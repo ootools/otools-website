@@ -5,6 +5,8 @@ aside: false
 
 <HeroIntro />
 
+<OriginStory />
+
 <PlatformHighlights />
 
 <TabsWorkflow />

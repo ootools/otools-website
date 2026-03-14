@@ -19,7 +19,7 @@
         <div class="bg-white rounded-2xl p-6 shadow-testimonial">
           <div class="text-primary text-2xl font-semibold mb-4">03</div>
           <h3 class="text-xl font-semibold text-dark mb-2">流程协作</h3>
-          <p class="text-body-color">插件间共享上下文，形成连续工作流。</p>
+          <p class="text-body-color">插件间协作，形成统一接口的AI连续工作流。</p>
         </div>
       </div>
     </div>

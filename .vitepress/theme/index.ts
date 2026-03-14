@@ -2,6 +2,7 @@ import DefaultTheme from 'vitepress/theme';
 import Layout from './Layout.vue';
 import './custom.css';
 import HeroIntro from './components/HeroIntro.vue';
+import OriginStory from './components/OriginStory.vue';
 import PlatformHighlights from './components/PlatformHighlights.vue';
 import TabsWorkflow from './components/TabsWorkflow.vue';
 import PluginShowcase from './components/PluginShowcase.vue';
@@ -13,6 +14,7 @@ export default {
   Layout,
   enhanceApp({ app }) {
     app.component('HeroIntro', HeroIntro);
+    app.component('OriginStory', OriginStory);
     app.component('PlatformHighlights', PlatformHighlights);
     app.component('TabsWorkflow', TabsWorkflow);
     app.component('PluginShowcase', PluginShowcase);

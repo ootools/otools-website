@@ -156,6 +156,62 @@
   color: rgba(255, 255, 255, 0.7);
 }
 
+.typing-line {
+  position: relative;
+}
+
+.typing-line .typing-ghost,
+.typing-line .typing-text {
+  white-space: pre-wrap;
+}
+
+.typing-paragraph {
+  min-height: 3.2em;
+}
+
+.typing-ghost {
+  visibility: hidden;
+  display: block;
+}
+
+.typing-text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: inline-block;
+  max-width: 100%;
+  pointer-events: none;
+}
+
+.typing-text::after {
+  content: '';
+  display: inline-block;
+  width: 0;
+  height: 1em;
+  box-shadow: 2px 0 0 rgba(255, 255, 255, 0.9);
+  transform: translateX(4px);
+  vertical-align: -0.05em;
+  opacity: 0;
+  animation: none;
+}
+
+.typing-text.show-cursor::after {
+  opacity: 1;
+  animation: typingBlink 0.8s steps(1) infinite;
+}
+
+
+@keyframes typingBlink {
+  0%,
+  49% {
+    opacity: 1;
+  }
+  50%,
+  100% {
+    opacity: 0;
+  }
+}
+
 @keyframes miniFloat {
   from {
     transform: translateY(6px);

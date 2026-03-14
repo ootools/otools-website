@@ -3,12 +3,13 @@
     <div class="container">
       <div class="flex flex-wrap -mx-4 items-center">
         <div class="w-full lg:w-5/12 px-4">
-          <h1 class="text-white font-bold text-4xl sm:text-5xl leading-tight mb-6">
-            OTools 高性能工具平台-小身躯大能量
+          <h1 class="text-white font-bold text-4xl sm:text-5xl leading-tight mb-6 typing-line">
+            <span class="typing-ghost">{{ fullTitle }}</span>
+            <span class="typing-text" :class="{ 'show-cursor': typingPhase === 'title' }">{{ typedTitle }}</span>
           </h1>
-          <p class="text-gray-300 text-lg mb-8">
-            以 Tabs 多任务化为核心，统一插件生态、原生能力与桌面运行时。
-            让每个工具都成为可组合的AI工作流模块。
+          <p class="text-gray-300 text-lg mb-8 typing-line typing-paragraph">
+            <span class="typing-ghost">{{ fullDesc }}</span>
+            <span class="typing-text" :class="{ 'show-cursor': typingPhase === 'desc' }">{{ typedDesc }}</span>
           </p>
           <div class="flex flex-wrap items-center gap-4">
             <a
@@ -109,7 +110,7 @@ const tabs = [
   {
     key: 'home',
     label: '首页',
-    title: '海洋生态入口',
+    title: '生态入口',
     desc: '工具聚合与插件快速访问。',
     colors: ['#1d4ed8', '#0ea5e9'],
     cards: [
@@ -170,7 +171,7 @@ const tabs = [
     key: 'ollama',
     label: 'Ollama',
     title: '乌贼Ollama',
-    desc: '本地模型管理与运行。',
+    desc: '本地大模型可视化管理与运行。',
     colors: ['#6d28d9', '#a855f7'],
     cards: [
       { title: '模型管理', desc: '版本 + 依赖' },
@@ -207,6 +208,16 @@ const tabs = [
 const activeTab = ref(0);
 const overlayOpen = ref(false);
 const overlayTab = ref(0);
+const typedTitle = ref('');
+const typedDesc = ref('');
+const typingPhase = ref<'title' | 'desc' | 'done'>('title');
+const fullTitle = 'OTools 高性能AI工作流平台-小身躯大能量';
+const fullDesc = '以 Tabs 多任务化为核心，统一插件生态、原生能力与桌面运行时。让每个工具都成为可组合的开放AI工作流模块。';
+const titlePrefixTyped = 'OceanTools';
+const titleSuffix = ' 高性能AI工作流平台-小身躯大能量';
+let typingTimer: number | null = null;
+let typingStopped = false;
+let tabTimer: number | null = null;
 
 const screenStyle = computed(() => ({
   background: `linear-gradient(135deg, ${tabs[activeTab.value].colors[0]}, ${tabs[activeTab.value].colors[1]})`,
@@ -226,6 +237,73 @@ const closeOverlay = () => {
   overlayOpen.value = false;
 };
 
+const clearTypingTimer = () => {
+  if (typingTimer !== null) {
+    window.clearTimeout(typingTimer);
+    typingTimer = null;
+  }
+};
+
+const clearTabTimer = () => {
+  if (tabTimer !== null) {
+    window.clearInterval(tabTimer);
+    tabTimer = null;
+  }
+};
+
+const startTabAuto = () => {
+  clearTabTimer();
+  tabTimer = window.setInterval(() => {
+    if (overlayOpen.value) return;
+    activeTab.value = (activeTab.value + 1) % tabs.length;
+  }, 5000);
+};
+
+const typeText = (text: string, target: typeof typedTitle, speed: number, prefix = '') =>
+  new Promise<void>((resolve) => {
+    let index = 0;
+    const step = () => {
+      if (typingStopped) {
+        resolve();
+        return;
+      }
+      index += 1;
+      target.value = `${prefix}${text.slice(0, index)}`;
+      if (index < text.length) {
+        typingTimer = window.setTimeout(step, speed);
+      } else {
+        resolve();
+      }
+    };
+    step();
+  });
+
+const eraseMiddle = (text: string, start: number, count: number, target: typeof typedTitle, speed: number) =>
+  new Promise<void>((resolve) => {
+    let removed = 0;
+    const step = () => {
+      if (typingStopped) {
+        resolve();
+        return;
+      }
+      removed += 1;
+      const head = text.slice(0, start);
+      const tail = text.slice(start + removed);
+      target.value = head + tail;
+      if (removed < count) {
+        typingTimer = window.setTimeout(step, speed);
+      } else {
+        resolve();
+      }
+    };
+    step();
+  });
+
+const wait = (ms: number) =>
+  new Promise<void>((resolve) => {
+    typingTimer = window.setTimeout(resolve, ms);
+  });
+
 const onKeydown = (event: KeyboardEvent) => {
   if (event.key === 'Escape') {
     overlayOpen.value = false;
@@ -233,10 +311,34 @@ const onKeydown = (event: KeyboardEvent) => {
 };
 
 onMounted(() => {
+  void (async () => {
+    while (!typingStopped) {
+      typedTitle.value = '';
+      typedDesc.value = '';
+      typingPhase.value = 'title';
+      await typeText(titlePrefixTyped, typedTitle, 95);
+      if (typingStopped) return;
+      await wait(1000);
+      await eraseMiddle(titlePrefixTyped, 1, 4, typedTitle, 140);
+      if (typingStopped) return;
+      await wait(220);
+      await typeText(titleSuffix, typedTitle, 95, typedTitle.value);
+      if (typingStopped) return;
+      typingPhase.value = 'desc';
+      await wait(180);
+      await typeText(fullDesc, typedDesc, 65);
+      typingPhase.value = 'done';
+      await wait(4200);
+    }
+  })();
+  startTabAuto();
   window.addEventListener('keydown', onKeydown);
 });
 
 onBeforeUnmount(() => {
+  typingStopped = true;
+  clearTypingTimer();
+  clearTabTimer();
   window.removeEventListener('keydown', onKeydown);
 });
 </script>
