@@ -1,11 +1,12 @@
 <script setup lang="ts">
 import DefaultTheme from 'vitepress/theme';
-import { computed, ref } from 'vue';
+import { computed, onBeforeUnmount, onMounted, ref } from 'vue';
 import { useData } from 'vitepress';
 
 const { page } = useData();
 const isHome = computed(() => page.value.relativePath === 'index.md');
 const menuOpen = ref(false);
+const scrolled = ref(false);
 
 const navItems = [
   { text: '首页', link: '/' },
@@ -13,19 +14,41 @@ const navItems = [
   { text: '文档', link: '/guide/overview' },
 ];
 
+const onHomeDark = computed(() => isHome.value && !scrolled.value);
+
+const headerClass = computed(() => {
+  if (isHome.value) {
+    return scrolled.value ? 'bg-white/90 shadow-sm backdrop-blur' : 'bg-dark/90 backdrop-blur';
+  }
+  return 'bg-white/90 shadow-sm backdrop-blur';
+});
+
 const linkClass = computed(() =>
-  isHome.value ? 'text-white/90 hover:text-white' : 'text-dark hover:text-primary'
+  onHomeDark.value ? 'text-white/90 hover:text-white' : 'text-dark hover:text-primary'
 );
 
-const brandTextClass = computed(() => (isHome.value ? 'text-white' : 'text-dark'));
+const brandTextClass = computed(() => (onHomeDark.value ? 'text-white' : 'text-dark'));
 
 const toggleBorderClass = computed(() =>
-  isHome.value ? 'border-white/40' : 'border-primary/20'
+  onHomeDark.value ? 'border-white/40' : 'border-primary/20'
 );
 
 const toggleBarClass = computed(() =>
-  isHome.value ? 'bg-white' : 'bg-primary'
+  onHomeDark.value ? 'bg-white' : 'bg-primary'
 );
+
+const updateScroll = () => {
+  scrolled.value = window.scrollY > 24;
+};
+
+onMounted(() => {
+  updateScroll();
+  window.addEventListener('scroll', updateScroll, { passive: true });
+});
+
+onBeforeUnmount(() => {
+  window.removeEventListener('scroll', updateScroll);
+});
 
 const toggleMenu = () => {
   menuOpen.value = !menuOpen.value;
@@ -40,8 +63,7 @@ const closeMenu = () => {
   <div class="otools-docs">
     <header
       class="site-header fixed top-0 left-0 w-full z-50 transition"
-      :class="isHome ? 'bg-transparent' : 'bg-white/90 shadow-sm backdrop-blur'
-      "
+      :class="headerClass"
     >
       <div class="container">
         <div class="flex items-center justify-between py-4 lg:py-5">
@@ -77,7 +99,7 @@ const closeMenu = () => {
         </div>
       </div>
     </header>
-    <div class="layout-body" :class="isHome ? 'layout-home pt-24' : 'layout-doc pt-24'">
+    <div class="layout-body" :class="isHome ? 'layout-home pt-0' : 'layout-doc pt-24'">
       <DefaultTheme.Layout />
     </div>
   </div>

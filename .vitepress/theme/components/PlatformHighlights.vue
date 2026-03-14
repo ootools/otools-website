@@ -4,7 +4,7 @@
       <div class="text-center max-w-2xl mx-auto mb-12">
         <h2 class="text-3xl font-bold text-dark mb-4">平台能力一览</h2>
         <p class="text-body-color">
-          围绕生态、性能与协作，构建桌面级工具平台。
+          围绕生态、性能与协作，构建桌面级小程序工具平台。
         </p>
       </div>
       <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
