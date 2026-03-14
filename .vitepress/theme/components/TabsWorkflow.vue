@@ -1,21 +1,27 @@
 <template>
-  <section class="section">
-    <div class="section-head">
-      <h2>Tabs 多任务化工作流</h2>
-      <p>从发现工具到并行任务执行，统一在 OTools 的标签体系中完成。</p>
+  <section id="tabs" class="py-20 bg-[#f8faff]">
+    <div class="container">
+      <div class="text-center max-w-2xl mx-auto mb-12">
+        <h2 class="text-3xl font-bold text-dark mb-4">Tabs 工作流体验</h2>
+        <p class="text-body-color">统一入口、并行任务、跨插件联动，保持上下文不丢失。</p>
+      </div>
+      <div class="grid gap-6 lg:grid-cols-3">
+        <div class="bg-white rounded-2xl p-6 shadow-testimonial">
+          <div class="text-primary text-2xl font-semibold mb-4">01</div>
+          <h3 class="text-xl font-semibold text-dark mb-2">发现工具</h3>
+          <p class="text-body-color">从海洋生态插件库中快速定位能力。</p>
+        </div>
+        <div class="bg-white rounded-2xl p-6 shadow-testimonial">
+          <div class="text-primary text-2xl font-semibold mb-4">02</div>
+          <h3 class="text-xl font-semibold text-dark mb-2">固定到 Tabs</h3>
+          <p class="text-body-color">多任务同时打开，减少切换成本。</p>
+        </div>
+        <div class="bg-white rounded-2xl p-6 shadow-testimonial">
+          <div class="text-primary text-2xl font-semibold mb-4">03</div>
+          <h3 class="text-xl font-semibold text-dark mb-2">流程协作</h3>
+          <p class="text-body-color">插件间共享上下文，形成连续工作流。</p>
+        </div>
+      </div>
     </div>
-    <el-card class="table-card" shadow="never">
-      <el-steps align-center finish-status="success">
-        <el-step title="发现工具" description="通过海洋生态插件与内置模块获取能力" />
-        <el-step title="固定到 Tabs" description="常用工具常驻标签页，保持上下文" />
-        <el-step title="并行处理" description="多任务并行，减少切换成本" />
-      </el-steps>
-    </el-card>
   </section>
 </template>
-
-<style scoped>
-.el-steps {
-  padding: 12px 0;
-}
-</style>

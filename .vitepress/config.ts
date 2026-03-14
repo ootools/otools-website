@@ -34,9 +34,4 @@ export default defineConfig({
       copyright: 'Copyright © OTools',
     },
   },
-  vite: {
-    ssr: {
-      noExternal: ['element-plus'],
-    },
-  },
 });

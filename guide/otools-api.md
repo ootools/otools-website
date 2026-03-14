@@ -1,6 +1,6 @@
 # OTools API
 
-所有插件统一通过 `window.otools` 调用能力。为了兼容历史生态，也可使用 `window.utools`。
+所有插件统一通过 `window.otools` 调用能力。
 
 <ApiMatrix />
 
@@ -34,7 +34,7 @@ otools.showNotification('构建完成');
 otools.shellOpenPath('/Users/you/Desktop');
 otools.shellShowItemInFolder('/Users/you/Downloads/file.zip');
 otools.shellTrashItem('/Users/you/Downloads/old.log');
-otools.shellOpenExternal('https://otools.dev');
+otools.shellOpenExternal('https://otools.lingyun.net');
 otools.shellBeep();
 ```
 

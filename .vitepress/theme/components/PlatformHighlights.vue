@@ -1,43 +1,44 @@
 <template>
-  <section class="section">
-    <div class="section-head">
-      <h2>平台定位</h2>
-      <p>海洋生态、高性能、可扩展，面向专业场景的桌面级工具平台。</p>
-    </div>
-    <div class="card-grid">
-      <el-card shadow="never">
-        <el-tag type="success" effect="plain">生态</el-tag>
-        <h3>海洋生态工具族</h3>
-        <p>统一的插件目录、版本管理与运行时，让工具像海洋生物一样协同进化。</p>
-      </el-card>
-      <el-card shadow="never">
-        <el-tag type="warning" effect="plain">性能</el-tag>
-        <h3>高性能桌面内核</h3>
-        <p>结合本地能力与原生插件，执行速度更快，稳定性更高。</p>
-      </el-card>
-      <el-card shadow="never">
-        <el-tag type="info" effect="plain">协作</el-tag>
-        <h3>Tabs 多任务化</h3>
-        <p>每个工具都是一个任务页，支持并行操作与上下文切换。</p>
-      </el-card>
+  <section id="features" class="py-20">
+    <div class="container">
+      <div class="text-center max-w-2xl mx-auto mb-12">
+        <h2 class="text-3xl font-bold text-dark mb-4">平台能力一览</h2>
+        <p class="text-body-color">
+          围绕生态、性能与协作，构建桌面级工具平台。
+        </p>
+      </div>
+      <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+        <div class="bg-white shadow-testimonial rounded-2xl p-6">
+          <div class="h-12 w-12 flex items-center justify-center rounded-xl bg-primary/10 text-primary mb-4">🌊</div>
+          <h3 class="text-xl font-semibold text-dark mb-2">海洋生态插件体系</h3>
+          <p class="text-body-color">统一插件目录、版本与市场分发，内置与社区能力共生共建。</p>
+        </div>
+        <div class="bg-white shadow-testimonial rounded-2xl p-6">
+          <div class="h-12 w-12 flex items-center justify-center rounded-xl bg-secondary/10 text-secondary mb-4">📑</div>
+          <h3 class="text-xl font-semibold text-dark mb-2">Tabs 多任务化</h3>
+          <p class="text-body-color">工具多开、上下文常驻，适配长流程任务。</p>
+        </div>
+        <div class="bg-white shadow-testimonial rounded-2xl p-6">
+          <div class="h-12 w-12 flex items-center justify-center rounded-xl bg-warning/10 text-warning mb-4">⚙️</div>
+          <h3 class="text-xl font-semibold text-dark mb-2">统一运行时</h3>
+          <p class="text-body-color">Web 插件 + 原生能力，统一 API 与状态存储。</p>
+        </div>
+        <div class="bg-white shadow-testimonial rounded-2xl p-6">
+          <div class="h-12 w-12 flex items-center justify-center rounded-xl bg-primary/10 text-primary mb-4">🚀</div>
+          <h3 class="text-xl font-semibold text-dark mb-2">高性能基础</h3>
+          <p class="text-body-color">Rust + Tauri 架构，启动快、占用低、执行稳。</p>
+        </div>
+        <div class="bg-white shadow-testimonial rounded-2xl p-6">
+          <div class="h-12 w-12 flex items-center justify-center rounded-xl bg-secondary/10 text-secondary mb-4">🧭</div>
+          <h3 class="text-xl font-semibold text-dark mb-2">自动化工具链</h3>
+          <p class="text-body-color">Git、HTTP、Docker、DBM 等高频工具持续内置。</p>
+        </div>
+        <div class="bg-white shadow-testimonial rounded-2xl p-6">
+          <div class="h-12 w-12 flex items-center justify-center rounded-xl bg-warning/10 text-warning mb-4">🧩</div>
+          <h3 class="text-xl font-semibold text-dark mb-2">原生能力扩展</h3>
+          <p class="text-body-color">支持 Rust 动态库，轻松扩展性能边界。</p>
+        </div>
+      </div>
     </div>
   </section>
 </template>
-
-<style scoped>
-.el-card {
-  border: 1px solid rgba(148, 163, 184, 0.28);
-  background: rgba(255, 255, 255, 0.9);
-}
-
-h3 {
-  margin: 12px 0 8px;
-  color: #0f172a;
-}
-
-p {
-  margin: 0;
-  color: #475569;
-  line-height: 1.6;
-}
-</style>

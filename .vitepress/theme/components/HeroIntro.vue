@@ -1,47 +1,69 @@
 <template>
-  <section class="section hero-intro">
-    <el-card class="hero-card" shadow="never">
-      <div class="hero-badge">
-        <el-tag type="info" effect="dark">OTools</el-tag>
-        <span>海洋生态高性能工具平台</span>
-      </div>
-      <h1>让桌面成为可扩展的小程序平台</h1>
-      <p>
-        OTools 以 Tabs 多任务化为核心，提供统一入口、统一运行时与插件生态，
-        让每个工具都成为可组合的生产力模块。
-      </p>
-      <div class="hero-actions">
-        <el-button type="primary" plain tag="a" href="/features">快速了解</el-button>
-        <el-button tag="a" href="/guide/overview">开发者文档</el-button>
-      </div>
-    </el-card>
-      <div class="hero-panel">
-        <div class="hero-panel-item">
-          <strong>生态化工具</strong>
-          <p>从内置工具到开发者插件，统一资源管理与能力调用。</p>
+  <section id="home" class="relative overflow-hidden bg-dark pt-28 pb-20">
+    <div class="container">
+      <div class="flex flex-wrap -mx-4 items-center">
+        <div class="w-full lg:w-1/2 px-4">
+          <h1 class="text-white font-bold text-4xl sm:text-5xl leading-tight mb-6">
+            OTools 高性能工具平台-小身躯大能量
+          </h1>
+          <div class="text-white text-1xl">还在用SourceTree?Navicat?XShell?PHPStudy?，试试我们仅用小于1%的空间占用却完成更优秀的新时代替代体验吧</div>
+          <p class="text-dark-700 text-lg mb-8">
+            以 Tabs 多任务化为核心，统一插件生态、原生能力与桌面运行时。
+            致力于让每个工具都成为可组合的工作流模块。
+          </p>
+          <div class="flex flex-wrap items-center gap-4">
+            <a
+              href="/features"
+              class="inline-flex items-center justify-center bg-primary text-white px-8 py-3 rounded-lg shadow-lg transition hover:bg-primary/90"
+            >
+              下载内测版(20M)
+            </a>
+            <a
+              href="/guide/overview"
+              class="inline-flex items-center justify-center border border-white/40 text-white px-8 py-3 rounded-lg transition hover:bg-white/10"
+            >
+              开发者文档
+            </a>
+          </div>
+          <div class="mt-10 grid grid-cols-1 sm:grid-cols-3 gap-4 text-white/80">
+            <div class="bg-white/10 border border-white/10 rounded-xl p-4">
+              <div class="text-2xl font-semibold">40+</div>
+              <div class="text-sm">丰富的插件生态</div>
+            </div>
+            <div class="bg-white/10 border border-white/10 rounded-xl p-4">
+              <div class="text-2xl font-semibold">Tabs</div>
+              <div class="text-sm">多任务并行机制</div>
+            </div>
+            <div class="bg-white/10 border border-white/10 rounded-xl p-4">
+              <div class="text-2xl font-semibold">Native</div>
+              <div class="text-sm">高性能插件扩展</div>
+            </div>
+          </div>
         </div>
-      <div class="hero-panel-item">
-        <strong>多任务 Tabs</strong>
-        <p>并行打开多个工具与页面，保持上下文、不中断流程。</p>
-      </div>
-      <div class="hero-panel-item">
-        <strong>高性能体验</strong>
-        <p>桌面端能力 + 原生插件扩展，兼顾速度与稳定性。</p>
+        <div class="w-full lg:w-1/2 px-4 mt-12 lg:mt-0">
+          <div class="bg-white rounded-2xl shadow-2xl p-6">
+            <div class="flex items-center gap-2 mb-4">
+              <span class="h-3 w-3 rounded-full bg-warning"></span>
+              <span class="h-3 w-3 rounded-full bg-secondary"></span>
+              <span class="h-3 w-3 rounded-full bg-primary"></span>
+            </div>
+            <div class="space-y-4">
+              <div class="bg-body-color/10 rounded-xl p-4">
+                <h4 class="font-semibold text-dark mb-1">插件市场</h4>
+                <p class="text-body-color text-sm">插件版本、评分与更新动态一站式呈现。</p>
+              </div>
+              <div class="bg-body-color/10 rounded-xl p-4">
+                <h4 class="font-semibold text-dark mb-1">开发者中心</h4>
+                <p class="text-body-color text-sm">Web + Rust 原生能力一键构建。</p>
+              </div>
+              <div class="bg-body-color/10 rounded-xl p-4">
+                <h4 class="font-semibold text-dark mb-1">Tabs 工作流</h4>
+                <p class="text-body-color text-sm">多任务并行，保持上下文。</p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 </template>
-
-<style scoped>
-.hero-panel-item strong {
-  display: block;
-  font-size: 16px;
-  margin-bottom: 6px;
-}
-
-.hero-panel-item p {
-  margin: 0;
-  font-size: 13px;
-  color: #475569;
-}
-</style>

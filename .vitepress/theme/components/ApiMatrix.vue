@@ -20,16 +20,20 @@ const apis = [
 </script>
 
 <template>
-  <section class="section">
-    <div class="section-head">
-      <h2>OTools API 总览</h2>
-      <p>所有能力通过 <code>window.otools</code> 统一暴露。</p>
-    </div>
-    <el-card class="table-card" shadow="never">
-      <el-table :data="apis" style="width: 100%" border>
-        <el-table-column prop="group" label="能力分组" width="160" />
-        <el-table-column prop="items" label="包含内容" />
-      </el-table>
-    </el-card>
-  </section>
+  <div class="overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-testimonial">
+    <table class="w-full text-left">
+      <thead class="bg-[#f5f7fb]">
+        <tr>
+          <th class="px-6 py-4 text-dark">能力分组</th>
+          <th class="px-6 py-4 text-dark">包含内容</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr v-for="item in apis" :key="item.group" class="border-t">
+          <td class="px-6 py-4 font-medium text-dark">{{ item.group }}</td>
+          <td class="px-6 py-4 text-body-color">{{ item.items }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
 </template>

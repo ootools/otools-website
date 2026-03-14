@@ -1,5 +1,6 @@
 ---
 layout: page
+aside: false
 ---
 
 <HeroIntro />
