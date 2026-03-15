@@ -84,7 +84,7 @@
 
     <transition name="hero-overlay">
       <div v-if="overlayOpen" class="hero-overlay" @click="closeOverlay">
-        <div class="hero-overlay-card" @click.stop>
+        <div class="hero-overlay-card" :class="{ 'compare-mode': hasCompareImages }" @click.stop>
           <div class="hero-overlay-header">
             <div class="overlay-title">
               {{ tabs[overlayTab].title }}
