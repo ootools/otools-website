@@ -30,8 +30,8 @@
         </div>
         <div class="bg-white shadow-testimonial rounded-2xl p-6">
           <div class="h-12 w-12 flex items-center justify-center rounded-xl bg-secondary/10 text-secondary mb-4">🧭</div>
-          <h3 class="text-xl font-semibold text-dark mb-2">自动化工具链</h3>
-          <p class="text-body-color">Git、HTTP、Docker、DBM 等高频工具持续内置。</p>
+          <h3 class="text-xl font-semibold text-dark mb-2">面向AI友好</h3>
+          <p class="text-body-color">提供统一MCP协议供AI调用形成插件工作流。</p>
         </div>
         <div class="bg-white shadow-testimonial rounded-2xl p-6">
           <div class="h-12 w-12 flex items-center justify-center rounded-xl bg-warning/10 text-warning mb-4">🧩</div>

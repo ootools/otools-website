@@ -56,7 +56,7 @@
               </button>
             </div>
             <div class="hero-app-body">
-              <div class="hero-app-screen" :style="screenStyle">
+              <div class="hero-app-screen" :style="screenStyle" @click="openOverlay(activeTab)">
                 <div class="hero-app-overlay">
                   <div class="screen-title">{{ tabs[activeTab].title }}</div>
                   <div class="screen-desc">{{ tabs[activeTab].desc }}</div>
@@ -92,7 +92,14 @@
             <button class="overlay-close" @click="closeOverlay">✕</button>
           </div>
           <div class="hero-overlay-body" :style="overlayStyle">
-            <div class="overlay-caption">主程序截图占位</div>
+            <img
+              v-if="tabs[overlayTab].image"
+              class="hero-overlay-shot"
+              :src="tabs[overlayTab].image"
+              :alt="tabs[overlayTab].title"
+              loading="lazy"
+            />
+            <div v-else class="overlay-caption">主程序截图占位</div>
           </div>
           <div class="hero-overlay-footer">
             {{ tabs[overlayTab].desc }}
@@ -113,6 +120,7 @@ const tabs = [
     title: '生态入口',
     desc: '工具聚合与插件快速访问。',
     colors: ['#1d4ed8', '#0ea5e9'],
+    image: '',
     cards: [
       { title: '插件市场', desc: '精选 + 评分 + 更新' },
       { title: '开发者中心', desc: 'Web + Rust 构建' },
@@ -125,6 +133,7 @@ const tabs = [
     title: '章鱼Git',
     desc: '新型Git仓库管理与 AI 协作。',
     colors: ['#0f172a', '#1d4ed8'],
+    image: '/crop/git.png',
     cards: [
       { title: 'AI 生成提交信息', desc: '一键生成提交说明' },
       { title: 'AI 软著申请', desc: '自动生成软著申请的表单与文档' },
@@ -137,6 +146,7 @@ const tabs = [
     title: '鲨鱼数据库',
     desc: 'Mysql/Postgres/MongoDB等数据表结构与查询管理。',
     colors: ['#0f766e', '#2dd4bf'],
+    image: '/crop/dbm.png',
     cards: [
       { title: '连接管理', desc: '多库统一管理' },
       { title: '结构浏览', desc: '表结构/索引查看' },
@@ -149,6 +159,7 @@ const tabs = [
     title: '墨鱼终端',
     desc: '终端与SFTP协同。',
     colors: ['#334155', '#64748b'],
+    image: '/crop/ssh.png',
     cards: [
       { title: '终端会话', desc: '多会话并行' },
       { title: 'SFTP 文件', desc: '上传/下载/同步' },
@@ -161,6 +172,7 @@ const tabs = [
     title: '珊瑚Env',
     desc: '本地Nginx/PHP/Mysql/Redis等开发环境一键管理。',
     colors: ['#7c3aed', '#a78bfa'],
+    image: '/crop/servrun.png',
     cards: [
       { title: '服务管理', desc: 'Nginx/PHP/MySQL' },
       { title: '配置生成', desc: 'vHost 一键配置' },
@@ -173,6 +185,7 @@ const tabs = [
     title: '乌贼Ollama',
     desc: '本地大模型可视化管理与运行。',
     colors: ['#6d28d9', '#a855f7'],
+    image: '/crop/ollama.png',
     cards: [
       { title: '模型管理', desc: '版本 + 依赖' },
       { title: '性能监控', desc: 'GPU/CPU 占用' },
@@ -185,6 +198,7 @@ const tabs = [
     title: '海豚音频工坊',
     desc: '音频处理与实验室。',
     colors: ['#f97316', '#facc15'],
+    image: '/crop/audio.png',
     cards: [
       { title: '波形编辑', desc: '轨道级剪辑' },
       { title: '效果链', desc: '滤波 + 混响' },
@@ -197,6 +211,7 @@ const tabs = [
     title: '飞鱼HTTP',
     desc: '请求编排与响应洞察。',
     colors: ['#0ea5e9', '#38bdf8'],
+    image: '/crop/http.png',
     cards: [
       { title: '请求编排', desc: '多接口批量执行' },
       { title: '响应洞察', desc: '状态与性能分析' },
