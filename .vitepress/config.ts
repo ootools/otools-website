@@ -2,7 +2,7 @@ import { defineConfig } from 'vitepress';
 
 export default defineConfig({
   lang: 'zh-CN',
-  title: 'OTools 海洋生态平台',
+  title: 'OTools 高性能AI工作流平台',
   description: '高性能桌面工具平台 · Tabs 多任务化 · 桌面版小程序生态',
   appearance: false,
   cleanUrls: true,
@@ -30,7 +30,7 @@ export default defineConfig({
     },
     outline: [2, 3],
     footer: {
-      message: 'OTools 海洋生态 · 高性能工具平台',
+      message: 'OTools 海洋生态 · 高性能AI工作流平台',
       copyright: 'Copyright © OTools',
     },
   },

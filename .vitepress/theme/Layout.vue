@@ -7,6 +7,8 @@ const { page } = useData();
 const isHome = computed(() => page.value.relativePath === 'index.md');
 const menuOpen = ref(false);
 const scrolled = ref(false);
+const navHidden = ref(false);
+let lastScrollY = 0;
 
 const navItems = [
   { text: '首页', link: '/' },
@@ -38,7 +40,19 @@ const toggleBarClass = computed(() =>
 );
 
 const updateScroll = () => {
-  scrolled.value = window.scrollY > 24;
+  const currentY = window.scrollY;
+  scrolled.value = currentY > 24;
+
+  const delta = currentY - lastScrollY;
+  if (currentY < 80 || menuOpen.value) {
+    navHidden.value = false;
+  } else if (delta > 6 && currentY > 140) {
+    navHidden.value = true;
+  } else if (delta < -2) {
+    navHidden.value = false;
+  }
+
+  lastScrollY = currentY;
 };
 
 onMounted(() => {
@@ -63,10 +77,10 @@ const closeMenu = () => {
   <div class="otools-docs">
     <header
       class="site-header fixed top-0 left-0 w-full z-50 transition"
-      :class="headerClass"
+      :class="[headerClass, navHidden ? 'is-hidden' : '']"
     >
       <div class="container">
-        <div class="flex items-center justify-between py-4 lg:py-5">
+        <div class="flex items-center justify-between py-4 lg:py-4">
           <a class="flex items-center gap-3 font-semibold" :class="brandTextClass" href="/">
             <span class="h-9 w-9 rounded-xl bg-white/20 text-white flex items-center justify-center"
               :class="isHome ? 'bg-white/20 text-white' : 'bg-primary/10 text-primary'">O</span>

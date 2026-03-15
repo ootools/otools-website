@@ -9,8 +9,8 @@ aside: false
 
 <PlatformHighlights />
 
-<TabsWorkflow />
-
 <PluginShowcase />
+
+<TabsWorkflow />
 
 <DocCta />

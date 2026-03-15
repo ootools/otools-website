@@ -85,48 +85,58 @@
     <transition name="hero-overlay">
       <div v-if="overlayOpen" class="hero-overlay" @click="closeOverlay">
         <div class="hero-overlay-card" :class="{ 'compare-mode': hasCompareImages }" @click.stop>
-          <div class="hero-overlay-header">
-            <div class="overlay-title">
-              {{ tabs[overlayTab].title }}
+          <div class="hero-overlay-inner">
+            <div class="hero-overlay-header">
+              <div class="overlay-title">
+                {{ tabs[overlayTab].title }}
+              </div>
+              <button class="overlay-close" @click="closeOverlay">✕</button>
             </div>
-            <button class="overlay-close" @click="closeOverlay">✕</button>
-          </div>
-          <div class="hero-overlay-body" :style="overlayStyle">
+            <div class="hero-overlay-body" :style="overlayStyle">
             <div
               v-if="hasCompareImages"
               ref="compareWrap"
               class="hero-compare"
+              :class="{ 'is-dragging': compareDragging }"
               :style="{ '--compare-percent': `${comparePercent}%` }"
               @pointerdown="startCompare"
               @pointermove="moveCompare"
-              @pointerup="endCompare"
-              @pointerleave="endCompare"
-              @pointercancel="endCompare"
-            >
-              <img
-                class="hero-compare-base"
-                :src="overlayImages.dark"
-                :alt="`${tabs[overlayTab].title} 暗黑版`"
-                loading="lazy"
-              />
-              <div class="hero-compare-top">
+                @pointerup="endCompare"
+                @pointerleave="endCompare"
+                @pointercancel="endCompare"
+              >
                 <img
-                  class="hero-compare-image"
-                  :src="overlayImages.light"
-                  :alt="`${tabs[overlayTab].title} 明亮版`"
+                  class="hero-compare-base"
+                  :src="overlayImages.dark"
+                  :alt="`${tabs[overlayTab].title} 暗黑版`"
                   loading="lazy"
                 />
-              </div>
+                <div class="hero-compare-top">
+                  <img
+                    class="hero-compare-image"
+                    :src="overlayImages.light"
+                    :alt="`${tabs[overlayTab].title} 明亮版`"
+                    loading="lazy"
+                  />
+                </div>
               <div class="hero-compare-handle" :style="{ left: `${comparePercent}%` }">
                 <span class="hero-compare-line"></span>
                 <span class="hero-compare-knob"></span>
               </div>
+              <div class="hero-compare-hint">拖动圆形按钮对比明暗模式</div>
             </div>
-            <div v-else class="overlay-caption">主程序截图占位</div>
+              <div v-else class="overlay-caption">主程序截图占位</div>
+            </div>
+            <div class="hero-overlay-footer">
+              {{ tabs[overlayTab].desc }}
+            </div>
           </div>
-          <div class="hero-overlay-footer">
-            {{ tabs[overlayTab].desc }}
-          </div>
+          <button class="hero-overlay-nav hero-overlay-prev" @click.stop="prevOverlayTab" aria-label="上一项">
+            ‹
+          </button>
+          <button class="hero-overlay-nav hero-overlay-next" @click.stop="nextOverlayTab" aria-label="下一项">
+            ›
+          </button>
         </div>
       </div>
     </transition>
@@ -184,7 +194,7 @@ const tabs = [
     label: 'SSH',
     title: '墨鱼终端',
     desc: '终端与SFTP协同。',
-    colors: ['#334155', '#64748b'],
+    colors: ['#0f766e', '#22c55e'],
     imageLight: '/crop/ssh-light.png',
     imageDark: '/crop/ssh.png',
     cards: [
@@ -300,6 +310,18 @@ const closeOverlay = () => {
   overlayOpen.value = false;
   compareDragging.value = false;
   unbindCompareWindowEvents();
+};
+
+const prevOverlayTab = () => {
+  overlayTab.value = (overlayTab.value - 1 + tabs.length) % tabs.length;
+  activeTab.value = overlayTab.value;
+  compareRatio.value = 0.5;
+};
+
+const nextOverlayTab = () => {
+  overlayTab.value = (overlayTab.value + 1) % tabs.length;
+  activeTab.value = overlayTab.value;
+  compareRatio.value = 0.5;
 };
 
 const updateCompareFromEvent = (event: PointerEvent) => {
