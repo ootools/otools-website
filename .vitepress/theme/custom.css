@@ -234,11 +234,14 @@
 }
 
 .hero-overlay-card {
-  width: min(980px, 92vw);
+  width: min(92vw, calc(70vh * var(--overlay-aspect, 1.625)));
   background: #fff;
   border-radius: 20px;
   overflow: hidden;
   box-shadow: 0 30px 60px rgba(0, 0, 0, 0.35);
+  display: flex;
+  flex-direction: column;
+  max-height: 86vh;
 }
 
 .hero-overlay-header {
@@ -268,17 +271,81 @@
 
 .hero-overlay-body {
   position: relative;
-  min-height: 420px;
+  width: 100%;
+  aspect-ratio: var(--overlay-aspect, 1.625);
+  flex: 0 0 auto;
   display: grid;
   place-items: center;
   overflow: hidden;
 }
 
-.hero-overlay-shot {
+.hero-compare {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: #0f172a;
+  overflow: hidden;
+  cursor: ew-resize;
+  user-select: none;
+  touch-action: none;
+}
+
+.hero-compare-base,
+.hero-compare-image {
+  position: absolute;
+  inset: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: top center;
+  object-position: center;
+  display: block;
+  pointer-events: none;
+  -webkit-user-drag: none;
+  user-drag: none;
+}
+
+.hero-compare-top {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  clip-path: inset(0 calc(100% - var(--compare-percent, 50%)) 0 0);
+  -webkit-clip-path: inset(0 calc(100% - var(--compare-percent, 50%)) 0 0);
+}
+
+.hero-compare-handle {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+}
+
+.hero-compare-line {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  left: 0;
+  transform: translateX(-1px);
+  background: rgba(255, 255, 255, 0.85);
+  box-shadow: 0 0 12px rgba(255, 255, 255, 0.45);
+}
+
+.hero-compare-knob {
+  position: absolute;
+  width: 44px;
+  height: 44px;
+  border-radius: 999px;
+  left: 0;
+  transform: translateX(-50%);
+  background: rgba(255, 255, 255, 0.92);
+  border: 3px solid rgba(15, 23, 42, 0.65);
+  box-shadow: 0 16px 30px rgba(15, 23, 42, 0.35);
+  pointer-events: auto;
 }
 
 .overlay-caption {
