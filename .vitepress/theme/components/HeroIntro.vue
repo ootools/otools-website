@@ -172,10 +172,12 @@ import { computed, onBeforeUnmount, onMounted, ref } from 'vue';
 import { useData } from 'vitepress';
 import { useI18n } from '../i18n';
 
-const { localePath } = useData();
+const { localeIndex } = useData();
 const { t, tm } = useI18n();
 
-const localeBase = computed(() => localePath?.value ?? '/');
+const localeBase = computed(() =>
+  localeIndex?.value && localeIndex.value !== 'root' ? `/${localeIndex.value}/` : '/'
+);
 const withLocale = (path: string) => (localeBase.value === '/' ? `/${path}` : `${localeBase.value}${path}`);
 const docsLink = computed(() => withLocale('guide/overview'));
 

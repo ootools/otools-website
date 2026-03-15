@@ -47,7 +47,7 @@
         ]
       },
       "dbm": {
-        "label": "Base de données",
+        "label": "BDD",
         "title": "DB Requin",
         "desc": "Gestion schéma et requêtes MySQL/Postgres/MongoDB.",
         "cards": [
@@ -168,7 +168,7 @@
         ]
       },
       "dbm": {
-        "label": "Base de données",
+        "label": "BDD",
         "subtitle": "Multi‑BD · Schéma",
         "features": [
           { "title": "Connexions", "desc": "Gestion multi‑BD" },

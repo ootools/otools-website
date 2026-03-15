@@ -29,12 +29,8 @@ const getByPath = (obj: Messages | undefined, key: string) => {
 };
 
 export const useI18n = () => {
-  const { localePath } = useData();
-  const localeKey = computed(() => {
-    const path = localePath?.value ?? '/';
-    if (!path || path === '/') return 'root';
-    return path.replace(/\//g, '');
-  });
+  const { localeIndex } = useData();
+  const localeKey = computed(() => localeIndex?.value || 'root');
 
   const localeMessages = computed(() => messages[localeKey.value] ?? messages.root);
 
