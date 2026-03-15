@@ -16,6 +16,10 @@
       "download": "Télécharger la bêta (20M)",
       "docs": "Docs développeur"
     },
+    "betaModal": {
+      "title": "Rejoindre le groupe bêta",
+      "desc": "Scannez le QR code pour rejoindre le groupe bêta WeChat et recevoir les téléchargements et mises à jour."
+    },
     "stats": {
       "ecosystem": "Écosystème riche de plugins",
       "tabs": "Multitâche parallèle",

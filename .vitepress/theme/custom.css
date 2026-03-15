@@ -662,6 +662,65 @@
   background: rgba(40, 50, 80, 0.75);
 }
 
+.beta-overlay {
+  background: rgba(8, 12, 28, 0.78);
+}
+
+.beta-overlay-card {
+  width: min(92vw, 420px);
+  border-radius: 18px;
+  background: #0b1026;
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.35);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  overflow: hidden;
+}
+
+.beta-overlay-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 16px;
+  color: #f8fafc;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.beta-overlay-title {
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+.beta-overlay-close {
+  width: 30px;
+  height: 30px;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.06);
+  color: #fff;
+  font-size: 14px;
+}
+
+.beta-overlay-body {
+  padding: 18px;
+  text-align: center;
+  color: #e2e8f0;
+}
+
+.beta-qr {
+  width: min(70vw, 240px);
+  height: auto;
+  border-radius: 12px;
+  background: #fff;
+  padding: 8px;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.25);
+  margin: 0 auto 14px;
+  display: block;
+}
+
+.beta-overlay-desc {
+  font-size: 14px;
+  line-height: 1.6;
+}
+
 .tabs-compare-panel {
   background: #fff;
   border-radius: 24px;

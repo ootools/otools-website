@@ -16,6 +16,10 @@
       "download": "Download Beta (20M)",
       "docs": "Developer Docs"
     },
+    "betaModal": {
+      "title": "Join the Beta Group",
+      "desc": "Scan the QR code to join the beta WeChat group for downloads and update notices."
+    },
     "stats": {
       "ecosystem": "Rich plugin ecosystem",
       "tabs": "Parallel multitasking",

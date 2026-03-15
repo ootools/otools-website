@@ -16,6 +16,10 @@
       "download": "Beta herunterladen (20M)",
       "docs": "Entwickler‑Doku"
     },
+    "betaModal": {
+      "title": "Der Beta‑Gruppe beitreten",
+      "desc": "QR‑Code scannen, um der WeChat‑Beta‑Gruppe beizutreten und Downloads sowie Updates zu erhalten."
+    },
     "stats": {
       "ecosystem": "Reiches Plugin‑Ökosystem",
       "tabs": "Paralleles Multitasking",

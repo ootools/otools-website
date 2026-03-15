@@ -12,12 +12,13 @@
             <span class="typing-text" :class="{ 'show-cursor': typingPhase === 'desc' }">{{ typedDesc }}</span>
           </p>
           <div class="flex flex-wrap items-center gap-4">
-            <a
-              :href="downloadLink"
+            <button
+              type="button"
               class="inline-flex items-center justify-center bg-primary text-white px-8 py-3 rounded-lg shadow-lg transition hover:bg-primary/90"
+              @click="openDownloadModal"
             >
               {{ t('hero.cta.download') }}
-            </a>
+            </button>
             <a
               :href="docsLink"
               class="inline-flex items-center justify-center border border-white/40 text-white px-8 py-3 rounded-lg transition hover:bg-white/10"
@@ -148,6 +149,21 @@
         </div>
       </div>
     </transition>
+
+    <transition name="hero-overlay">
+      <div v-if="downloadModalOpen" class="hero-overlay beta-overlay" @click="closeDownloadModal">
+        <div class="beta-overlay-card" @click.stop>
+          <div class="beta-overlay-header">
+            <div class="beta-overlay-title">{{ t('hero.betaModal.title') }}</div>
+            <button class="beta-overlay-close" @click="closeDownloadModal">✕</button>
+          </div>
+          <div class="beta-overlay-body">
+            <img class="beta-qr" src="/weixin.jpg" alt="WeChat QR" loading="lazy" />
+            <p class="beta-overlay-desc">{{ t('hero.betaModal.desc') }}</p>
+          </div>
+        </div>
+      </div>
+    </transition>
   </section>
 </template>
 
@@ -161,7 +177,6 @@ const { t, tm } = useI18n();
 
 const localeBase = computed(() => localePath?.value ?? '/');
 const withLocale = (path: string) => (localeBase.value === '/' ? `/${path}` : `${localeBase.value}${path}`);
-const downloadLink = computed(() => withLocale('features'));
 const docsLink = computed(() => withLocale('guide/overview'));
 
 const tabMeta = [
@@ -236,6 +251,7 @@ const tabs = computed(() =>
 const activeTab = ref(0);
 const overlayOpen = ref(false);
 const overlayTab = ref(0);
+const downloadModalOpen = ref(false);
 const compareWrap = ref<HTMLElement | null>(null);
 const compareRatio = ref(0.5);
 const compareDragging = ref(false);
@@ -276,6 +292,14 @@ const openOverlay = (index: number) => {
   overlayOpen.value = true;
   compareRatio.value = 0.5;
   compareDragging.value = false;
+};
+
+const openDownloadModal = () => {
+  downloadModalOpen.value = true;
+};
+
+const closeDownloadModal = () => {
+  downloadModalOpen.value = false;
 };
 
 const closeOverlay = () => {
@@ -411,6 +435,7 @@ const wait = (ms: number) =>
 const onKeydown = (event: KeyboardEvent) => {
   if (event.key === 'Escape') {
     overlayOpen.value = false;
+    downloadModalOpen.value = false;
   }
 };
 
