@@ -13,30 +13,30 @@
           </p>
           <div class="flex flex-wrap items-center gap-4">
             <a
-              href="/features"
+              :href="downloadLink"
               class="inline-flex items-center justify-center bg-primary text-white px-8 py-3 rounded-lg shadow-lg transition hover:bg-primary/90"
             >
-              下载内测版(20M)
+              {{ t('hero.cta.download') }}
             </a>
             <a
-              href="/guide/overview"
+              :href="docsLink"
               class="inline-flex items-center justify-center border border-white/40 text-white px-8 py-3 rounded-lg transition hover:bg-white/10"
             >
-              开发者文档
+              {{ t('hero.cta.docs') }}
             </a>
           </div>
           <div class="mt-10 grid grid-cols-1 sm:grid-cols-3 gap-4 text-white/80">
             <div class="bg-white/10 border border-white/10 rounded-xl p-4">
               <div class="text-2xl font-semibold">40+</div>
-              <div class="text-sm">丰富的插件生态</div>
+              <div class="text-sm">{{ t('hero.stats.ecosystem') }}</div>
             </div>
             <div class="bg-white/10 border border-white/10 rounded-xl p-4">
               <div class="text-2xl font-semibold">Tabs</div>
-              <div class="text-sm">多任务并行机制</div>
+              <div class="text-sm">{{ t('hero.stats.tabs') }}</div>
             </div>
             <div class="bg-white/10 border border-white/10 rounded-xl p-4">
               <div class="text-2xl font-semibold">Rust</div>
-              <div class="text-sm">高性能插件底层支持</div>
+              <div class="text-sm">{{ t('hero.stats.rust') }}</div>
             </div>
           </div>
         </div>
@@ -108,14 +108,14 @@
                 <img
                   class="hero-compare-base"
                   :src="overlayImages.dark"
-                  :alt="`${tabs[overlayTab].title} 暗黑版`"
+                  :alt="`${tabs[overlayTab].title} ${t('common.dark')}`"
                   loading="lazy"
                 />
                 <div class="hero-compare-top">
                   <img
                     class="hero-compare-image"
                     :src="overlayImages.light"
-                    :alt="`${tabs[overlayTab].title} 明亮版`"
+                    :alt="`${tabs[overlayTab].title} ${t('common.light')}`"
                     loading="lazy"
                   />
                 </div>
@@ -123,18 +123,26 @@
                 <span class="hero-compare-line"></span>
                 <span class="hero-compare-knob"></span>
               </div>
-              <div class="hero-compare-hint">拖动圆形按钮对比明暗模式</div>
+              <div class="hero-compare-hint">{{ t('common.compareHint') }}</div>
             </div>
-              <div v-else class="overlay-caption">主程序截图占位</div>
+              <div v-else class="overlay-caption">{{ t('common.overlayPlaceholder') }}</div>
             </div>
             <div class="hero-overlay-footer">
               {{ tabs[overlayTab].desc }}
             </div>
           </div>
-          <button class="hero-overlay-nav hero-overlay-prev" @click.stop="prevOverlayTab" aria-label="上一项">
+          <button
+            class="hero-overlay-nav hero-overlay-prev"
+            @click.stop="prevOverlayTab"
+            :aria-label="t('common.prev')"
+          >
             ‹
           </button>
-          <button class="hero-overlay-nav hero-overlay-next" @click.stop="nextOverlayTab" aria-label="下一项">
+          <button
+            class="hero-overlay-nav hero-overlay-next"
+            @click.stop="nextOverlayTab"
+            :aria-label="t('common.next')"
+          >
             ›
           </button>
         </div>
@@ -145,121 +153,85 @@
 
 <script setup lang="ts">
 import { computed, onBeforeUnmount, onMounted, ref } from 'vue';
+import { useData } from 'vitepress';
+import { useI18n } from '../i18n';
 
-const tabs = [
+const { localePath } = useData();
+const { t, tm } = useI18n();
+
+const localeBase = computed(() => localePath?.value ?? '/');
+const withLocale = (path: string) => (localeBase.value === '/' ? `/${path}` : `${localeBase.value}${path}`);
+const downloadLink = computed(() => withLocale('features'));
+const docsLink = computed(() => withLocale('guide/overview'));
+
+const tabMeta = [
   {
     key: 'home',
-    label: '首页',
-    title: '生态入口',
-    desc: '工具聚合与插件快速访问。',
     colors: ['#1d4ed8', '#0ea5e9'],
     imageLight: '/crop/home-light.png',
     imageDark: '/crop/home.png',
-    cards: [
-      { title: '插件市场', desc: '精选 + 评分 + 更新' },
-      { title: '开发者中心', desc: 'Web + Rust 构建' },
-      { title: 'Tabs 工作流', desc: '多任务并行' },
-    ],
   },
   {
     key: 'git',
-    label: 'Git',
-    title: '章鱼Git',
-    desc: '新型Git仓库管理与 AI 协作。',
     colors: ['#0f172a', '#1d4ed8'],
     imageLight: '/crop/git-light.png',
     imageDark: '/crop/git.png',
-    cards: [
-      { title: 'AI 生成提交信息', desc: '一键生成提交说明' },
-      { title: 'AI 软著申请', desc: '自动生成软著申请的表单与文档' },
-      { title: '子模块直达', desc: '快捷式子模块访问' },
-    ],
   },
   {
     key: 'dbm',
-    label: '数据库',
-    title: '鲨鱼数据库',
-    desc: 'Mysql/Postgres/MongoDB等数据表结构与查询管理。',
     colors: ['#0f766e', '#2dd4bf'],
     imageLight: '/crop/dbm-light.png',
     imageDark: '/crop/dbm.png',
-    cards: [
-      { title: '连接管理', desc: '多库统一管理' },
-      { title: '结构浏览', desc: '表结构/索引查看' },
-      { title: '数据操作', desc: '增删改查与导出' },
-    ],
   },
   {
     key: 'ssh',
-    label: 'SSH',
-    title: '墨鱼终端',
-    desc: '终端与SFTP协同。',
     colors: ['#0f766e', '#22c55e'],
     imageLight: '/crop/ssh-light.png',
     imageDark: '/crop/ssh.png',
-    cards: [
-      { title: '终端会话', desc: '多会话并行' },
-      { title: 'SFTP 文件', desc: '上传/下载/同步' },
-      { title: '快捷操作', desc: '常用命令模板' },
-    ],
   },
   {
     key: 'servrun',
-    label: '开发环境',
-    title: '珊瑚Env',
-    desc: '本地Nginx/PHP/Mysql/Redis等开发环境一键管理。',
     colors: ['#7c3aed', '#a78bfa'],
     imageLight: '/crop/servrun-light.png',
     imageDark: '/crop/servrun.png',
-    cards: [
-      { title: '服务管理', desc: 'Nginx/PHP/MySQL' },
-      { title: '配置生成', desc: 'vHost 一键配置' },
-      { title: '版本切换', desc: '多版本并行' },
-    ],
   },
   {
     key: 'ollama',
-    label: 'Ollama',
-    title: '乌贼Ollama',
-    desc: '本地大模型可视化管理与运行。',
     colors: ['#6d28d9', '#a855f7'],
     imageLight: '/crop/ollama-light.png',
     imageDark: '/crop/ollama.png',
-    cards: [
-      { title: '模型管理', desc: '版本 + 依赖' },
-      { title: '性能监控', desc: 'GPU/CPU 占用' },
-      { title: '会话历史', desc: '多轮对话' },
-    ],
   },
   {
     key: 'audio',
-    label: '音频',
-    title: '海豚音频工坊',
-    desc: '音频处理与实验室。',
     colors: ['#f97316', '#facc15'],
     imageLight: '/crop/audio-light.png',
     imageDark: '/crop/audio.png',
-    cards: [
-      { title: '波形编辑', desc: '轨道级剪辑' },
-      { title: '效果链', desc: '滤波 + 混响' },
-      { title: '导出管理', desc: '多格式输出' },
-    ],
   },
   {
     key: 'http',
-    label: 'HTTP',
-    title: '飞鱼HTTP',
-    desc: '请求编排与响应洞察。',
     colors: ['#0ea5e9', '#38bdf8'],
     imageLight: '/crop/http-light.png',
     imageDark: '/crop/http.png',
-    cards: [
-      { title: '请求编排', desc: '多接口批量执行' },
-      { title: '响应洞察', desc: '状态与性能分析' },
-      { title: '环境切换', desc: '开发/测试/生产' },
-    ],
   },
 ];
+
+const tabs = computed(() =>
+  tabMeta.map((meta) => {
+    const text = (tm(`hero.tabs.${meta.key}`) as {
+      label?: string;
+      title?: string;
+      desc?: string;
+      cards?: Array<{ title: string; desc: string }>;
+    }) || {};
+    return {
+      ...meta,
+      label: text.label ?? meta.key,
+      title: text.title ?? '',
+      desc: text.desc ?? '',
+      cards: text.cards ?? [],
+    };
+  })
+);
 
 const activeTab = ref(0);
 const overlayOpen = ref(false);
@@ -271,24 +243,24 @@ let compareWindowBound = false;
 const typedTitle = ref('');
 const typedDesc = ref('');
 const typingPhase = ref<'title' | 'desc' | 'done'>('title');
-const fullTitle = 'OTools 高性能AI工作流平台-小身躯大能量';
-const fullDesc = '以 Tabs 多任务化为核心，统一插件生态、原生能力与桌面运行时。让每个工具都成为可组合的开放AI工作流模块。';
-const titlePrefixTyped = 'OceanTools';
-const titleSuffix = ' 高性能AI工作流平台-小身躯大能量';
+const fullTitle = computed(() => t('hero.title'));
+const fullDesc = computed(() => t('hero.desc'));
+const titlePrefixTyped = computed(() => t('hero.titlePrefix'));
+const titleSuffix = computed(() => t('hero.titleSuffix'));
 let typingTimer: number | null = null;
 let typingStopped = false;
 let tabTimer: number | null = null;
 
 const screenStyle = computed(() => ({
-  background: `linear-gradient(135deg, ${tabs[activeTab.value].colors[0]}, ${tabs[activeTab.value].colors[1]})`,
+  background: `linear-gradient(135deg, ${tabs.value[activeTab.value].colors[0]}, ${tabs.value[activeTab.value].colors[1]})`,
 }));
 
 const overlayStyle = computed(() => ({
-  background: `linear-gradient(135deg, ${tabs[overlayTab.value].colors[0]}, ${tabs[overlayTab.value].colors[1]})`,
+  background: `linear-gradient(135deg, ${tabs.value[overlayTab.value].colors[0]}, ${tabs.value[overlayTab.value].colors[1]})`,
 }));
 
 const overlayImages = computed(() => {
-  const tab = tabs[overlayTab.value];
+  const tab = tabs.value[overlayTab.value];
   const light = tab.imageLight || tab.imageDark || '';
   const dark = tab.imageDark || tab.imageLight || '';
   return { light, dark };
@@ -313,13 +285,13 @@ const closeOverlay = () => {
 };
 
 const prevOverlayTab = () => {
-  overlayTab.value = (overlayTab.value - 1 + tabs.length) % tabs.length;
+  overlayTab.value = (overlayTab.value - 1 + tabs.value.length) % tabs.value.length;
   activeTab.value = overlayTab.value;
   compareRatio.value = 0.5;
 };
 
 const nextOverlayTab = () => {
-  overlayTab.value = (overlayTab.value + 1) % tabs.length;
+  overlayTab.value = (overlayTab.value + 1) % tabs.value.length;
   activeTab.value = overlayTab.value;
   compareRatio.value = 0.5;
 };
@@ -387,7 +359,7 @@ const startTabAuto = () => {
   clearTabTimer();
   tabTimer = window.setInterval(() => {
     if (overlayOpen.value) return;
-    activeTab.value = (activeTab.value + 1) % tabs.length;
+    activeTab.value = (activeTab.value + 1) % tabs.value.length;
   }, 5000);
 };
 
@@ -448,17 +420,17 @@ onMounted(() => {
       typedTitle.value = '';
       typedDesc.value = '';
       typingPhase.value = 'title';
-      await typeText(titlePrefixTyped, typedTitle, 95);
+      await typeText(titlePrefixTyped.value, typedTitle, 95);
       if (typingStopped) return;
       await wait(1000);
-      await eraseMiddle(titlePrefixTyped, 1, 4, typedTitle, 140);
+      await eraseMiddle(titlePrefixTyped.value, 1, 4, typedTitle, 140);
       if (typingStopped) return;
       await wait(220);
-      await typeText(titleSuffix, typedTitle, 95, typedTitle.value);
+      await typeText(titleSuffix.value, typedTitle, 95, typedTitle.value);
       if (typingStopped) return;
       typingPhase.value = 'desc';
       await wait(180);
-      await typeText(fullDesc, typedDesc, 65);
+      await typeText(fullDesc.value, typedDesc, 65);
       typingPhase.value = 'done';
       await wait(4200);
     }

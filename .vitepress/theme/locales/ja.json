@@ -1,0 +1,239 @@
+{
+  "common": {
+    "dark": "ダーク",
+    "light": "ライト",
+    "compareHint": "丸いハンドルをドラッグして明暗を比較",
+    "overlayPlaceholder": "メインアプリのスクリーンショットのプレースホルダー",
+    "prev": "前へ",
+    "next": "次へ"
+  },
+  "hero": {
+    "title": "OTools 高性能AIワークフロープラットフォーム-小さな体で大きな力",
+    "desc": "Tabs マルチタスクを中心に、プラグインエコシステムとネイティブ能力、デスクトップランタイムを統合。すべてのツールを組み合わせ可能なAIワークフローモジュールに。",
+    "titlePrefix": "OceanTools",
+    "titleSuffix": " 高性能AIワークフロープラットフォーム-小さな体で大きな力",
+    "cta": {
+      "download": "ベータ版をダウンロード(20M)",
+      "docs": "開発者ドキュメント"
+    },
+    "stats": {
+      "ecosystem": "豊富なプラグインエコシステム",
+      "tabs": "並列マルチタスク",
+      "rust": "高性能プラグイン基盤"
+    },
+    "tabs": {
+      "home": {
+        "label": "ホーム",
+        "title": "エコシステム入口",
+        "desc": "ツール統合とプラグインへの高速アクセス。",
+        "cards": [
+          { "title": "マーケット", "desc": "厳選 + 評価 + 更新" },
+          { "title": "開発者センター", "desc": "Web + Rust 構築" },
+          { "title": "Tabs ワークフロー", "desc": "並列タスク" }
+        ]
+      },
+      "git": {
+        "label": "Git",
+        "title": "タコGit",
+        "desc": "新しいGit管理とAI協業。",
+        "cards": [
+          { "title": "AI コミット生成", "desc": "コミット説明をワンクリック" },
+          { "title": "AI 申請書生成", "desc": "申請フォームと文書を自動生成" },
+          { "title": "サブモジュール直達", "desc": "サブモジュールへ素早く" }
+        ]
+      },
+      "dbm": {
+        "label": "データベース",
+        "title": "サメDB",
+        "desc": "MySQL/Postgres/MongoDB の構造とクエリ管理。",
+        "cards": [
+          { "title": "接続管理", "desc": "複数DBを統一管理" },
+          { "title": "構造閲覧", "desc": "テーブル/インデックス" },
+          { "title": "データ操作", "desc": "CRUD とエクスポート" }
+        ]
+      },
+      "ssh": {
+        "label": "SSH",
+        "title": "イカ端末",
+        "desc": "ターミナルとSFTP連携。",
+        "cards": [
+          { "title": "ターミナル会話", "desc": "並列セッション" },
+          { "title": "SFTP ファイル", "desc": "アップ/ダウン/同期" },
+          { "title": "クイック操作", "desc": "よく使うコマンド" }
+        ]
+      },
+      "servrun": {
+        "label": "開発環境",
+        "title": "サンゴEnv",
+        "desc": "Nginx/PHP/MySQL/Redis をワンクリック管理。",
+        "cards": [
+          { "title": "サービス管理", "desc": "Nginx/PHP/MySQL" },
+          { "title": "設定生成", "desc": "vHost ワンクリック" },
+          { "title": "バージョン切替", "desc": "複数バージョン" }
+        ]
+      },
+      "ollama": {
+        "label": "Ollama",
+        "title": "イカOllama",
+        "desc": "ローカルモデルの可視化管理。",
+        "cards": [
+          { "title": "モデル管理", "desc": "バージョン + 依存" },
+          { "title": "性能監視", "desc": "GPU/CPU 使用率" },
+          { "title": "会話履歴", "desc": "マルチターン" }
+        ]
+      },
+      "audio": {
+        "label": "音声",
+        "title": "イルカ音声工房",
+        "desc": "音声処理と実験室。",
+        "cards": [
+          { "title": "波形編集", "desc": "トラック単位" },
+          { "title": "エフェクトチェーン", "desc": "フィルター + リバーブ" },
+          { "title": "エクスポート", "desc": "複数形式" }
+        ]
+      },
+      "http": {
+        "label": "HTTP",
+        "title": "トビウオHTTP",
+        "desc": "リクエスト編成とレスポンス洞察。",
+        "cards": [
+          { "title": "リクエスト編成", "desc": "複数APIを一括" },
+          { "title": "レスポンス洞察", "desc": "状態と性能" },
+          { "title": "環境切替", "desc": "開発/テスト/本番" }
+        ]
+      }
+    }
+  },
+  "origin": {
+    "label": "名称の由来と意味",
+    "title": "O は Ocean、そして 0 から始めるAIの海",
+    "desc": "OTools は海とツールの融合から生まれ、エコシステムとスケール、0から1への探究を伝えます。",
+    "points": [
+      "O は Ocean に由来し、万物を包み込む豊富なプラグインを象徴します。公式プラグインも海洋名で統一。",
+      "O は 0 に似ており、AI時代に新しいプラットフォームを再構築する意味。",
+      "Ocean と Tools の音から OTools、中文名「海兔」は軽快で機敏な相棒を表します。"
+    ],
+    "cardTitle": "中文名 · 海兔",
+    "cardDesc": "軽量・俊敏・ひらめき駆動のAIワークフロー",
+    "quote": "海から始まり、ツールが集まる。AIワークフローの基盤となる。"
+  },
+  "platform": {
+    "title": "プラットフォーム能力",
+    "subtitle": "エコシステム・性能・協業を中心にデスクトップミニアプリ基盤を構築。",
+    "items": [
+      { "title": "海洋プラグイン体系", "desc": "ディレクトリ、バージョン、配布を統一。" },
+      { "title": "Tabs マルチタスク", "desc": "多重起動と文脈保持、長い作業に最適。" },
+      { "title": "統一ランタイム", "desc": "Web + Native、統一APIと状態管理。" },
+      { "title": "高性能基盤", "desc": "Rust + Tauri で高速・低負荷・安定。" },
+      { "title": "AIフレンドリー", "desc": "統一MCPでAIプラグインワークフロー。" },
+      { "title": "Native 拡張", "desc": "Rust動的ライブラリで性能拡張。" }
+    ]
+  },
+  "apiMatrix": {
+    "header": {
+      "group": "機能グループ",
+      "items": "含まれる内容"
+    },
+    "rows": [
+      { "group": "システム", "items": "クリップボード、ファイル/パス、通知、Shell操作" },
+      { "group": "実行時情報", "items": "プラットフォーム、バージョン、UUID、環境変数" },
+      { "group": "Native", "items": "ロード、呼び出し、検出、ホットリロード" },
+      { "group": "プラグイン状態", "items": "ローカル/同期状態、scheme 多ファイル" }
+    ]
+  },
+  "pluginShowcase": {
+    "title": "プラグインのビジュアル展示",
+    "subtitle": "以下の公式プラグイン以外にも、マーケットには優秀なサードパーティが多数あります。",
+    "tabs": {
+      "home": {
+        "label": "ホーム",
+        "subtitle": "入口 · 集約",
+        "features": [
+          { "title": "マーケット", "desc": "厳選 + 評価 + 更新" },
+          { "title": "開発者センター", "desc": "Web + Rust 構築" },
+          { "title": "Tabs ワークフロー", "desc": "並列タスク" }
+        ]
+      },
+      "git": {
+        "label": "Git",
+        "subtitle": "AIコミット · 申請文書",
+        "features": [
+          { "title": "AI コミット生成", "desc": "コミット説明をワンクリック" },
+          { "title": "AI 申請書生成", "desc": "申請フォーム自動生成" },
+          { "title": "サブモジュール直達", "desc": "素早いアクセス" }
+        ]
+      },
+      "dbm": {
+        "label": "データベース",
+        "subtitle": "複数DB · 構造照会",
+        "features": [
+          { "title": "接続管理", "desc": "複数DBを統一管理" },
+          { "title": "構造閲覧", "desc": "テーブル/インデックス" },
+          { "title": "データ操作", "desc": "CRUD とエクスポート" }
+        ]
+      },
+      "ssh": {
+        "label": "SSH",
+        "subtitle": "ターミナル · SFTP",
+        "features": [
+          { "title": "ターミナル会話", "desc": "並列セッション" },
+          { "title": "SFTP ファイル", "desc": "アップ/ダウン/同期" },
+          { "title": "クイック操作", "desc": "コマンドテンプレ" }
+        ]
+      },
+      "servrun": {
+        "label": "開発環境",
+        "subtitle": "Nginx/PHP/MySQL",
+        "features": [
+          { "title": "サービス管理", "desc": "Nginx/PHP/MySQL" },
+          { "title": "設定生成", "desc": "vHost ワンクリック" },
+          { "title": "バージョン切替", "desc": "複数バージョン" }
+        ]
+      },
+      "ollama": {
+        "label": "Ollama",
+        "subtitle": "ローカルモデル · 性能",
+        "features": [
+          { "title": "モデル管理", "desc": "バージョン + 依存" },
+          { "title": "性能監視", "desc": "GPU/CPU 使用率" },
+          { "title": "会話履歴", "desc": "マルチターン" }
+        ]
+      },
+      "audio": {
+        "label": "音声",
+        "subtitle": "波形編集 · エフェクト",
+        "features": [
+          { "title": "波形編集", "desc": "トラック単位" },
+          { "title": "エフェクトチェーン", "desc": "フィルター + リバーブ" },
+          { "title": "エクスポート", "desc": "複数形式" }
+        ]
+      },
+      "http": {
+        "label": "HTTP",
+        "subtitle": "リクエスト編成 · 洞察",
+        "features": [
+          { "title": "リクエスト編成", "desc": "複数APIを一括" },
+          { "title": "レスポンス洞察", "desc": "状態と性能" },
+          { "title": "環境切替", "desc": "開発/テスト/本番" }
+        ]
+      }
+    }
+  },
+  "tabsWorkflow": {
+    "title": "Tabs ワークフロー体験",
+    "subtitle": "統一入口・並列タスク・連携で文脈を保持。",
+    "items": [
+      { "title": "ツール発見", "desc": "海洋プラグイン庫から素早く探す。" },
+      { "title": "Tabs に固定", "desc": "同時に開いて切替コスト削減。" },
+      { "title": "フロー協作", "desc": "連携してAIワークフローを形成。" }
+    ]
+  },
+  "docCta": {
+    "title": "プラグインエコシステムを構築しませんか？",
+    "desc": "開発者ドキュメントで OTools API と Dev ワークフローを学ぶ。",
+    "actions": {
+      "api": "OTools API を見る",
+      "dev": "開発者モードガイド"
+    }
+  }
+}

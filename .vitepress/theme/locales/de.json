@@ -1,0 +1,239 @@
+{
+  "common": {
+    "dark": "Dunkel",
+    "light": "Hell",
+    "compareHint": "Ziehe den Regler, um Hell/Dunkel zu vergleichen",
+    "overlayPlaceholder": "Platzhalter für App‑Screenshot",
+    "prev": "Zurück",
+    "next": "Weiter"
+  },
+  "hero": {
+    "title": "OTools Hochleistungs‑KI‑Workflow‑Plattform – Klein, aber leistungsstark",
+    "desc": "Tabs‑Multitasking als Kern, vereint Plugin‑Ökosystem, Native‑Funktionen und Desktop‑Runtime. Jedes Tool wird zu einem komposierbaren KI‑Workflow‑Modul.",
+    "titlePrefix": "OceanTools",
+    "titleSuffix": " Hochleistungs‑KI‑Workflow‑Plattform – Klein, aber leistungsstark",
+    "cta": {
+      "download": "Beta herunterladen (20M)",
+      "docs": "Entwickler‑Doku"
+    },
+    "stats": {
+      "ecosystem": "Reiches Plugin‑Ökosystem",
+      "tabs": "Paralleles Multitasking",
+      "rust": "Hochleistungs‑Basis"
+    },
+    "tabs": {
+      "home": {
+        "label": "Start",
+        "title": "Ökosystem‑Hub",
+        "desc": "Tool‑Bündelung und schneller Plugin‑Zugriff.",
+        "cards": [
+          { "title": "Marketplace", "desc": "Kuratiert + Bewertet + Updates" },
+          { "title": "Developer Center", "desc": "Web + Rust Build" },
+          { "title": "Tabs‑Workflow", "desc": "Parallele Aufgaben" }
+        ]
+      },
+      "git": {
+        "label": "Git",
+        "title": "Oktopus Git",
+        "desc": "Moderne Git‑Verwaltung mit KI‑Kollaboration.",
+        "cards": [
+          { "title": "KI‑Commit‑Texte", "desc": "Mit einem Klick erzeugen" },
+          { "title": "KI‑Dokumente", "desc": "Formulare automatisch erzeugen" },
+          { "title": "Submodule", "desc": "Schneller Zugriff" }
+        ]
+      },
+      "dbm": {
+        "label": "Datenbank",
+        "title": "Haifisch‑DB",
+        "desc": "Schema‑ und Query‑Management für MySQL/Postgres/MongoDB.",
+        "cards": [
+          { "title": "Verbindungen", "desc": "Multi‑DB zentral" },
+          { "title": "Schema‑Ansicht", "desc": "Tabellen / Indizes" },
+          { "title": "Daten‑Ops", "desc": "CRUD und Export" }
+        ]
+      },
+      "ssh": {
+        "label": "SSH",
+        "title": "Sepia‑Terminal",
+        "desc": "Terminal und SFTP kombiniert.",
+        "cards": [
+          { "title": "Sessions", "desc": "Parallele Sessions" },
+          { "title": "SFTP‑Dateien", "desc": "Upload / Download / Sync" },
+          { "title": "Quick Actions", "desc": "Befehlsvorlagen" }
+        ]
+      },
+      "servrun": {
+        "label": "Dev‑Umgebung",
+        "title": "Korallen‑Env",
+        "desc": "Nginx/PHP/MySQL/Redis mit einem Klick verwalten.",
+        "cards": [
+          { "title": "Services", "desc": "Nginx/PHP/MySQL" },
+          { "title": "Config", "desc": "vHost mit einem Klick" },
+          { "title": "Versionen", "desc": "Multi‑Version" }
+        ]
+      },
+      "ollama": {
+        "label": "Ollama",
+        "title": "Tintenfisch Ollama",
+        "desc": "Visuelle Verwaltung lokaler Modelle.",
+        "cards": [
+          { "title": "Modelle", "desc": "Versionen + Abhängigkeiten" },
+          { "title": "Performance", "desc": "GPU/CPU‑Auslastung" },
+          { "title": "Historie", "desc": "Mehrturn‑Chats" }
+        ]
+      },
+      "audio": {
+        "label": "Audio",
+        "title": "Delfin‑Audio‑Lab",
+        "desc": "Audio‑Verarbeitung und Labor.",
+        "cards": [
+          { "title": "Waveform‑Edit", "desc": "Spur‑Bearbeitung" },
+          { "title": "Effects‑Chain", "desc": "Filter + Reverb" },
+          { "title": "Export", "desc": "Mehrere Formate" }
+        ]
+      },
+      "http": {
+        "label": "HTTP",
+        "title": "Fliegender Fisch HTTP",
+        "desc": "Request‑Orchestrierung und Insights.",
+        "cards": [
+          { "title": "Orchestrierung", "desc": "Batch‑Multi‑API" },
+          { "title": "Insights", "desc": "Status und Performance" },
+          { "title": "Umgebung", "desc": "Dev / Test / Prod" }
+        ]
+      }
+    }
+  },
+  "origin": {
+    "label": "Namensherkunft",
+    "title": "O steht für Ocean – und den Start bei Null",
+    "desc": "OTools verbindet Ozean und Tools und vermittelt Ökosystem, Skalierung und den Geist von 0→1.",
+    "points": [
+      "O stammt von Ocean und steht für Inklusivität und viele Plugins; offizielle Plugins folgen maritimen Namen.",
+      "O ähnelt 0 – ein Neuanfang im KI‑Zeitalter.",
+      "Ocean + Tools klingt wie OTools; der chinesische Name „Sea Rabbit“ steht für Leichtigkeit und Agilität."
+    ],
+    "cardTitle": "Chinesischer Name · Sea Rabbit",
+    "cardDesc": "Leichte, agile, inspirierte KI‑Workflow‑Plattform",
+    "quote": "Aus dem Ozean heraus Werkzeuge sammeln; Grundlage realer KI‑Workflows."
+  },
+  "platform": {
+    "title": "Plattform‑Fähigkeiten",
+    "subtitle": "Ökosystem, Performance und Zusammenarbeit für eine Desktop‑Mini‑App‑Plattform.",
+    "items": [
+      { "title": "Ozean‑Plugin‑Ökosystem", "desc": "Verzeichnis, Versionen und Distribution vereinheitlicht." },
+      { "title": "Tabs‑Multitasking", "desc": "Mehrfach öffnen, Kontext bleibt." },
+      { "title": "Unified Runtime", "desc": "Web + Native, API und State vereinheitlicht." },
+      { "title": "Hochleistungs‑Core", "desc": "Rust + Tauri, schnell und stabil." },
+      { "title": "AI‑freundlich", "desc": "Einheitliches MCP für KI‑Workflows." },
+      { "title": "Native Erweiterung", "desc": "Rust‑Dynlibs erweitern die Performance." }
+    ]
+  },
+  "apiMatrix": {
+    "header": {
+      "group": "Gruppe",
+      "items": "Inhalt"
+    },
+    "rows": [
+      { "group": "System", "items": "Zwischenablage, Dateien/Pfade, Benachrichtigungen, Shell" },
+      { "group": "Runtime‑Info", "items": "Plattform, Version, UUID, Umgebungsvariablen" },
+      { "group": "Native", "items": "Laden, Aufruf, Probe, Hot‑Reload" },
+      { "group": "Plugin‑State", "items": "Lokaler/Sync‑State, scheme‑Speicher" }
+    ]
+  },
+  "pluginShowcase": {
+    "title": "Plugin‑Visualisierung",
+    "subtitle": "Neben diesen offiziellen Plugins gibt es viele exzellente Drittanbieter‑Plugins.",
+    "tabs": {
+      "home": {
+        "label": "Start",
+        "subtitle": "Hub · Aggregation",
+        "features": [
+          { "title": "Marketplace", "desc": "Kuratiert + Bewertet + Updates" },
+          { "title": "Developer Center", "desc": "Web + Rust Build" },
+          { "title": "Tabs‑Workflow", "desc": "Parallele Aufgaben" }
+        ]
+      },
+      "git": {
+        "label": "Git",
+        "subtitle": "KI‑Commit · Dokumente",
+        "features": [
+          { "title": "KI‑Commit‑Texte", "desc": "Mit einem Klick erzeugen" },
+          { "title": "KI‑Dokumente", "desc": "Formulare automatisch" },
+          { "title": "Submodule", "desc": "Schneller Zugriff" }
+        ]
+      },
+      "dbm": {
+        "label": "Datenbank",
+        "subtitle": "Multi‑DB · Schema",
+        "features": [
+          { "title": "Verbindungen", "desc": "Multi‑DB zentral" },
+          { "title": "Schema‑Ansicht", "desc": "Tabellen / Indizes" },
+          { "title": "Daten‑Ops", "desc": "CRUD und Export" }
+        ]
+      },
+      "ssh": {
+        "label": "SSH",
+        "subtitle": "Terminal · SFTP",
+        "features": [
+          { "title": "Sessions", "desc": "Parallele Sessions" },
+          { "title": "SFTP‑Dateien", "desc": "Upload / Download / Sync" },
+          { "title": "Quick Actions", "desc": "Befehlsvorlagen" }
+        ]
+      },
+      "servrun": {
+        "label": "Dev‑Umgebung",
+        "subtitle": "Nginx/PHP/MySQL",
+        "features": [
+          { "title": "Services", "desc": "Nginx/PHP/MySQL" },
+          { "title": "Config", "desc": "vHost mit einem Klick" },
+          { "title": "Versionen", "desc": "Multi‑Version" }
+        ]
+      },
+      "ollama": {
+        "label": "Ollama",
+        "subtitle": "Lokale Modelle · Performance",
+        "features": [
+          { "title": "Modelle", "desc": "Versionen + Abhängigkeiten" },
+          { "title": "Performance", "desc": "GPU/CPU‑Auslastung" },
+          { "title": "Historie", "desc": "Mehrturn" }
+        ]
+      },
+      "audio": {
+        "label": "Audio",
+        "subtitle": "Waveform · Effekte",
+        "features": [
+          { "title": "Waveform‑Edit", "desc": "Spur‑Bearbeitung" },
+          { "title": "Effects‑Chain", "desc": "Filter + Reverb" },
+          { "title": "Export", "desc": "Mehrere Formate" }
+        ]
+      },
+      "http": {
+        "label": "HTTP",
+        "subtitle": "Orchestrierung · Insights",
+        "features": [
+          { "title": "Orchestrierung", "desc": "Batch‑Multi‑API" },
+          { "title": "Insights", "desc": "Status und Performance" },
+          { "title": "Umgebung", "desc": "Dev / Test / Prod" }
+        ]
+      }
+    }
+  },
+  "tabsWorkflow": {
+    "title": "Tabs‑Workflow‑Erlebnis",
+    "subtitle": "Einheitlicher Einstieg, parallele Aufgaben, Plugin‑Kollaboration.",
+    "items": [
+      { "title": "Tools entdecken", "desc": "Fähigkeiten schnell finden." },
+      { "title": "An Tabs pinnen", "desc": "Parallel öffnen, weniger Wechsel." },
+      { "title": "Flow‑Kollaboration", "desc": "KI‑Workflow bilden." }
+    ]
+  },
+  "docCta": {
+    "title": "Bereit, dein Plugin‑Ökosystem zu bauen?",
+    "desc": "Sieh dir die Entwickler‑Docs zu OTools API und Dev an.",
+    "actions": {
+      "api": "OTools API ansehen",
+      "dev": "Entwicklermodus‑Guide"
+    }
+  }
+}

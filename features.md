@@ -1,3 +1,7 @@
+---
+layout: doc
+---
+
 # 功能亮点
 
 OTools 将“工具集成、插件生态、Tabs 多任务”合并为一个高性能桌面平台。以下是核心能力概览。
@@ -37,4 +41,4 @@ OTools 将“工具集成、插件生态、Tabs 多任务”合并为一个高�
 
 <ApiMatrix />
 
-<PluginShowcase />
+<!-- <PluginShowcase /> -->

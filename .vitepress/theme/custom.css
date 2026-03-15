@@ -10,7 +10,110 @@
 }
 
 .VPNav {
-  display: none;
+  display: block;
+  transition: transform 0.32s ease, opacity 0.2s ease, background-color 0.3s ease;
+}
+
+.layout-home:not(.nav-scrolled),
+.home-nav-transparent {
+  --vp-nav-bg-color: transparent;
+  --vp-nav-screen-bg-color: rgba(10, 15, 45, 0.96);
+}
+
+.nav-scrolled {
+  --vp-nav-bg-color: rgba(255, 255, 255, 0.9);
+}
+
+.nav-hidden .VPNav {
+  transform: translateY(-110%);
+  opacity: 0;
+  pointer-events: none;
+}
+
+.nav-scrolled .VPNav {
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(8px);
+}
+
+:is(.layout-home:not(.nav-scrolled), .home-nav-transparent) .VPNav {
+  background: transparent;
+  box-shadow: none;
+  border-bottom: 0;
+}
+
+.home-nav-transparent .VPNavBar,
+.layout-home:not(.nav-scrolled) .VPNavBar {
+  background: transparent !important;
+}
+
+.home-nav-transparent .VPNavBar .container,
+.home-nav-transparent .VPNavBar .content,
+.home-nav-transparent .VPNavBar .title,
+.layout-home:not(.nav-scrolled) .VPNavBar .container,
+.layout-home:not(.nav-scrolled) .VPNavBar .content,
+.layout-home:not(.nav-scrolled) .VPNavBar .title {
+  background: transparent !important;
+}
+
+.home-nav-transparent .VPNavBarTitle .title,
+.home-nav-transparent .VPNavBarMenuLink,
+.home-nav-transparent .VPNavBarMenuLink.active,
+.layout-home:not(.nav-scrolled) .VPNavBarTitle .title,
+.layout-home:not(.nav-scrolled) .VPNavBarMenuLink,
+.layout-home:not(.nav-scrolled) .VPNavBarMenuLink.active {
+  color: #f8fafc;
+}
+
+.home-nav-transparent .VPNavBarTitle .logo,
+.layout-home:not(.nav-scrolled) .VPNavBarTitle .logo {
+  filter: none;
+  content: url('/otools-logo-white.svg');
+}
+
+.home-nav-transparent .VPNavBarMenuLink:hover,
+.layout-home:not(.nav-scrolled) .VPNavBarMenuLink:hover {
+  color: #ffffff;
+}
+
+.home-nav-transparent .VPNavBarTranslations button,
+.layout-home:not(.nav-scrolled) .VPNavBarTranslations button {
+  color: #f8fafc;
+  border-color: rgba(255, 255, 255, 0.22);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.home-nav-transparent .VPNavBarTranslations .text,
+.home-nav-transparent .VPNavBarTranslations .button,
+.home-nav-transparent .VPNavBarTranslations .text-icon,
+.home-nav-transparent .VPNavBarTranslations .option-icon {
+  color: #f8fafc;
+}
+
+.home-nav-transparent .VPNavBarTranslations .icon {
+  fill: #f8fafc;
+}
+
+.home-nav-transparent .VPNavBarTranslations button:hover,
+.layout-home:not(.nav-scrolled) .VPNavBarTranslations button:hover {
+  background: rgba(255, 255, 255, 0.16);
+}
+
+.home-nav-transparent .VPNavBarHamburger .line,
+.layout-home:not(.nav-scrolled) .VPNavBarHamburger .line {
+  background-color: #ffffff;
+}
+
+.home-nav-transparent .divider-line,
+.home-nav-transparent .divider {
+  background-color: transparent !important;
+}
+
+.home-nav-transparent .menu + .translations::before,
+.home-nav-transparent .menu + .appearance::before,
+.home-nav-transparent .menu + .social-links::before,
+.home-nav-transparent .translations + .appearance::before,
+.home-nav-transparent .appearance + .social-links::before {
+  background-color: rgba(255, 255, 255, 0.2);
 }
 
 .site-header {
@@ -24,8 +127,117 @@
   pointer-events: none;
 }
 
+.nav-actions {
+  display: inline-flex;
+  align-items: center;
+}
+
+.locale-switcher {
+  position: relative;
+}
+
+.locale-trigger {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  border-radius: 999px;
+  font-size: 12px;
+  border: 1px solid transparent;
+  transition: 0.2s ease;
+  backdrop-filter: blur(6px);
+}
+
+.locale-trigger-light {
+  border-color: rgba(15, 23, 42, 0.12);
+  color: #334155;
+  background: rgba(255, 255, 255, 0.9);
+}
+
+.locale-trigger-light:hover {
+  background: #ffffff;
+  border-color: rgba(48, 86, 211, 0.35);
+  color: #1e3a8a;
+}
+
+.locale-trigger-dark {
+  border-color: rgba(255, 255, 255, 0.25);
+  color: rgba(255, 255, 255, 0.9);
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.locale-trigger-dark:hover {
+  background: rgba(255, 255, 255, 0.18);
+}
+
+.locale-caret {
+  font-size: 10px;
+  opacity: 0.7;
+}
+
+.locale-panel {
+  position: absolute;
+  right: 0;
+  top: calc(100% + 8px);
+  min-width: 140px;
+  padding: 6px;
+  border-radius: 12px;
+  border: 1px solid transparent;
+  box-shadow: 0 18px 36px rgba(15, 23, 42, 0.18);
+  display: grid;
+  gap: 4px;
+  z-index: 60;
+}
+
+.locale-panel-light {
+  background: #ffffff;
+  border-color: rgba(15, 23, 42, 0.08);
+}
+
+.locale-panel-dark {
+  background: rgba(15, 23, 42, 0.92);
+  border-color: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(8px);
+}
+
+.locale-item {
+  display: block;
+  padding: 6px 10px;
+  border-radius: 8px;
+  font-size: 12px;
+  color: inherit;
+  transition: 0.2s ease;
+}
+
+.locale-panel-light .locale-item {
+  color: #475569;
+}
+
+.locale-panel-dark .locale-item {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.locale-item:hover {
+  background: rgba(48, 86, 211, 0.12);
+  color: #1e3a8a;
+}
+
+.locale-panel-dark .locale-item:hover {
+  color: #ffffff;
+}
+
 .VPContent .container {
   max-width: 1320px;
+}
+
+.layout-home .VPContent {
+  margin-top: 0;
+}
+
+@media (min-width: 960px) {
+  .layout-home .VPContent {
+    padding-top: 0;
+  }
 }
 
 .layout-body .VPContent {
@@ -549,7 +761,7 @@
 .tabs-compare-tab {
   position: relative;
   overflow: hidden;
-  --tab-progress-duration: 4s;
+  --tab-progress-duration: 5s;
   border: 1px solid #e2e8f0;
   background: #f8fafc;
   color: #475569;
