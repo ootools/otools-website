@@ -6,10 +6,12 @@ OTools ist eine Desktop‑Mini‑App‑Plattform für professionelle Szenarien. 
 
 - **OTools API**: Runtime‑Funktionen, System‑APIs, Native‑Plugin‑Aufrufe, lokale/synchrone Zustandspeicherung.
 - **Entwicklermodus**: Plugin‑Erstellung, Bindung, Debugging, Build und Release‑Workflow.
+- **Kompatibilität**: bestehende Tauri‑Projekte gleichzeitig für Standalone‑Veröffentlichung und OTools‑Plugin‑Veröffentlichung anpassen.
 
 ## Schnellzugriff
 
 - [OTools API](./otools-api)
 - [Entwicklermodus](./dev)
+- [Kompatibilität](./migration)
 
 <PlatformHighlights />

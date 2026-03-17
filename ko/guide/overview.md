@@ -6,10 +6,12 @@ OTools는 전문 환경을 위한 데스크톱 미니앱 플랫폼입니다. 해
 
 - **OTools API**: 런타임 기능, 시스템 인터페이스, Native 플러그인 호출, 로컬/동기 상태 저장.
 - **개발자 모드**: 플러그인 생성, 바인딩, 디버깅, 빌드 및 배포 흐름.
+- **호환**: 기존 Tauri 프로젝트를 독립 배포와 OTools 플러그인 배포 양쪽에 맞추는 방법.
 
 ## 빠른 링크
 
 - [OTools API](./otools-api)
 - [개발자 모드](./dev)
+- [호환](./migration)
 
 <PlatformHighlights />
