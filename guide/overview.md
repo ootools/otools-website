@@ -6,10 +6,12 @@ OTools 是一款面向专业场景的桌面版小程序平台，通过海洋生�
 
 - **OTools API**：运行时能力、系统接口、Native 插件调用、本地/同步状态存储。
 - **开发者模式**：插件创建、绑定、调试、构建与发布流程。
+- **兼容**：已有 Tauri 工程同时兼容独立发布与 OTools 插件发布。
 
 ## 快速入口
 
 - [OTools API](./otools-api)
 - [开发者模式](./dev)
+- [兼容](./migration)
 
 <PlatformHighlights />

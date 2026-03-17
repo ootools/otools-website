@@ -237,6 +237,7 @@ export default defineConfig({
             { text: '概览', link: '/guide/overview' },
             { text: 'OTools API', link: '/guide/otools-api' },
             { text: '开发者模式', link: '/guide/dev' },
+            { text: '兼容', link: '/guide/migration' },
           ],
         },
       ],

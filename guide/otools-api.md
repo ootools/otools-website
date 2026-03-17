@@ -76,3 +76,39 @@ const syncState = await otools.getPluginSyncState(plugin, 'profile');
 ```
 
 > 提示：`scheme` 不传时默认 `state.json`，传入 `workspace` 会生成 `workspace.json`。
+
+## 6. AI 能力
+
+OTools 主程序已将 AI 调用统一封装，Git 提交信息、软著文档、JSON 修复等场景都复用同一套后端接口。
+
+Web 插件可直接通过 `window.otools` 调用：
+
+```ts
+const text = await otools.aiGenerateText({
+  systemPrompt: '你是一个严谨的 JSON 修复助手。',
+  userPrompt: '请将以下内容修复为合法 JSON：{"name":"otools",}',
+  temperature: 0.1,
+  maxTokens: 1024,
+});
+```
+
+也可以显式覆盖当前全局 AI 配置：
+
+```ts
+const summary = await otools.aiGenerateText({
+  provider: 'ollama',
+  baseUrl: 'http://127.0.0.1:11434/v1',
+  apiKey: 'ollama',
+  model: 'qwen2.5-coder:14b',
+  systemPrompt: '你是资深 Git 提交信息助手。',
+  userPrompt: '请根据以下 diff 生成提交信息：...',
+  temperature: 0.2,
+  maxTokens: 120,
+});
+```
+
+说明：
+
+- `provider` / `baseUrl` / `apiKey` / `model` 都是可选项；不传时会自动回落到 OTools 全局 AI 配置。
+- `provider` 支持 `openai`、`ollama`、`azure`，以及 `aliyun-bailian` 这类 OpenAI 兼容别名。
+- 返回值始终为纯文本字符串，结果清洗与结构化解析由插件自己决定。

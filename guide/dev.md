@@ -48,6 +48,60 @@ OTools 支持插件携带 Rust 动态库能力，提升性能上限。
 - Windows: `Windows.dll`
 - Linux: `Linux.so`
 
+### 主程序统一 AI 接口
+
+如果插件只需要在 Web 层调用 AI，直接使用 `window.otools.aiGenerateText(...)` 即可，主程序会自动复用全局 AI 配置。
+
+```ts
+const result = await window.otools.aiGenerateText({
+  systemPrompt: '你是一个插件文档助手。',
+  userPrompt: '请为当前插件生成一段更新说明。',
+});
+```
+
+### Native 插件回调主程序
+
+现在 native 动态库也可以回调 OTools 主程序的统一 AI 接口。宿主在加载动态库时，会尝试调用可选导出函数：
+
+- `otools_plugin_bind_host(host_api_ptr)`
+
+`host_api_ptr` 指向一个 `version=1` 的宿主 API 结构体，内含两个函数指针：
+
+- `invoke(input_ptr, input_len, output_len) -> *mut u8`
+- `free(ptr, len)`
+
+native 插件可保存这两个函数指针，然后按 JSON 协议回调宿主：
+
+```json
+{
+  "method": "ai.generateText",
+  "payload": {
+    "systemPrompt": "你是原生插件开发助手。",
+    "userPrompt": "请总结这段日志。",
+    "model": "qwen2.5-coder:14b"
+  }
+}
+```
+
+返回 JSON：
+
+```json
+{
+  "ok": true,
+  "data": {
+    "text": "......",
+    "provider": "ollama",
+    "model": "qwen2.5-coder:14b"
+  }
+}
+```
+
+建议：
+
+- Web 插件优先用 `window.otools.aiGenerateText`。
+- native 动态库仅在必须由 Rust 侧直接发起 AI 调用时，再使用宿主回调接口。
+- `payload` 中的 `provider` / `baseUrl` / `apiKey` / `model` 都可选；省略时自动继承主程序全局 AI 配置。
+
 ## 5. 打包与发布
 
 - 打包时要求插件根目录存在 `logo.png` 与 `plugin.json`。
