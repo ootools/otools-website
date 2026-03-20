@@ -235,6 +235,7 @@ export default defineConfig({
           text: '文档',
           items: [
             { text: '概览', link: '/guide/overview' },
+            { text: '更新日志', link: '/guide/changelog' },
             { text: 'OTools API', link: '/guide/otools-api' },
             { text: '开发者模式', link: '/guide/dev' },
             { text: '兼容', link: '/guide/migration' },
