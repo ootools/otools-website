@@ -32,7 +32,7 @@ OTools 将“工具集成、插件生态、Tabs 多任务”合并为一个高�
 
 ## 5. 内置模块一览
 
-- Git 工程管理与 AI 辅助文档
+- Git 项目管理
 - HTTP / MQTT / FTP 网络工具
 - Docker 与 SSH/SFTP 终端
 - 数据库管理（DBM）

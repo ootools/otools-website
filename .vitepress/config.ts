@@ -21,6 +21,7 @@ export default defineConfig({
           { text: 'Home', link: '/en/' },
           { text: 'Features', link: '/en/features' },
           { text: 'Docs', link: '/en/guide/overview' },
+          { text: 'Changelog', link: '/en/guide/changelog' },
         ],
         sidebar: {
           '/en/guide/': [
@@ -52,6 +53,7 @@ export default defineConfig({
           { text: 'ホーム', link: '/ja/' },
           { text: '機能', link: '/ja/features' },
           { text: 'ドキュメント', link: '/ja/guide/overview' },
+          { text: '更新履歴', link: '/ja/guide/changelog' },
         ],
         sidebar: {
           '/ja/guide/': [
@@ -83,6 +85,7 @@ export default defineConfig({
           { text: '홈', link: '/ko/' },
           { text: '기능', link: '/ko/features' },
           { text: '문서', link: '/ko/guide/overview' },
+          { text: '변경 로그', link: '/ko/guide/changelog' },
         ],
         sidebar: {
           '/ko/guide/': [
@@ -114,6 +117,7 @@ export default defineConfig({
           { text: 'Accueil', link: '/fr/' },
           { text: 'Fonctionnalités', link: '/fr/features' },
           { text: 'Documentation', link: '/fr/guide/overview' },
+          { text: 'Journal des modifications', link: '/fr/guide/changelog' },
         ],
         sidebar: {
           '/fr/guide/': [
@@ -145,6 +149,7 @@ export default defineConfig({
           { text: 'Inicio', link: '/es/' },
           { text: 'Funciones', link: '/es/features' },
           { text: 'Documentación', link: '/es/guide/overview' },
+          { text: 'Registro de cambios', link: '/es/guide/changelog' },
         ],
         sidebar: {
           '/es/guide/': [
@@ -176,6 +181,7 @@ export default defineConfig({
           { text: 'Startseite', link: '/de/' },
           { text: 'Funktionen', link: '/de/features' },
           { text: 'Dokumentation', link: '/de/guide/overview' },
+          { text: 'Änderungsprotokoll', link: '/de/guide/changelog' },
         ],
         sidebar: {
           '/de/guide/': [
@@ -207,6 +213,7 @@ export default defineConfig({
           { text: 'Главная', link: '/ru/' },
           { text: 'Возможности', link: '/ru/features' },
           { text: 'Документация', link: '/ru/guide/overview' },
+          { text: 'История изменений', link: '/ru/guide/changelog' },
         ],
         sidebar: {
           '/ru/guide/': [
@@ -242,6 +249,7 @@ export default defineConfig({
       { text: '首页', link: '/' },
       { text: '功能', link: '/features' },
       { text: '文档', link: '/guide/overview' },
+      { text: '更新日志', link: '/guide/changelog' },
     ],
     sidebar: {
       '/guide/': [
