@@ -13,7 +13,35 @@ OTools 提供内置开发者中心，覆盖从创建插件到发布版本的完�
 - `devUrl` 支持 `http/https`，适配 Vite、Webpack 等开发服务器。
 - 也支持 `index.html` 形式的本地路径，适合纯静态或非框架插件。
 
-## 3. Web/Vue 工程初始化
+## 3. Web SDK 与权限
+
+插件 WebView 默认注入 Node 风格兼容层，可在 `preload.js` 或业务代码中直接调用：
+
+```js
+const runtime = require("@otools/runtime");
+const fs = require("node:fs");
+const path = require("node:path");
+const { execSync } = require("node:child_process");
+```
+
+需要高权限能力时，在根目录 `plugin.json` 显式声明：
+
+```json
+{
+  "permissions": ["fs", "dialog", "shell", "child_process"]
+}
+```
+
+说明：
+
+- `fs`：开放 `node:fs`、`node:fs/promises`、`@otools/fs`
+- `dialog`：开放 `@otools/dialog`
+- `shell`：开放 `@otools/shell`
+- `child_process`：开放 `node:child_process`、`@otools/child_process`
+- 未声明时默认拒绝上述高风险能力；`path`、`os`、`process`、`http/https` 默认可用
+- 内置工具页与非插件页面不受该声明限制
+
+## 4. Web/Vue 工程初始化
 
 开发者工具内可一键生成 Vue + Vite 工程骨架：
 
@@ -21,7 +49,7 @@ OTools 提供内置开发者中心，覆盖从创建插件到发布版本的完�
 - `src/main.ts` / `src/App.vue`
 - 绑定目录直接作为工程根目录
 
-## 4. Native 原生能力
+## 5. Native 原生能力
 
 OTools 支持插件携带 Rust 动态库能力，提升性能上限。
 
@@ -102,13 +130,13 @@ native 插件可保存这两个函数指针，然后按 JSON 协议回调宿主�
 - native 动态库仅在必须由 Rust 侧直接发起 AI 调用时，再使用宿主回调接口。
 - `payload` 中的 `provider` / `baseUrl` / `apiKey` / `model` 都可选；省略时自动继承主程序全局 AI 配置。
 
-## 5. 打包与发布
+## 6. 打包与发布
 
 - 打包时要求插件根目录存在 `logo.png` 与 `plugin.json`。
 - 打包成功后会生成插件包，并写入本地市场记录。
 - 发布版本需提供下载地址（仅支持 `http/https`）。
 
-## 6. 推荐流程
+## 7. 推荐流程
 
 1. 创建插件并绑定目录
 2. 初始化 Web/Vue 工程或纯 HTML
