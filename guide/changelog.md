@@ -1,247 +1,327 @@
 ---
 layout: doc
 title: 更新日志
-description: 基于仓库近期 git log 整理的 OTools 阶段性更新记录。
+description: 基于仓库最近 100 条 git log 整理的 OTools 阶段性更新记录。
 ---
 
 <div class="changelog-hero">
   <div class="changelog-eyebrow">Recent Shipments · OTools</div>
   <h1>更新日志</h1>
   <p class="changelog-lead">
-    基于仓库最近 <code>30</code> 条 <code>git log</code> 整理，按主题提炼近期在 Git、SharkDBM、远程访问、
-    SSH 信任与桌面能力上的关键更新。
+    基于仓库最近 <code>100</code> 条 <code>git log</code> 整理，按主题提炼近期在 Git、Docker、Servrun、
+    Linux 桌面运行时、远程模式与平台能力上的关键更新。
   </p>
   <div class="changelog-badges">
-    <span>近 6 天</span>
-    <span>30 次提交</span>
-    <span>Git / DBM / SSH / 截图</span>
+    <span>近 14 天</span>
+    <span>100 次提交</span>
+    <span>Git / Docker / Servrun / 平台</span>
   </div>
 </div>
 
 <div class="changelog-highlights">
   <div class="changelog-highlight">
-    <strong>03-20</strong>
-    <span>Git 推送稳定性与 SharkDBM 工作区恢复进入密集迭代</span>
+    <strong>04-02</strong>
+    <span>平台级包管理能力落地，Git 提交信息生成链路继续调整</span>
   </div>
   <div class="changelog-highlight">
-    <strong>03-19</strong>
-    <span>远程访问模式、终端能力与 Git 仓库列表体验同步增强</span>
+    <strong>04-01</strong>
+    <span>Docker 工作区围绕 Colima 与 OpenClaw 完成一轮明显升级</span>
   </div>
   <div class="changelog-highlight">
-    <strong>03-18</strong>
-    <span>跨平台支持、SSH 主机信任机制与编辑器基础能力继续夯实</span>
+    <strong>03-31</strong>
+    <span>Linux 子窗口、GtkFixed、Wayland 与构建稳定性进入集中修复期</span>
   </div>
 </div>
 
 > [!TIP]
-> 本页依据最近一次 `git log -n 30` 汇总，保留短提交哈希以便继续追溯源码和提交上下文。
+> 本页依据最近一次 `git log -n 100` 汇总，保留短提交哈希以便继续追溯源码和提交上下文。
 
-## 2026-03-20
+## 2026-04-02
 
 <div class="changelog-grid">
   <article class="changelog-card">
-    <div class="changelog-card-tag">Git</div>
-    <h3>推送链路更稳，弹窗反馈更快</h3>
+    <div class="changelog-card-tag">平台 / 安装</div>
+    <h3>包管理能力上移到平台层，安装卸载链路开始统一</h3>
     <p>
-      围绕 Git 推送流程连续修复 SSH 认证、推送卡顿、默认远端选择与配置弹窗加载时机，让推送更接近
-      “点开即用”的体验。
+      最近这轮平台重构开始落到具体能力上，围绕系统包管理抽出统一宿主层接口，让 Docker 与 Servrun
+      不再各自维护一套安装卸载逻辑。
     </p>
     <ul>
-      <li>调整 SSH 密钥认证顺序，减少推送阶段卡住的概率。</li>
-      <li>推送选项对话框改为优先展示，再异步拉取默认配置与远端信息。</li>
-      <li>默认优先勾选已跟踪远端，提交后自动推送改为先让用户确认目标。</li>
+      <li>新增平台级包管理能力，统一承接 brew、winget 与 Linux 包管理器。</li>
+      <li>Docker 与 Servrun 的安装卸载流程开始复用同一套平台宿主接口。</li>
+      <li>为后续更多系统级能力继续从插件内剥离、沉到平台层打下基础。</li>
     </ul>
     <p class="changelog-refs">
-      相关提交：<code>5133bc2</code> <code>c669244</code> <code>7bbb4a1</code> <code>a90e1b4</code>
+      相关提交：<code>d8b29eb</code>
     </p>
   </article>
 
   <article class="changelog-card">
-    <div class="changelog-card-tag">SharkDBM</div>
-    <h3>数据库工作区状态恢复与连接体验持续补强</h3>
+    <div class="changelog-card-tag">Git / Linux</div>
+    <h3>提交信息生成显示逻辑与 Linux 子 WebView 布局同步调整</h3>
     <p>
-      DBM 在这一轮获得了更完整的工作区持久化、连接状态管理、树节点记忆与导入导出能力，同时也持续细化
-      连接列表和操作反馈。
+      同一天也集中处理了两个高频细节，一边继续整理 Git 提交信息的生成与展示逻辑，一边修补 Linux
+      子 WebView 的布局问题。
     </p>
     <ul>
-      <li>支持工作区状态持久化、树节点展开状态记忆与标签页恢复。</li>
-      <li>补充用户管理、连接状态指示器、数据库类型图标与操作防抖。</li>
-      <li>围绕连接列表和右侧内容区做了一整轮交互和 UI 优化。</li>
+      <li>Git 提交信息生成与展示链路继续整理，为更稳定的提交体验做铺垫。</li>
+      <li>修复 Linux 子 WebView 布局异常，继续收敛复杂嵌入场景下的显示问题。</li>
+      <li>最近几天围绕子窗口与嵌入 WebView 的改动开始逐步连成一条完整修复链路。</li>
     </ul>
     <p class="changelog-refs">
-      相关提交：<code>e9189f9</code> <code>6e825e7</code> <code>6a95422</code> <code>2209493</code>
+      相关提交：<code>6e1071b</code> <code>9927b9e</code>
     </p>
   </article>
 </div>
 
-## 2026-03-19
+## 2026-04-01
 
 <div class="changelog-grid">
   <article class="changelog-card">
-    <div class="changelog-card-tag">Remote</div>
-    <h3>远程访问模式和终端能力继续扩展</h3>
+    <div class="changelog-card-tag">Docker</div>
+    <h3>Docker 工作区围绕 Colima 与 OpenClaw 进入密集建设期</h3>
     <p>
-      远程工作流能力进一步前进，终端与文件传输的使用场景更完整，也更接近日常开发和运维的真实需求。
+      Docker 模块在这一天发生了明显跃迁，从基础工作区到容器详情、从 Colima 到 OpenClaw，
+      开始形成一套更完整的本地容器工作流。
     </p>
     <ul>
-      <li>新增远程访问模式，覆盖更多非本地使用场景。</li>
-      <li>终端 SFTP 支持上传与下载，补齐高频文件操作链路。</li>
-      <li>增加本地终端支持，统一本地与远程工作入口。</li>
+      <li>补齐 Colima、OpenClaw 镜像、创建容器弹窗等核心入口。</li>
+      <li>在容器详情中内嵌 OpenClaw 仪表盘，继续推动模块内闭环操作。</li>
+      <li>完善容器复制、状态判定与仪表盘交互，让容器管理更接近真实使用场景。</li>
     </ul>
-    <p class="changelog-refs">相关提交：<code>3c32633</code></p>
+    <p class="changelog-refs">
+      相关提交：<code>3b675a8</code> <code>d5f35df</code> <code>a8b5ed9</code> <code>6605886</code>
+    </p>
   </article>
 
   <article class="changelog-card">
     <div class="changelog-card-tag">Git UX</div>
-    <h3>仓库列表更顺手，排序和视觉细节同步升级</h3>
+    <h3>Git 模块 UI 继续组件化，欢迎页与结构重构同步推进</h3>
     <p>
-      Git 工作区列表从“能用”往“好用”继续推进，强调更直接的组织方式和更清爽的信息层次。
+      Git 模块不再只停留在细节润色，而是开始整体整理结构与入口形态，为后续继续扩展工作区与历史能力做准备。
     </p>
     <ul>
-      <li>支持仓库列表拖动排序，便于按项目优先级整理。</li>
-      <li>同步优化列表样式，让高频仓库切换更轻盈。</li>
+      <li>重构 Git 模块 UI 结构，继续把大体量界面拆成更清晰的组件层级。</li>
+      <li>新增欢迎页面，让空仓库或初始状态下的入口表达更完整。</li>
+      <li>与近期提交信息生成、历史查看器等改动一起，Git 模块正从功能堆叠转向系统化整理。</li>
     </ul>
-    <p class="changelog-refs">相关提交：<code>db44329</code> <code>45024e4</code></p>
+    <p class="changelog-refs">相关提交：<code>81eb06f</code></p>
   </article>
 </div>
 
-## 2026-03-18
+## 2026-03-31
 
 <div class="changelog-grid">
   <article class="changelog-card">
-    <div class="changelog-card-tag">SSH / 平台</div>
-    <h3>跨平台与 SSH 信任机制变得更完整</h3>
+    <div class="changelog-card-tag">Linux / 窗口</div>
+    <h3>GtkFixed、Wayland 与子窗口布局进入集中修复</h3>
     <p>
-      这一轮重点在基础设施层，既补齐了 Windows/Linux 平台能力，也完善了 SSH 主机密钥信任和错误处理路径。
+      这一天的主线非常明确，就是持续追打 Linux 桌面端子窗口和嵌入布局问题，并补齐 Wayland 场景下的适配。
     </p>
     <ul>
-      <li>支持 Windows/Linux 平台截图功能。</li>
-      <li>封装并落地主机密钥验证与首次指纹信任机制。</li>
-      <li>继续优化窗口样式、工具模式配置与编辑器窗口装饰细节。</li>
+      <li>引入 GtkFixed 方案修复插件页面遮盖关系，并继续修补顶部 Tabs 点击问题。</li>
+      <li>新增 Wayland 显示会话支持，调整工具子窗口布局逻辑。</li>
+      <li>同步修复 Linux 子窗口定位错误，收敛复杂窗口体系下的行为差异。</li>
     </ul>
     <p class="changelog-refs">
-      相关提交：<code>9812088</code> <code>b990398</code> <code>d7c2d50</code>
+      相关提交：<code>c27adf1</code> <code>460379d</code> <code>9588f7a</code> <code>bbab835</code>
     </p>
   </article>
 
   <article class="changelog-card">
-    <div class="changelog-card-tag">稳定性</div>
-    <h3>编辑器、Git 线程与通用模块继续收口</h3>
+    <div class="changelog-card-tag">构建 / 运行时</div>
+    <h3>构建链路、插件状态与服务控制也在同一轮被补强</h3>
     <p>
-      在功能之外，这一天也包含一批偏“打地基”的整理工作，集中在编辑器统一、线程行为收敛以及 warnings 清理。
+      除了桌面窗口问题，这一天也完成了一批偏基础设施的修补，把构建稳定性、插件运行状态和服务控制一并往前推进。
     </p>
     <ul>
-      <li>内置代码编辑器与 SFTP/FTP 编辑链路继续统一。</li>
-      <li>Git 推送与拉取相关线程行为被重新梳理。</li>
-      <li>数据库、Git、SSH 与工具模块做了一轮稳定性重构。</li>
+      <li>添加插件状态文件修复与自动启动任务持久化。</li>
+      <li>为 Servrun 增加强制停止服务功能并补齐国际化支持。</li>
+      <li>修复 macOS 打包和 codegen 内存限制问题，并开始根据内存自动计算更合适的构建并发数。</li>
     </ul>
     <p class="changelog-refs">
-      相关提交：<code>fa8e8f4</code> <code>ef04a2d</code> <code>e02e1b2</code>
+      相关提交：<code>024605c</code> <code>a71360d</code> <code>9315867</code> <code>dd00fe8</code>
     </p>
   </article>
 </div>
 
-## 2026-03-17
+## 2026-03-30 ~ 2026-03-29
 
 <div class="changelog-grid">
   <article class="changelog-card">
-    <div class="changelog-card-tag">截图</div>
-    <h3>截图工作流经历了一轮明显的重做</h3>
+    <div class="changelog-card-tag">Servrun</div>
+    <h3>官方版本、提权安装与运行状态管理开始跨平台收口</h3>
     <p>
-      从蒙层显示到窗口层级控制，再到捕获窗口管理，截图体验在短时间内完成了两轮连续演进。
+      Servrun 在这几天里迭代非常密集，重点集中在官方版本支持、跨平台安装控制、日志与路径整理，以及运行状态辨识。
     </p>
     <ul>
-      <li>新增截图蒙层功能，提升交互沉浸感。</li>
-      <li>优化截图编辑体验，增强窗口层级控制。</li>
-      <li>重构截图功能，新增捕获窗口管理与更稳的蒙层逻辑。</li>
+      <li>支持官方源版本下载、快速启动、Windows 官方包启动停止控制与 Linux sudo 安装流程。</li>
+      <li>完善 Windows Shell 编码、管理员权限 winget、日志路径、服务目录迁移和 PHP 扩展配置。</li>
+      <li>继续区分托管与外部运行状态，并修复官方源 PHP 版本选择、程序路径与实例问题。</li>
     </ul>
-    <p class="changelog-refs">相关提交：<code>08a1393</code> <code>89735cc</code></p>
+    <p class="changelog-refs">
+      相关提交：<code>0700417</code> <code>86a5191</code> <code>1f8cbc6</code> <code>1955f2b</code> <code>bbe92fe</code>
+    </p>
   </article>
 
   <article class="changelog-card">
-    <div class="changelog-card-tag">生态</div>
-    <h3>插件示例与 Git 历史细节同步完善</h3>
+    <div class="changelog-card-tag">平台 / 产品</div>
+    <h3>平台分层、国际化和通用能力继续成批落地</h3>
     <p>
-      一边补生态示例，一边打磨 Git 历史与子模块细节，让产品对开发者和日常项目管理都更友好。
+      这一段更新更多是在“打底座”，既包括前后端架构分层，也包括多语言、移动端、主题和构建辅助能力的铺设。
     </p>
     <ul>
-      <li>新增思维导图插件示例页面，扩展示例覆盖面。</li>
-      <li>修复 Git 历史时间格式化问题。</li>
-      <li>继续优化子模块初始化逻辑。</li>
+      <li>把插件 UI 与平台通用能力继续按层拆分到 <code>src/platform</code> 与 <code>src/plugins</code>。</li>
+      <li>补齐 8 国多语言、移动端优化、全屏支持，以及插件名国际名称支持。</li>
+      <li>新增 tauri-build 命令、证件照去背景换底色，并继续修复图标与通用路径问题。</li>
     </ul>
-    <p class="changelog-refs">相关提交：<code>357cace</code></p>
+    <p class="changelog-refs">
+      相关提交：<code>9b9db34</code> <code>8590415</code> <code>d690f50</code> <code>3861e81</code> <code>2269986</code> <code>ee09d34</code>
+    </p>
   </article>
 </div>
 
-## 2026-03-15 ~ 2026-03-16
+## 2026-03-28 ~ 2026-03-20
 
 <div class="changelog-grid">
   <article class="changelog-card">
-    <div class="changelog-card-tag">Git / 内容</div>
-    <h3>GitHub 集成、认证体验与文档素材能力同步前进</h3>
+    <div class="changelog-card-tag">远程 / Git / 终端</div>
+    <h3>远程模式、Git 工作树与终端能力开始形成完整工作流</h3>
     <p>
-      这两天的更新更偏向日常使用效率，既包括 GitHub 集成和 HTTPS 认证，也包括 Markdown 图片上传等内容工作流。
+      从 3 月下旬开始，OTools 在远程场景和 Git 工作流上的推进非常明显，逐步把本地与远程开发串成统一入口。
     </p>
     <ul>
-      <li>新增 GitHub 集成与 HTTPS 凭证管理，优化推送界面。</li>
-      <li>支持 Markdown 图片上传，补齐静态资源与存储模块。</li>
-      <li>为 Git 提交历史差异查看器加入高度拖拽调节能力。</li>
+      <li>支持远程访问模式、主机桥接、终端事件拉取、本地终端，以及 SFTP 上传下载和搜索。</li>
+      <li>Git 模块补齐工作树、仓库列表排序、图标、推送认证、历史查看器高度调节等能力。</li>
+      <li>SSH 认证继续从密码走向私钥、隧道、SOCKS5、本地端口转发与主机信任机制的一体化支持。</li>
     </ul>
     <p class="changelog-refs">
-      相关提交：<code>0ad8aeb</code> <code>a062ca6</code> <code>ee2b78e</code>
+      相关提交：<code>f5ee0a1</code> <code>db49f5e</code> <code>2892df1</code> <code>3c32633</code> <code>6e8aa37</code> <code>399095d</code>
     </p>
   </article>
 
   <article class="changelog-card">
-    <div class="changelog-card-tag">细节优化</div>
-    <h3>IDPhoto 与编辑链路继续微调</h3>
+    <div class="changelog-card-tag">DBM / 平台</div>
+    <h3>数据库能力、CLI 模式与平台底座在同一时期快速扩张</h3>
     <p>
-      除了大型功能外，证件照和编辑器这类高频基础模块也在持续优化，让细节体验更稳定、更顺手。
+      同一时期的另一条主线是 DBM 与平台底层能力扩展，覆盖更多数据库类型、查询工作台、CLI 模式和主题构建。
     </p>
     <ul>
-      <li>优化 IDPhoto 排版模板展示与默认示例图片加载。</li>
-      <li>调整裁剪编辑器缩放逻辑。</li>
-      <li>替换 DBM 模块中的 Markdown 编辑器组件。</li>
+      <li>DBM 快速扩展到 MariaDB、Redis、Oracle、MSSQL、ClickHouse、Kafka、Snowflake 等更多类型。</li>
+      <li>查询工作台、导出、结果摘要、行数统计、对象树加载、侧栏拖拽和状态持久化持续加强。</li>
+      <li>平台层新增 CLI 模式、主题系统、构建依赖整理与插件打包工作流，底座能力明显变厚。</li>
     </ul>
-    <p class="changelog-refs">相关提交：<code>f41c800</code> <code>445d6c0</code></p>
+    <p class="changelog-refs">
+      相关提交：<code>e47e182</code> <code>fd9233b</code> <code>3e41f13</code> <code>f94c832</code> <code>c45db60</code> <code>db99fa3</code>
+    </p>
   </article>
 </div>
 
 ## 原始提交摘录
 
 <details class="changelog-raw">
-  <summary>查看最近 30 条提交</summary>
+  <summary>查看最近 100 条提交</summary>
 
   <ul>
+    <li><code>6e1071b</code> · 2026-04-02 · refactor(git): 更新提交信息生成和显示逻辑</li>
+    <li><code>d8b29eb</code> · 2026-04-02 · feat: 抽离平台级包管理能力并统一 docker/servrun 安装卸载流程</li>
+    <li><code>9927b9e</code> · 2026-04-02 · fix: 修复linux子webview布局问题</li>
+    <li><code>6605886</code> · 2026-04-01 · feat(docker): 完善 OpenClaw 容器复制、状态判定与仪表盘交互</li>
+    <li><code>a8b5ed9</code> · 2026-04-01 · feat(docker): 在容器详情中内嵌 OpenClaw 仪表盘并优化龙虾面板交互</li>
+    <li><code>d5f35df</code> · 2026-04-01 · feat(docker): 重构 Docker 工作区并补齐 Colima / OpenClaw 流程</li>
+    <li><code>81eb06f</code> · 2026-04-01 · refactor: git模块UI结构重构、组件化、新增欢迎页面</li>
+    <li><code>3b675a8</code> · 2026-04-01 · feat: docker模块支持Colima、支持创建容器弹窗、支持OpenClaw镜像</li>
+    <li><code>d68345a</code> · 2026-03-31 · fix: 修复创建openclaw虚拟机</li>
+    <li><code>34aacaa</code> · 2026-03-31 · fix: 取消脚本安装open-claw改为使用openclaw官方Docker镜像、修复kkrunvm存储卷建立</li>
+    <li><code>460379d</code> · 2026-03-31 · fix: 修复GtkFixed方案下顶部tabs无法点击</li>
+    <li><code>c27adf1</code> · 2026-03-31 · fix: linux下使用GtkFixed修复插件页面布局无法遮盖问题</li>
+    <li><code>9588f7a</code> · 2026-03-31 · feat(src-tauri): 添加对 Wayland 显示会话的支持，并调整工具子窗口布局逻辑</li>
+    <li><code>a71360d</code> · 2026-03-31 · feat(servrun): 添加强制停止服务功能及国际化支持</li>
+    <li><code>024605c</code> · 2026-03-31 · feat(src-tauri): 添加插件状态文件修复和自动启动任务持久化</li>
+    <li><code>bbab835</code> · 2026-03-31 · fix: 修复macOS打包报错、修复linux下子窗口定位错误</li>
+    <li><code>9315867</code> · 2026-03-31 · fix: codegen vendor change 8MB to 64MB fix build error</li>
+    <li><code>dd00fe8</code> · 2026-03-31 · feat: 支持根据内存自动计算适合的build的jobs数量及macOS编译报错修复</li>
+    <li><code>f2efeaa</code> · 2026-03-30 · fix: 修复vhsot新增页面无法选择存在的官方源PHP版本</li>
+    <li><code>1955f2b</code> · 2026-03-30 · feat(servrun):  界面布局优化、修复 Windows Shell 编码、区分托管与外部运行状态、完善官方版本管理与 PHP 扩展配置</li>
+    <li><code>bbe92fe</code> · 2026-03-30 · feat(servrun): 支持官方版本快速启动开关、迁移服务目录、统一日志路径、修复背景移除库导入</li>
+    <li><code>2269986</code> · 2026-03-30 · feat: 新增tauri-build命令</li>
+    <li><code>1b2bf4d</code> · 2026-03-30 · fix: 修复部分路径不正确</li>
+    <li><code>ee09d34</code> · 2026-03-30 · feat: 证件照支持去除背景更换底色</li>
+    <li><code>c670af4</code> · 2026-03-30 · fix: 修复Windows下servrun各程序路径问题及PHP实例问题</li>
+    <li><code>33db3f9</code> · 2026-03-30 · fix: 修复servrun模块执行官方源包启动命令报错</li>
+    <li><code>9db35b2</code> · 2026-03-30 · fix: Windows下支持官方源包的启动停止控制</li>
+    <li><code>1f8cbc6</code> · 2026-03-30 · feat: Windows下winget执行命令需要管理员权限的处理</li>
+    <li><code>86a5191</code> · 2026-03-29 · feat: linux下支持sudo提示用户输入root密码编译执行apt的install/remove等命令</li>
+    <li><code>b83d436</code> · 2026-03-29 · fix: 修复一些内置插件图标不显示</li>
+    <li><code>9b9db34</code> · 2026-03-29 · refactor: 重构src/components下的插件UI按照架构分层放进src/platform和src/plugins</li>
+    <li><code>0d5e804</code> · 2026-03-29 · feat: 每次重新 build，内测截止时间都会自动顺延到该次构建日后 15 天。</li>
+    <li><code>3861e81</code> · 2026-03-29 · feat: 插件名词支持国际名称（英文）和中文名</li>
+    <li><code>6853965</code> · 2026-03-29 · feat: 剩余插件的多语言完善</li>
+    <li><code>b831f63</code> · 2026-03-28 · fix: 修复很多unused问题</li>
+    <li><code>8590415</code> · 2026-03-28 · feat: 新增8国多语言支持</li>
+    <li><code>d690f50</code> · 2026-03-28 · feat: 添加移动端优化和全屏支持</li>
+    <li><code>fd9233b</code> · 2026-03-27 · feat(dbm): 优化数据库树节点加载逻辑，增强对多数据库类型的支持，并完善构建流程依赖配置</li>
+    <li><code>e47e182</code> · 2026-03-27 · feat(src-tauri): 添加 CLI 模式支持、新增 tauri.cli.conf.json 配置文件</li>
+    <li><code>b82449b</code> · 2026-03-27 · refactor: 重大重构src-tauri里的能力整理优化平台与内置插件目录层级和能力分层等</li>
+    <li><code>487ce14</code> · 2026-03-24 · refactor: 重构文件系统和 shell 相关逻辑，引入新的平台服务模块</li>
+    <li><code>dc8a4d7</code> · 2026-03-24 · feat(src/components/git/Git.vue): 添加工作树UI显示控制变量</li>
+    <li><code>2892df1</code> · 2026-03-24 · feat: 添加本地终端事件拉取功能及优化相关组件</li>
+    <li><code>d0d464f</code> · 2026-03-24 · feat: 添加远程服务桥接页面、优化Git子模块远程模式兼容、改进仓库详情加载逻辑、增强子模块节点构建</li>
+    <li><code>567f739</code> · 2026-03-24 · fix(shims): 修复适用于远程模式/浏览器环境的 Tauri API 兼容层</li>
+    <li><code>f5ee0a1</code> · 2026-03-24 · feat: 添加远程服务功能及配置管理</li>
+    <li><code>9755bf3</code> · 2026-03-24 · fix: 当MSSQL未指定schema时，会抛出错误提示用户必须指定schema。</li>
+    <li><code>be374f3</code> · 2026-03-24 · fix: 修复MSSQL无法连接及对象树展开错乱问题</li>
+    <li><code>db49f5e</code> · 2026-03-24 · feat(remote): 构建 remote 模式主机桥接兼容层并统一插件预加载系统接口</li>
+    <li><code>d82dc65</code> · 2026-03-24 · fix: 修复上个版本的乱码</li>
+    <li><code>05c483b</code> · 2026-03-24 · refactor:  把磁盘助手拆分为plugins下独立组件uuid 为otools-disk、并且实现一个通用机制能在github actions支持手动执行打包指定plugins下插件三个平台的动态链接库并打包为插件zip包</li>
+    <li><code>3e41f13</code> · 2026-03-24 · feat: dbm新增 SQLServer/elastisearch/clickhouse/kafka/snowflake/人大金仓/达梦数据库支持初步</li>
+    <li><code>0700417</code> · 2026-03-24 · feat(servrun): 添加官方源版本支持与下载功能</li>
+    <li><code>4fd53ae</code> · 2026-03-24 · feat: 添加通用AI对话组件，优化数据库AI大屏机查询工作台AI对话</li>
+    <li><code>29e2eab</code> · 2026-03-23 · feat: 添加数据库同步功能及AI大屏功能初步</li>
+    <li><code>098ebf4</code> · 2026-03-23 · feat:  修复noder 模块引入、优化 Git 面板文件图标与交互样式</li>
+    <li><code>990f4d8</code> · 2026-03-23 · feat: 集成 vscode-material-icons 实现文件图标显示、新增终端对主题色彩风格支持</li>
+    <li><code>6e8aa37</code> · 2026-03-23 · feat: 添加 Git 工作树功能，包括创建、删除、列出和清理操作，并更新前端界面支持工作树切换与管理</li>
+    <li><code>3272885</code> · 2026-03-23 · feat: 添加数据库备份计划、数据字典导出及 SSH 私钥认证功能</li>
+    <li><code>70820e2</code> · 2026-03-23 · feat(src-tauri): 添加 noder 模块及运行时脚本，支持常用nodejs兼容的文件系统和子进程操作等接口</li>
+    <li><code>c2b90de</code> · 2026-03-23 · feat: 支持 SSH 私钥认证、新增本地端口转发与 SOCKS5 代理功能，重构 SSH 连接逻辑以统一认证流程</li>
+    <li><code>c75e914</code> · 2026-03-23 · feat: 新增数据库连接SSH隧道支持，包含后端隧道管理、前端配置界面及连接逻辑适配</li>
+    <li><code>59d530b</code> · 2026-03-23 · feat: 实现SFTP文件树展开状态持久化、优化目录操作后的状态恢复逻辑</li>
+    <li><code>18af9b5</code> · 2026-03-23 · feat: 实现终端工作区状态持久化与恢复，支持终端标签、编辑器标签、SFTP路径及界面布局</li>
+    <li><code>f4857bc</code> · 2026-03-23 · fix: 修正 GitHub Actions 工作流中的拼写错误、更新构建环境变量、调整 Cargo 配置</li>
+    <li><code>23bdc54</code> · 2026-03-23 · feat: 优化HTTPS推送认证流程，增加凭证缺失标识、完善前端提示交互。</li>
+    <li><code>4e0b276</code> · 2026-03-23 · fix: 修复Windows下SSH命令参数构建，统一使用POSIX路径格式与引用方式</li>
+    <li><code>399095d</code> · 2026-03-23 · feat(git): 修复Windows下git模块ssh鉴权支持、 Windows 系统 OpenSSH、增强 SSH 配置解析、新增SSH认证设置界面</li>
+    <li><code>aa7cf61</code> · 2026-03-22 · feat(sftp): 新增 SFTP 文件搜索功能，支持远程文件查找、结果展示与路径跳转</li>
+    <li><code>270ba1d</code> · 2026-03-22 · feat: 重构全新终端界面布局，实现SFTP文件增删改功能，新增配置及终端设置对话框。</li>
+    <li><code>f4271e5</code> · 2026-03-22 · docs: 新增Rust代码格式化规范，明确使用rustfmt、限制全量格式化及异常处理策略</li>
+    <li><code>a70746e</code> · 2026-03-22 · fix: 修复macos-permissions:default权限导致Windows下编译错误、修复Windows下本地终端乱码输入不回显等问题</li>
+    <li><code>5833ea3</code> · 2026-03-22 · feat: 新增系统终端运行npm脚本功能、优化跨平台命令执行、添加运行目标设置选项</li>
+    <li><code>f861bf3</code> · 2026-03-22 · feat: 实现 DBM 组件侧边栏拖拽调整宽度功能，优化样式和交互体验</li>
+    <li><code>cd1206f</code> · 2026-03-22 · feat: 新增 violet/emerald/amber 主题配色，优化按钮样式为 plain 朴素模式，重构主题颜色系统并添加深浅色适配</li>
+    <li><code>1730b87</code> · 2026-03-21 · feat: 新增子窗口主题同步功能、优化主题设置逻辑、修复插件安装扩展名检查</li>
+    <li><code>1925808</code> · 2026-03-21 · refactor: 优化数据库导出功能的目录处理逻辑、统一导出路径管理、改进前端默认路径同步机制</li>
+    <li><code>8a1d008</code> · 2026-03-21 · feat: 新增插件卸载功能、优化插件打包逻辑、改进插件归档处理</li>
+    <li><code>36f6209</code> · 2026-03-21 · feat: 优化构建配置、重构主题变量、改进数据库管理界面样式与交互体验</li>
+    <li><code>1fbc2c6</code> · 2026-03-21 · refactor: DiffPanel组件样式重构为CSS变量、添加主题配色支持</li>
+    <li><code>0015572</code> · 2026-03-21 · build: 添加 libspeechd-dev 依赖并更新前端依赖安装命令</li>
+    <li><code>d7abae0</code> · 2026-03-21 · feat: 新增色彩主题配置功能，支持经典蓝和莓果粉两种主题，并优化主题应用逻辑</li>
+    <li><code>1e5a1c1</code> · 2026-03-21 · feat: 优化Windows 平台构建配置等</li>
+    <li><code>f97673d</code> · 2026-03-21 · feat(dbm): 查询工作台结果标签显示优化，新增行数统计和状态标识，调整标签最大宽度至240px</li>
+    <li><code>79a6f1b</code> · 2026-03-21 · build: 添加 libpipewire-0.3-dev 依赖并更新前端安装命令</li>
+    <li><code>c762cc2</code> · 2026-03-21 · build: 更新构建工作流，添加 tauri-remote-service 仓库克隆步骤并调整构建配置</li>
+    <li><code>f94c832</code> · 2026-03-21 · feat(dbm): 优化查询工作台功能，支持SQL批量执行与结果展示、错误处理及性能优化</li>
+    <li><code>80ee412</code> · 2026-03-21 · refactor: 重构数据库连接列表组件，新增树形面板可折叠布局、动态高度调整、连接项排序及骨架屏加载效果</li>
+    <li><code>c45db60</code> · 2026-03-21 · feat: 支持 MariaDB 数据库连接、查询、导入导出功能，并添加 MariaDB 图标及类型标识</li>
+    <li><code>db99fa3</code> · 2026-03-21 · feat: 新增redis、oracle类型数据库支持、完善postgress、mongodb数据库管理功能初步</li>
+    <li><code>6b94943</code> · 2026-03-20 · feat: 新增数据表删除确认对话框，优化对象列表刷新机制，修复MySQL表查询逻辑，增强DBM组件交互体验</li>
+    <li><code>494aea8</code> · 2026-03-20 · feat(dbm): 支持数据库表创建功能、优化表结构管理界面、增强树形菜单操作体验</li>
+    <li><code>c5a6ccd</code> · 2026-03-20 · style(refactor): DbmTree组件样式优化、Git组件重构自动推送逻辑</li>
+    <li><code>4bd8713</code> · 2026-03-20 · feat: 新增SQL查询类型判断逻辑，优化数据库操作区域查询工作台功能，改进结果展示和状态重置机制</li>
+    <li><code>4df935f</code> · 2026-03-20 · feat: 新增AGENTS.md协作规则，优化数据库查询支持动态数据库名，改进树过滤器UI和状态管理，增强错误处理和视图定义功能</li>
+    <li><code>e84df0a</code> · 2026-03-20 · feat(dbm): 修复数据库模块假死问题、添加查询工作台结果摘要、改进状态持久化性能、修复定时器内存泄漏、调整构建配置</li>
+    <li><code>60b7493</code> · 2026-03-20 · feat: 工具组件新增插件标签页名称规范化和去重功能，优化窗口标签构建逻辑，修复插件标签页重复添加问题</li>
+    <li><code>7b612ca</code> · 2026-03-20 · feat: 终端组件收藏命令功能修复、优化命令发送逻辑</li>
+    <li><code>c501feb</code> · 2026-03-20 · fix: 修复Windows编译报错</li>
     <li><code>a90e1b4</code> · 2026-03-20 · fix: 移除 Git 组件推送选项对话框自动提交参数</li>
-    <li><code>7bbb4a1</code> · 2026-03-20 · feat: GitPush组件新增默认选中远程仓库逻辑，优化推送选项对话框的远程仓库选择策略</li>
-    <li><code>c669244</code> · 2026-03-20 · feat: 优化 Git 推送配置加载逻辑、添加加载状态提示、改进异步处理流程</li>
-    <li><code>5133bc2</code> · 2026-03-20 · fix: 调整SSH密钥认证顺序并移除推送超时限制、优化推送流程</li>
-    <li><code>e9189f9</code> · 2026-03-20 · feat(dbm): 新增数据库连接超时控制、查询工作台、导入导出功能及UI优化，修复连接管理和代码编辑器问题</li>
-    <li><code>6e825e7</code> · 2026-03-20 · feat: 数据库管理器支持工作区状态持久化、树节点展开状态记忆、标签页状态恢复及选中节点保持功能</li>
-    <li><code>3554c1f</code> · 2026-03-20 · feat: 更新数据库连接列表组件标题为SharkDBM，重构树节点选择和表/视图/存储过程操作处理逻辑，移除底部边框样式</li>
-    <li><code>1289ce9</code> · 2026-03-20 · feat(dbm): 优化数据库连接列表UI，新增连接状态下拉菜单、调整样式布局、改进交互体验</li>
-    <li><code>6a95422</code> · 2026-03-20 · feat(dbm): 实现连接状态恢复机制、优化连接列表UI、增强用户管理功能、迁移本地存储结构</li>
-    <li><code>f96fbd7</code> · 2026-03-20 · feat(dbm): 新增用户管理、导入导出功能，优化树节点排序与选中逻辑，修复Git推送进度显示</li>
-    <li><code>2209493</code> · 2026-03-20 · feat(dbm): 改进数据库连接管理，新增连接状态指示器、数据库类型图标支持、连接操作防抖及侧边栏宽度调整功能</li>
-    <li><code>95b84dd</code> · 2026-03-20 · feat: 数据库管理新增视图和存储过程功能、支持表筛选和置顶、优化连接状态管理、完善右键菜单操作、增加收藏命令和SFTP收藏目录功能、修复连接断开状态同步问题、重构标签页管理机制、添加SQL语法高亮支持</li>
-    <li><code>3c32633</code> · 2026-03-19 · feat: 支持远程访问模式、终端SFTP支持上传下载、新增本地终端支持、</li>
-    <li><code>45024e4</code> · 2026-03-19 · improvement: Git仓库列表样式优化</li>
-    <li><code>db44329</code> · 2026-03-19 · feat: Git仓库列表支持拖动排序</li>
-    <li><code>fa8e8f4</code> · 2026-03-18 · improvment: Git内置代码编辑器与SFTP/FTP 编辑文件使用通用的CodeMirrorTextEditor及Git推送拉取线程优化</li>
-    <li><code>d7c2d50</code> · 2026-03-18 · feat: 优化 macOS 窗口样式适配，调整工具模式窗口配置，修复编辑器窗口装饰问题</li>
-    <li><code>b990398</code> · 2026-03-18 · feat: 支持 Windows/Linux 平台截图功能、SSH 主机密钥信任机制、子模块初始化优化及 Git 操作错误处理改进</li>
-    <li><code>ef04a2d</code> · 2026-03-18 · refactor: 清理编译warnings，数据库管理、Git操作、SSH连接、工具模块等多项功能重构优化，清理未使用代码并增强稳定性</li>
-    <li><code>9812088</code> · 2026-03-18 · feat: 封装通用SSH主机密钥验证与信任功能，支持SSH首次交互存储指纹和错误处理优化。</li>
-    <li><code>e02e1b2</code> · 2026-03-18 · feat: AI调用改为通用接口封装、支持证件照的打印功能、新增全局快捷键支持，优化 Git 操作和文件管理功能，修复Windows会打开很多终端问题、优化AI和自动启动执行线程等</li>
-    <li><code>89735cc</code> · 2026-03-17 · feat: 重构截图功能，新增捕获窗口管理、优化蒙层显示逻辑、改进窗口层级控制</li>
-    <li><code>357cace</code> · 2026-03-17 · feat: 新增思维导图插件示例页面、修复Git历史时间格式化、优化子模块初始化逻辑</li>
-    <li><code>08a1393</code> · 2026-03-17 · feat: 新增截图蒙层功能、优化截图编辑体验、增强窗口管理能力</li>
-    <li><code>f41c800</code> · 2026-03-16 · feat(idphoto): 调整IDPhoto组件布局样式、优化排版模板选项显示、添加默认示例图片加载功能</li>
-    <li><code>a062ca6</code> · 2026-03-16 · feat: 新增 Markdown 图片上传功能，添加静态资源协议处理器和图片存储模块，更新 CSP 配置和依赖项</li>
-    <li><code>321faec</code> · 2026-03-15 · refactor: 移除旧版数据迁移逻辑、简化状态管理、优化Git HTTPS认证流程、统一插件入口配置、调整Markdown存储策略</li>
-    <li><code>0ad8aeb</code> · 2026-03-15 · feat: 新增 GitHub 集成与 HTTPS 凭证管理、优化推送界面、修复深色主题样式</li>
-    <li><code>ee2b78e</code> · 2026-03-15 · feat: 为 Git 提交历史组件添加差异查看器高度调整功能，支持拖拽调节、双击重置及百分比显示</li>
-    <li><code>445d6c0</code> · 2026-03-15 · refactor: 调整裁剪编辑器缩放逻辑、替换dbm模块Markdown编辑器组件</li>
   </ul>
 </details>
