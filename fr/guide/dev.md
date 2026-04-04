@@ -48,6 +48,14 @@ Noms de bibliothèques par défaut :
 - Windows: `Windows.dll`
 - Linux: `Linux.so`
 
+### Dépôt : `native` vs `tauri` (optionnel)
+
+Le dépôt principal peut contenir **`plugins/<name>/native`** et un crate **`tauri`** facultatif (commandes intégrées à l’app). Le **package marketplace** reste **`plugin.json` + front + `lib/`** — ne pas y inclure le crate `tauri`.
+
+### Événements poussés (`poll_events`)
+
+Pour une bibliothèque dynamique seule, implémentez **`poll_events`** ; côté web utilisez **`window.otools.listenNative`** (voir la doc OTools API).
+
 ## 5. Packaging & publication
 
 - Le packaging exige `logo.png` et `plugin.json` à la racine du plugin.

@@ -55,6 +55,29 @@ await otools.invokeNativePlugin('plugin-uuid', 'ping');
 await otools.reloadNativePlugin('plugin-uuid');
 ```
 
+### 호스트 `host_dispatch`(마켓 동적 라이브러리)
+
+동적 라이브러리가 **`otools_plugin_bind_host`**를 export하면 호스트는 로드 시 **`OtoolsNativeHostApiV1`**(`version >= 2`)을 전달합니다. 기존 **`invoke` / `free`** 외에 **`host_dispatch`**는 **`ot-host-dispatch`**의 **`dispatch_direct`**와 동일한 capability 라우팅(HTTP, 플러그인 로컬 상태 등)을 사용합니다.
+
+- **입력**: `capability`는 UTF-8 이름, `request`는 JSON(내장 `dispatch_direct`와 동일 형태).
+- **출력**: `{ "ok": true, "data": ... }` 또는 `{ "ok": false, "error": "..." }`.
+- **해제**: 같은 API 구조체의 **`free`**로 `host_dispatch` 반환 버퍼 해제.
+
+`capability` 예: `http.send`, `http.normalize_request`, `http.write_base64_file`, `plugin_state.read`, `plugin_state.save_local`(`ot_host_dispatch::caps`와 동일).
+
+### Native 이벤트 구독 (`listenNative`)
+
+마켓플레이스 동적 라이브러리용: 호스트가 **`poll_events`**를 주기 호출하고 **`otools-native:{uuid}`** 채널로 이벤트를 보냅니다.
+
+```ts
+const unlisten = await otools.listenNative((e) => {
+  const { topic, payload } = e.payload;
+}, { intervalMs: 200 });
+await unlisten();
+```
+
+`otools_plugin_invoke`에서 **`poll_events`** 처리, `data.events`에 `{ topic, payload }` 배열. 메인 앱 내장 플러그인은 `invoke('command')` 계속 사용 가능.
+
 ## 5. 플러그인 상태 저장
 
 **로컬 상태** 와 **동기 상태** 를 지원하며, `scheme` 으로 여러 JSON 저장소를 만들 수 있습니다.

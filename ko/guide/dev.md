@@ -48,6 +48,14 @@ OTools는 Rust 동적 라이브러리를 통한 성능 확장을 지원합니다
 - Windows: `Windows.dll`
 - Linux: `Linux.so`
 
+### 저장소: `native`와 `tauri`(선택)
+
+메인 저장소에서는 `plugins/<name>/native`와 선택적 `plugins/<name>/tauri`(OTools에 내장할 때만)가 있을 수 있습니다. **마켓 패키지**는 `plugin.json` + 프런트 + `lib/` 동적 라이브러리이며 `tauri` 크레이트는 포함하지 않습니다.
+
+### `poll_events` 푸시
+
+동적 라이브러리만 사용할 때 `poll_events`를 구현하고, 프런트는 `window.otools.listenNative`로 수신합니다(OTools API 참고).
+
 ## 5. 패키징 및 배포
 
 - 패키징 시 플러그인 루트에 `logo.png`와 `plugin.json`이 필요합니다.

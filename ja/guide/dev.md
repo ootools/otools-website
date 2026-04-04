@@ -48,6 +48,14 @@ OTools は Rust 動的ライブラリによる性能拡張に対応していま�
 - Windows: `Windows.dll`
 - Linux: `Linux.so`
 
+### リポジトリ構成：`native` と `tauri`（任意）
+
+メインリポジトリでは **`plugins/<name>/native`** と任意の **`plugins/<name>/tauri`**（OTools 本体に同梱する場合の `#[tauri::command]` 用）に分かれることがあります。**マーケット配布物**は従来どおり **`plugin.json` + フロント + `lib/` 動的ライブラリ** であり、`tauri` クレートは含めません。
+
+### プッシュイベント（`poll_events`）
+
+動的ライブラリのみの場合、`poll_events` を実装し、フロントでは `window.otools.listenNative` で受け取れます（詳細は OTools API ドキュメント）。間隔は `intervalMs` で指定（ホストが約 50～10000 ms にクランプ）。
+
 ## 5. パッケージングと公開
 
 - パッケージングにはプラグインルートに `logo.png` と `plugin.json` が必要です。

@@ -57,6 +57,17 @@ OTools supports Rust dynamic libraries for higher performance.
 - Build native library: generates dynamic libs under `lib/`.
 - Standalone build: build platform-specific libs on another system.
 
+### Repo layout: `native` vs `tauri` (optional)
+
+In the main repository, some plugins use **`plugins/<name>/native`** (business logic + `otools_plugin_invoke`) plus an optional **`plugins/<name>/tauri`** crate used **only when the plugin is bundled inside the OTools desktop app** to register `#[tauri::command]`.  
+**Marketplace packages** are still **`plugin.json` + frontend assets + `lib/` dynamic library** — do **not** ship the `tauri` sub-crate: after marketplace install, the host loads the dylib via FFI; built-in integration is done by the main app depending on the `*-tauri` crate.
+
+### Push-style events (`poll_events`)
+
+Third-party native code loaded **only as a dylib** can expose **`poll_events`**; the host polls it and the frontend consumes events via **`window.otools.listenNative`** (see the OTools API doc, “Native event subscription”). The polling interval can be set with `intervalMs` on `listenNative` (the host clamps roughly 50–10000 ms).
+
+- Web code can still use Tauri `listen` for channels the main app `emit`s; the **dynamic library** feeds pending items through `poll_events`, and the host performs `emit` for the webview.
+
 `plugin.json` configuration:
 
 ```json

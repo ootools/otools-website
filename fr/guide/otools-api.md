@@ -55,6 +55,29 @@ await otools.invokeNativePlugin('plugin-uuid', 'ping');
 await otools.reloadNativePlugin('plugin-uuid');
 ```
 
+### Hôte `host_dispatch` (bibliothèques dynamiques marketplace)
+
+Si la bibliothèque exporte **`otools_plugin_bind_host`**, l’hôte transmet **`OtoolsNativeHostApiV1`** au chargement (`version >= 2`). En plus de **`invoke` / `free`**, **`host_dispatch`** utilise la même table de capacités que **`dispatch_direct`** dans **`ot-host-dispatch`** (HTTP, état local du plugin, etc.).
+
+- **Entrée** : `capability` en UTF‑8, `request` en JSON (même forme que `dispatch_direct` intégré).
+- **Sortie** : `{ "ok": true, "data": ... }` ou `{ "ok": false, "error": "..." }`.
+- **Libération** : utiliser **`free`** de la même structure API pour libérer le tampon renvoyé par `host_dispatch`.
+
+Exemples de `capability` : `http.send`, `http.normalize_request`, `http.write_base64_file`, `plugin_state.read`, `plugin_state.save_local` (voir `ot_host_dispatch::caps`).
+
+### Événements natifs (`listenNative`)
+
+Pour les bibliothèques dynamiques du marketplace : l’hôte appelle **`poll_events`** et émet sur **`otools-native:{uuid}`**. Utilisez `listenNative` côté web.
+
+```ts
+const unlisten = await otools.listenNative((e) => {
+  const { topic, payload } = e.payload;
+}, { intervalMs: 200 });
+await unlisten();
+```
+
+Implémentez **`poll_events`** dans `otools_plugin_invoke` ; renvoyez `data.events` comme tableau `{ topic, payload }`. Les plugins intégrés au binaire peuvent toujours utiliser `invoke('command')`.
+
 ## 5. Stockage d’état du plugin
 
 Prend en charge **l’état local** et **l’état synchronisé** ; `scheme` permet plusieurs JSON.

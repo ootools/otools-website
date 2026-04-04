@@ -48,6 +48,14 @@ Nombres por defecto:
 - Windows: `Windows.dll`
 - Linux: `Linux.so`
 
+### Repositorio: `native` y `tauri` (opcional)
+
+En el monorepo puede haber **`plugins/<name>/native`** y un crate **`tauri`** opcional (solo integración en la app). El **paquete del marketplace** sigue siendo **`plugin.json` + front + `lib/`** sin el crate `tauri`.
+
+### Eventos push (`poll_events`)
+
+Con solo biblioteca dinámica, implemente **`poll_events`**; en el front use **`window.otools.listenNative`** (véase la API OTools).
+
 ## 5. Empaquetado y publicación
 
 - El empaquetado requiere `logo.png` y `plugin.json` en la raíz del plugin.

@@ -55,6 +55,53 @@ await otools.invokeNativePlugin('plugin-uuid', 'ping');
 await otools.reloadNativePlugin('plugin-uuid');
 ```
 
+### Host `host_dispatch` (marketplace dylibs)
+
+If the library exports **`otools_plugin_bind_host`**, the host passes **`OtoolsNativeHostApiV1`** at load time (`version >= 2`). Besides **`invoke` / `free`** (e.g. host AI callbacks), the **`host_dispatch`** field routes to the same capability table as **`dispatch_direct`** in **`ot-host-dispatch`** (HTTP, plugin local state, etc.), so marketplace builds match the app.
+
+- **Input**: `capability` is a UTF-8 name; `request` is JSON (same shape as built-in `dispatch_direct`).
+- **Output**: JSON, `{ "ok": true, "data": ... }` or `{ "ok": false, "error": "..." }`.
+- **Free**: use the same struct’s **`free`** to release buffers returned by `host_dispatch`.
+
+Common `capability` strings: `http.send`, `http.normalize_request`, `http.write_base64_file`, `plugin_state.read`, `plugin_state.save_local` (see `ot_host_dispatch::caps`).
+
+### Native event subscription (`listenNative`)
+
+For **marketplace-installed plugins loaded as dynamic libraries**, the host periodically calls the library method **`poll_events`** and forwards events via Tauri to the channel **`otools-native:{current plugin uuid}`**. Use `listenNative` on the frontend (this registers host commands and sets up `listen`).
+
+```ts
+const unlisten = await otools.listenNative((e) => {
+  const { topic, payload } = e.payload;
+  console.log(topic, payload);
+}, { intervalMs: 200 });
+
+// Always call unlisten on teardown (stops host polling ref-count)
+await unlisten();
+```
+
+To target another plugin uuid explicitly:
+
+```ts
+await otools.listenNativePlugin('other-plugin-uuid', handler, { intervalMs: 300 });
+```
+
+The dynamic library must handle **`method: "poll_events"`** inside `otools_plugin_invoke`. A typical success body:
+
+```json
+{
+  "ok": true,
+  "data": {
+    "events": [
+      { "topic": "progress", "payload": { "percent": 50 } }
+    ]
+  }
+}
+```
+
+`data` may also be a bare array of events; each item may use **`topic`** or **`event`**. Return an empty array when there is nothing to push.
+
+> **Note**: Plugins **linked into the main app** can still use Tauri `invoke('some_command')`. **Dynamic-library-only** distribution should use `invokeNative` / `listenNative` and the agreed method names (e.g. `poll_events`).
+
 ## 5. Plugin State Storage
 
 Supports **local state** and **sync state**; `scheme` can be used for multiple JSON stores.

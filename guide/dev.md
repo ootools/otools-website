@@ -57,6 +57,17 @@ OTools 支持插件携带 Rust 动态库能力，提升性能上限。
 - 构建原生库：生成 `lib/` 目录下的动态库文件。
 - 独立构建：可在其他系统环境中单独构建对应平台的动态库。
 
+### 仓库目录：`native` 与 `tauri`（可选）
+
+主仓库中部分插件采用 **`plugins/<name>/native`**（业务与 `otools_plugin_invoke` 协议）+ **`plugins/<name>/tauri`**（仅用于**内置**进 OTools 桌面端时注册 `#[tauri::command]`）。  
+**插件市场上架包**仍以 **`plugin.json` + 前端资源 + `lib/` 动态库** 为准，**不需要**、也不应打包 `tauri` 子工程：市场安装后走动态库 FFI；内置集成由主程序 Cargo 依赖 `*-tauri` crate 完成。
+
+### 推送事件（`poll_events`）
+
+若第三方希望在**仅动态库**场景下使用类似「监听」的能力，可在 native 中实现 **`poll_events`**，由宿主轮询并在前端通过 **`window.otools.listenNative`** 接收（详见《OTools API》中 Native 事件监听一节）。轮询间隔可由前端 `listenNative` 的 `intervalMs` 传入（宿主限制约 50～10000 ms）。
+
+- Web 层优先仍可用 Tauri `listen` 订阅主程序 `emit` 的频道；**动态库侧**通过 `poll_events` 把待推送事项交给宿主统一 `emit`。
+
 `plugin.json` 中配置：
 
 ```json

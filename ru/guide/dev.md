@@ -48,6 +48,14 @@ OTools поддерживает Rust‑динамические библиоте
 - Windows: `Windows.dll`
 - Linux: `Linux.so`
 
+### Репозиторий: `native` и `tauri` (необязательно)
+
+В основном репозитории могут быть **`plugins/<name>/native`** и опциональный crate **`tauri`** (встраивание в приложение). **Пакет маркетплейса** — по-прежнему **`plugin.json` + фронт + `lib/`**, без crate `tauri`.
+
+### События push (`poll_events`)
+
+Для одной только динамической библиотеки реализуйте **`poll_events`**; на фронте — **`window.otools.listenNative`** (см. документацию OTools API).
+
 ## 5. Упаковка и публикация
 
 - Для упаковки нужны `logo.png` и `plugin.json` в корне.

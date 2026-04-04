@@ -55,6 +55,29 @@ await otools.invokeNativePlugin('plugin-uuid', 'ping');
 await otools.reloadNativePlugin('plugin-uuid');
 ```
 
+### Host `host_dispatch` (Marketplace‑Dylibs)
+
+Exportiert die Bibliothek **`otools_plugin_bind_host`**, übergibt der Host beim Laden **`OtoolsNativeHostApiV1`** (`version >= 2`). Neben **`invoke` / `free`** zeigt **`host_dispatch`** auf dieselbe Capability‑Tabelle wie **`dispatch_direct`** in **`ot-host-dispatch`** (HTTP, lokaler Plugin‑State usw.).
+
+- **Eingabe**: `capability` als UTF‑8‑Name, `request` als JSON (wie eingebautes `dispatch_direct`).
+- **Ausgabe**: `{ "ok": true, "data": ... }` oder `{ "ok": false, "error": "..." }`.
+- **Freigabe**: Rückgabepuffer mit **`free`** derselben API‑Struktur freigeben.
+
+Typische `capability`‑Strings: `http.send`, `http.normalize_request`, `http.write_base64_file`, `plugin_state.read`, `plugin_state.save_local` (siehe `ot_host_dispatch::caps`).
+
+### Native‑Ereignisse (`listenNative`)
+
+Für Marketplace‑Dynamic Libraries: der Host ruft **`poll_events`** auf und emittiert auf **`otools-native:{uuid}`**. Frontend: `listenNative`.
+
+```ts
+const unlisten = await otools.listenNative((e) => {
+  const { topic, payload } = e.payload;
+}, { intervalMs: 200 });
+await unlisten();
+```
+
+In `otools_plugin_invoke` **`poll_events`** behandeln; `data.events` als `{ topic, payload }`‑Liste. In die App eingebettete Plugins können weiter `invoke('command')` nutzen.
+
 ## 5. Plugin‑Zustandsspeicher
 
 Unterstützt **lokalen Zustand** und **Sync‑Zustand**; `scheme` ermöglicht mehrere JSON‑Stores.

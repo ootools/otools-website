@@ -55,6 +55,29 @@ await otools.invokeNativePlugin('plugin-uuid', 'ping');
 await otools.reloadNativePlugin('plugin-uuid');
 ```
 
+### Хост `host_dispatch` (динамические библиотеки маркетплейса)
+
+Если библиотека экспортирует **`otools_plugin_bind_host`**, хост при загрузке передаёт **`OtoolsNativeHostApiV1`** (`version >= 2`). Помимо **`invoke` / `free`**, поле **`host_dispatch`** использует ту же таблицу возможностей, что и **`dispatch_direct`** в **`ot-host-dispatch`** (HTTP, локальное состояние плагина и т.д.).
+
+- **Вход**: `capability` — UTF‑8; `request` — JSON (как у встроенного `dispatch_direct`).
+- **Выход**: `{ "ok": true, "data": ... }` или `{ "ok": false, "error": "..." }`.
+- **Освобождение**: буфер, возвращённый `host_dispatch`, освобождать через **`free`** той же структуры API.
+
+Типичные `capability`: `http.send`, `http.normalize_request`, `http.write_base64_file`, `plugin_state.read`, `plugin_state.save_local` (см. `ot_host_dispatch::caps`).
+
+### События native (`listenNative`)
+
+Для динамических библиотек из маркетплейса: хост вызывает **`poll_events`** и шлёт события в канал **`otools-native:{uuid}`**. На фронте — `listenNative`.
+
+```ts
+const unlisten = await otools.listenNative((e) => {
+  const { topic, payload } = e.payload;
+}, { intervalMs: 200 });
+await unlisten();
+```
+
+Обработайте **`poll_events`** в `otools_plugin_invoke`; верните `data.events` как массив `{ topic, payload }`. Встроенные в приложение плагины по-прежнему могут использовать `invoke('command')`.
+
 ## 5. Хранение состояния плагина
 
 Поддерживаются **локальное состояние** и **синхронное состояние**; `scheme` позволяет несколько JSON‑хранилищ.

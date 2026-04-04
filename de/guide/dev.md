@@ -48,6 +48,14 @@ Standard‑Bibliotheksnamen:
 - Windows: `Windows.dll`
 - Linux: `Linux.so`
 
+### Repository: `native` und `tauri` (optional)
+
+Im Hauptrepo gibt es **`plugins/<name>/native`** und optional **`plugins/<name>/tauri`** (nur Einbindung in die Desktop‑App). **Marktplatz‑Pakete** bleiben **`plugin.json` + Frontend + `lib/`** — ohne `tauri`‑Crate.
+
+### Push‑Ereignisse (`poll_events`)
+
+Bei reiner Dynamic Library **`poll_events`** implementieren; Frontend: **`window.otools.listenNative`** (siehe OTools‑API‑Dokumentation).
+
 ## 5. Packaging & Veröffentlichung
 
 - Packaging erfordert `logo.png` und `plugin.json` im Plugin‑Root.
