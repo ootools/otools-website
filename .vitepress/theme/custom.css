@@ -65,9 +65,10 @@
 }
 
 .home-nav-transparent .VPNavBarTitle .logo,
-.layout-home:not(.nav-scrolled) .VPNavBarTitle .logo {
+.home-nav-transparent .VPNavScreenTitle .logo,
+.layout-home:not(.nav-scrolled) .VPNavBarTitle .logo,
+.layout-home:not(.nav-scrolled) .VPNavScreenTitle .logo {
   filter: none;
-  content: url('/otools-logo-white.svg');
 }
 
 .home-nav-transparent .VPNavBarMenuLink:hover,

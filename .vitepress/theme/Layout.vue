@@ -17,6 +17,11 @@ const isHome = computed(() => {
 
 const navScrollThreshold = computed(() => (isHome.value ? 120 : 24));
 
+const getNavLogos = () =>
+  Array.from(
+    document.querySelectorAll<HTMLImageElement>('.VPNavBarTitle .logo, .VPNavScreenTitle .logo')
+  );
+
 const updateScroll = () => {
   const currentY = window.scrollY;
   navScrolled.value = currentY > navScrollThreshold.value;
@@ -25,8 +30,7 @@ const updateScroll = () => {
   const root = document.documentElement;
   root.classList.toggle('home-nav-transparent', transparentNav);
 
-  const logo = document.querySelector('.VPNavBarTitle .logo') as HTMLImageElement | null;
-  if (logo) {
+  for (const logo of getNavLogos()) {
     if (!logo.dataset.srcLight) {
       logo.dataset.srcLight = logo.getAttribute('src') || logoLightSrc;
     }
@@ -66,9 +70,10 @@ watch(
 onBeforeUnmount(() => {
   window.removeEventListener('scroll', updateScroll);
   document.documentElement.classList.remove('home-nav-transparent');
-  const logo = document.querySelector('.VPNavBarTitle .logo') as HTMLImageElement | null;
-  if (logo?.dataset.srcLight) {
-    logo.setAttribute('src', logo.dataset.srcLight);
+  for (const logo of getNavLogos()) {
+    if (logo.dataset.srcLight) {
+      logo.setAttribute('src', logo.dataset.srcLight);
+    }
   }
 });
 </script>
