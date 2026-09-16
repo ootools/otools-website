@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-label="鲨鱼数据库">
+  <defs>
+    <linearGradient id="bg-otools-dbm" x1="0%" x2="100%" y1="0%" y2="100%">
+      <stop offset="0%" stop-color="#14b8a6" />
+      <stop offset="100%" stop-color="#0f766e" />
+    </linearGradient>
+  </defs>
+  <rect width="128" height="128" rx="28" fill="url(#bg-otools-dbm)" />
+  <g fill="none" stroke="#fff" stroke-width="8" stroke-linecap="round" stroke-linejoin="round">
+    <ellipse cx="64" cy="32" rx="34" ry="13"/>
+    <path d="M30 32v64c0 7.2 15.2 13 34 13s34-5.8 34-13V32"/>
+    <path d="M30 64c0 7.2 15.2 13 34 13s34-5.8 34-13"/>
+  </g>
+</svg>
