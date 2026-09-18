@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+  <defs>
+    <linearGradient id="disk-bg" x1="0%" x2="100%" y1="0%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="100%" stop-color="#2563eb" />
+    </linearGradient>
+  </defs>
+  <rect width="128" height="128" rx="28" fill="url(#disk-bg)" />
+  <path fill="#fff" d="M64 24c-18.8 0-34 15.2-34 34s15.2 34 34 34 34-15.2 34-34S82.8 24 64 24Zm0 12c12.2 0 22 9.8 22 22S76.2 80 64 80 42 70.2 42 58s9.8-22 22-22Zm0 10a12 12 0 1 0 0 24 12 12 0 0 0 0-24Zm-22 50h44c9.9 0 18 8.1 18 18v2H24v-2c0-9.9 8.1-18 18-18Z"/>
+</svg>
