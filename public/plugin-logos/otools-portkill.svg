@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-label="虎鲸端口检测">
+  <defs>
+    <linearGradient id="bg-otools-portkill" x1="0%" x2="100%" y1="0%" y2="100%">
+      <stop offset="0%" stop-color="#f87171" />
+      <stop offset="100%" stop-color="#b91c1c" />
+    </linearGradient>
+  </defs>
+  <rect width="128" height="128" rx="28" fill="url(#bg-otools-portkill)" />
+  <g fill="none" stroke="#fff" stroke-width="8" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M28 44h40v26a20 20 0 0 1-40 0z"/>
+    <path d="M38 44V26"/>
+    <path d="M58 44V26"/>
+    <path d="M48 92v14"/>
+    <path d="M82 68l22 22"/>
+    <path d="M104 68l-22 22"/>
+  </g>
+</svg>
