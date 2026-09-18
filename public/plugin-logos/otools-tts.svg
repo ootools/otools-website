@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-label="BelugaTTS">
+  <defs>
+    <linearGradient id="bg-otools-tts" x1="0%" x2="100%" y1="0%" y2="100%">
+      <stop offset="0%" stop-color="#c084fc" />
+      <stop offset="100%" stop-color="#7c3aed" />
+    </linearGradient>
+  </defs>
+  <rect width="128" height="128" rx="28" fill="url(#bg-otools-tts)" />
+  <g fill="#fff">
+    <path d="M28 54h16l20-18v56L44 74H28z"/>
+  </g>
+  <g fill="none" stroke="#fff" stroke-width="8" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M78 48a22 22 0 0 1 0 32"/>
+    <path d="M92 36a38 38 0 0 1 0 56"/>
+  </g>
+</svg>
