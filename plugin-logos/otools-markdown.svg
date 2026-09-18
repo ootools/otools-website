@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-label="海草 Markdown">
+  <defs>
+    <linearGradient id="bg-otools-markdown" x1="0%" x2="100%" y1="0%" y2="100%">
+      <stop offset="0%" stop-color="#34d399" />
+      <stop offset="100%" stop-color="#059669" />
+    </linearGradient>
+  </defs>
+  <rect width="128" height="128" rx="28" fill="url(#bg-otools-markdown)" />
+  <g fill="none" stroke="#fff" stroke-width="8" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="18" y="34" width="92" height="60" rx="12"/>
+  </g>
+  <g fill="none" stroke="#fff" stroke-width="8" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M40 82V52l14 18 14-18v30"/>
+    <path d="M88 52v24"/>
+    <path d="M78 66l10 10 10-10"/>
+  </g>
+</svg>
