@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-label="墨鱼终端">
+  <defs>
+    <linearGradient id="bg-otools-term" x1="0%" x2="100%" y1="0%" y2="100%">
+      <stop offset="0%" stop-color="#334155" />
+      <stop offset="100%" stop-color="#0f172a" />
+    </linearGradient>
+  </defs>
+  <rect width="128" height="128" rx="28" fill="url(#bg-otools-term)" />
+  <g fill="none" stroke="#fff" stroke-width="8" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="18" y="26" width="92" height="76" rx="12"/>
+    <path d="M40 56l14 14-14 14"/>
+    <path d="M64 84h24"/>
+  </g>
+</svg>
