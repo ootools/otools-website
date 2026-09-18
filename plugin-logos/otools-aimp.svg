@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-label="公众号AI助手">
+  <defs>
+    <linearGradient id="bg-otools-aimp" x1="0%" x2="100%" y1="0%" y2="100%">
+      <stop offset="0%" stop-color="#10b981" />
+      <stop offset="100%" stop-color="#047857" />
+    </linearGradient>
+  </defs>
+  <rect width="128" height="128" rx="28" fill="url(#bg-otools-aimp)" />
+  <g fill="none" stroke="#fff" stroke-width="8" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M28 24h34l18 18v56H28z"/>
+    <path d="M62 24v18h18"/>
+    <path d="M42 60h24"/>
+    <path d="M42 76h16"/>
+  </g>
+  <g fill="#fff">
+    <path d="M100 66l5 12 12 5-12 5-5 12-5-12-12-5 12-5z"/>
+  </g>
+</svg>
