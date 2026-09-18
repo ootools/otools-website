@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-label="系统助手">
+  <defs>
+    <linearGradient id="bg-otools-os-helper" x1="0%" x2="100%" y1="0%" y2="100%">
+      <stop offset="0%" stop-color="#64748b" />
+      <stop offset="100%" stop-color="#1e293b" />
+    </linearGradient>
+  </defs>
+  <rect width="128" height="128" rx="28" fill="url(#bg-otools-os-helper)" />
+  <g fill="none" stroke="#fff" stroke-width="8" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M26 40h76"/>
+    <path d="M26 64h76"/>
+    <path d="M26 88h76"/>
+  </g>
+  <g fill="#fff">
+    <circle cx="48" cy="40" r="10"/>
+    <circle cx="80" cy="64" r="10"/>
+    <circle cx="44" cy="88" r="10"/>
+  </g>
+</svg>
