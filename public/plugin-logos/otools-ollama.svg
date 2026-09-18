@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-label="Ollama">
+  <defs>
+    <linearGradient id="bg-otools-ollama" x1="0%" x2="100%" y1="0%" y2="100%">
+      <stop offset="0%" stop-color="#7c3aed" />
+      <stop offset="100%" stop-color="#a855f7" />
+    </linearGradient>
+  </defs>
+  <rect width="128" height="128" rx="28" fill="url(#bg-otools-ollama)" />
+  <g fill="none" stroke="#fff" stroke-width="8" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M34 30h60a12 12 0 0 1 12 12v34a12 12 0 0 1-12 12H62L44 104V88H34a12 12 0 0 1-12-12V42a12 12 0 0 1 12-12z"/>
+  </g>
+  <g fill="#fff">
+    <path d="M64 44l6 14 14 6-14 6-6 14-6-14-14-6 14-6z"/>
+  </g>
+</svg>
