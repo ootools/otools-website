@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-label="蓝鲸 HTTP">
+  <defs>
+    <linearGradient id="bg-otools-http" x1="0%" x2="100%" y1="0%" y2="100%">
+      <stop offset="0%" stop-color="#0ea5e9" />
+      <stop offset="100%" stop-color="#2563eb" />
+    </linearGradient>
+  </defs>
+  <rect width="128" height="128" rx="28" fill="url(#bg-otools-http)" />
+  <g fill="none" stroke="#fff" stroke-width="8" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="64" cy="64" r="40"/>
+    <ellipse cx="64" cy="64" rx="18" ry="40"/>
+    <path d="M26 52h76"/>
+    <path d="M26 76h76"/>
+  </g>
+</svg>
