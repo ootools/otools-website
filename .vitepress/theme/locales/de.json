@@ -31,9 +31,18 @@
         "title": "Ökosystem‑Hub",
         "desc": "Tool‑Bündelung und schneller Plugin‑Zugriff.",
         "cards": [
-          { "title": "Marketplace", "desc": "Kuratiert + Bewertet + Updates" },
-          { "title": "Developer Center", "desc": "Web + Rust Build" },
-          { "title": "Tabs‑Workflow", "desc": "Parallele Aufgaben" }
+          {
+            "title": "Marketplace",
+            "desc": "Kuratiert + Bewertet + Updates"
+          },
+          {
+            "title": "Developer Center",
+            "desc": "Web + Rust Build"
+          },
+          {
+            "title": "Tabs‑Workflow",
+            "desc": "Parallele Aufgaben"
+          }
         ]
       },
       "git": {
@@ -41,9 +50,18 @@
         "title": "Oktopus Git",
         "desc": "Moderne Git‑Verwaltung mit KI‑Kollaboration.",
         "cards": [
-          { "title": "KI‑Commit‑Texte", "desc": "Mit einem Klick erzeugen" },
-          { "title": "KI‑Dokumente", "desc": "Formulare automatisch erzeugen" },
-          { "title": "Submodule", "desc": "Schneller Zugriff" }
+          {
+            "title": "KI‑Commit‑Texte",
+            "desc": "Mit einem Klick erzeugen"
+          },
+          {
+            "title": "KI‑Dokumente",
+            "desc": "Formulare automatisch erzeugen"
+          },
+          {
+            "title": "Submodule",
+            "desc": "Schneller Zugriff"
+          }
         ]
       },
       "dbm": {
@@ -51,9 +69,18 @@
         "title": "Haifisch‑DB",
         "desc": "Schema‑ und Query‑Management für MySQL/Postgres/MongoDB.",
         "cards": [
-          { "title": "Verbindungen", "desc": "Multi‑DB zentral" },
-          { "title": "Schema‑Ansicht", "desc": "Tabellen / Indizes" },
-          { "title": "Daten‑Ops", "desc": "CRUD und Export" }
+          {
+            "title": "Verbindungen",
+            "desc": "Multi‑DB zentral"
+          },
+          {
+            "title": "Schema‑Ansicht",
+            "desc": "Tabellen / Indizes"
+          },
+          {
+            "title": "Daten‑Ops",
+            "desc": "CRUD und Export"
+          }
         ]
       },
       "ssh": {
@@ -61,9 +88,18 @@
         "title": "Sepia‑Terminal",
         "desc": "Terminal und SFTP kombiniert.",
         "cards": [
-          { "title": "Sessions", "desc": "Parallele Sessions" },
-          { "title": "SFTP‑Dateien", "desc": "Upload / Download / Sync" },
-          { "title": "Quick Actions", "desc": "Befehlsvorlagen" }
+          {
+            "title": "Sessions",
+            "desc": "Parallele Sessions"
+          },
+          {
+            "title": "SFTP‑Dateien",
+            "desc": "Upload / Download / Sync"
+          },
+          {
+            "title": "Quick Actions",
+            "desc": "Befehlsvorlagen"
+          }
         ]
       },
       "servrun": {
@@ -71,9 +107,18 @@
         "title": "Korallen‑Env",
         "desc": "Nginx/PHP/MySQL/Redis mit einem Klick verwalten.",
         "cards": [
-          { "title": "Services", "desc": "Nginx/PHP/MySQL" },
-          { "title": "Config", "desc": "vHost mit einem Klick" },
-          { "title": "Versionen", "desc": "Multi‑Version" }
+          {
+            "title": "Services",
+            "desc": "Nginx/PHP/MySQL"
+          },
+          {
+            "title": "Config",
+            "desc": "vHost mit einem Klick"
+          },
+          {
+            "title": "Versionen",
+            "desc": "Multi‑Version"
+          }
         ]
       },
       "ollama": {
@@ -81,9 +126,18 @@
         "title": "Tintenfisch Ollama",
         "desc": "Visuelle Verwaltung lokaler Modelle.",
         "cards": [
-          { "title": "Modelle", "desc": "Versionen + Abhängigkeiten" },
-          { "title": "Performance", "desc": "GPU/CPU‑Auslastung" },
-          { "title": "Historie", "desc": "Mehrturn‑Chats" }
+          {
+            "title": "Modelle",
+            "desc": "Versionen + Abhängigkeiten"
+          },
+          {
+            "title": "Performance",
+            "desc": "GPU/CPU‑Auslastung"
+          },
+          {
+            "title": "Historie",
+            "desc": "Mehrturn‑Chats"
+          }
         ]
       },
       "audio": {
@@ -91,9 +145,18 @@
         "title": "Delfin‑Audio‑Lab",
         "desc": "Audio‑Verarbeitung und Labor.",
         "cards": [
-          { "title": "Waveform‑Edit", "desc": "Spur‑Bearbeitung" },
-          { "title": "Effects‑Chain", "desc": "Filter + Reverb" },
-          { "title": "Export", "desc": "Mehrere Formate" }
+          {
+            "title": "Waveform‑Edit",
+            "desc": "Spur‑Bearbeitung"
+          },
+          {
+            "title": "Effects‑Chain",
+            "desc": "Filter + Reverb"
+          },
+          {
+            "title": "Export",
+            "desc": "Mehrere Formate"
+          }
         ]
       },
       "http": {
@@ -101,9 +164,18 @@
         "title": "Fliegender Fisch HTTP",
         "desc": "Request‑Orchestrierung und Insights.",
         "cards": [
-          { "title": "Orchestrierung", "desc": "Batch‑Multi‑API" },
-          { "title": "Insights", "desc": "Status und Performance" },
-          { "title": "Umgebung", "desc": "Dev / Test / Prod" }
+          {
+            "title": "Orchestrierung",
+            "desc": "Batch‑Multi‑API"
+          },
+          {
+            "title": "Insights",
+            "desc": "Status und Performance"
+          },
+          {
+            "title": "Umgebung",
+            "desc": "Dev / Test / Prod"
+          }
         ]
       }
     }
@@ -125,12 +197,30 @@
     "title": "Plattform‑Fähigkeiten",
     "subtitle": "Ökosystem, Performance und Zusammenarbeit für eine Desktop‑Mini‑App‑Plattform.",
     "items": [
-      { "title": "Ozean‑Plugin‑Ökosystem", "desc": "Verzeichnis, Versionen und Distribution vereinheitlicht." },
-      { "title": "Tabs‑Multitasking", "desc": "Mehrfach öffnen, Kontext bleibt." },
-      { "title": "Unified Runtime", "desc": "Web + Native, API und State vereinheitlicht." },
-      { "title": "Hochleistungs‑Core", "desc": "Rust + Tauri, schnell und stabil." },
-      { "title": "AI‑freundlich", "desc": "Einheitliches MCP für KI‑Workflows." },
-      { "title": "Native Erweiterung", "desc": "Rust‑Dynlibs erweitern die Performance." }
+      {
+        "title": "Ozean‑Plugin‑Ökosystem",
+        "desc": "Verzeichnis, Versionen und Distribution vereinheitlicht."
+      },
+      {
+        "title": "Tabs‑Multitasking",
+        "desc": "Mehrfach öffnen, Kontext bleibt."
+      },
+      {
+        "title": "Unified Runtime",
+        "desc": "Web + Native, API und State vereinheitlicht."
+      },
+      {
+        "title": "Hochleistungs‑Core",
+        "desc": "Rust + Tauri, schnell und stabil."
+      },
+      {
+        "title": "AI‑freundlich",
+        "desc": "Einheitliches MCP für KI‑Workflows."
+      },
+      {
+        "title": "Native Erweiterung",
+        "desc": "Rust‑Dynlibs erweitern die Performance."
+      }
     ]
   },
   "apiMatrix": {
@@ -139,10 +229,22 @@
       "items": "Inhalt"
     },
     "rows": [
-      { "group": "System", "items": "Zwischenablage, Dateien/Pfade, Benachrichtigungen, Shell" },
-      { "group": "Runtime‑Info", "items": "Plattform, Version, UUID, Umgebungsvariablen" },
-      { "group": "Native", "items": "Laden, Aufruf, Probe, Hot‑Reload" },
-      { "group": "Plugin‑State", "items": "Lokaler/Sync‑State, scheme‑Speicher" }
+      {
+        "group": "System",
+        "items": "Zwischenablage, Dateien/Pfade, Benachrichtigungen, Shell"
+      },
+      {
+        "group": "Runtime‑Info",
+        "items": "Plattform, Version, UUID, Umgebungsvariablen"
+      },
+      {
+        "group": "Native",
+        "items": "Laden, Aufruf, Probe, Hot‑Reload"
+      },
+      {
+        "group": "Plugin‑State",
+        "items": "Lokaler/Sync‑State, scheme‑Speicher"
+      }
     ]
   },
   "pluginShowcase": {
@@ -153,72 +255,144 @@
         "label": "Start",
         "subtitle": "Hub · Aggregation",
         "features": [
-          { "title": "Marketplace", "desc": "Kuratiert + Bewertet + Updates" },
-          { "title": "Developer Center", "desc": "Web + Rust Build" },
-          { "title": "Tabs‑Workflow", "desc": "Parallele Aufgaben" }
+          {
+            "title": "Marketplace",
+            "desc": "Kuratiert + Bewertet + Updates"
+          },
+          {
+            "title": "Developer Center",
+            "desc": "Web + Rust Build"
+          },
+          {
+            "title": "Tabs‑Workflow",
+            "desc": "Parallele Aufgaben"
+          }
         ]
       },
       "git": {
         "label": "Git",
         "subtitle": "KI‑Commit · Dokumente",
         "features": [
-          { "title": "KI‑Commit‑Texte", "desc": "Mit einem Klick erzeugen" },
-          { "title": "KI‑Dokumente", "desc": "Formulare automatisch" },
-          { "title": "Submodule", "desc": "Schneller Zugriff" }
+          {
+            "title": "KI‑Commit‑Texte",
+            "desc": "Mit einem Klick erzeugen"
+          },
+          {
+            "title": "KI‑Dokumente",
+            "desc": "Formulare automatisch"
+          },
+          {
+            "title": "Submodule",
+            "desc": "Schneller Zugriff"
+          }
         ]
       },
       "dbm": {
         "label": "Datenbank",
         "subtitle": "Multi‑DB · Schema",
         "features": [
-          { "title": "Verbindungen", "desc": "Multi‑DB zentral" },
-          { "title": "Schema‑Ansicht", "desc": "Tabellen / Indizes" },
-          { "title": "Daten‑Ops", "desc": "CRUD und Export" }
+          {
+            "title": "Verbindungen",
+            "desc": "Multi‑DB zentral"
+          },
+          {
+            "title": "Schema‑Ansicht",
+            "desc": "Tabellen / Indizes"
+          },
+          {
+            "title": "Daten‑Ops",
+            "desc": "CRUD und Export"
+          }
         ]
       },
       "ssh": {
         "label": "SSH",
         "subtitle": "Terminal · SFTP",
         "features": [
-          { "title": "Sessions", "desc": "Parallele Sessions" },
-          { "title": "SFTP‑Dateien", "desc": "Upload / Download / Sync" },
-          { "title": "Quick Actions", "desc": "Befehlsvorlagen" }
+          {
+            "title": "Sessions",
+            "desc": "Parallele Sessions"
+          },
+          {
+            "title": "SFTP‑Dateien",
+            "desc": "Upload / Download / Sync"
+          },
+          {
+            "title": "Quick Actions",
+            "desc": "Befehlsvorlagen"
+          }
         ]
       },
       "servrun": {
         "label": "Dev‑Umgebung",
         "subtitle": "Nginx/PHP/MySQL",
         "features": [
-          { "title": "Services", "desc": "Nginx/PHP/MySQL" },
-          { "title": "Config", "desc": "vHost mit einem Klick" },
-          { "title": "Versionen", "desc": "Multi‑Version" }
+          {
+            "title": "Services",
+            "desc": "Nginx/PHP/MySQL"
+          },
+          {
+            "title": "Config",
+            "desc": "vHost mit einem Klick"
+          },
+          {
+            "title": "Versionen",
+            "desc": "Multi‑Version"
+          }
         ]
       },
       "ollama": {
         "label": "Ollama",
         "subtitle": "Lokale Modelle · Performance",
         "features": [
-          { "title": "Modelle", "desc": "Versionen + Abhängigkeiten" },
-          { "title": "Performance", "desc": "GPU/CPU‑Auslastung" },
-          { "title": "Historie", "desc": "Mehrturn" }
+          {
+            "title": "Modelle",
+            "desc": "Versionen + Abhängigkeiten"
+          },
+          {
+            "title": "Performance",
+            "desc": "GPU/CPU‑Auslastung"
+          },
+          {
+            "title": "Historie",
+            "desc": "Mehrturn"
+          }
         ]
       },
       "audio": {
         "label": "Audio",
         "subtitle": "Waveform · Effekte",
         "features": [
-          { "title": "Waveform‑Edit", "desc": "Spur‑Bearbeitung" },
-          { "title": "Effects‑Chain", "desc": "Filter + Reverb" },
-          { "title": "Export", "desc": "Mehrere Formate" }
+          {
+            "title": "Waveform‑Edit",
+            "desc": "Spur‑Bearbeitung"
+          },
+          {
+            "title": "Effects‑Chain",
+            "desc": "Filter + Reverb"
+          },
+          {
+            "title": "Export",
+            "desc": "Mehrere Formate"
+          }
         ]
       },
       "http": {
         "label": "HTTP",
         "subtitle": "Orchestrierung · Insights",
         "features": [
-          { "title": "Orchestrierung", "desc": "Batch‑Multi‑API" },
-          { "title": "Insights", "desc": "Status und Performance" },
-          { "title": "Umgebung", "desc": "Dev / Test / Prod" }
+          {
+            "title": "Orchestrierung",
+            "desc": "Batch‑Multi‑API"
+          },
+          {
+            "title": "Insights",
+            "desc": "Status und Performance"
+          },
+          {
+            "title": "Umgebung",
+            "desc": "Dev / Test / Prod"
+          }
         ]
       }
     }
@@ -227,9 +401,18 @@
     "title": "Tabs‑Workflow‑Erlebnis",
     "subtitle": "Einheitlicher Einstieg, parallele Aufgaben, Plugin‑Kollaboration.",
     "items": [
-      { "title": "Tools entdecken", "desc": "Fähigkeiten schnell finden." },
-      { "title": "An Tabs pinnen", "desc": "Parallel öffnen, weniger Wechsel." },
-      { "title": "Flow‑Kollaboration", "desc": "KI‑Workflow bilden." }
+      {
+        "title": "Tools entdecken",
+        "desc": "Fähigkeiten schnell finden."
+      },
+      {
+        "title": "An Tabs pinnen",
+        "desc": "Parallel öffnen, weniger Wechsel."
+      },
+      {
+        "title": "Flow‑Kollaboration",
+        "desc": "KI‑Workflow bilden."
+      }
     ]
   },
   "docCta": {
@@ -239,5 +422,238 @@
       "api": "OTools API ansehen",
       "dev": "Entwicklermodus‑Guide"
     }
+  },
+  "pluginLanding": {
+    "downloadStandalone": "Standalone herunterladen",
+    "getPlugin": "Plugin-Version holen",
+    "recommended": "Empfohlen",
+    "galleryTitle": "Screenshots",
+    "gallerySub": "Gerendert aus der echten Plugin-Oberfläche (Hell / Dunkel folgt dem Website-Theme).",
+    "featuresTitle": "Fähigkeiten",
+    "featuresSub": "Für den Alltag ausgefeilte Details – keine Funktionsliste.",
+    "downloadTitle": "Zwei Nutzungsarten",
+    "downloadSub": "Eine fokussierte App nur dafür – oder als Plugin in deinem bestehenden OTools?",
+    "standaloneTitle": "Standalone-Version",
+    "standaloneDesc": "Eine eigene Desktop-App mit derselben Engine, aber nur den Funktionen dieses Plugins. Doppelklick und los – OTools nicht nötig.",
+    "standaloneNote": "Installer liegen auf GitHub Releases; integrierte Auto-Updates.",
+    "pluginTitle": "Plugin-Version",
+    "pluginDesc": "Zu deinem bestehenden OTools hinzufügen und mit anderen Tools im selben Workspace arbeiten – Tabs und Shortcuts geteilt.",
+    "pluginStep1": "OTools Desktop herunterladen und installieren",
+    "pluginStep2": "Den „Plugin-Marktplatz“ öffnen",
+    "pluginStep3": "Dieses Plugin suchen und mit einem Klick installieren",
+    "pluginNote": "Die Plugin-Version wird zusammen mit OTools aktualisiert.",
+    "otools-git": {
+      "badge": "Integriertes Plugin",
+      "tagline": "Git in deinem Arbeitsbereich",
+      "sub": "Multi-Repo-Übersicht, Staging, Historie und Vergleiche — der Alltag auf einem Bildschirm, ohne Terminal-Wechsel.",
+      "highlights": [
+        "Multi-Repo-Übersicht mit Status auf einen Blick",
+        "Visueller Diff mit Block-Reset",
+        "KI-generierte Commit-Nachrichten"
+      ],
+      "screens": [
+        "Arbeitsbereich",
+        "Historie"
+      ],
+      "features": [
+        {
+          "title": "Multi-Repo-Werkbank",
+          "desc": "Ein Dutzend Repos auf einmal: Commits, voraus/zurück und offene Änderungen — aufklappen zeigt Submodule."
+        },
+        {
+          "title": "Visuelle Diffs",
+          "desc": "Inline oder nebeneinander, mit Reset pro Block oder Zeile über das Kontextmenü."
+        },
+        {
+          "title": "KI-Commit-Nachrichten",
+          "desc": "Erzeugt konventionelle Commit-Nachrichten aus dem Index – mit eigenem Template."
+        }
+      ]
+    },
+    "otools-dbm": {
+      "badge": "Integriertes Plugin",
+      "tagline": "Ein Client für alle Datenbanken",
+      "sub": "MySQL / PostgreSQL / Redis / MongoDB / ClickHouse… einheitliche Verbindungen, SQL-Werkbank, Schemata und Backups.",
+      "highlights": [
+        "15+ Engines an einem Ort",
+        "SQL-Werkbank mit Ergebnisraster",
+        "Backup-Pläne und Datenwörterbuch"
+      ],
+      "screens": [
+        "Verbindungen",
+        "Ergebnis",
+        "Tabellen"
+      ],
+      "features": [
+        {
+          "title": "Alle Engines",
+          "desc": "Relational, Dokument, Key-Value, spaltenorientiert und analytisch in einer Liste – mit Umgebungs-Tags."
+        },
+        {
+          "title": "SQL-Werkbank",
+          "desc": "Tabs, Ausführungspläne, Paging und Export – flüssig auch bei großen Ergebnissen."
+        },
+        {
+          "title": "Tabellen & Schema",
+          "desc": "Durchsuche alle Tabellen, Spalten und Indizes auf einen Blick und springe direkt zu den Daten."
+        },
+        {
+          "title": "Backups",
+          "desc": "Visuelle Backup-Pläne, Sync zwischen Datenbanken und Wörterbuch-Export ohne Skripte."
+        }
+      ]
+    },
+    "otools-term": {
+      "badge": "内置插件",
+      "tagline": "终端、SFTP 与端口转发一体",
+      "sub": "多会话 SSH、内置 SFTP 文件管理、端口转发与 SOCKS5 代理，运维常用动作一个面板搞定。",
+      "highlights": [
+        "多会话终端与分组管理",
+        "内置 SFTP 浏览与编辑",
+        "端口转发 / SOCKS5 代理"
+      ],
+      "screens": [
+        "工作区"
+      ],
+      "features": [
+        {
+          "title": "多会话终端",
+          "desc": "服务器按分组管理，多标签并行操作，常用命令收藏一键执行。"
+        },
+        {
+          "title": "SFTP 浏览器",
+          "desc": "远程目录树、上传下载、在线编辑与保存，不用再开一个工具。"
+        },
+        {
+          "title": "端口转发",
+          "desc": "本地/远程端口转发与 SOCKS5 代理，可视化启停并自动恢复。"
+        }
+      ]
+    },
+    "otools-mqtt": {
+      "badge": "内置插件",
+      "tagline": "把 MQTT 调试变得直观",
+      "sub": "连接管理、订阅树、消息日志与多格式载荷解析，物联网调试不再靠命令行。",
+      "highlights": [
+        "多连接与订阅管理",
+        "消息日志与多格式载荷解析",
+        "在线发布与重放"
+      ],
+      "screens": [
+        "连接列表",
+        "会话",
+        "新建连接"
+      ],
+      "features": [
+        {
+          "title": "连接与订阅",
+          "desc": "MQTT 3.1.1 / 5.0、TLS 与遗嘱消息，订阅树按主题层级展开。"
+        },
+        {
+          "title": "载荷解析",
+          "desc": "纯文本 / JSON / Base64 / Hex / CBOR 多视图切换，JSON 自动格式化。"
+        },
+        {
+          "title": "发布与重放",
+          "desc": "QoS、Retain 可选，历史消息一键重发，便于复现问题。"
+        }
+      ]
+    },
+    "otools-ftp": {
+      "badge": "内置插件",
+      "tagline": "双栏 FTP，像本地一样操作",
+      "sub": "本地与远程双栏对照、拖拽传输、传输队列与断点续传，还支持 FTPS 加密。",
+      "highlights": [
+        "本地 / 远程双栏对照",
+        "拖拽传输与队列",
+        "FTPS 加密与断点续传"
+      ],
+      "screens": [
+        "连接列表",
+        "目录浏览"
+      ],
+      "features": [
+        {
+          "title": "双栏浏览",
+          "desc": "左边本地、右边远程，目录树与文件列表对齐，一眼看清两边结构。"
+        },
+        {
+          "title": "传输队列",
+          "desc": "上传下载进队列，进度、速率与剩余时间可视化，失败可重试。"
+        },
+        {
+          "title": "安全连接",
+          "desc": "支持 FTPS 显式加密与证书校验，被动/主动模式可切换。"
+        }
+      ]
+    },
+    "otools-servrun": {
+      "badge": "内置插件",
+      "tagline": "本机服务，一个面板管完",
+      "sub": "Nginx / MySQL / PostgreSQL / Redis / PHP… 一键启停、查看版本与日志，还能管理虚拟主机。",
+      "highlights": [
+        "服务一键启停与状态总览",
+        "Nginx 虚拟主机管理",
+        "PHP 多版本与 Composer"
+      ],
+      "screens": [
+        "服务面板",
+        "Nginx-Dienst",
+        "MySQL-Dienst"
+      ],
+      "features": [
+        {
+          "title": "服务总览",
+          "desc": "安装状态、运行状态、端口与版本集中展示，启停不必记命令。"
+        },
+        {
+          "title": "虚拟主机",
+          "desc": "Nginx vhost 可视化编辑，域名、根目录与 SSL 一目了然。"
+        },
+        {
+          "title": "PHP 多版本",
+          "desc": "多版本共存与切换，Composer 版本检测与更新。"
+        },
+        {
+          "title": "Dienststeuerung & Konfiguration",
+          "desc": "Dienste mit einem Klick starten, stoppen oder neu laden. Konfigurationen für nginx, mysql, php, redis bearbeiten und jederzeit zurücksetzen."
+        }
+      ]
+    },
+    "otools-scrcpy": {
+      "badge": "内置插件",
+      "tagline": "安卓投屏与操控",
+      "sub": "基于 scrcpy 的低延迟投屏，键鼠反向控制、无线调试与多设备同时连接。",
+      "highlights": [
+        "低延迟投屏与反向控制",
+        "无线调试配对（Android 11+）",
+        "多设备并行"
+      ],
+      "screens": [
+        "设备列表",
+        "Bildschirm"
+      ],
+      "features": [
+        {
+          "title": "低延迟投屏",
+          "desc": "可调码率与分辨率，支持录制与截图，长时间运行也稳定。"
+        },
+        {
+          "title": "反向控制",
+          "desc": "键鼠直接操作手机，剪贴板互通，支持拖拽安装 APK。"
+        },
+        {
+          "title": "无线与多设备",
+          "desc": "扫码配对无线调试，多台设备并行投屏互不干扰。"
+        }
+      ]
+    },
+    "showcaseTitle": "In der Praxis",
+    "showcaseSub": "Jede Funktion mit echtem Screenshot — sieh dir an, wie sie im Alltag aussieht."
+  },
+  "pluginGrid": {
+    "title": "Die Plugins im Detail",
+    "subtitle": "Jedes Plugin gibt es als eigenständige Desktop-App und als integriertes Plugin. Öffne eines, um zu sehen, was es kann.",
+    "more": "Mehr erfahren"
   }
 }
