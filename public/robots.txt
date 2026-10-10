@@ -1,0 +1,13 @@
+# https://ootools.github.io/otools-website/
+# 站点部署在 gh-pages 分支根目录，注意 base 路径。
+
+User-agent: *
+Allow: /
+
+# AI 检索入口
+# - /llms.txt     站点索引（llmstxt.org 规范）
+# - /llms-full.txt 全部页面正文铺平版
+Allow: /otools-website/llms.txt
+Allow: /otools-website/llms-full.txt
+
+Sitemap: https://ootools.github.io/otools-website/sitemap.xml

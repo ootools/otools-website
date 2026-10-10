@@ -1,4 +1,17 @@
+import path from 'node:path';
+import { fileURLToPath } from 'node:url';
 import { defineConfig } from 'vitepress';
+import { createSeoTransform, readLocales, readRegistry } from './seo/index.mjs';
+
+// VitePress 1.x 没有 useHead：head 唯一合法入口是 frontmatter.head，
+// 所以 SEO 必须在构建期经transformPageData 写进去，产物才是对的静态 HTML。
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
+const rootDir = path.resolve(__dirname, '..');
+const transformPageData = createSeoTransform({
+  rootDir,
+  locales: readLocales(rootDir),
+  registry: readRegistry(rootDir),
+});
 
 export default defineConfig({
   lang: 'zh-CN',
@@ -238,9 +251,13 @@ export default defineConfig({
   },
   appearance: false,
   cleanUrls: true,
+  transformPageData,
   head: [
     ['meta', { name: 'theme-color', content: '#0ea5e9' }],
     ['meta', { name: 'viewport', content: 'width=device-width, initial-scale=1' }],
+    // 显式声明 favicon：浏览器默认去请求 /favicon.ico，缺失时每个页面首访都会
+    // 抛一条 404（dev 下 console 里可见，线上则是一条无意义的失败请求）。
+    ['link', { rel: 'icon', href: '/otools-logo.svg', type: 'image/svg+xml' }],
   ],
   themeConfig: {
     logo: '/otools-logo.svg',

@@ -32,22 +32,35 @@ export const pluginLandingMeta: Record<PluginLandingKey, PluginLandingMeta> = {
     name: 'Git',
     colors: ['#0f172a', '#1d4ed8'],
     releases: `${RELEASES}/plugin-app-otools-git-v0.2.6`,
-    screenshots: [{ key: 'workspace', label: 'Workspace' }, { key: 'history', label: 'History' }],
+    // files / history / terminal 三个都要进画廊并挂进功能实景：
+    // 用户第一轮就点名「git 缺少文件、终端的功能实景」。terminal 是 git 插件的
+    // 差异化能力（内置终端跑 git 命令），只放画廊不放实景等于白拍。
+    screenshots: [
+      { key: 'workspace', label: 'Workspace' },
+      { key: 'files', label: 'Files' },
+      { key: 'history', label: 'History' },
+      { key: 'terminal', label: 'Terminal' },
+    ],
     highlights: ['', '', ''],
     features: [
       { key: 'repos', shot: 'workspace' },
+      { key: 'files', shot: 'files' },
       { key: 'diff' },
       { key: 'ai' },
+      { key: 'terminal', shot: 'terminal' },
     ],
   },
   'otools-dbm': {
     name: 'DBM',
     colors: ['#0f766e', '#2dd4bf'],
     releases: `${RELEASES}/plugin-app-otools-dbm-v0.2.3`,
+    // ⚠️ 第一张用 **tables** 而不是 connections：
+    // connections 只填了上方一张连接信息卡，下半屏全空；
+    // tables 有 12 行真实数据 + 左侧展开的数据库/表树，也是用户点名要的形态。
     screenshots: [
-      { key: 'connections', label: 'Connections' },
-      { key: 'query', label: 'Query' },
       { key: 'tables', label: 'Tables' },
+      { key: 'query', label: 'Query' },
+      { key: 'structure', label: 'Schema' },
     ],
     highlights: ['', '', ''],
     features: [
@@ -61,11 +74,16 @@ export const pluginLandingMeta: Record<PluginLandingKey, PluginLandingMeta> = {
     name: 'Term',
     colors: ['#1d4ed8', '#38bdf8'],
     releases: `${RELEASES}/plugin-app-otools-term-v0.1.4`,
-    screenshots: [{ key: 'workspace', label: 'Workspace' }],
+    // ⚠️ 不要用workspace（未连接态，画面 90% 是「请选择一个服务器」的空白色块）。
+    // 主图与功能实景都用连接后的状态，这也是用户明确要求过的（「截图太空了」）。
+    screenshots: [
+      { key: 'connected', label: 'Connected' },
+      { key: 'sftp', label: 'SFTP' },
+    ],
     highlights: ['', '', ''],
     features: [
-      { key: 'ssh', shot: 'workspace' },
-      { key: 'sftp' },
+      { key: 'ssh', shot: 'connected' },
+      { key: 'sftp', shot: 'sftp' },
       { key: 'forward' },
     ],
   },
@@ -73,9 +91,12 @@ export const pluginLandingMeta: Record<PluginLandingKey, PluginLandingMeta> = {
     name: 'MQTT',
     colors: ['#7c3aed', '#a78bfa'],
     releases: `${RELEASES}/plugin-app-otools-mqtt-v0.1.4`,
+    // ⚠️ 第一张必须是 **session**（会话打开、消息流visible），这是用户明确要求的
+    // （「把会话打开的那种作为主图」）。list是未打开会话的空态，
+    // 大半屏是「从左侧选择连接并打开会话」的占位图。
     screenshots: [
-      { key: 'list', label: 'Connections' },
       { key: 'session', label: 'Session' },
+      { key: 'list', label: 'Connections' },
       { key: 'form', label: 'New connection' },
     ],
     highlights: ['', '', ''],
@@ -104,16 +125,24 @@ export const pluginLandingMeta: Record<PluginLandingKey, PluginLandingMeta> = {
     name: 'Env',
     colors: ['#7c3aed', '#c084fc'],
     releases: `${RELEASES}/plugin-app-otools-servrun-v0.1.6`,
+    // 用户要求「ENV 可以每个服务都截图」—— 9 个服务场景全部拍完（产物里
+    // detail-* 共 9 个），画廊这里就全列出来，别只挑 3 个藏着。
     screenshots: [
       { key: 'dashboard', label: 'Dashboard' },
       { key: 'detail-nginx', label: 'Nginx' },
       { key: 'detail-mysql', label: 'MySQL' },
+      { key: 'detail-php', label: 'PHP' },
+      { key: 'detail-redis', label: 'Redis' },
+      { key: 'detail-mongodb', label: 'MongoDB' },
+      { key: 'detail-postgresql', label: 'PostgreSQL' },
+      { key: 'detail-memcached', label: 'Memcached' },
+      { key: 'detail-rabbitmq', label: 'RabbitMQ' },
     ],
     highlights: ['', '', ''],
     features: [
       { key: 'services', shot: 'dashboard' },
       { key: 'vhost', shot: 'detail-nginx' },
-      { key: 'php' },
+      { key: 'php', shot: 'detail-php' },
       { key: 'detail', shot: 'detail-mysql' },
     ],
   },

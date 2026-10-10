@@ -7,3 +7,6 @@ node_modules
 # 仓库目前不跟踪任何 lockfile，CI 用的是 npm install（见 .github/workflows/master.yml），
 # 提交 pnpm-lock.yaml 会与实际安装方式不一致。
 pnpm-lock.yaml
+
+# VitePress dev 的临时编译产物
+.vitepress/config.ts.timestamp-*.mjs

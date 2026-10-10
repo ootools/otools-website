@@ -453,12 +453,18 @@
       ],
       "screens": [
         "Área de trabajo",
-        "Historial"
+        "Explorador de archivos",
+        "Historial",
+        "Terminal"
       ],
       "features": [
         {
           "title": "Banco multi-repositorio",
           "desc": "Gestiona una docena de repos: commits, adelante/atrás y cambios pendientes — expande para ver submódulos."
+        },
+        {
+          "title": "Explorador de archivos",
+          "desc": "Explora y abre los archivos del repositorio desde el árbol, edítalos y vuelve a la lista de cambios para prepararlos."
         },
         {
           "title": "Diffs visuales",
@@ -467,6 +473,10 @@
         {
           "title": "Mensajes IA",
           "desc": "Genera mensajes de commit convencionales desde lo preparado, con tu propia plantilla."
+        },
+        {
+          "title": "Terminal integrado",
+          "desc": "Ejecuta comandos git en la misma ventana y cambia de directorio según el repositorio, sin abrir otra terminal."
         }
       ]
     },
@@ -480,9 +490,9 @@
         "Planes de copia y diccionario"
       ],
       "screens": [
-        "Conexiones",
-        "Resultado",
-        "Tablas"
+        "Tablas",
+        "Resultado de consulta",
+        "Esquema"
       ],
       "features": [
         {
@@ -505,146 +515,153 @@
     },
     "otools-term": {
       "badge": "内置插件",
-      "tagline": "终端、SFTP 与端口转发一体",
-      "sub": "多会话 SSH、内置 SFTP 文件管理、端口转发与 SOCKS5 代理，运维常用动作一个面板搞定。",
+      "tagline": "Terminal, SFTP y reenvío de puertos en uno",
+      "sub": "SSH multisSesión, gestión de archivos SFTP integrada, reenvío de puertos y proxy SOCKS5: las tareas habituales de sistemas caben en un panel.",
       "highlights": [
-        "多会话终端与分组管理",
-        "内置 SFTP 浏览与编辑",
-        "端口转发 / SOCKS5 代理"
+        "Terminal multisSesión con agrupación",
+        "Exploración y edición SFTP integradas",
+        "Reenvío de puertos y proxy SOCKS5"
       ],
       "screens": [
-        "工作区"
+        "Host conectado",
+        "Gestor de archivos SFTP"
       ],
       "features": [
         {
-          "title": "多会话终端",
-          "desc": "服务器按分组管理，多标签并行操作，常用命令收藏一键执行。"
+          "title": "Terminal multisSesión",
+          "desc": "Agrupa los servidores, trabaja en paralelo en varias pestañas y lanza tus comandos favoritos con un clic."
         },
         {
-          "title": "SFTP 浏览器",
-          "desc": "远程目录树、上传下载、在线编辑与保存，不用再开一个工具。"
+          "title": "Explorador SFTP",
+          "desc": "Árbol de directorios remoto, subida y descarga, edición y guardado in situ: sin herramientas adicionales."
         },
         {
-          "title": "端口转发",
-          "desc": "本地/远程端口转发与 SOCKS5 代理，可视化启停并自动恢复。"
+          "title": "Reenvío de puertos",
+          "desc": "Reenvíos local y remoto más un proxy SOCKS5, activados visualmente y restaurados automáticamente."
         }
       ]
     },
     "otools-mqtt": {
       "badge": "内置插件",
-      "tagline": "把 MQTT 调试变得直观",
-      "sub": "连接管理、订阅树、消息日志与多格式载荷解析，物联网调试不再靠命令行。",
+      "tagline": "Depuración MQTT visual",
+      "sub": "Gestión de conexiones, árbol de suscripción, registro de mensajes y decodificación multiformato: depura IoT sin línea de comandos.",
       "highlights": [
-        "多连接与订阅管理",
-        "消息日志与多格式载荷解析",
-        "在线发布与重放"
+        "Gestión de varias conexiones y suscripciones",
+        "Registro de mensajes con decodificación multiformato",
+        "Publicación y repetición en línea"
       ],
       "screens": [
-        "连接列表",
-        "会话",
-        "新建连接"
+        "Sesión y mensajes",
+        "Lista de conexiones",
+        "Nueva conexión"
       ],
       "features": [
         {
-          "title": "连接与订阅",
-          "desc": "MQTT 3.1.1 / 5.0、TLS 与遗嘱消息，订阅树按主题层级展开。"
+          "title": "Conexiones y suscripciones",
+          "desc": "MQTT 3.1.1 / 5.0, TLS y mensajes de.last will; el árbol de suscripción se despliega por jerarquía de temas."
         },
         {
-          "title": "载荷解析",
-          "desc": "纯文本 / JSON / Base64 / Hex / CBOR 多视图切换，JSON 自动格式化。"
+          "title": "Decodificación de cargas útiles",
+          "desc": "Alterna entre texto plano, JSON, Base64, Hex y CBOR; el JSON se formatea automáticamente."
         },
         {
-          "title": "发布与重放",
-          "desc": "QoS、Retain 可选，历史消息一键重发，便于复现问题。"
+          "title": "Publicación y repetición",
+          "desc": "QoS y Retain opcionales, y reenvío con un clic de cualquier mensaje histórico para reproducir un problema."
         }
       ]
     },
     "otools-ftp": {
       "badge": "内置插件",
-      "tagline": "双栏 FTP，像本地一样操作",
-      "sub": "本地与远程双栏对照、拖拽传输、传输队列与断点续传，还支持 FTPS 加密。",
+      "tagline": "FTP de dos paneles, tan natural como local",
+      "sub": "Paneles local y remoto en paralelo, transferencia por arrastre, cola de transferencias y reanudación, además de cifrado FTPS.",
       "highlights": [
-        "本地 / 远程双栏对照",
-        "拖拽传输与队列",
-        "FTPS 加密与断点续传"
+        "Comparación local / remoto en dos paneles",
+        "Transferencia por arrastre con cola",
+        "Cifrado FTPS y reanudación"
       ],
       "screens": [
-        "连接列表",
-        "目录浏览"
+        "Lista de conexiones",
+        "Explorar"
       ],
       "features": [
         {
-          "title": "双栏浏览",
-          "desc": "左边本地、右边远程，目录树与文件列表对齐，一眼看清两边结构。"
+          "title": "Exploración en dos paneles",
+          "desc": "Local a la izquierda, remoto a la derecha, con árboles y listas alineados para ver ambas estructuras de un vistazo."
         },
         {
-          "title": "传输队列",
-          "desc": "上传下载进队列，进度、速率与剩余时间可视化，失败可重试。"
+          "title": "Cola de transferencias",
+          "desc": "Las transferencias se encolan con progreso, velocidad y tiempo restante visibles; los fallos se reintentan."
         },
         {
-          "title": "安全连接",
-          "desc": "支持 FTPS 显式加密与证书校验，被动/主动模式可切换。"
+          "title": "Conexiones seguras",
+          "desc": "Cifrado FTPS explícito con validación de certificado y modos pasivo/activo conmutables."
         }
       ]
     },
     "otools-servrun": {
       "badge": "内置插件",
-      "tagline": "本机服务，一个面板管完",
-      "sub": "Nginx / MySQL / PostgreSQL / Redis / PHP… 一键启停、查看版本与日志，还能管理虚拟主机。",
+      "tagline": "Todos tus servicios locales en un panel",
+      "sub": "Nginx / MySQL / PostgreSQL / Redis / PHP… inicia y detén con un clic, consulta versiones y registros, y gestiona hosts virtuales.",
       "highlights": [
-        "服务一键启停与状态总览",
-        "Nginx 虚拟主机管理",
-        "PHP 多版本与 Composer"
+        "Control con un clic y resumen de estado",
+        "Gestión de hosts virtuales Nginx",
+        "Varias versiones de PHP y Composer"
       ],
       "screens": [
-        "服务面板",
-        "Servicio Nginx",
-        "Servicio MySQL"
+        "Panel de servicios",
+        "Detalle de Nginx",
+        "Detalle de MySQL",
+        "Detalle de PHP",
+        "Detalle de Redis",
+        "Detalle de MongoDB",
+        "Detalle de PostgreSQL",
+        "Detalle de Memcached",
+        "Detalle de RabbitMQ"
       ],
       "features": [
         {
-          "title": "服务总览",
-          "desc": "安装状态、运行状态、端口与版本集中展示，启停不必记命令。"
+          "title": "Resumen de servicios",
+          "desc": "Estado de instalación, estado de ejecución, puertos y versiones en un solo lugar: sin memorizar comandos."
         },
         {
-          "title": "虚拟主机",
-          "desc": "Nginx vhost 可视化编辑，域名、根目录与 SSL 一目了然。"
+          "title": "Hosts virtuales",
+          "desc": "Edición visual de vhosts de Nginx; dominio, raíz del sitio y SSL a la vista."
         },
         {
-          "title": "PHP 多版本",
-          "desc": "多版本共存与切换，Composer 版本检测与更新。"
+          "title": "Varias versiones de PHP",
+          "desc": "Versiones de PHP coexistentes con cambio entre ellas, más detección y actualización de Composer."
         },
         {
-          "title": "Control y configuración",
-          "desc": "Inicia, detén o recarga cualquier servicio con un clic. Edita configuraciones de nginx, mysql, php, redis y revierte cualquier cambio."
+          "title": "Arranque, parada y configuración",
+          "desc": "Inicia, detén o recarga un servicio; consulta y edita configuraciones de nginx/mysql/php/redis en línea, con reversión en un clic."
         }
       ]
     },
     "otools-scrcpy": {
       "badge": "内置插件",
-      "tagline": "安卓投屏与操控",
-      "sub": "基于 scrcpy 的低延迟投屏，键鼠反向控制、无线调试与多设备同时连接。",
+      "tagline": "Reflejo y control de Android",
+      "sub": "Reflejo de baja latencia basado en scrcpy, control inverso con teclado y ratón, depuración wireless y varios dispositivos a la vez.",
       "highlights": [
-        "低延迟投屏与反向控制",
-        "无线调试配对（Android 11+）",
-        "多设备并行"
+        "Reflejo de baja latencia y control inverso",
+        "Emparejamiento de depuración wireless (Android 11+)",
+        "Varios dispositivos en paralelo"
       ],
       "screens": [
-        "设备列表",
-        "Pantalla"
+        "Lista de dispositivos",
+        "Pantalla espejo"
       ],
       "features": [
         {
-          "title": "低延迟投屏",
-          "desc": "可调码率与分辨率，支持录制与截图，长时间运行也稳定。"
+          "title": "Reflejo de baja latencia",
+          "desc": "Tasa de bits y resolución ajustables, con grabación y capturas; estable en sesiones largas."
         },
         {
-          "title": "反向控制",
-          "desc": "键鼠直接操作手机，剪贴板互通，支持拖拽安装 APK。"
+          "title": "Control inverso",
+          "desc": "Controla el teléfono con teclado y ratón, comparte el portapapeles e instala APK arrastrando."
         },
         {
-          "title": "无线与多设备",
-          "desc": "扫码配对无线调试，多台设备并行投屏互不干扰。"
+          "title": "Wireless y multidispositivo",
+          "desc": "Empareja la depuración wireless por código QR y refleja varios dispositivos sin interferencias."
         }
       ]
     },

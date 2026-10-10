@@ -5,12 +5,36 @@ import { pluginLandingMeta, type PluginLandingKey } from '../plugins/registry';
 
 const props = defineProps<{ plugin: PluginLandingKey }>();
 
-const { t } = useI18n();
+const { t, localeKey } = useI18n();
 
 const meta = computed(() => pluginLandingMeta[props.plugin]);
 
 const base = `/plugins/${props.plugin}`;
-const shot = (name: string, theme: 'light' | 'dark') => `${base}/${name}-${theme}.png`;
+
+// 站点语言 → 截图语言。
+// ⚠️ 两边的语言集合**不一样**：插件自带语言包是
+// zh-CN/en-US/de-DE/es-ES/ja-JP/ko-KR/ru-RU/ar-SA（没有 fr），
+// 站点是 zh/en/ja/ko/fr/es/de/ru（没有 ar）。
+// 所以站点法语页取不到 fr 截图 —— 回退到英语而不是中文，
+// 至少语种距离更近；阿拉伯语截图已随产物落盘（`*-ar-SA-*.webp`），
+// 插件补上 fr 语言包后只要把这里的回退去掉即可。
+const SHOT_LANG: Record<string, string> = {
+  root: 'zh-CN',
+  en: 'en-US',
+  ja: 'ja-JP',
+  ko: 'ko-KR',
+  fr: 'en-US', // 插件暂无 fr 语言包
+  es: 'es-ES',
+  de: 'de-DE',
+  ru: 'ru-RU',
+};
+const shotLang = computed(() => SHOT_LANG[localeKey.value] ?? 'zh-CN');
+
+// 截图统一用 WebP（体积约为 PNG 的 1/3，UI 小字在原生 2x 分辨率下无可见损失）。
+// 目录里同时存在 `<name>-<theme>.webp`（中文副本，SEO/OG 与不支持 JS 的场景兜底）
+// 与 `<name>-<lang>-<theme>.webp`（逐语言副本）。
+const shot = (name: string, theme: 'light' | 'dark') =>
+  `${base}/${name}-${shotLang.value}-${theme}.webp`;
 
 // ── 主题（明/暗）────────────────────────────────────────────────────────────
 const isDark = ref(false);
