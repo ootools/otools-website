@@ -481,7 +481,8 @@
       ],
       "screens": [
         "Verbindungen",
-        "Ergebnis"
+        "Ergebnis",
+        "Tabellen"
       ],
       "features": [
         {
@@ -491,6 +492,10 @@
         {
           "title": "SQL-Werkbank",
           "desc": "Tabs, Ausführungspläne, Paging und Export – flüssig auch bei großen Ergebnissen."
+        },
+        {
+          "title": "Tabellen & Schema",
+          "desc": "Durchsuche alle Tabellen, Spalten und Indizes auf einen Blick und springe direkt zu den Daten."
         },
         {
           "title": "Backups",
@@ -635,7 +640,9 @@
           "desc": "扫码配对无线调试，多台设备并行投屏互不干扰。"
         }
       ]
-    }
+    },
+    "showcaseTitle": "In der Praxis",
+    "showcaseSub": "Jede Funktion mit echtem Screenshot — sieh dir an, wie sie im Alltag aussieht."
   },
   "pluginGrid": {
     "title": "Die Plugins im Detail",

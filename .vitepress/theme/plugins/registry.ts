@@ -21,8 +21,8 @@ export interface PluginLandingMeta {
   screenshots: Array<{ key: string; label: string }>;
   /** 首页高亮点数量（文案在 locale 里） */
   highlights: string[];
-  /** 功能特性数量（文案在 locale 里） */
-  features: Array<{ key: string }>;
+  /** 功能特性；带 `shot` 的特性会在「功能实景」区以「图文交替」形式展示 */
+  features: Array<{ key: string; shot?: string }>;
 }
 
 const RELEASES = 'https://github.com/ootools/otools-publish/releases/tag';
@@ -34,7 +34,11 @@ export const pluginLandingMeta: Record<PluginLandingKey, PluginLandingMeta> = {
     releases: `${RELEASES}/plugin-app-otools-git-v0.2.6`,
     screenshots: [{ key: 'workspace', label: 'Workspace' }, { key: 'history', label: 'History' }],
     highlights: ['', '', ''],
-    features: [{ key: 'repos' }, { key: 'diff' }, { key: 'ai' }],
+    features: [
+      { key: 'repos', shot: 'workspace' },
+      { key: 'diff' },
+      { key: 'ai' },
+    ],
   },
   'otools-dbm': {
     name: 'DBM',
@@ -43,9 +47,15 @@ export const pluginLandingMeta: Record<PluginLandingKey, PluginLandingMeta> = {
     screenshots: [
       { key: 'connections', label: 'Connections' },
       { key: 'query', label: 'Query' },
+      { key: 'tables', label: 'Tables' },
     ],
     highlights: ['', '', ''],
-    features: [{ key: 'multi' }, { key: 'query' }, { key: 'backup' }],
+    features: [
+      { key: 'multi', shot: 'connections' },
+      { key: 'query', shot: 'query' },
+      { key: 'tables', shot: 'tables' },
+      { key: 'backup' },
+    ],
   },
   'otools-term': {
     name: 'Term',
@@ -53,7 +63,11 @@ export const pluginLandingMeta: Record<PluginLandingKey, PluginLandingMeta> = {
     releases: `${RELEASES}/plugin-app-otools-term-v0.1.4`,
     screenshots: [{ key: 'workspace', label: 'Workspace' }],
     highlights: ['', '', ''],
-    features: [{ key: 'ssh' }, { key: 'sftp' }, { key: 'forward' }],
+    features: [
+      { key: 'ssh', shot: 'workspace' },
+      { key: 'sftp' },
+      { key: 'forward' },
+    ],
   },
   'otools-mqtt': {
     name: 'MQTT',
@@ -65,7 +79,11 @@ export const pluginLandingMeta: Record<PluginLandingKey, PluginLandingMeta> = {
       { key: 'form', label: 'New connection' },
     ],
     highlights: ['', '', ''],
-    features: [{ key: 'multi' }, { key: 'payload' }, { key: 'subscribe' }],
+    features: [
+      { key: 'multi', shot: 'list' },
+      { key: 'payload', shot: 'session' },
+      { key: 'subscribe' },
+    ],
   },
   'otools-ftp': {
     name: 'FTP',
@@ -76,7 +94,11 @@ export const pluginLandingMeta: Record<PluginLandingKey, PluginLandingMeta> = {
       { key: 'browse', label: 'Browse' },
     ],
     highlights: ['', '', ''],
-    features: [{ key: 'dual' }, { key: 'transfer' }, { key: 'tls' }],
+    features: [
+      { key: 'dual', shot: 'list' },
+      { key: 'transfer', shot: 'browse' },
+      { key: 'tls' },
+    ],
   },
   'otools-servrun': {
     name: 'Env',
@@ -84,7 +106,11 @@ export const pluginLandingMeta: Record<PluginLandingKey, PluginLandingMeta> = {
     releases: `${RELEASES}/plugin-app-otools-servrun-v0.1.6`,
     screenshots: [{ key: 'dashboard', label: 'Dashboard' }],
     highlights: ['', '', ''],
-    features: [{ key: 'services' }, { key: 'vhost' }, { key: 'php' }],
+    features: [
+      { key: 'services', shot: 'dashboard' },
+      { key: 'vhost' },
+      { key: 'php' },
+    ],
   },
   'otools-scrcpy': {
     name: 'Android Mirror',
@@ -92,7 +118,11 @@ export const pluginLandingMeta: Record<PluginLandingKey, PluginLandingMeta> = {
     releases: `${RELEASES}/plugin-app-otools-scrcpy-v0.3.2`,
     screenshots: [{ key: 'devices', label: 'Devices' }],
     highlights: ['', '', ''],
-    features: [{ key: 'mirror' }, { key: 'control' }, { key: 'wireless' }],
+    features: [
+      { key: 'mirror', shot: 'devices' },
+      { key: 'control' },
+      { key: 'wireless' },
+    ],
   },
 };
 

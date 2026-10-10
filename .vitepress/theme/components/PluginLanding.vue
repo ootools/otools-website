@@ -19,6 +19,13 @@ const syncTheme = () => {
   isDark.value = document.documentElement.classList.contains('dark');
 };
 
+// ── 功能实景（图文交替）────────────────────────────────────────────────────
+const showcaseRows = computed(() =>
+  meta.value.features
+    .map((f, i) => ({ ...f, i }))
+    .filter((f) => f.shot),
+);
+
 // ── 截图画廊 ───────────────────────────────────────────────────────────────
 const activeShot = ref(0);
 const gallery = computed(() => meta.value.screenshots);
@@ -124,6 +131,41 @@ const releaseUrl = computed(() => meta.value.releases);
               <span>{{ t(`pluginLanding.${plugin}.screens.${i}`) }}</span>
             </button>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 功能实景：图文交替 -->
+    <section class="pl-section pl-showcase-sec">
+      <div class="pl-container">
+        <header class="pl-section-head pl-reveal">
+          <h2>{{ t('pluginLanding.showcaseTitle') }}</h2>
+          <p>{{ t('pluginLanding.showcaseSub') }}</p>
+        </header>
+        <div class="pl-showcase">
+          <article
+            v-for="(row, idx) in showcaseRows"
+            :key="row.key"
+            class="pl-show pl-reveal"
+            :class="{ 'pl-show--rev': idx % 2 === 1 }"
+            :style="{ '--d': `${idx * 80}ms` }"
+          >
+            <div class="pl-show-media">
+              <div class="pl-window">
+                <div class="pl-window-bar">
+                  <span class="pl-dot pl-dot-r"></span><span class="pl-dot pl-dot-y"></span><span class="pl-dot pl-dot-g"></span>
+                  <span class="pl-window-title">{{ meta.name }}</span>
+                </div>
+                <img :src="shot(row.shot, 'light')" :alt="row.shot" class="pl-window-img pl-window-light" />
+                <img :src="shot(row.shot, 'dark')" :alt="row.shot" class="pl-window-img pl-window-dark" />
+              </div>
+            </div>
+            <div class="pl-show-text">
+              <span class="pl-show-num">{{ String(idx + 1).padStart(2, '0') }}</span>
+              <h3>{{ t(`pluginLanding.${plugin}.features.${row.i}.title`) }}</h3>
+              <p>{{ t(`pluginLanding.${plugin}.features.${row.i}.desc`) }}</p>
+            </div>
+          </article>
         </div>
       </div>
     </section>
@@ -285,6 +327,30 @@ const releaseUrl = computed(() => meta.value.releases);
 .pl-thumb span { display: block; padding: 8px 10px; font-size: 12px; color: var(--vp-c-text-2); }
 .pl-thumb:hover { transform: translateY(-3px); box-shadow: 0 10px 24px rgba(15, 23, 42, .12); }
 .pl-thumb.active { border-color: var(--vp-c-brand-1); box-shadow: 0 0 0 3px color-mix(in srgb, var(--vp-c-brand-1) 18%, transparent); }
+
+/* 功能实景：图文交替 */
+.pl-showcase { display: grid; gap: 30px; }
+.pl-show {
+  display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr); gap: 36px; align-items: center;
+  padding: 18px; border-radius: var(--pl-radius); border: 1px solid var(--vp-c-divider); background: var(--vp-c-bg);
+}
+.pl-show--rev .pl-show-media { order: 2; }
+.pl-show-media { min-width: 0; }
+.pl-show-media .pl-window { transform: none; box-shadow: 0 18px 46px rgba(15, 23, 42, .14); }
+.pl-show-media .pl-window:hover { transform: translateY(-3px); transition: transform .25s ease; }
+.pl-show-text { position: relative; padding-left: 4px; }
+.pl-show-num {
+  display: inline-block; font-size: 13px; font-weight: 800; letter-spacing: .04em;
+  color: var(--pl-from); background: color-mix(in srgb, var(--pl-from) 12%, transparent);
+  padding: 3px 10px; border-radius: 999px; margin-bottom: 14px;
+}
+.pl-show-text h3 { font-size: 22px; margin: 0 0 12px; letter-spacing: -0.01em; }
+.pl-show-text p { font-size: 15px; line-height: 1.75; color: var(--vp-c-text-2); margin: 0; }
+@media (max-width: 860px) {
+  .pl-show { grid-template-columns: 1fr; gap: 18px; }
+  .pl-show--rev .pl-show-media { order: 0; }
+}
+@media (prefers-reduced-motion: reduce) { .pl-show-media .pl-window:hover { transform: none; } }
 
 /* 特性 */
 .pl-features { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px; }

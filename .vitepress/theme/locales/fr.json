@@ -481,7 +481,8 @@
       ],
       "screens": [
         "Connexions",
-        "Résultat"
+        "Résultat",
+        "Tables"
       ],
       "features": [
         {
@@ -491,6 +492,10 @@
         {
           "title": "Atelier SQL",
           "desc": "Édition par onglets, plans d’exécution, pagination et export — fluide même sur de gros volumes."
+        },
+        {
+          "title": "Tables & schéma",
+          "desc": "Parcourez toutes les tables, colonnes et index d'un coup d'œil et accédez directement aux données."
         },
         {
           "title": "Sauvegardes",
@@ -635,7 +640,9 @@
           "desc": "扫码配对无线调试，多台设备并行投屏互不干扰。"
         }
       ]
-    }
+    },
+    "showcaseTitle": "En action",
+    "showcaseSub": "Chaque fonctionnalité est illustrée par une capture réelle — voyez-la en situation."
   },
   "pluginGrid": {
     "title": "Découvrez les plugins",

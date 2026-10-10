@@ -481,7 +481,8 @@
       ],
       "screens": [
         "Connections",
-        "Query result"
+        "Query result",
+        "Tables"
       ],
       "features": [
         {
@@ -491,6 +492,10 @@
         {
           "title": "Query workbench",
           "desc": "Tabbed SQL editing, execution plans, paged results and export — smooth even on large result sets."
+        },
+        {
+          "title": "Tables & schema",
+          "desc": "Browse every table, column and index at a glance, and jump straight to the data you need."
         },
         {
           "title": "Backups & sync",
@@ -635,7 +640,9 @@
           "desc": "扫码配对无线调试，多台设备并行投屏互不干扰。"
         }
       ]
-    }
+    },
+    "showcaseTitle": "In action",
+    "showcaseSub": "Every capability comes with a real screenshot — see what it looks like in daily work."
   },
   "pluginGrid": {
     "title": "Meet the plugins",

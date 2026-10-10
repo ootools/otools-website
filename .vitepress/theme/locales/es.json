@@ -481,7 +481,8 @@
       ],
       "screens": [
         "Conexiones",
-        "Resultado"
+        "Resultado",
+        "Tablas"
       ],
       "features": [
         {
@@ -491,6 +492,10 @@
         {
           "title": "Taller SQL",
           "desc": "Edición por pestañas, planes de ejecución, paginación y exportación — fluido incluso con muchos datos."
+        },
+        {
+          "title": "Tablas y esquema",
+          "desc": "Explora todas las tablas, columnas e índices de un vistazo y salta a los datos que necesitas."
         },
         {
           "title": "Copias y sincronización",
@@ -635,7 +640,9 @@
           "desc": "扫码配对无线调试，多台设备并行投屏互不干扰。"
         }
       ]
-    }
+    },
+    "showcaseTitle": "En acción",
+    "showcaseSub": "Cada funcionalidad incluye una captura real: mira cómo se ve en el día a día."
   },
   "pluginGrid": {
     "title": "Conoce los plugins",
