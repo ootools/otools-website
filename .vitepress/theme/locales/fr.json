@@ -597,7 +597,9 @@
         "PHP 多版本与 Composer"
       ],
       "screens": [
-        "服务面板"
+        "服务面板",
+        "Service Nginx",
+        "Service MySQL"
       ],
       "features": [
         {
@@ -611,6 +613,10 @@
         {
           "title": "PHP 多版本",
           "desc": "多版本共存与切换，Composer 版本检测与更新。"
+        },
+        {
+          "title": "Contrôle & configuration",
+          "desc": "Démarrez, arrêtez ou rechargez chaque service en un clic. Modifiez les configs nginx, mysql, php, redis et annulez toute modification."
         }
       ]
     },
@@ -624,7 +630,8 @@
         "多设备并行"
       ],
       "screens": [
-        "设备列表"
+        "设备列表",
+        "Miroir"
       ],
       "features": [
         {
