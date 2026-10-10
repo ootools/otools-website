@@ -31,9 +31,18 @@
         "title": "생태계入口",
         "desc": "도구 통합과 빠른 플러그인 접근.",
         "cards": [
-          { "title": "마켓플레이스", "desc": "엄선 + 평점 + 업데이트" },
-          { "title": "개발자 센터", "desc": "Web + Rust 빌드" },
-          { "title": "Tabs 워크플로", "desc": "병렬 작업" }
+          {
+            "title": "마켓플레이스",
+            "desc": "엄선 + 평점 + 업데이트"
+          },
+          {
+            "title": "개발자 센터",
+            "desc": "Web + Rust 빌드"
+          },
+          {
+            "title": "Tabs 워크플로",
+            "desc": "병렬 작업"
+          }
         ]
       },
       "git": {
@@ -41,9 +50,18 @@
         "title": "문어 Git",
         "desc": "새로운 Git 관리와 AI 협업.",
         "cards": [
-          { "title": "AI 커밋 메시지", "desc": "원클릭 생성" },
-          { "title": "AI 서류 생성", "desc": "신청서 자동 생성" },
-          { "title": "서브모듈 바로가기", "desc": "빠른 접근" }
+          {
+            "title": "AI 커밋 메시지",
+            "desc": "원클릭 생성"
+          },
+          {
+            "title": "AI 서류 생성",
+            "desc": "신청서 자동 생성"
+          },
+          {
+            "title": "서브모듈 바로가기",
+            "desc": "빠른 접근"
+          }
         ]
       },
       "dbm": {
@@ -51,9 +69,18 @@
         "title": "상어 DB",
         "desc": "MySQL/Postgres/MongoDB 구조 및 쿼리 관리.",
         "cards": [
-          { "title": "연결 관리", "desc": "다중 DB 통합" },
-          { "title": "구조 탐색", "desc": "테이블/인덱스" },
-          { "title": "데이터 작업", "desc": "CRUD 및 내보내기" }
+          {
+            "title": "연결 관리",
+            "desc": "다중 DB 통합"
+          },
+          {
+            "title": "구조 탐색",
+            "desc": "테이블/인덱스"
+          },
+          {
+            "title": "데이터 작업",
+            "desc": "CRUD 및 내보내기"
+          }
         ]
       },
       "ssh": {
@@ -61,9 +88,18 @@
         "title": "오징어 터미널",
         "desc": "터미널과 SFTP 협업.",
         "cards": [
-          { "title": "터미널 세션", "desc": "병렬 세션" },
-          { "title": "SFTP 파일", "desc": "업/다운/동기화" },
-          { "title": "빠른 작업", "desc": "명령 템플릿" }
+          {
+            "title": "터미널 세션",
+            "desc": "병렬 세션"
+          },
+          {
+            "title": "SFTP 파일",
+            "desc": "업/다운/동기화"
+          },
+          {
+            "title": "빠른 작업",
+            "desc": "명령 템플릿"
+          }
         ]
       },
       "servrun": {
@@ -71,9 +107,18 @@
         "title": "산호 Env",
         "desc": "Nginx/PHP/MySQL/Redis 원클릭 관리.",
         "cards": [
-          { "title": "서비스 관리", "desc": "Nginx/PHP/MySQL" },
-          { "title": "설정 생성", "desc": "vHost 원클릭" },
-          { "title": "버전 전환", "desc": "멀티 버전" }
+          {
+            "title": "서비스 관리",
+            "desc": "Nginx/PHP/MySQL"
+          },
+          {
+            "title": "설정 생성",
+            "desc": "vHost 원클릭"
+          },
+          {
+            "title": "버전 전환",
+            "desc": "멀티 버전"
+          }
         ]
       },
       "ollama": {
@@ -81,9 +126,18 @@
         "title": "오징어 Ollama",
         "desc": "로컬 모델 시각화 관리.",
         "cards": [
-          { "title": "모델 관리", "desc": "버전 + 의존성" },
-          { "title": "성능 모니터링", "desc": "GPU/CPU 사용률" },
-          { "title": "대화 기록", "desc": "멀티턴" }
+          {
+            "title": "모델 관리",
+            "desc": "버전 + 의존성"
+          },
+          {
+            "title": "성능 모니터링",
+            "desc": "GPU/CPU 사용률"
+          },
+          {
+            "title": "대화 기록",
+            "desc": "멀티턴"
+          }
         ]
       },
       "audio": {
@@ -91,9 +145,18 @@
         "title": "돌고래 오디오 랩",
         "desc": "오디오 처리와 실험실.",
         "cards": [
-          { "title": "파형 편집", "desc": "트랙 단위" },
-          { "title": "이펙트 체인", "desc": "필터 + 리버브" },
-          { "title": "내보내기", "desc": "다중 포맷" }
+          {
+            "title": "파형 편집",
+            "desc": "트랙 단위"
+          },
+          {
+            "title": "이펙트 체인",
+            "desc": "필터 + 리버브"
+          },
+          {
+            "title": "내보내기",
+            "desc": "다중 포맷"
+          }
         ]
       },
       "http": {
@@ -101,9 +164,18 @@
         "title": "날치 HTTP",
         "desc": "요청 편성과 응답 인사이트.",
         "cards": [
-          { "title": "요청 편성", "desc": "다중 API 일괄" },
-          { "title": "응답 인사이트", "desc": "상태 및 성능" },
-          { "title": "환경 전환", "desc": "개발/테스트/운영" }
+          {
+            "title": "요청 편성",
+            "desc": "다중 API 일괄"
+          },
+          {
+            "title": "응답 인사이트",
+            "desc": "상태 및 성능"
+          },
+          {
+            "title": "환경 전환",
+            "desc": "개발/테스트/운영"
+          }
         ]
       }
     }
@@ -125,12 +197,30 @@
     "title": "플랫폼 역량",
     "subtitle": "생태계, 성능, 협업을 중심으로 데스크톱 미니앱 플랫폼을 구축합니다.",
     "items": [
-      { "title": "해양 생태계 플러그인", "desc": "디렉터리/버전/마켓 배포를 통일." },
-      { "title": "Tabs 멀티태스킹", "desc": "동시 실행과 컨텍스트 유지." },
-      { "title": "통합 런타임", "desc": "Web + Native, 통합 API/상태." },
-      { "title": "고성능 기반", "desc": "Rust + Tauri, 빠르고 안정적." },
-      { "title": "AI 친화", "desc": "통합 MCP로 AI 플러그인 워크플로." },
-      { "title": "네이티브 확장", "desc": "Rust 동적 라이브러리로 성능 확장." }
+      {
+        "title": "해양 생태계 플러그인",
+        "desc": "디렉터리/버전/마켓 배포를 통일."
+      },
+      {
+        "title": "Tabs 멀티태스킹",
+        "desc": "동시 실행과 컨텍스트 유지."
+      },
+      {
+        "title": "통합 런타임",
+        "desc": "Web + Native, 통합 API/상태."
+      },
+      {
+        "title": "고성능 기반",
+        "desc": "Rust + Tauri, 빠르고 안정적."
+      },
+      {
+        "title": "AI 친화",
+        "desc": "통합 MCP로 AI 플러그인 워크플로."
+      },
+      {
+        "title": "네이티브 확장",
+        "desc": "Rust 동적 라이브러리로 성능 확장."
+      }
     ]
   },
   "apiMatrix": {
@@ -139,10 +229,22 @@
       "items": "포함 내용"
     },
     "rows": [
-      { "group": "시스템", "items": "클립보드, 파일/경로, 알림, Shell 관리" },
-      { "group": "런타임 정보", "items": "플랫폼, 버전, UUID, 환경 변수" },
-      { "group": "Native", "items": "로드, 호출, 탐지, 핫 리로드" },
-      { "group": "플러그인 상태", "items": "로컬/동기 상태, scheme 다중 파일" }
+      {
+        "group": "시스템",
+        "items": "클립보드, 파일/경로, 알림, Shell 관리"
+      },
+      {
+        "group": "런타임 정보",
+        "items": "플랫폼, 버전, UUID, 환경 변수"
+      },
+      {
+        "group": "Native",
+        "items": "로드, 호출, 탐지, 핫 리로드"
+      },
+      {
+        "group": "플러그인 상태",
+        "items": "로컬/동기 상태, scheme 다중 파일"
+      }
     ]
   },
   "pluginShowcase": {
@@ -153,72 +255,144 @@
         "label": "홈",
         "subtitle": "입구 · 집합",
         "features": [
-          { "title": "마켓플레이스", "desc": "엄선 + 평점 + 업데이트" },
-          { "title": "개발자 센터", "desc": "Web + Rust 빌드" },
-          { "title": "Tabs 워크플로", "desc": "병렬 작업" }
+          {
+            "title": "마켓플레이스",
+            "desc": "엄선 + 평점 + 업데이트"
+          },
+          {
+            "title": "개발자 센터",
+            "desc": "Web + Rust 빌드"
+          },
+          {
+            "title": "Tabs 워크플로",
+            "desc": "병렬 작업"
+          }
         ]
       },
       "git": {
         "label": "Git",
         "subtitle": "AI 커밋 · 서류",
         "features": [
-          { "title": "AI 커밋 메시지", "desc": "원클릭 생성" },
-          { "title": "AI 서류 생성", "desc": "신청서 자동 생성" },
-          { "title": "서브모듈 접근", "desc": "빠른 접근" }
+          {
+            "title": "AI 커밋 메시지",
+            "desc": "원클릭 생성"
+          },
+          {
+            "title": "AI 서류 생성",
+            "desc": "신청서 자동 생성"
+          },
+          {
+            "title": "서브모듈 접근",
+            "desc": "빠른 접근"
+          }
         ]
       },
       "dbm": {
         "label": "데이터베이스",
         "subtitle": "다중 DB · 구조 조회",
         "features": [
-          { "title": "연결 관리", "desc": "다중 DB 통합" },
-          { "title": "구조 탐색", "desc": "테이블/인덱스" },
-          { "title": "데이터 작업", "desc": "CRUD 및 내보내기" }
+          {
+            "title": "연결 관리",
+            "desc": "다중 DB 통합"
+          },
+          {
+            "title": "구조 탐색",
+            "desc": "테이블/인덱스"
+          },
+          {
+            "title": "데이터 작업",
+            "desc": "CRUD 및 내보내기"
+          }
         ]
       },
       "ssh": {
         "label": "SSH",
         "subtitle": "터미널 · SFTP",
         "features": [
-          { "title": "터미널 세션", "desc": "병렬 세션" },
-          { "title": "SFTP 파일", "desc": "업/다운/동기화" },
-          { "title": "빠른 작업", "desc": "명령 템플릿" }
+          {
+            "title": "터미널 세션",
+            "desc": "병렬 세션"
+          },
+          {
+            "title": "SFTP 파일",
+            "desc": "업/다운/동기화"
+          },
+          {
+            "title": "빠른 작업",
+            "desc": "명령 템플릿"
+          }
         ]
       },
       "servrun": {
         "label": "개발 환경",
         "subtitle": "Nginx/PHP/MySQL",
         "features": [
-          { "title": "서비스 관리", "desc": "Nginx/PHP/MySQL" },
-          { "title": "설정 생성", "desc": "vHost 원클릭" },
-          { "title": "버전 전환", "desc": "멀티 버전" }
+          {
+            "title": "서비스 관리",
+            "desc": "Nginx/PHP/MySQL"
+          },
+          {
+            "title": "설정 생성",
+            "desc": "vHost 원클릭"
+          },
+          {
+            "title": "버전 전환",
+            "desc": "멀티 버전"
+          }
         ]
       },
       "ollama": {
         "label": "Ollama",
         "subtitle": "로컬 모델 · 성능",
         "features": [
-          { "title": "모델 관리", "desc": "버전 + 의존성" },
-          { "title": "성능 모니터링", "desc": "GPU/CPU 사용률" },
-          { "title": "대화 기록", "desc": "멀티턴" }
+          {
+            "title": "모델 관리",
+            "desc": "버전 + 의존성"
+          },
+          {
+            "title": "성능 모니터링",
+            "desc": "GPU/CPU 사용률"
+          },
+          {
+            "title": "대화 기록",
+            "desc": "멀티턴"
+          }
         ]
       },
       "audio": {
         "label": "오디오",
         "subtitle": "파형 편집 · 이펙트",
         "features": [
-          { "title": "파형 편집", "desc": "트랙 단위" },
-          { "title": "이펙트 체인", "desc": "필터 + 리버브" },
-          { "title": "내보내기", "desc": "다중 포맷" }
+          {
+            "title": "파형 편집",
+            "desc": "트랙 단위"
+          },
+          {
+            "title": "이펙트 체인",
+            "desc": "필터 + 리버브"
+          },
+          {
+            "title": "내보내기",
+            "desc": "다중 포맷"
+          }
         ]
       },
       "http": {
         "label": "HTTP",
         "subtitle": "요청 편성 · 인사이트",
         "features": [
-          { "title": "요청 편성", "desc": "다중 API 일괄" },
-          { "title": "응답 인사이트", "desc": "상태 및 성능" },
-          { "title": "환경 전환", "desc": "개발/테스트/운영" }
+          {
+            "title": "요청 편성",
+            "desc": "다중 API 일괄"
+          },
+          {
+            "title": "응답 인사이트",
+            "desc": "상태 및 성능"
+          },
+          {
+            "title": "환경 전환",
+            "desc": "개발/테스트/운영"
+          }
         ]
       }
     }
@@ -227,9 +401,18 @@
     "title": "Tabs 워크플로 경험",
     "subtitle": "통합 입구, 병렬 작업, 플러그인 연동으로 컨텍스트 유지.",
     "items": [
-      { "title": "도구 발견", "desc": "해양 플러그인 라이브러리에서 빠르게 탐색." },
-      { "title": "Tabs 고정", "desc": "동시 열기, 전환 비용 감소." },
-      { "title": "흐름 협업", "desc": "플러그인 협업으로 AI 워크플로 구성." }
+      {
+        "title": "도구 발견",
+        "desc": "해양 플러그인 라이브러리에서 빠르게 탐색."
+      },
+      {
+        "title": "Tabs 고정",
+        "desc": "동시 열기, 전환 비용 감소."
+      },
+      {
+        "title": "흐름 협업",
+        "desc": "플러그인 협업으로 AI 워크플로 구성."
+      }
     ]
   },
   "docCta": {
@@ -239,5 +422,224 @@
       "api": "OTools API 보기",
       "dev": "개발자 모드 가이드"
     }
+  },
+  "pluginLanding": {
+    "downloadStandalone": "독립 버전 다운로드",
+    "getPlugin": "플러그인 버전 받기",
+    "recommended": "추천",
+    "galleryTitle": "화면 갤러리",
+    "gallerySub": "실제 플러그인 UI로 렌더링한 스크린샷(라이트/다크는 사이트 테마를 따릅니다).",
+    "featuresTitle": "핵심 기능",
+    "featuresSub": "기능 목록이 아니라, 매일 쓰기 위해 다듬은 디테일.",
+    "downloadTitle": "두 가지 사용 방식",
+    "downloadSub": "이 기능만 담은 가벼운 앱으로 쓸까요, 기존 OTools에 통합할까요?",
+    "standaloneTitle": "독립 버전",
+    "standaloneDesc": "같은 엔진을 쓰되 이 플러그인 기능만 담은 전용 데스크톱 앱. 더블클릭으로 바로 실행되며 OTools가 필요 없습니다.",
+    "standaloneNote": "설치 파일은 GitHub Releases에 있으며 자동 업데이트가 내장되어 있습니다.",
+    "pluginTitle": "플러그인 버전",
+    "pluginDesc": "기존 OTools에 추가해 다른 도구와 같은 워크스페이스에서 탭과 단축키를 공유합니다.",
+    "pluginStep1": "OTools 데스크톱 버전 다운로드 및 설치",
+    "pluginStep2": "“플러그인 마켓” 열기",
+    "pluginStep3": "이 플러그인을 검색해 원클릭 설치",
+    "pluginNote": "플러그인 버전은 OTools와 함께 업데이트됩니다.",
+    "otools-git": {
+      "badge": "내장 플러그인",
+      "tagline": "Git을 워크스페이스로",
+      "sub": "여러 저장소 개요, 스테이징, 커밋 기록, 차이 비교 — 일상 작업을 한 화면에서. 터미널을 오갈 필요가 없습니다.",
+      "highlights": [
+        "다중 저장소 관리와 상태 개요",
+        "시각적 diff와 블록 단위 리셋",
+        "AI 커밋 메시지 생성"
+      ],
+      "screens": [
+        "워크스페이스",
+        "커밋 기록"
+      ],
+      "features": [
+        {
+          "title": "다중 저장소 워크벤치",
+          "desc": "열 개 넘는 저장소를 한 번에: 커밋 수, 앞섬/뒤짐, 미커밋 변경을 한눈에. 펼치면 서브모듈도 보입니다."
+        },
+        {
+          "title": "시각적 차이",
+          "desc": "인라인/나란히 보기 두 가지, 변경 블록·줄 단위 리셋을 지원합니다."
+        },
+        {
+          "title": "AI 커밋 메시지",
+          "desc": "스테이징된 변경으로 규칙에 맞는 메시지를 자동 생성합니다. 템플릿 조정도 가능합니다."
+        }
+      ]
+    },
+    "otools-dbm": {
+      "badge": "내장 플러그인",
+      "tagline": "모든 데이터베이스를 하나의 클라이언트로",
+      "sub": "MySQL / PostgreSQL / Redis / MongoDB / ClickHouse… 연결 관리, SQL 워크벤치, 스키마, 백업을 통합.",
+      "highlights": [
+        "15개 이상 DB 엔진 통합",
+        "SQL 워크벤치와 결과 그리드",
+        "백업 계획과 데이터 사전"
+      ],
+      "screens": [
+        "연결 목록",
+        "쿼리 결과"
+      ],
+      "features": [
+        {
+          "title": "모든 엔진을 한 목록에",
+          "desc": "관계형·문서형·키값·컬럼형·분석형을 한 목록에서. 환경 태그로 실수를 방지합니다."
+        },
+        {
+          "title": "쿼리 워크벤치",
+          "desc": "탭형 SQL 편집, 실행 계획, 결과 페이징과 내보내기. 큰 결과도 부드럽습니다."
+        },
+        {
+          "title": "백업과 동기화",
+          "desc": "시각적 백업 계획, DB 간 동기화, 데이터 사전 내보내기를 스크립트 없이."
+        }
+      ]
+    },
+    "otools-term": {
+      "badge": "内置插件",
+      "tagline": "终端、SFTP 与端口转发一体",
+      "sub": "多会话 SSH、内置 SFTP 文件管理、端口转发与 SOCKS5 代理，运维常用动作一个面板搞定。",
+      "highlights": [
+        "多会话终端与分组管理",
+        "内置 SFTP 浏览与编辑",
+        "端口转发 / SOCKS5 代理"
+      ],
+      "screens": [
+        "工作区"
+      ],
+      "features": [
+        {
+          "title": "多会话终端",
+          "desc": "服务器按分组管理，多标签并行操作，常用命令收藏一键执行。"
+        },
+        {
+          "title": "SFTP 浏览器",
+          "desc": "远程目录树、上传下载、在线编辑与保存，不用再开一个工具。"
+        },
+        {
+          "title": "端口转发",
+          "desc": "本地/远程端口转发与 SOCKS5 代理，可视化启停并自动恢复。"
+        }
+      ]
+    },
+    "otools-mqtt": {
+      "badge": "内置插件",
+      "tagline": "把 MQTT 调试变得直观",
+      "sub": "连接管理、订阅树、消息日志与多格式载荷解析，物联网调试不再靠命令行。",
+      "highlights": [
+        "多连接与订阅管理",
+        "消息日志与多格式载荷解析",
+        "在线发布与重放"
+      ],
+      "screens": [
+        "连接列表",
+        "会话",
+        "新建连接"
+      ],
+      "features": [
+        {
+          "title": "连接与订阅",
+          "desc": "MQTT 3.1.1 / 5.0、TLS 与遗嘱消息，订阅树按主题层级展开。"
+        },
+        {
+          "title": "载荷解析",
+          "desc": "纯文本 / JSON / Base64 / Hex / CBOR 多视图切换，JSON 自动格式化。"
+        },
+        {
+          "title": "发布与重放",
+          "desc": "QoS、Retain 可选，历史消息一键重发，便于复现问题。"
+        }
+      ]
+    },
+    "otools-ftp": {
+      "badge": "内置插件",
+      "tagline": "双栏 FTP，像本地一样操作",
+      "sub": "本地与远程双栏对照、拖拽传输、传输队列与断点续传，还支持 FTPS 加密。",
+      "highlights": [
+        "本地 / 远程双栏对照",
+        "拖拽传输与队列",
+        "FTPS 加密与断点续传"
+      ],
+      "screens": [
+        "连接列表",
+        "目录浏览"
+      ],
+      "features": [
+        {
+          "title": "双栏浏览",
+          "desc": "左边本地、右边远程，目录树与文件列表对齐，一眼看清两边结构。"
+        },
+        {
+          "title": "传输队列",
+          "desc": "上传下载进队列，进度、速率与剩余时间可视化，失败可重试。"
+        },
+        {
+          "title": "安全连接",
+          "desc": "支持 FTPS 显式加密与证书校验，被动/主动模式可切换。"
+        }
+      ]
+    },
+    "otools-servrun": {
+      "badge": "内置插件",
+      "tagline": "本机服务，一个面板管完",
+      "sub": "Nginx / MySQL / PostgreSQL / Redis / PHP… 一键启停、查看版本与日志，还能管理虚拟主机。",
+      "highlights": [
+        "服务一键启停与状态总览",
+        "Nginx 虚拟主机管理",
+        "PHP 多版本与 Composer"
+      ],
+      "screens": [
+        "服务面板"
+      ],
+      "features": [
+        {
+          "title": "服务总览",
+          "desc": "安装状态、运行状态、端口与版本集中展示，启停不必记命令。"
+        },
+        {
+          "title": "虚拟主机",
+          "desc": "Nginx vhost 可视化编辑，域名、根目录与 SSL 一目了然。"
+        },
+        {
+          "title": "PHP 多版本",
+          "desc": "多版本共存与切换，Composer 版本检测与更新。"
+        }
+      ]
+    },
+    "otools-scrcpy": {
+      "badge": "内置插件",
+      "tagline": "安卓投屏与操控",
+      "sub": "基于 scrcpy 的低延迟投屏，键鼠反向控制、无线调试与多设备同时连接。",
+      "highlights": [
+        "低延迟投屏与反向控制",
+        "无线调试配对（Android 11+）",
+        "多设备并行"
+      ],
+      "screens": [
+        "设备列表"
+      ],
+      "features": [
+        {
+          "title": "低延迟投屏",
+          "desc": "可调码率与分辨率，支持录制与截图，长时间运行也稳定。"
+        },
+        {
+          "title": "反向控制",
+          "desc": "键鼠直接操作手机，剪贴板互通，支持拖拽安装 APK。"
+        },
+        {
+          "title": "无线与多设备",
+          "desc": "扫码配对无线调试，多台设备并行投屏互不干扰。"
+        }
+      ]
+    }
+  },
+  "pluginGrid": {
+    "title": "플러그인 자세히 보기",
+    "subtitle": "모든 플러그인은 독립 데스크톱 앱과 플러그인 버전으로 제공됩니다. 열어 기능을 확인하세요.",
+    "more": "자세히 보기"
   }
 }

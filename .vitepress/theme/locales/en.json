@@ -31,9 +31,18 @@
         "title": "Ecosystem Hub",
         "desc": "Tool aggregation and fast plugin access.",
         "cards": [
-          { "title": "Marketplace", "desc": "Curated + Rated + Updated" },
-          { "title": "Developer Center", "desc": "Web + Rust build" },
-          { "title": "Tabs Workflow", "desc": "Parallel tasks" }
+          {
+            "title": "Marketplace",
+            "desc": "Curated + Rated + Updated"
+          },
+          {
+            "title": "Developer Center",
+            "desc": "Web + Rust build"
+          },
+          {
+            "title": "Tabs Workflow",
+            "desc": "Parallel tasks"
+          }
         ]
       },
       "git": {
@@ -41,9 +50,18 @@
         "title": "Octopus Git",
         "desc": "Modern Git repo management with AI collaboration.",
         "cards": [
-          { "title": "AI Commit Messages", "desc": "Generate commit notes in one click" },
-          { "title": "AI Copyright Docs", "desc": "Auto-generate application forms and docs" },
-          { "title": "Submodule Access", "desc": "Quick access to submodules" }
+          {
+            "title": "AI Commit Messages",
+            "desc": "Generate commit notes in one click"
+          },
+          {
+            "title": "AI Copyright Docs",
+            "desc": "Auto-generate application forms and docs"
+          },
+          {
+            "title": "Submodule Access",
+            "desc": "Quick access to submodules"
+          }
         ]
       },
       "dbm": {
@@ -51,9 +69,18 @@
         "title": "Shark Database",
         "desc": "Schema and query management for MySQL/Postgres/MongoDB.",
         "cards": [
-          { "title": "Connections", "desc": "Unified multi-DB management" },
-          { "title": "Schema Browser", "desc": "Tables / indexes" },
-          { "title": "Data Ops", "desc": "CRUD and export" }
+          {
+            "title": "Connections",
+            "desc": "Unified multi-DB management"
+          },
+          {
+            "title": "Schema Browser",
+            "desc": "Tables / indexes"
+          },
+          {
+            "title": "Data Ops",
+            "desc": "CRUD and export"
+          }
         ]
       },
       "ssh": {
@@ -61,9 +88,18 @@
         "title": "Cuttlefish Terminal",
         "desc": "Terminal + SFTP collaboration.",
         "cards": [
-          { "title": "Terminal Sessions", "desc": "Parallel sessions" },
-          { "title": "SFTP Files", "desc": "Upload / download / sync" },
-          { "title": "Quick Actions", "desc": "Common command templates" }
+          {
+            "title": "Terminal Sessions",
+            "desc": "Parallel sessions"
+          },
+          {
+            "title": "SFTP Files",
+            "desc": "Upload / download / sync"
+          },
+          {
+            "title": "Quick Actions",
+            "desc": "Common command templates"
+          }
         ]
       },
       "servrun": {
@@ -71,9 +107,18 @@
         "title": "Coral Env",
         "desc": "One-click management for local Nginx/PHP/MySQL/Redis.",
         "cards": [
-          { "title": "Service Manager", "desc": "Nginx/PHP/MySQL" },
-          { "title": "Config Generator", "desc": "vHost one-click" },
-          { "title": "Version Switch", "desc": "Multi-version" }
+          {
+            "title": "Service Manager",
+            "desc": "Nginx/PHP/MySQL"
+          },
+          {
+            "title": "Config Generator",
+            "desc": "vHost one-click"
+          },
+          {
+            "title": "Version Switch",
+            "desc": "Multi-version"
+          }
         ]
       },
       "ollama": {
@@ -81,9 +126,18 @@
         "title": "Squid Ollama",
         "desc": "Visual management and running of local models.",
         "cards": [
-          { "title": "Model Manager", "desc": "Versions + deps" },
-          { "title": "Performance", "desc": "GPU/CPU usage" },
-          { "title": "Session History", "desc": "Multi-turn chats" }
+          {
+            "title": "Model Manager",
+            "desc": "Versions + deps"
+          },
+          {
+            "title": "Performance",
+            "desc": "GPU/CPU usage"
+          },
+          {
+            "title": "Session History",
+            "desc": "Multi-turn chats"
+          }
         ]
       },
       "audio": {
@@ -91,9 +145,18 @@
         "title": "Dolphin Audio Lab",
         "desc": "Audio processing and lab.",
         "cards": [
-          { "title": "Waveform Edit", "desc": "Track-level editing" },
-          { "title": "Effects Chain", "desc": "Filter + reverb" },
-          { "title": "Export", "desc": "Multi-format output" }
+          {
+            "title": "Waveform Edit",
+            "desc": "Track-level editing"
+          },
+          {
+            "title": "Effects Chain",
+            "desc": "Filter + reverb"
+          },
+          {
+            "title": "Export",
+            "desc": "Multi-format output"
+          }
         ]
       },
       "http": {
@@ -101,9 +164,18 @@
         "title": "Flying Fish HTTP",
         "desc": "Request orchestration and response insights.",
         "cards": [
-          { "title": "Request Orchestration", "desc": "Batch multi-API" },
-          { "title": "Response Insights", "desc": "Status and performance" },
-          { "title": "Environment Switch", "desc": "Dev / Test / Prod" }
+          {
+            "title": "Request Orchestration",
+            "desc": "Batch multi-API"
+          },
+          {
+            "title": "Response Insights",
+            "desc": "Status and performance"
+          },
+          {
+            "title": "Environment Switch",
+            "desc": "Dev / Test / Prod"
+          }
         ]
       }
     }
@@ -125,12 +197,30 @@
     "title": "Platform Capabilities",
     "subtitle": "Built around ecosystem, performance, and collaboration for a desktop mini-app platform.",
     "items": [
-      { "title": "Ocean Ecosystem Plugins", "desc": "Unified directory, versioning, and marketplace distribution." },
-      { "title": "Tabs Multitasking", "desc": "Multi-open tools, persistent context, long workflows." },
-      { "title": "Unified Runtime", "desc": "Web plugins + native capabilities, unified API and state." },
-      { "title": "High-Performance Core", "desc": "Rust + Tauri, fast launch, low footprint, stable execution." },
-      { "title": "AI-Friendly", "desc": "Unified MCP protocol for AI-driven plugin workflows." },
-      { "title": "Native Extension", "desc": "Rust dynamic libraries to extend performance limits." }
+      {
+        "title": "Ocean Ecosystem Plugins",
+        "desc": "Unified directory, versioning, and marketplace distribution."
+      },
+      {
+        "title": "Tabs Multitasking",
+        "desc": "Multi-open tools, persistent context, long workflows."
+      },
+      {
+        "title": "Unified Runtime",
+        "desc": "Web plugins + native capabilities, unified API and state."
+      },
+      {
+        "title": "High-Performance Core",
+        "desc": "Rust + Tauri, fast launch, low footprint, stable execution."
+      },
+      {
+        "title": "AI-Friendly",
+        "desc": "Unified MCP protocol for AI-driven plugin workflows."
+      },
+      {
+        "title": "Native Extension",
+        "desc": "Rust dynamic libraries to extend performance limits."
+      }
     ]
   },
   "apiMatrix": {
@@ -139,10 +229,22 @@
       "items": "Included"
     },
     "rows": [
-      { "group": "System", "items": "Clipboard, files & paths, notifications, shell open & manage" },
-      { "group": "Runtime Info", "items": "Platform, version, plugin UUID, environment variables" },
-      { "group": "Native", "items": "Load, invoke, probe, hot reload native plugins" },
-      { "group": "Plugin State", "items": "Local & sync state, scheme-based multi-file storage" }
+      {
+        "group": "System",
+        "items": "Clipboard, files & paths, notifications, shell open & manage"
+      },
+      {
+        "group": "Runtime Info",
+        "items": "Platform, version, plugin UUID, environment variables"
+      },
+      {
+        "group": "Native",
+        "items": "Load, invoke, probe, hot reload native plugins"
+      },
+      {
+        "group": "Plugin State",
+        "items": "Local & sync state, scheme-based multi-file storage"
+      }
     ]
   },
   "pluginShowcase": {
@@ -153,72 +255,144 @@
         "label": "Home",
         "subtitle": "Ecosystem hub · Plugin aggregator",
         "features": [
-          { "title": "Marketplace", "desc": "Curated + Rated + Updated" },
-          { "title": "Developer Center", "desc": "Web + Rust build" },
-          { "title": "Tabs Workflow", "desc": "Parallel tasks" }
+          {
+            "title": "Marketplace",
+            "desc": "Curated + Rated + Updated"
+          },
+          {
+            "title": "Developer Center",
+            "desc": "Web + Rust build"
+          },
+          {
+            "title": "Tabs Workflow",
+            "desc": "Parallel tasks"
+          }
         ]
       },
       "git": {
         "label": "Git",
         "subtitle": "AI commit · Copyright docs",
         "features": [
-          { "title": "AI Commit Messages", "desc": "Generate commit notes in one click" },
-          { "title": "AI Copyright Docs", "desc": "Auto-generate application forms" },
-          { "title": "Submodule Access", "desc": "Quick access to submodules" }
+          {
+            "title": "AI Commit Messages",
+            "desc": "Generate commit notes in one click"
+          },
+          {
+            "title": "AI Copyright Docs",
+            "desc": "Auto-generate application forms"
+          },
+          {
+            "title": "Submodule Access",
+            "desc": "Quick access to submodules"
+          }
         ]
       },
       "dbm": {
         "label": "Database",
         "subtitle": "Multi-DB · Schema query",
         "features": [
-          { "title": "Connections", "desc": "Unified multi-DB management" },
-          { "title": "Schema Browser", "desc": "Tables / indexes" },
-          { "title": "Data Ops", "desc": "CRUD and export" }
+          {
+            "title": "Connections",
+            "desc": "Unified multi-DB management"
+          },
+          {
+            "title": "Schema Browser",
+            "desc": "Tables / indexes"
+          },
+          {
+            "title": "Data Ops",
+            "desc": "CRUD and export"
+          }
         ]
       },
       "ssh": {
         "label": "SSH",
         "subtitle": "Terminal sessions · SFTP",
         "features": [
-          { "title": "Terminal Sessions", "desc": "Parallel sessions" },
-          { "title": "SFTP Files", "desc": "Upload / download / sync" },
-          { "title": "Quick Actions", "desc": "Common command templates" }
+          {
+            "title": "Terminal Sessions",
+            "desc": "Parallel sessions"
+          },
+          {
+            "title": "SFTP Files",
+            "desc": "Upload / download / sync"
+          },
+          {
+            "title": "Quick Actions",
+            "desc": "Common command templates"
+          }
         ]
       },
       "servrun": {
         "label": "Dev Env",
         "subtitle": "Nginx/PHP/MySQL",
         "features": [
-          { "title": "Service Manager", "desc": "Nginx/PHP/MySQL" },
-          { "title": "Config Generator", "desc": "vHost one-click" },
-          { "title": "Version Switch", "desc": "Multi-version" }
+          {
+            "title": "Service Manager",
+            "desc": "Nginx/PHP/MySQL"
+          },
+          {
+            "title": "Config Generator",
+            "desc": "vHost one-click"
+          },
+          {
+            "title": "Version Switch",
+            "desc": "Multi-version"
+          }
         ]
       },
       "ollama": {
         "label": "Ollama",
         "subtitle": "Local models · Performance",
         "features": [
-          { "title": "Model Manager", "desc": "Versions + deps" },
-          { "title": "Performance", "desc": "GPU/CPU usage" },
-          { "title": "Session History", "desc": "Multi-turn chats" }
+          {
+            "title": "Model Manager",
+            "desc": "Versions + deps"
+          },
+          {
+            "title": "Performance",
+            "desc": "GPU/CPU usage"
+          },
+          {
+            "title": "Session History",
+            "desc": "Multi-turn chats"
+          }
         ]
       },
       "audio": {
         "label": "Audio",
         "subtitle": "Waveform edit · Effects",
         "features": [
-          { "title": "Waveform Edit", "desc": "Track-level editing" },
-          { "title": "Effects Chain", "desc": "Filter + reverb" },
-          { "title": "Export", "desc": "Multi-format output" }
+          {
+            "title": "Waveform Edit",
+            "desc": "Track-level editing"
+          },
+          {
+            "title": "Effects Chain",
+            "desc": "Filter + reverb"
+          },
+          {
+            "title": "Export",
+            "desc": "Multi-format output"
+          }
         ]
       },
       "http": {
         "label": "HTTP",
         "subtitle": "Request orchestration · Insights",
         "features": [
-          { "title": "Request Orchestration", "desc": "Batch multi-API" },
-          { "title": "Response Insights", "desc": "Status and performance" },
-          { "title": "Environment Switch", "desc": "Dev / Test / Prod" }
+          {
+            "title": "Request Orchestration",
+            "desc": "Batch multi-API"
+          },
+          {
+            "title": "Response Insights",
+            "desc": "Status and performance"
+          },
+          {
+            "title": "Environment Switch",
+            "desc": "Dev / Test / Prod"
+          }
         ]
       }
     }
@@ -227,9 +401,18 @@
     "title": "Tabs Workflow Experience",
     "subtitle": "Unified entry, parallel tasks, cross-plugin collaboration with context intact.",
     "items": [
-      { "title": "Discover Tools", "desc": "Quickly locate capabilities in the ocean plugin library." },
-      { "title": "Pin to Tabs", "desc": "Open multiple tasks at once and reduce switching." },
-      { "title": "Flow Collaboration", "desc": "Plugin collaboration into a unified AI workflow." }
+      {
+        "title": "Discover Tools",
+        "desc": "Quickly locate capabilities in the ocean plugin library."
+      },
+      {
+        "title": "Pin to Tabs",
+        "desc": "Open multiple tasks at once and reduce switching."
+      },
+      {
+        "title": "Flow Collaboration",
+        "desc": "Plugin collaboration into a unified AI workflow."
+      }
     ]
   },
   "docCta": {
@@ -239,5 +422,224 @@
       "api": "View OTools API",
       "dev": "Developer Mode Guide"
     }
+  },
+  "pluginLanding": {
+    "downloadStandalone": "Download standalone",
+    "getPlugin": "Get the plugin",
+    "recommended": "Recommended",
+    "galleryTitle": "Screenshots",
+    "gallerySub": "Rendered from the real plugin UI (light / dark follows the site theme).",
+    "featuresTitle": "Capabilities",
+    "featuresSub": "Details refined for daily use — not a checklist of features.",
+    "downloadTitle": "Two ways to use it",
+    "downloadSub": "A focused app that does just this, or a plugin inside your existing OTools workspace?",
+    "standaloneTitle": "Standalone app",
+    "standaloneDesc": "A dedicated desktop app with the same engine but only this plugin’s features. Double-click and go — no OTools required.",
+    "standaloneNote": "Installers live on GitHub Releases; built-in auto-update.",
+    "pluginTitle": "As a plugin",
+    "pluginDesc": "Add it to your existing OTools and work alongside your other tools, sharing tabs and shortcuts.",
+    "pluginStep1": "Download and install OTools desktop",
+    "pluginStep2": "Open the Plugin Marketplace",
+    "pluginStep3": "Search this plugin and install with one click",
+    "pluginNote": "The plugin updates together with OTools.",
+    "otools-git": {
+      "badge": "Built-in plugin",
+      "tagline": "Git, inside your workspace",
+      "sub": "Multi-repo overview, staging, commit history and side-by-side diffs — the everyday flow without switching to a terminal.",
+      "highlights": [
+        "Multi-repo dashboard with status at a glance",
+        "Built-in visual diff with hunk-level reset",
+        "AI-generated commit messages"
+      ],
+      "screens": [
+        "Workspace",
+        "History"
+      ],
+      "features": [
+        {
+          "title": "Multi-repo workbench",
+          "desc": "Manage a dozen repos at once: commit counts, ahead/behind and pending changes — expand to see submodules."
+        },
+        {
+          "title": "Visual diffs",
+          "desc": "Inline or side-by-side, with per-hunk or per-line reset from the context menu."
+        },
+        {
+          "title": "AI commit messages",
+          "desc": "Generate conventional commit messages from staged changes, with your own template and style."
+        }
+      ]
+    },
+    "otools-dbm": {
+      "badge": "Built-in plugin",
+      "tagline": "One client for every database",
+      "sub": "MySQL / PostgreSQL / Redis / MongoDB / ClickHouse… unified connections, SQL workbench, schemas and backups.",
+      "highlights": [
+        "15+ database engines in one place",
+        "SQL workbench with result grid",
+        "Backup plans and data dictionary"
+      ],
+      "screens": [
+        "Connections",
+        "Query result"
+      ],
+      "features": [
+        {
+          "title": "Every engine, one list",
+          "desc": "Relational, document, key-value, columnar and analytical databases in a single list, with environment tags to avoid mistakes."
+        },
+        {
+          "title": "Query workbench",
+          "desc": "Tabbed SQL editing, execution plans, paged results and export — smooth even on large result sets."
+        },
+        {
+          "title": "Backups & sync",
+          "desc": "Visual backup plans, cross-database sync and data dictionary export without writing scripts."
+        }
+      ]
+    },
+    "otools-term": {
+      "badge": "内置插件",
+      "tagline": "终端、SFTP 与端口转发一体",
+      "sub": "多会话 SSH、内置 SFTP 文件管理、端口转发与 SOCKS5 代理，运维常用动作一个面板搞定。",
+      "highlights": [
+        "多会话终端与分组管理",
+        "内置 SFTP 浏览与编辑",
+        "端口转发 / SOCKS5 代理"
+      ],
+      "screens": [
+        "工作区"
+      ],
+      "features": [
+        {
+          "title": "多会话终端",
+          "desc": "服务器按分组管理，多标签并行操作，常用命令收藏一键执行。"
+        },
+        {
+          "title": "SFTP 浏览器",
+          "desc": "远程目录树、上传下载、在线编辑与保存，不用再开一个工具。"
+        },
+        {
+          "title": "端口转发",
+          "desc": "本地/远程端口转发与 SOCKS5 代理，可视化启停并自动恢复。"
+        }
+      ]
+    },
+    "otools-mqtt": {
+      "badge": "内置插件",
+      "tagline": "把 MQTT 调试变得直观",
+      "sub": "连接管理、订阅树、消息日志与多格式载荷解析，物联网调试不再靠命令行。",
+      "highlights": [
+        "多连接与订阅管理",
+        "消息日志与多格式载荷解析",
+        "在线发布与重放"
+      ],
+      "screens": [
+        "连接列表",
+        "会话",
+        "新建连接"
+      ],
+      "features": [
+        {
+          "title": "连接与订阅",
+          "desc": "MQTT 3.1.1 / 5.0、TLS 与遗嘱消息，订阅树按主题层级展开。"
+        },
+        {
+          "title": "载荷解析",
+          "desc": "纯文本 / JSON / Base64 / Hex / CBOR 多视图切换，JSON 自动格式化。"
+        },
+        {
+          "title": "发布与重放",
+          "desc": "QoS、Retain 可选，历史消息一键重发，便于复现问题。"
+        }
+      ]
+    },
+    "otools-ftp": {
+      "badge": "内置插件",
+      "tagline": "双栏 FTP，像本地一样操作",
+      "sub": "本地与远程双栏对照、拖拽传输、传输队列与断点续传，还支持 FTPS 加密。",
+      "highlights": [
+        "本地 / 远程双栏对照",
+        "拖拽传输与队列",
+        "FTPS 加密与断点续传"
+      ],
+      "screens": [
+        "连接列表",
+        "目录浏览"
+      ],
+      "features": [
+        {
+          "title": "双栏浏览",
+          "desc": "左边本地、右边远程，目录树与文件列表对齐，一眼看清两边结构。"
+        },
+        {
+          "title": "传输队列",
+          "desc": "上传下载进队列，进度、速率与剩余时间可视化，失败可重试。"
+        },
+        {
+          "title": "安全连接",
+          "desc": "支持 FTPS 显式加密与证书校验，被动/主动模式可切换。"
+        }
+      ]
+    },
+    "otools-servrun": {
+      "badge": "内置插件",
+      "tagline": "本机服务，一个面板管完",
+      "sub": "Nginx / MySQL / PostgreSQL / Redis / PHP… 一键启停、查看版本与日志，还能管理虚拟主机。",
+      "highlights": [
+        "服务一键启停与状态总览",
+        "Nginx 虚拟主机管理",
+        "PHP 多版本与 Composer"
+      ],
+      "screens": [
+        "服务面板"
+      ],
+      "features": [
+        {
+          "title": "服务总览",
+          "desc": "安装状态、运行状态、端口与版本集中展示，启停不必记命令。"
+        },
+        {
+          "title": "虚拟主机",
+          "desc": "Nginx vhost 可视化编辑，域名、根目录与 SSL 一目了然。"
+        },
+        {
+          "title": "PHP 多版本",
+          "desc": "多版本共存与切换，Composer 版本检测与更新。"
+        }
+      ]
+    },
+    "otools-scrcpy": {
+      "badge": "内置插件",
+      "tagline": "安卓投屏与操控",
+      "sub": "基于 scrcpy 的低延迟投屏，键鼠反向控制、无线调试与多设备同时连接。",
+      "highlights": [
+        "低延迟投屏与反向控制",
+        "无线调试配对（Android 11+）",
+        "多设备并行"
+      ],
+      "screens": [
+        "设备列表"
+      ],
+      "features": [
+        {
+          "title": "低延迟投屏",
+          "desc": "可调码率与分辨率，支持录制与截图，长时间运行也稳定。"
+        },
+        {
+          "title": "反向控制",
+          "desc": "键鼠直接操作手机，剪贴板互通，支持拖拽安装 APK。"
+        },
+        {
+          "title": "无线与多设备",
+          "desc": "扫码配对无线调试，多台设备并行投屏互不干扰。"
+        }
+      ]
+    }
+  },
+  "pluginGrid": {
+    "title": "Meet the plugins",
+    "subtitle": "Every plugin ships as both a standalone desktop app and an in-app plugin. Open one to see what it can do for you.",
+    "more": "Learn more"
   }
 }

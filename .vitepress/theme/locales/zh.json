@@ -31,9 +31,18 @@
         "title": "生态入口",
         "desc": "工具聚合与插件快速访问。",
         "cards": [
-          { "title": "插件市场", "desc": "精选 + 评分 + 更新" },
-          { "title": "开发者中心", "desc": "Web + Rust 构建" },
-          { "title": "Tabs 工作流", "desc": "多任务并行" }
+          {
+            "title": "插件市场",
+            "desc": "精选 + 评分 + 更新"
+          },
+          {
+            "title": "开发者中心",
+            "desc": "Web + Rust 构建"
+          },
+          {
+            "title": "Tabs 工作流",
+            "desc": "多任务并行"
+          }
         ]
       },
       "git": {
@@ -41,9 +50,18 @@
         "title": "章鱼Git",
         "desc": "新型Git仓库管理与 AI 协作。",
         "cards": [
-          { "title": "AI 生成提交信息", "desc": "一键生成提交说明" },
-          { "title": "AI 软著申请", "desc": "自动生成软著申请的表单与文档" },
-          { "title": "子模块直达", "desc": "快捷式子模块访问" }
+          {
+            "title": "AI 生成提交信息",
+            "desc": "一键生成提交说明"
+          },
+          {
+            "title": "AI 软著申请",
+            "desc": "自动生成软著申请的表单与文档"
+          },
+          {
+            "title": "子模块直达",
+            "desc": "快捷式子模块访问"
+          }
         ]
       },
       "dbm": {
@@ -51,9 +69,18 @@
         "title": "鲨鱼数据库",
         "desc": "Mysql/Postgres/MongoDB等数据表结构与查询管理。",
         "cards": [
-          { "title": "连接管理", "desc": "多库统一管理" },
-          { "title": "结构浏览", "desc": "表结构/索引查看" },
-          { "title": "数据操作", "desc": "增删改查与导出" }
+          {
+            "title": "连接管理",
+            "desc": "多库统一管理"
+          },
+          {
+            "title": "结构浏览",
+            "desc": "表结构/索引查看"
+          },
+          {
+            "title": "数据操作",
+            "desc": "增删改查与导出"
+          }
         ]
       },
       "ssh": {
@@ -61,9 +88,18 @@
         "title": "墨鱼终端",
         "desc": "终端与SFTP协同。",
         "cards": [
-          { "title": "终端会话", "desc": "多会话并行" },
-          { "title": "SFTP 文件", "desc": "上传/下载/同步" },
-          { "title": "快捷操作", "desc": "常用命令模板" }
+          {
+            "title": "终端会话",
+            "desc": "多会话并行"
+          },
+          {
+            "title": "SFTP 文件",
+            "desc": "上传/下载/同步"
+          },
+          {
+            "title": "快捷操作",
+            "desc": "常用命令模板"
+          }
         ]
       },
       "servrun": {
@@ -71,9 +107,18 @@
         "title": "珊瑚Env",
         "desc": "本地Nginx/PHP/Mysql/Redis等开发环境一键管理。",
         "cards": [
-          { "title": "服务管理", "desc": "Nginx/PHP/MySQL" },
-          { "title": "配置生成", "desc": "vHost 一键配置" },
-          { "title": "版本切换", "desc": "多版本并行" }
+          {
+            "title": "服务管理",
+            "desc": "Nginx/PHP/MySQL"
+          },
+          {
+            "title": "配置生成",
+            "desc": "vHost 一键配置"
+          },
+          {
+            "title": "版本切换",
+            "desc": "多版本并行"
+          }
         ]
       },
       "ollama": {
@@ -81,9 +126,18 @@
         "title": "乌贼Ollama",
         "desc": "本地大模型可视化管理与运行。",
         "cards": [
-          { "title": "模型管理", "desc": "版本 + 依赖" },
-          { "title": "性能监控", "desc": "GPU/CPU 占用" },
-          { "title": "会话历史", "desc": "多轮对话" }
+          {
+            "title": "模型管理",
+            "desc": "版本 + 依赖"
+          },
+          {
+            "title": "性能监控",
+            "desc": "GPU/CPU 占用"
+          },
+          {
+            "title": "会话历史",
+            "desc": "多轮对话"
+          }
         ]
       },
       "audio": {
@@ -91,9 +145,18 @@
         "title": "海豚音频工坊",
         "desc": "音频处理与实验室。",
         "cards": [
-          { "title": "波形编辑", "desc": "轨道级剪辑" },
-          { "title": "效果链", "desc": "滤波 + 混响" },
-          { "title": "导出管理", "desc": "多格式输出" }
+          {
+            "title": "波形编辑",
+            "desc": "轨道级剪辑"
+          },
+          {
+            "title": "效果链",
+            "desc": "滤波 + 混响"
+          },
+          {
+            "title": "导出管理",
+            "desc": "多格式输出"
+          }
         ]
       },
       "http": {
@@ -101,9 +164,18 @@
         "title": "飞鱼HTTP",
         "desc": "请求编排与响应洞察。",
         "cards": [
-          { "title": "请求编排", "desc": "多接口批量执行" },
-          { "title": "响应洞察", "desc": "状态与性能分析" },
-          { "title": "环境切换", "desc": "开发/测试/生产" }
+          {
+            "title": "请求编排",
+            "desc": "多接口批量执行"
+          },
+          {
+            "title": "响应洞察",
+            "desc": "状态与性能分析"
+          },
+          {
+            "title": "环境切换",
+            "desc": "开发/测试/生产"
+          }
         ]
       }
     }
@@ -183,72 +255,144 @@
         "label": "首页",
         "subtitle": "生态入口 · 插件聚合",
         "features": [
-          { "title": "插件市场", "desc": "精选 + 评分 + 更新" },
-          { "title": "开发者中心", "desc": "Web + Rust 构建" },
-          { "title": "Tabs 工作流", "desc": "多任务并行" }
+          {
+            "title": "插件市场",
+            "desc": "精选 + 评分 + 更新"
+          },
+          {
+            "title": "开发者中心",
+            "desc": "Web + Rust 构建"
+          },
+          {
+            "title": "Tabs 工作流",
+            "desc": "多任务并行"
+          }
         ]
       },
       "git": {
         "label": "Git",
         "subtitle": "AI 提交 · 软著文档",
         "features": [
-          { "title": "AI 生成提交信息", "desc": "一键生成提交说明" },
-          { "title": "AI 软著申请", "desc": "自动生成软著申请表单" },
-          { "title": "子模块直达", "desc": "快捷式子模块访问" }
+          {
+            "title": "AI 生成提交信息",
+            "desc": "一键生成提交说明"
+          },
+          {
+            "title": "AI 软著申请",
+            "desc": "自动生成软著申请表单"
+          },
+          {
+            "title": "子模块直达",
+            "desc": "快捷式子模块访问"
+          }
         ]
       },
       "dbm": {
         "label": "数据库",
         "subtitle": "多库管理 · 结构查询",
         "features": [
-          { "title": "连接管理", "desc": "多库统一管理" },
-          { "title": "结构浏览", "desc": "表结构/索引查看" },
-          { "title": "数据操作", "desc": "增删改查与导出" }
+          {
+            "title": "连接管理",
+            "desc": "多库统一管理"
+          },
+          {
+            "title": "结构浏览",
+            "desc": "表结构/索引查看"
+          },
+          {
+            "title": "数据操作",
+            "desc": "增删改查与导出"
+          }
         ]
       },
       "ssh": {
         "label": "SSH",
         "subtitle": "终端会话 · SFTP",
         "features": [
-          { "title": "终端会话", "desc": "多会话并行" },
-          { "title": "SFTP 文件", "desc": "上传/下载/同步" },
-          { "title": "快捷操作", "desc": "常用命令模板" }
+          {
+            "title": "终端会话",
+            "desc": "多会话并行"
+          },
+          {
+            "title": "SFTP 文件",
+            "desc": "上传/下载/同步"
+          },
+          {
+            "title": "快捷操作",
+            "desc": "常用命令模板"
+          }
         ]
       },
       "servrun": {
         "label": "开发环境",
         "subtitle": "Nginx/PHP/MySQL",
         "features": [
-          { "title": "服务管理", "desc": "Nginx/PHP/MySQL" },
-          { "title": "配置生成", "desc": "vHost 一键配置" },
-          { "title": "版本切换", "desc": "多版本并行" }
+          {
+            "title": "服务管理",
+            "desc": "Nginx/PHP/MySQL"
+          },
+          {
+            "title": "配置生成",
+            "desc": "vHost 一键配置"
+          },
+          {
+            "title": "版本切换",
+            "desc": "多版本并行"
+          }
         ]
       },
       "ollama": {
         "label": "Ollama",
         "subtitle": "本地模型 · 性能监控",
         "features": [
-          { "title": "模型管理", "desc": "版本 + 依赖" },
-          { "title": "性能监控", "desc": "GPU/CPU 占用" },
-          { "title": "会话历史", "desc": "多轮对话" }
+          {
+            "title": "模型管理",
+            "desc": "版本 + 依赖"
+          },
+          {
+            "title": "性能监控",
+            "desc": "GPU/CPU 占用"
+          },
+          {
+            "title": "会话历史",
+            "desc": "多轮对话"
+          }
         ]
       },
       "audio": {
         "label": "音频",
         "subtitle": "波形编辑 · 效果链",
         "features": [
-          { "title": "波形编辑", "desc": "轨道级剪辑" },
-          { "title": "效果链", "desc": "滤波 + 混响" },
-          { "title": "导出管理", "desc": "多格式输出" }
+          {
+            "title": "波形编辑",
+            "desc": "轨道级剪辑"
+          },
+          {
+            "title": "效果链",
+            "desc": "滤波 + 混响"
+          },
+          {
+            "title": "导出管理",
+            "desc": "多格式输出"
+          }
         ]
       },
       "http": {
         "label": "HTTP",
         "subtitle": "请求编排 · 响应洞察",
         "features": [
-          { "title": "请求编排", "desc": "多接口批量执行" },
-          { "title": "响应洞察", "desc": "状态与性能分析" },
-          { "title": "环境切换", "desc": "开发/测试/生产" }
+          {
+            "title": "请求编排",
+            "desc": "多接口批量执行"
+          },
+          {
+            "title": "响应洞察",
+            "desc": "状态与性能分析"
+          },
+          {
+            "title": "环境切换",
+            "desc": "开发/测试/生产"
+          }
         ]
       }
     }
@@ -257,9 +401,18 @@
     "title": "Tabs 工作流体验",
     "subtitle": "统一入口、并行任务、跨插件联动，保持上下文不丢失。",
     "items": [
-      { "title": "发现工具", "desc": "从海洋生态插件库中快速定位能力。" },
-      { "title": "固定到 Tabs", "desc": "多任务同时打开，减少切换成本。" },
-      { "title": "流程协作", "desc": "插件间协作，形成统一接口的AI连续工作流。" }
+      {
+        "title": "发现工具",
+        "desc": "从海洋生态插件库中快速定位能力。"
+      },
+      {
+        "title": "固定到 Tabs",
+        "desc": "多任务同时打开，减少切换成本。"
+      },
+      {
+        "title": "流程协作",
+        "desc": "插件间协作，形成统一接口的AI连续工作流。"
+      }
     ]
   },
   "docCta": {
@@ -269,5 +422,224 @@
       "api": "查看 OTools API",
       "dev": "开发者模式指南"
     }
+  },
+  "pluginLanding": {
+    "downloadStandalone": "下载独立版",
+    "getPlugin": "获取插件版",
+    "recommended": "推荐",
+    "galleryTitle": "界面一览",
+    "gallerySub": "以下截图由插件真实界面渲染（明 / 暗主题随站点自动切换）。",
+    "featuresTitle": "核心能力",
+    "featuresSub": "为日常使用打磨过的细节，而不是功能清单的堆砌。",
+    "downloadTitle": "两种用法，任选其一",
+    "downloadSub": "想要一个只做这件事的干净应用，还是并入已有的 OTools 工作台？",
+    "standaloneTitle": "独立版",
+    "standaloneDesc": "与宿主同源、但只带本插件功能的独立桌面应用，双击即用，无需先装 OTools。",
+    "standaloneNote": "安装包在 GitHub Releases；应用内置自动更新。",
+    "pluginTitle": "插件版",
+    "pluginDesc": "并入已有的 OTools，与其它工具在同一工作台里协作，共享标签页与快捷键。",
+    "pluginStep1": "下载并安装 OTools 桌面版",
+    "pluginStep2": "打开「插件市场」",
+    "pluginStep3": "搜索本插件并一键安装",
+    "pluginNote": "插件版会随 OTools 一起更新。",
+    "otools-git": {
+      "badge": "内置插件",
+      "tagline": "把 Git 搬进工作台",
+      "sub": "多仓库总览、变更暂存、提交历史与差异对照 —— 常用操作一屏完成，不必来回切终端。",
+      "highlights": [
+        "多仓库并行管理与状态总览",
+        "内置可视化 diff，支持逐块重置",
+        "AI 生成提交信息"
+      ],
+      "screens": [
+        "工作区",
+        "提交历史"
+      ],
+      "features": [
+        {
+          "title": "多仓库工作台",
+          "desc": "一次管理十几个仓库：提交数、领先/落后、未提交改动一目了然，展开即可看到子模块。"
+        },
+        {
+          "title": "可视化差异",
+          "desc": "行内 / 并排两种 diff，支持按改动块或单行重置，右键即可操作。"
+        },
+        {
+          "title": "AI 提交信息",
+          "desc": "根据暂存改动自动生成符合规范的提交信息，支持自定义模板与风格。"
+        }
+      ]
+    },
+    "otools-dbm": {
+      "badge": "内置插件",
+      "tagline": "一个客户端，连所有数据库",
+      "sub": "MySQL / PostgreSQL / Redis / MongoDB / ClickHouse… 统一连接管理、SQL 工作台、表结构与备份。",
+      "highlights": [
+        "15+ 数据库类型统一连接",
+        "SQL 工作台与结果表格",
+        "备份计划与数据字典"
+      ],
+      "screens": [
+        "连接列表",
+        "查询结果"
+      ],
+      "features": [
+        {
+          "title": "多引擎统一管理",
+          "desc": "关系型、文档型、键值、列式与分析型数据库放进同一份连接列表，带环境标签防误操作。"
+        },
+        {
+          "title": "查询工作台",
+          "desc": "多标签 SQL 编辑、执行计划、结果分页与导出，大结果集也不卡。"
+        },
+        {
+          "title": "备份与同步",
+          "desc": "可视化备份计划、跨库同步与数据字典导出，运维动作不用再写脚本。"
+        }
+      ]
+    },
+    "otools-term": {
+      "badge": "内置插件",
+      "tagline": "终端、SFTP 与端口转发一体",
+      "sub": "多会话 SSH、内置 SFTP 文件管理、端口转发与 SOCKS5 代理，运维常用动作一个面板搞定。",
+      "highlights": [
+        "多会话终端与分组管理",
+        "内置 SFTP 浏览与编辑",
+        "端口转发 / SOCKS5 代理"
+      ],
+      "screens": [
+        "工作区"
+      ],
+      "features": [
+        {
+          "title": "多会话终端",
+          "desc": "服务器按分组管理，多标签并行操作，常用命令收藏一键执行。"
+        },
+        {
+          "title": "SFTP 浏览器",
+          "desc": "远程目录树、上传下载、在线编辑与保存，不用再开一个工具。"
+        },
+        {
+          "title": "端口转发",
+          "desc": "本地/远程端口转发与 SOCKS5 代理，可视化启停并自动恢复。"
+        }
+      ]
+    },
+    "otools-mqtt": {
+      "badge": "内置插件",
+      "tagline": "把 MQTT 调试变得直观",
+      "sub": "连接管理、订阅树、消息日志与多格式载荷解析，物联网调试不再靠命令行。",
+      "highlights": [
+        "多连接与订阅管理",
+        "消息日志与多格式载荷解析",
+        "在线发布与重放"
+      ],
+      "screens": [
+        "连接列表",
+        "会话",
+        "新建连接"
+      ],
+      "features": [
+        {
+          "title": "连接与订阅",
+          "desc": "MQTT 3.1.1 / 5.0、TLS 与遗嘱消息，订阅树按主题层级展开。"
+        },
+        {
+          "title": "载荷解析",
+          "desc": "纯文本 / JSON / Base64 / Hex / CBOR 多视图切换，JSON 自动格式化。"
+        },
+        {
+          "title": "发布与重放",
+          "desc": "QoS、Retain 可选，历史消息一键重发，便于复现问题。"
+        }
+      ]
+    },
+    "otools-ftp": {
+      "badge": "内置插件",
+      "tagline": "双栏 FTP，像本地一样操作",
+      "sub": "本地与远程双栏对照、拖拽传输、传输队列与断点续传，还支持 FTPS 加密。",
+      "highlights": [
+        "本地 / 远程双栏对照",
+        "拖拽传输与队列",
+        "FTPS 加密与断点续传"
+      ],
+      "screens": [
+        "连接列表",
+        "目录浏览"
+      ],
+      "features": [
+        {
+          "title": "双栏浏览",
+          "desc": "左边本地、右边远程，目录树与文件列表对齐，一眼看清两边结构。"
+        },
+        {
+          "title": "传输队列",
+          "desc": "上传下载进队列，进度、速率与剩余时间可视化，失败可重试。"
+        },
+        {
+          "title": "安全连接",
+          "desc": "支持 FTPS 显式加密与证书校验，被动/主动模式可切换。"
+        }
+      ]
+    },
+    "otools-servrun": {
+      "badge": "内置插件",
+      "tagline": "本机服务，一个面板管完",
+      "sub": "Nginx / MySQL / PostgreSQL / Redis / PHP… 一键启停、查看版本与日志，还能管理虚拟主机。",
+      "highlights": [
+        "服务一键启停与状态总览",
+        "Nginx 虚拟主机管理",
+        "PHP 多版本与 Composer"
+      ],
+      "screens": [
+        "服务面板"
+      ],
+      "features": [
+        {
+          "title": "服务总览",
+          "desc": "安装状态、运行状态、端口与版本集中展示，启停不必记命令。"
+        },
+        {
+          "title": "虚拟主机",
+          "desc": "Nginx vhost 可视化编辑，域名、根目录与 SSL 一目了然。"
+        },
+        {
+          "title": "PHP 多版本",
+          "desc": "多版本共存与切换，Composer 版本检测与更新。"
+        }
+      ]
+    },
+    "otools-scrcpy": {
+      "badge": "内置插件",
+      "tagline": "安卓投屏与操控",
+      "sub": "基于 scrcpy 的低延迟投屏，键鼠反向控制、无线调试与多设备同时连接。",
+      "highlights": [
+        "低延迟投屏与反向控制",
+        "无线调试配对（Android 11+）",
+        "多设备并行"
+      ],
+      "screens": [
+        "设备列表"
+      ],
+      "features": [
+        {
+          "title": "低延迟投屏",
+          "desc": "可调码率与分辨率，支持录制与截图，长时间运行也稳定。"
+        },
+        {
+          "title": "反向控制",
+          "desc": "键鼠直接操作手机，剪贴板互通，支持拖拽安装 APK。"
+        },
+        {
+          "title": "无线与多设备",
+          "desc": "扫码配对无线调试，多台设备并行投屏互不干扰。"
+        }
+      ]
+    }
+  },
+  "pluginGrid": {
+    "title": "逐个插件深入了解",
+    "subtitle": "每个插件都有独立桌面版与插件版两种形态，点开看看它能为你做什么。",
+    "more": "查看详情"
   }
 }

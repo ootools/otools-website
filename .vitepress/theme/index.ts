@@ -8,6 +8,8 @@ import TabsWorkflow from './components/TabsWorkflow.vue';
 import PluginShowcase from './components/PluginShowcase.vue';
 import ApiMatrix from './components/ApiMatrix.vue';
 import DocCta from './components/DocCta.vue';
+import PluginLanding from './components/PluginLanding.vue';
+import PluginGrid from './components/PluginGrid.vue';
 
 export default {
   ...DefaultTheme,
@@ -20,5 +22,7 @@ export default {
     app.component('PluginShowcase', PluginShowcase);
     app.component('ApiMatrix', ApiMatrix);
     app.component('DocCta', DocCta);
+    app.component('PluginLanding', PluginLanding);
+    app.component('PluginGrid', PluginGrid);
   },
 };
