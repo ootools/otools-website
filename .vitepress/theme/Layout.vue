@@ -1,14 +1,14 @@
 <script setup lang="ts">
 import DefaultTheme from 'vitepress/theme';
 import { computed, onBeforeUnmount, onMounted, ref, watch } from 'vue';
-import { useData } from 'vitepress';
+import { useData, withBase } from 'vitepress';
 
 const { page } = useData();
 const navHidden = ref(false);
 const navScrolled = ref(false);
 let lastScrollY = 0;
-const logoLightSrc = '/otools-logo.svg';
-const logoDarkSrc = '/otools-logo-white.svg';
+const logoLightSrc = withBase('/otools-logo.svg');
+const logoDarkSrc = withBase('/otools-logo-white.svg');
 
 const isHome = computed(() => {
   const rel = page.value.relativePath;
