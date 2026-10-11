@@ -1,0 +1,145 @@
+# OTools
+
+> OTools 是一个高性能桌面AI 工作流平台，核心是「Tabs 多任务化」：
+> 常用桌面工具收进同一个工作台，多个工具并行打开、保持上下文、随时切换。
+> 平台与内置插件均可免费下载，支持 Windows 与 macOS。
+> 每个工具都有**独立版**，可脱离平台单独下载运行，功能不阉割。
+
+## 站点结构
+
+- 首页：/otools-website/
+- 功能总览：/otools-website/features
+- 插件总览：/otools-website/plugins/
+- 开发文档：/otools-website/guide/overview
+- OTools API：/otools-website/guide/otools-api
+
+## 插件能力与对比
+
+### Git（otools-git）
+> 把 Git 搬进工作台。多仓库总览、变更暂存、提交历史与差异对照 —— 常用操作一屏完成，不必来回切终端。
+- 落地页：/otools-website/plugins/otools-git/
+- 独立版下载：https://github.com/ootools/otools-publish/releases/tag/plugin-app-otools-git-v0.2.6
+- 界面预览图：/otools-website/plugins/otools-git/workspace-light.webp（明）/ workspace-dark.webp（暗）
+- 功能：多仓库工作台 —— 一次管理十几个仓库：提交数、领先/落后、未提交改动一目了然，展开即可看到子模块。
+- 功能：可视化差异 —— 行内 / 并排两种 diff，支持按改动块或单行重置，右键即可操作。
+- 功能：AI 提交信息 —— 根据暂存改动自动生成符合规范的提交信息，支持自定义模板与风格。
+- 对比对象：SourceTree、GitKraken、GitHub Desktop、TortoiseGit、Fork、Tower、Git Extensions、Lazygit、git-credential-manager
+- 相比同类（SourceTree / GitKraken / GitHub Desktop / TortoiseGit 等）：不依赖 Java/JRE 的原生桌面实现，启动即用，不需要像 Eclipse 系工具那样先配 JDK。
+- 相比同类（SourceTree / GitKraken / GitHub Desktop / TortoiseGit 等）：仓库列表、提交历史、文件树、Diff、终端四合一，同屏完成「看改动 → 写命令 → 再看结果」，不必在多个窗口间来回切。
+- 相比同类（SourceTree / GitKraken / GitHub Desktop / TortoiseGit 等）：每个功能都有独立版可下载，能单独当纯 Git GUI 用，不必先装整个平台。
+- 相比同类（SourceTree / GitKraken / GitHub Desktop / TortoiseGit 等）：支持 SSH / HTTPS 凭据管理、签名提交与 .gitignore 可视化编辑，新仓库上手不需要背命令。
+
+### DBM（otools-dbm）
+> 一个客户端，连所有数据库。MySQL / PostgreSQL / Redis / MongoDB / ClickHouse… 统一连接管理、SQL 工作台、表结构与备份。
+- 落地页：/otools-website/plugins/otools-dbm/
+- 独立版下载：https://github.com/ootools/otools-publish/releases/tag/plugin-app-otools-dbm-v0.2.3
+- 界面预览图：/otools-website/plugins/otools-dbm/connections-light.webp（明）/ connections-dark.webp（暗）
+- 功能：多引擎统一管理 —— 关系型、文档型、键值、列式与分析型数据库放进同一份连接列表，带环境标签防误操作。
+- 功能：查询工作台 —— 多标签 SQL 编辑、执行计划、结果分页与导出，大结果集也不卡。
+- 功能：表与结构浏览 —— 一眼浏览库内所有表、字段与索引，快速定位要操作的数据对象。
+- 功能：备份与同步 —— 可视化备份计划、跨库同步与数据字典导出，运维动作不用再写脚本。
+- 对比对象：Navicat、DBeaver、DataGrip、HeidiSQL、Sequel Pro、TablePlus、Beekeeper Studio、phpMyAdmin、Adminer、Toad for Oracle
+- 相比同类（Navicat / DBeaver / DataGrip / HeidiSQL 等）：单文件多数据库：一个工作区同时挂MySQL / PostgreSQL / SQLite / SQL Server 等十六种数据库，切换不用换软件。
+- 相比同类（Navicat / DBeaver / DataGrip / HeidiSQL 等）：表结构页把「新增 / 修改 / 删除」三种状态并排展示，改字段前就能确认影响面，比逐条点开确认快得多。
+- 相比同类（Navicat / DBeaver / DataGrip / HeidiSQL 等）：查询页支持多结果集并排对比，JSON 结果自动格式化，调试存储过程与复杂 join 时不用先手工整理输出。
+- 相比同类（Navicat / DBeaver / DataGrip / HeidiSQL 等）：内置备份与导出到文件的能力，备份链路不依赖额外的命令行工具。
+
+### Term（otools-term）
+> 终端、SFTP 与端口转发一体。多会话 SSH、内置 SFTP 文件管理、端口转发与 SOCKS5 代理，运维常用动作一个面板搞定。
+- 落地页：/otools-website/plugins/otools-term/
+- 独立版下载：https://github.com/ootools/otools-publish/releases/tag/plugin-app-otools-term-v0.1.4
+- 界面预览图：/otools-website/plugins/otools-term/workspace-light.webp（明）/ workspace-dark.webp（暗）
+- 功能：多会话终端 —— 服务器按分组管理，多标签并行操作，常用命令收藏一键执行。
+- 功能：SFTP 浏览器 —— 远程目录树、上传下载、在线编辑与保存，不用再开一个工具。
+- 功能：端口转发 —— 本地/远程端口转发与 SOCKS5 代理，可视化启停并自动恢复。
+- 对比对象：Xshell、MobaXterm、FinalShell、PuTTY、SecureCRT、Tabby、WezTerm、Electerm、Royal TS、Termius、WinSCP、Termscp
+- 相比同类（Xshell / MobaXterm / FinalShell / PuTTY 等）：SSH 与 SFTP 同一个窗口：左侧远程文件树、右侧终端，拖拽上传的同时能敲命令看结果，不用在两个工具间来回切。
+- 相比同类（Xshell / MobaXterm / FinalShell / PuTTY 等）：会话配置集中管理，主机、端口、账号、密钥分组保存，新机器接入只需填一次。
+- 相比同类（Xshell / MobaXterm / FinalShell / PuTTY 等）：端口转发可视化配置，本地服务（数据库、调试端口）可以直接映射到远程，省掉手写 ssh -L 的记忆负担。
+- 相比同类（Xshell / MobaXterm / FinalShell / PuTTY 等）：终端渲染与文件传输走不同的并发通道，大文件传输不会把交互式命令卡住。
+
+### MQTT（otools-mqtt）
+> 把 MQTT 调试变得直观。连接管理、订阅树、消息日志与多格式载荷解析，物联网调试不再靠命令行。
+- 落地页：/otools-website/plugins/otools-mqtt/
+- 独立版下载：https://github.com/ootools/otools-publish/releases/tag/plugin-app-otools-mqtt-v0.1.4
+- 界面预览图：/otools-website/plugins/otools-mqtt/list-light.webp（明）/ list-dark.webp（暗）
+- 功能：连接与订阅 —— MQTT 3.1.1 / 5.0、TLS 与遗嘱消息，订阅树按主题层级展开。
+- 功能：载荷解析 —— 纯文本 / JSON / Base64 / Hex / CBOR 多视图切换，JSON 自动格式化。
+- 功能：发布与重放 —— QoS、Retain 可选，历史消息一键重发，便于复现问题。
+- 对比对象：MQTTX、EQMX、MQTT Explorer、MQTTBox、HiveMQ MQTT Explorer、Mosquitto、EMQX、Charles、Wireshark、mqtt.js
+- 相比同类（MQTTX / EQMX / MQTT Explorer / MQTTBox 等）：会话打开即见消息流：连接、会话、订阅树、消息日志在同一视图里，不用先点开一堆标签才能开始调试。
+- 相比同类（MQTTX / EQMX / MQTT Explorer / MQTTBox 等）：载荷多格式解析：纯文本 / JSON / Base64 / Hex / CBOR 一键切换，JSON 自动格式化，硬件上报的十六进制包不用手工解码。
+- 相比同类（MQTTX / EQMX / MQTT Explorer / MQTTBox 等）：历史消息一键重发到任意主题，复现「偶发上报」类问题不必再去生产环境捞包。
+- 相比同类（MQTTX / EQMX / MQTT Explorer / MQTTBox 等）：支持 MQTT 3.1.1 与 5.0、TLS 与遗嘱消息，Broker 侧差异不用换客户端验证。
+- 相比同类（MQTTX / EQMX / MQTT Explorer / MQTTBox 等）：开源免费且跨平台，Windows / macOS 行为一致，不必为一台机器单独换工具。
+
+### FTP（otools-ftp）
+> 双栏 FTP，像本地一样操作。本地与远程双栏对照、拖拽传输、传输队列与断点续传，还支持 FTPS 加密。
+- 落地页：/otools-website/plugins/otools-ftp/
+- 独立版下载：https://github.com/ootools/otools-publish/releases/tag/plugin-app-otools-ftp-v0.1.3
+- 界面预览图：/otools-website/plugins/otools-ftp/list-light.webp（明）/ list-dark.webp（暗）
+- 功能：双栏浏览 —— 左边本地、右边远程，目录树与文件列表对齐，一眼看清两边结构。
+- 功能：传输队列 —— 上传下载进队列，进度、速率与剩余时间可视化，失败可重试。
+- 功能：安全连接 —— 支持 FTPS 显式加密与证书校验，被动/主动模式可切换。
+- 对比对象：FileZilla、WinSCP、FlashFXP、Xftp、Cyberduck、Transmit、Total Commander、Termius、ForkLift
+- 相比同类（FileZilla / WinSCP / FlashFXP / Xftp 等）：FTP 与 SFTP 同一套双栏文件管理界面，切换协议不用换软件，也不用重新适应两套快捷键。
+- 相比同类（FileZilla / WinSCP / FlashFXP / Xftp 等）：队列 + 断点续传：大批量上传中断后从断点继续，不用整包重来。
+- 相比同类（FileZilla / WinSCP / FlashFXP / Xftp 等）：TLS / FTPS / SSH 密钥等安全选项直接写在连接配置里，公司内网要求加密时不用另想办法。
+- 相比同类（FileZilla / WinSCP / FlashFXP / Xftp 等）：可独立下载运行，不占平台资源，也不需要常驻后台服务。
+
+### Env（otools-servrun）
+> 本机服务，一个面板管完。Nginx / MySQL / PostgreSQL / Redis / PHP… 一键启停、查看版本与日志，还能管理虚拟主机。
+- 落地页：/otools-website/plugins/otools-servrun/
+- 独立版下载：https://github.com/ootools/otools-publish/releases/tag/plugin-app-otools-servrun-v0.1.6
+- 界面预览图：/otools-website/plugins/otools-servrun/dashboard-light.webp（明）/ dashboard-dark.webp（暗）
+- 功能：服务总览 —— 安装状态、运行状态、端口与版本集中展示，启停不必记命令。
+- 功能：虚拟主机 —— Nginx vhost 可视化编辑，域名、根目录与 SSL 一目了然。
+- 功能：PHP 多版本 —— 多版本共存与切换，Composer 版本检测与更新。
+- 功能：服务启停与配置 —— 一键启动、停止、重载单个服务；在线浏览与编辑 nginx/mysql/php/redis 等配置，改动可一键回滚。
+- 对比对象：phpstudy、phpStudy、phpenv、wampserver、WampServer、xampp、XAMPP、laragon、MAMP、ServBay、宝塔面板、btpanel、小皮狼、Docker Desktop
+- 相比同类（phpstudy / phpStudy / phpenv / wampserver 等）：不只是「装环境」：安装状态、运行状态、监听端口与版本号集中在一张面板里，哪几个服务没起来一眼看到。
+- 相比同类（phpstudy / phpStudy / phpenv / wampserver 等）：Nginx 虚拟主机可视化编辑，域名、根目录、SSL 证书在同一处配置，不用改完配置再去验证文件语法。
+- 相比同类（phpstudy / phpStudy / phpenv / wampserver 等）：PHP 多版本共存与切换，Composer 版本检测与更新内置，兼容性调试时不用反复重装整个环境。
+- 相比同类（phpstudy / phpStudy / phpenv / wampserver 等）：服务配置文件可在线浏览与编辑，改完能一键回滚，改坏了不用凭记忆复原。
+- 相比同类（phpstudy / phpStudy / phpenv / wampserver 等）：不需要额外常驻的容器运行时或面板服务，纯本地进程管理，启动快、占用低。
+
+### Android Mirror（otools-scrcpy）
+> 安卓投屏与操控。基于 scrcpy 的低延迟投屏，键鼠反向控制、无线调试与多设备同时连接。
+- 落地页：/otools-website/plugins/otools-scrcpy/
+- 独立版下载：https://github.com/ootools/otools-publish/releases/tag/plugin-app-otools-scrcpy-v0.3.2
+- 界面预览图：/otools-website/plugins/otools-scrcpy/devices-light.webp（明）/ devices-dark.webp（暗）
+- 功能：低延迟投屏 —— 可调码率与分辨率，支持录制与截图，长时间运行也稳定。
+- 功能：反向控制 —— 键鼠直接操作手机，剪贴板互通，支持拖拽安装 APK。
+- 功能：无线与多设备 —— 扫码配对无线调试，多台设备并行投屏互不干扰。
+- 对比对象：scrcpy、Vysor、ApowerMirror、AirDroid、AnyDesk、TeamViewer、向日葵、ToDesk、LetsView、Samsung DeX、Mirroid
+- 相比同类（scrcpy / Vysor / ApowerMirror / AirDroid 等）：基于开源 scrcpy 链路，不依赖投屏软件自带的私有服务，也不需要账号登录或付费解锁。
+- 相比同类（scrcpy / Vysor / ApowerMirror / AirDroid 等）：图形化设备列表代替反复敲 adb connect，设备多的时候切换成本明显更低。
+- 相比同类（scrcpy / Vysor / ApowerMirror / AirDroid 等）：控制与画面同步在同一窗口，演示、调试、录屏场景都能直接用。
+- 相比同类（scrcpy / Vysor / ApowerMirror / AirDroid 等）：可独立版运行，与其他 OTools 工具互不依赖。
+
+## 常见问答
+
+### OTools 是什么？可以免费用吗？
+OTools 是一个把常用桌面工具收进同一个工作台的高性能 AI 工作流平台，核心是「Tabs 多任务化」：多个工具并行打开、保持上下文、随时切换。平台与内置插件均可免费下载，Windows 与macOS 行为一致。
+
+### 每个工具有独立版吗？不想装整个平台行不行？
+可以。Git、DBM、Term、MQTT、FTP、Env、Android Mirror 每个工具都有独立版，可脱离平台单独下载运行，功能不阉割。适合只想要其中一个工具、或想在多台机器上轻量部署的场景。
+
+### OTools 的 Git 客户端和 SourceTree / GitKraken 有什么区别？
+OTools 是原生桌面实现，不依赖 Java/JRE，启动即用；同时把仓库列表、提交历史、文件树、Diff、终端放在同一屏，能完成「看改动 → 写命令 → 看结果」的完整闭环，不必在多个窗口切换。它也有独立版，可以当纯 Git GUI 使用。
+
+### 有没有能替代 phpstudy / xampp 的本地服务管理工具？
+有，Env（原 ServRun）就是。它的差异在于不止「装环境」：安装与运行状态、监听端口、版本号集中在一张面板；Nginx 虚拟主机可视化编辑；PHP 多版本共存与切换；服务配置文件在线编辑并可一键回滚。而且是纯本地进程管理，不需要常驻容器运行时或面板服务，启动快、占用低。
+
+### MQTT 调试除了 MQTTX 还有什么选择？
+OTools MQTT 打开会话即可看到消息流，订阅树与日志同屏；载荷支持纯文本 / JSON / Base64 / Hex / CBOR 多视图切换，JSON 自动格式化；历史消息可一键重发复现问题；支持 MQTT 3.1.1 与 5.0、TLS 与遗嘱消息。开源免费跨平台。
+
+### 支持哪些操作系统？需要联网吗？
+Windows 与 macOS 都支持，界面与快捷键一致。工具本身离线可用，联网只用于下载与版本更新。
+
+## 说明
+
+- 多语言：en/ ja/ ko/ fr/ es/ de/ ru/，每个语言下均有对应的 plugins/ 与 guide/ 页面。
+- 截图统一为 WebP，明/暗主题各一张，语言副本命名为 `<插件>-<场景>-<语言>-<主题>.webp`。
+- 每个页面的 head 内含 JSON-LD（SoftwareApplication / FAQPage / BreadcrumbList），
+  结构化数据可直接被检索工具解析。
