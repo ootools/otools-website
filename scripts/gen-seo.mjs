@@ -19,8 +19,8 @@ import { LOCALES, PLUGIN_SEO, faqFor, localePrefixOf } from '../.vitepress/seo/d
 import { RELEASE_BASE } from '../.vitepress/seo/index.mjs';
 
 const repoRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
-const SITE_ORIGIN = 'https://ootools.github.io';
-const SITE_BASE = '/otools-website';
+const SITE_ORIGIN = 'https://ootools.lingyun.net';
+const SITE_BASE = '';
 const outBase = `${SITE_ORIGIN}${SITE_BASE}`;
 
 const hreflangOf = (prefix) => LOCALES.find((l) => l.prefix === prefix)?.hreflang ?? 'zh-CN';

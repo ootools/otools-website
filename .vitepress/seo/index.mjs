@@ -34,9 +34,9 @@ import {
   localePrefixOf,
 } from './data.mjs';
 
-/** 部署在 gh-pages 分支根目录 → https://ootools.github.io/otools-website/ */
-export const SITE_ORIGIN = 'https://ootools.github.io';
-export const SITE_BASE = '/otools-website';
+/** 生产域名（根路径）：https://ootools.lingyun.net（GitHub Pages 子路径源站仅作 CDN 回源） */
+export const SITE_ORIGIN = 'https://ootools.lingyun.net';
+export const SITE_BASE = '';
 
 const PLUGIN_KEYS = Object.keys(PLUGIN_SEO);
 

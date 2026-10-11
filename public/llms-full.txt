@@ -1,8 +1,8 @@
 # OTools 完整文档
 
-> 本文件是 /otools-website/llms.txt 的展开版，包含全部页面文本。
+> 本文件是 /llms.txt 的展开版，包含全部页面文本。
 
-## /otools-website/features
+## /features
 
 # Funktions‑Highlights
 
@@ -45,7 +45,7 @@ OTools vereint Tool‑Integration, Plugin‑Ökosystem und Tabs‑Multitasking z
 
 <PluginShowcase />
 
-## /otools-website/guide/dev
+## /guide/dev
 
 # Entwicklermodus
 
@@ -119,7 +119,7 @@ Bei reiner Dynamic Library **`poll_events`** implementieren; Frontend: **`window
 4. Bei Bedarf `native` hinzufügen
 5. Packagen und im Marketplace veröffentlichen
 
-## /otools-website/guide/mac-installation-issue
+## /guide/mac-installation-issue
 
 # Häufiges macOS-Installationsproblem - "App ist beschädigt" Lösung
 
@@ -179,7 +179,7 @@ Für Erstinstallationen können Sie auch Folgendes versuchen:
 - Ihr Computer ist nicht durch Malware beeinträchtigt
 - Dieses Problem wird durch die Sicherheitsrichtlinien von Apple verursacht, nicht durch die Anwendung selbst
 
-## /otools-website/guide/migration
+## /guide/migration
 
 # Kompatibilität
 
@@ -310,7 +310,7 @@ Solche Funktionen sollten in einer Runtime-Adapter-Schicht gekapselt werden und 
 4. Im Projektwurzelverzeichnis `plugin.json` hinzufügen und die für OTools-Plugins nötigen Metadaten ergänzen.
 5. Host-spezifische Fähigkeiten wie Fenster, Tray und Autostart zuletzt behandeln.
 
-## /otools-website/guide/otools-api
+## /guide/otools-api
 
 # OTools API
 
@@ -414,7 +414,7 @@ const syncState = await otools.getPluginSyncState(plugin, 'profile');
 
 > Tipp: Wenn `scheme` weggelassen wird, ist der Standard `state.json`. Mit `workspace` entsteht `workspace.json`.
 
-## /otools-website/guide/overview
+## /guide/overview
 
 # Dokumentationsübersicht
 
@@ -434,7 +434,7 @@ OTools ist eine Desktop‑Mini‑App‑Plattform für professionelle Szenarien. 
 
 <PlatformHighlights />
 
-## /otools-website/
+## /
 
 <HeroIntro />
 
@@ -448,35 +448,35 @@ OTools ist eine Desktop‑Mini‑App‑Plattform für professionelle Szenarien. 
 
 <DocCta />
 
-## /otools-website/plugins/otools-dbm
+## /plugins/otools-dbm
 
-_（页面正文由组件渲染；结构化数据见 https://ootools.github.io/otools-website/otools-website/plugins/otools-dbm 的 JSON-LD）_
+_（页面正文由组件渲染；结构化数据见 https://ootools.lingyun.net/plugins/otools-dbm 的 JSON-LD）_
 
-## /otools-website/plugins/otools-ftp
+## /plugins/otools-ftp
 
-_（页面正文由组件渲染；结构化数据见 https://ootools.github.io/otools-website/otools-website/plugins/otools-ftp 的 JSON-LD）_
+_（页面正文由组件渲染；结构化数据见 https://ootools.lingyun.net/plugins/otools-ftp 的 JSON-LD）_
 
-## /otools-website/plugins/otools-git
+## /plugins/otools-git
 
-_（页面正文由组件渲染；结构化数据见 https://ootools.github.io/otools-website/otools-website/plugins/otools-git 的 JSON-LD）_
+_（页面正文由组件渲染；结构化数据见 https://ootools.lingyun.net/plugins/otools-git 的 JSON-LD）_
 
-## /otools-website/plugins/otools-mqtt
+## /plugins/otools-mqtt
 
-_（页面正文由组件渲染；结构化数据见 https://ootools.github.io/otools-website/otools-website/plugins/otools-mqtt 的 JSON-LD）_
+_（页面正文由组件渲染；结构化数据见 https://ootools.lingyun.net/plugins/otools-mqtt 的 JSON-LD）_
 
-## /otools-website/plugins/otools-scrcpy
+## /plugins/otools-scrcpy
 
-_（页面正文由组件渲染；结构化数据见 https://ootools.github.io/otools-website/otools-website/plugins/otools-scrcpy 的 JSON-LD）_
+_（页面正文由组件渲染；结构化数据见 https://ootools.lingyun.net/plugins/otools-scrcpy 的 JSON-LD）_
 
-## /otools-website/plugins/otools-servrun
+## /plugins/otools-servrun
 
-_（页面正文由组件渲染；结构化数据见 https://ootools.github.io/otools-website/otools-website/plugins/otools-servrun 的 JSON-LD）_
+_（页面正文由组件渲染；结构化数据见 https://ootools.lingyun.net/plugins/otools-servrun 的 JSON-LD）_
 
-## /otools-website/plugins/otools-term
+## /plugins/otools-term
 
-_（页面正文由组件渲染；结构化数据见 https://ootools.github.io/otools-website/otools-website/plugins/otools-term 的 JSON-LD）_
+_（页面正文由组件渲染；结构化数据见 https://ootools.lingyun.net/plugins/otools-term 的 JSON-LD）_
 
-## /otools-website/guide/changelog
+## /guide/changelog
 
 <div class="changelog-hero">
   <div class="changelog-eyebrow">Recent Shipments · OTools</div>

@@ -7,11 +7,11 @@ import { createSeoTransform, readLocales, readRegistry } from './seo/index.mjs';
 // 所以 SEO 必须在构建期经transformPageData 写进去，产物才是对的静态 HTML。
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const rootDir = path.resolve(__dirname, '..');
-// ⚠️ 站点部署在 GitHub **项目页**子路径下（https://ootools.github.io/otools-website/），
-// VitePress 的 `base` 一旦漏配，产物里所有资源（CSS/JS/图片/图标）都会写成根绝对路径
-// `/assets/...`，浏览器就去请求 https://ootools.github.io/assets/... —— 全站样式与
-// favicon 一起 404，页面看起来像"图标是空白的"。
-const SITE_BASE = '/otools-website/';
+// ⚠️ 生产域名 otools.lingyun.net 是**根路径**站点（国内 dnsoe4.com 静态/CDN 服务，
+// 本质是 GitHub Pages 子路径源站 ootools.github.io/otools-website/ 前面套了一层根路径 CDN）。
+// 因此 VitePress `base` 必须为根 '/'，否则资源被写成 /otools-website/assets/...，
+// 在根路径域名下 404 —— 全站样式与 favicon 一起丢失（页面看起来"没样式"）。
+const SITE_BASE = '/';
 
 const transformPageData = createSeoTransform({
   rootDir,
@@ -270,7 +270,7 @@ export default defineConfig({
   ],
   themeConfig: {
     // themeConfig.logo 与 head 不同：VitePress 内部会自动补 base，手写会变成
-    // /otools-website/otools-website/... 双重前缀（导航栏 logo 404）。
+    // /otools-logo.svg 的双重前缀（导航栏 logo 404）；base 已是根 '/'，无需手拼。
     logo: '/otools-logo.svg',
     siteTitle: 'OTools',
     nav: [

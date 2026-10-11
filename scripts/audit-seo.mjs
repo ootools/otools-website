@@ -7,7 +7,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 
 const dist = path.resolve(process.argv[2] ?? '.vitepress/dist');
-const ORIGIN = 'https://ootools.github.io';
+const ORIGIN = 'https://ootools.lingyun.net';
 
 const walk = (dir, acc = []) => {
   for (const e of fs.readdirSync(dir, { withFileTypes: true })) {
@@ -27,7 +27,7 @@ for (const file of walk(dist)) {
   const html = fs.readFileSync(file, 'utf8');
   const head = html.slice(0, html.indexOf('</head>'));
   const g = (re) => head.match(re)?.[1];
-  const url = `${ORIGIN}/otools-website/${rel.replace(/index\.html$/, '').replace(/\.html$/, '')}`;
+  const url = `${ORIGIN}/${rel.replace(/index\.html$/, '').replace(/\.html$/, '')}`;
 
   stats.pages++;
   const title = g(/<title>([^<]*)<\/title>/);
