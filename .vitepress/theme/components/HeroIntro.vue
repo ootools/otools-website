@@ -158,7 +158,7 @@
             <button class="beta-overlay-close" @click="closeDownloadModal">✕</button>
           </div>
           <div class="beta-overlay-body">
-            <img class="beta-qr" src="/weixin.jpg" alt="WeChat QR" loading="lazy" />
+            <img class="beta-qr" :src="withBase('/weixin.jpg')" alt="WeChat QR" loading="lazy" />
             <p class="beta-overlay-desc">{{ t('hero.betaModal.desc') }}</p>
           </div>
         </div>
@@ -169,8 +169,9 @@
 
 <script setup lang="ts">
 import { computed, onBeforeUnmount, onMounted, ref } from 'vue';
-import { useData } from 'vitepress';
+import { useData, withBase } from 'vitepress';
 import { useI18n } from '../i18n';
+import { pluginAccent } from '../plugins/registry';
 
 const { localeIndex } = useData();
 const { t, tm } = useI18n();
@@ -179,54 +180,54 @@ const localeBase = computed(() =>
   localeIndex?.value && localeIndex.value !== 'root' ? `/${localeIndex.value}/` : '/'
 );
 const withLocale = (path: string) => (localeBase.value === '/' ? `/${path}` : `${localeBase.value}${path}`);
-const docsLink = computed(() => withLocale('guide/overview'));
+const docsLink = computed(() => withBase(withLocale('guide/overview')));
 
 const tabMeta = [
   {
     key: 'home',
-    colors: ['#1d4ed8', '#0ea5e9'],
+    colors: pluginAccent.home,
     imageLight: '/crop/home-light.png',
     imageDark: '/crop/home.png',
   },
   {
     key: 'git',
-    colors: ['#0f172a', '#1d4ed8'],
+    colors: pluginAccent.git,
     imageLight: '/crop/git-light.png',
     imageDark: '/crop/git.png',
   },
   {
     key: 'dbm',
-    colors: ['#0f766e', '#2dd4bf'],
+    colors: pluginAccent.dbm,
     imageLight: '/crop/dbm-light.png',
     imageDark: '/crop/dbm.png',
   },
   {
     key: 'ssh',
-    colors: ['#0f766e', '#22c55e'],
+    colors: pluginAccent.ssh,
     imageLight: '/crop/ssh-light.png',
     imageDark: '/crop/ssh.png',
   },
   {
     key: 'servrun',
-    colors: ['#7c3aed', '#a78bfa'],
+    colors: pluginAccent.servrun,
     imageLight: '/crop/servrun-light.png',
     imageDark: '/crop/servrun.png',
   },
   {
     key: 'ollama',
-    colors: ['#6d28d9', '#a855f7'],
+    colors: pluginAccent.ollama,
     imageLight: '/crop/ollama-light.png',
     imageDark: '/crop/ollama.png',
   },
   {
     key: 'audio',
-    colors: ['#f97316', '#facc15'],
+    colors: pluginAccent.audio,
     imageLight: '/crop/audio-light.png',
     imageDark: '/crop/audio.png',
   },
   {
     key: 'http',
-    colors: ['#0ea5e9', '#38bdf8'],
+    colors: pluginAccent.http,
     imageLight: '/crop/http-light.png',
     imageDark: '/crop/http.png',
   },
@@ -279,8 +280,8 @@ const overlayStyle = computed(() => ({
 
 const overlayImages = computed(() => {
   const tab = tabs.value[overlayTab.value];
-  const light = tab.imageLight || tab.imageDark || '';
-  const dark = tab.imageDark || tab.imageLight || '';
+  const light = withBase(tab.imageLight || tab.imageDark || '');
+  const dark = withBase(tab.imageDark || tab.imageLight || '');
   return { light, dark };
 });
 

@@ -7,6 +7,12 @@ import { createSeoTransform, readLocales, readRegistry } from './seo/index.mjs';
 // 所以 SEO 必须在构建期经transformPageData 写进去，产物才是对的静态 HTML。
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const rootDir = path.resolve(__dirname, '..');
+// ⚠️ 站点部署在 GitHub **项目页**子路径下（https://ootools.github.io/otools-website/），
+// VitePress 的 `base` 一旦漏配，产物里所有资源（CSS/JS/图片/图标）都会写成根绝对路径
+// `/assets/...`，浏览器就去请求 https://ootools.github.io/assets/... —— 全站样式与
+// favicon 一起 404，页面看起来像"图标是空白的"。
+const SITE_BASE = '/otools-website/';
+
 const transformPageData = createSeoTransform({
   rootDir,
   locales: readLocales(rootDir),
@@ -15,6 +21,7 @@ const transformPageData = createSeoTransform({
 
 export default defineConfig({
   lang: 'zh-CN',
+  base: SITE_BASE,
   title: 'OTools 高性能AI工作流平台',
   description: '高性能桌面工具平台 · Tabs 多任务化 · 桌面版小程序生态',
   locales: {
@@ -255,11 +262,15 @@ export default defineConfig({
   head: [
     ['meta', { name: 'theme-color', content: '#0ea5e9' }],
     ['meta', { name: 'viewport', content: 'width=device-width, initial-scale=1' }],
-    // 显式声明 favicon：浏览器默认去请求 /favicon.ico，缺失时每个页面首访都会
-    // 抛一条 404（dev 下 console 里可见，线上则是一条无意义的失败请求）。
-    ['link', { rel: 'icon', href: '/otools-logo.svg', type: 'image/svg+xml' }],
+    // head 里的 href **不会被自动补 base**（只有路由链接会），必须手动拼 SITE_BASE。
+    // favicon.ico 兜底是给不支持 SVG 图标的环境（部分 iOS / 微信内置浏览器）。
+    ['link', { rel: 'icon', type: 'image/svg+xml', href: `${SITE_BASE}otools-logo.svg` }],
+    ['link', { rel: 'alternate icon', type: 'image/x-icon', href: `${SITE_BASE}favicon.ico` }],
+    ['link', { rel: 'apple-touch-icon', href: `${SITE_BASE}favicon.ico` }],
   ],
   themeConfig: {
+    // themeConfig.logo 与 head 不同：VitePress 内部会自动补 base，手写会变成
+    // /otools-website/otools-website/... 双重前缀（导航栏 logo 404）。
     logo: '/otools-logo.svg',
     siteTitle: 'OTools',
     nav: [

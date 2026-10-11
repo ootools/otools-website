@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { onBeforeUnmount, onMounted, ref } from 'vue';
+import { withBase } from 'vitepress';
 import { useI18n } from '../i18n';
 import { pluginLandingKeys, pluginLandingMeta } from '../plugins/registry';
 
@@ -11,8 +12,8 @@ const cards = pluginLandingKeys.map((key) => ({
   key,
   name: pluginLandingMeta[key].name,
   colors: pluginLandingMeta[key].colors,
-  logo: `/plugin-logos/${key}.svg`,
-  href: `/plugins/${key}`,
+  logo: withBase(`/plugin-logos/${key}.svg`),
+  href: withBase(`/plugins/${key}`),
 }));
 
 onMounted(() => {
@@ -41,7 +42,7 @@ onBeforeUnmount(() => io?.disconnect());
           v-for="(c, i) in cards"
           :key="c.key"
           class="pg-card pg-reveal"
-          :style="{ '--pg-from': c.colors[0], '--pg-to': c.colors[1], '--d': `${i * 60}ms` }"
+          :style="{ '--pg-from': c.colors[0], '--pg-to': c.colors[1], '--pg-ink': c.colors[1], '--d': `${i * 60}ms` }"
           :href="c.href"
         >
           <span class="pg-icon"><img :src="c.logo" :alt="c.name" /></span>
@@ -81,7 +82,7 @@ onBeforeUnmount(() => io?.disconnect());
 .pg-icon img { width: 26px; height: 26px; filter: brightness(0) invert(1); }
 .pg-name { font-size: 18px; font-weight: 700; color: var(--vp-c-text-1); }
 .pg-tagline { font-size: 13.5px; line-height: 1.6; color: var(--vp-c-text-2); min-height: 42px; }
-.pg-more { margin-top: 6px; font-size: 13px; font-weight: 600; color: var(--pg-from); }
+.pg-more { margin-top: 6px; font-size: 13px; font-weight: 600; color: var(--pg-ink); }
 .pg-reveal { opacity: 0; transform: translateY(18px); transition: opacity .55s cubic-bezier(.22,1,.36,1), transform .55s cubic-bezier(.22,1,.36,1); transition-delay: var(--d, 0ms); }
 .pg-reveal.is-visible { opacity: 1; transform: none; }
 @media (prefers-reduced-motion: reduce) { .pg-reveal { opacity: 1; transform: none; transition: none; } }

@@ -1,56 +1,58 @@
 <script setup lang="ts">
 import { computed, onBeforeUnmount, onMounted, ref } from 'vue';
+import { withBase } from 'vitepress';
 import { useI18n } from '../i18n';
+import { pluginAccent } from '../plugins/registry';
 
 const { t, tm } = useI18n();
 
 const compareMeta = [
   {
     key: 'home',
-    colors: ['#1d4ed8', '#0ea5e9'],
+    colors: pluginAccent.home,
     light: '/crop/home-light.png',
     dark: '/crop/home.png',
   },
   {
     key: 'git',
-    colors: ['#0f172a', '#1d4ed8'],
-    progressColors: ['#1d4ed8', '#60a5fa'],
+    colors: pluginAccent.git,
+    progressColors: [pluginAccent.git[0], '#f97316'],
     light: '/crop/git-light.png',
     dark: '/crop/git.png',
   },
   {
     key: 'dbm',
-    colors: ['#0f766e', '#2dd4bf'],
+    colors: pluginAccent.dbm,
     light: '/crop/dbm-light.png',
     dark: '/crop/dbm.png',
   },
   {
     key: 'ssh',
-    colors: ['#0f766e', '#22c55e'],
+    colors: pluginAccent.ssh,
     light: '/crop/ssh-light.png',
     dark: '/crop/ssh.png',
   },
   {
     key: 'servrun',
-    colors: ['#7c3aed', '#a78bfa'],
+    colors: pluginAccent.servrun,
     light: '/crop/servrun-light.png',
     dark: '/crop/servrun.png',
   },
   {
     key: 'ollama',
-    colors: ['#6d28d9', '#a855f7'],
+    colors: pluginAccent.ollama,
     light: '/crop/ollama-light.png',
     dark: '/crop/ollama.png',
   },
   {
     key: 'audio',
-    colors: ['#f97316', '#facc15'],
+    colors: pluginAccent.audio,
     light: '/crop/audio-light.png',
     dark: '/crop/audio.png',
   },
   {
     key: 'http',
-    colors: ['#0ea5e9', '#38bdf8'],
+    colors: pluginAccent.http,
     light: '/crop/http-light.png',
     dark: '/crop/http.png',
   },
@@ -65,6 +67,8 @@ const compareTabs = computed(() =>
     }) || {};
     return {
       ...meta,
+      light: withBase(meta.light),
+      dark: withBase(meta.dark),
       label: text.label ?? meta.key,
       subtitle: text.subtitle ?? '',
       features: text.features ?? [],

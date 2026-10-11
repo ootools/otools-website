@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { computed, onBeforeUnmount, onMounted, ref } from 'vue';
 import { useI18n } from '../i18n';
+import { withBase } from 'vitepress';
 import { pluginLandingMeta, type PluginLandingKey } from '../plugins/registry';
 
 const props = defineProps<{ plugin: PluginLandingKey }>();
@@ -9,7 +10,7 @@ const { t, localeKey } = useI18n();
 
 const meta = computed(() => pluginLandingMeta[props.plugin]);
 
-const base = `/plugins/${props.plugin}`;
+const base = withBase(`/plugins/${props.plugin}`);
 
 // 站点语言 → 截图语言。
 // ⚠️ 两边的语言集合**不一样**：插件自带语言包是
@@ -88,10 +89,13 @@ onBeforeUnmount(() => {
 });
 
 const releaseUrl = computed(() => meta.value.releases);
+const logoUrl = computed(() => withBase(`/plugin-logos/${props.plugin}.svg`));
+const guideLink = withBase('/guide/overview');
 </script>
 
 <template>
-  <div ref="revealRoot" class="pl-root">
+  <div ref="revealRoot" class="pl-root"
+    :style="{ '--pl-from': meta.colors[0], '--pl-to': meta.colors[1], '--pl-ink': meta.colors[1] }">
     <!-- Hero -->
     <section class="pl-hero" :style="{ '--pl-from': meta.colors[0], '--pl-to': meta.colors[1] }">
       <div class="pl-hero-bg" aria-hidden="true">
@@ -100,7 +104,7 @@ const releaseUrl = computed(() => meta.value.releases);
       <div class="pl-container pl-hero-inner">
         <div class="pl-hero-text pl-reveal">
           <div class="pl-badge">
-            <img :src="`/plugin-logos/${plugin}.svg`" :alt="meta.name" class="pl-badge-logo" />
+            <img :src="logoUrl" :alt="meta.name" class="pl-badge-logo" />
             <span>{{ t(`pluginLanding.${plugin}.badge`) }}</span>
           </div>
           <h1 class="pl-title">{{ meta.name }}</h1>
@@ -110,7 +114,7 @@ const releaseUrl = computed(() => meta.value.releases);
             <a class="pl-btn pl-btn-primary" :href="releaseUrl" target="_blank" rel="noopener">
               {{ t('pluginLanding.downloadStandalone') }}
             </a>
-            <a class="pl-btn pl-btn-ghost" href="/guide/overview">
+            <a class="pl-btn pl-btn-ghost" :href="guideLink">
               {{ t('pluginLanding.getPlugin') }}
             </a>
           </div>
@@ -209,7 +213,7 @@ const releaseUrl = computed(() => meta.value.releases);
             :style="{ '--d': `${i * 70}ms` }"
           >
             <div class="pl-feature-icon" :style="{ '--ic-from': meta.colors[0], '--ic-to': meta.colors[1] }">
-              <img :src="`/plugin-logos/${plugin}.svg`" alt="" />
+              <img :src="logoUrl" alt="" />
             </div>
             <h3>{{ t(`pluginLanding.${plugin}.features.${i}.title`) }}</h3>
             <p>{{ t(`pluginLanding.${plugin}.features.${i}.desc`) }}</p>
@@ -249,7 +253,7 @@ const releaseUrl = computed(() => meta.value.releases);
               <li>{{ t('pluginLanding.pluginStep2') }}</li>
               <li>{{ t('pluginLanding.pluginStep3') }}</li>
             </ol>
-            <a class="pl-btn pl-btn-ghost pl-btn-block" href="/guide/overview">
+            <a class="pl-btn pl-btn-ghost pl-btn-block" :href="guideLink">
               {{ t('pluginLanding.getPlugin') }}
             </a>
             <p class="pl-dl-note">{{ t('pluginLanding.pluginNote') }}</p>
@@ -283,7 +287,7 @@ const releaseUrl = computed(() => meta.value.releases);
   display: inline-flex; align-items: center; gap: 8px; padding: 6px 14px 6px 8px;
   border-radius: 999px; font-size: 13px; font-weight: 600;
   background: color-mix(in srgb, var(--pl-from) 10%, transparent);
-  color: var(--pl-from); margin-bottom: 18px;
+  color: var(--pl-ink); margin-bottom: 18px;
 }
 .pl-badge-logo { width: 22px; height: 22px; border-radius: 6px; }
 .pl-title { font-size: 52px; line-height: 1.06; font-weight: 800; margin: 0 0 14px; letter-spacing: -0.02em; }
@@ -365,7 +369,7 @@ const releaseUrl = computed(() => meta.value.releases);
 .pl-show-text { position: relative; padding-left: 4px; }
 .pl-show-num {
   display: inline-block; font-size: 13px; font-weight: 800; letter-spacing: .04em;
-  color: var(--pl-from); background: color-mix(in srgb, var(--pl-from) 12%, transparent);
+  color: var(--pl-ink); background: color-mix(in srgb, var(--pl-from) 12%, transparent);
   padding: 3px 10px; border-radius: 999px; margin-bottom: 14px;
 }
 .pl-show-text h3 { font-size: 22px; margin: 0 0 12px; letter-spacing: -0.01em; }
@@ -407,7 +411,7 @@ const releaseUrl = computed(() => meta.value.releases);
 .pl-dl-card > p { font-size: 14px; line-height: 1.7; color: var(--vp-c-text-2); margin: 0 0 16px; }
 .pl-dl-list { list-style: none; padding: 0; margin: 0 0 20px; display: grid; gap: 8px; }
 .pl-dl-list li { font-size: 14px; color: var(--vp-c-text-2); padding-left: 20px; position: relative; }
-.pl-dl-list li::before { content: '↓'; position: absolute; left: 0; color: var(--pl-from); font-weight: 700; }
+.pl-dl-list li::before { content: '↓'; position: absolute; left: 0; color: var(--pl-ink); font-weight: 700; }
 .pl-dl-steps { margin: 0 0 20px; padding-left: 20px; display: grid; gap: 8px; }
 .pl-dl-steps li { font-size: 14px; line-height: 1.6; color: var(--vp-c-text-2); }
 .pl-dl-note { margin: 14px 0 0; font-size: 12.5px; color: var(--vp-c-text-3); }
