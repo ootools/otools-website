@@ -228,7 +228,7 @@ export const pluginLandingMeta: Record<PluginLandingKey, PluginLandingMeta> = {
     ],
   },
   'otools-puter-3d': {
-    name: '3D',
+    name: '3D Studio',
     colors: pluginAccent['puter-3d'],
     releases: '',
     standalone: false,
@@ -316,7 +316,7 @@ export const pluginLandingMeta: Record<PluginLandingKey, PluginLandingMeta> = {
     ],
   },
   'otools-video': {
-    name: 'Video',
+    name: 'Video Studio',
     colors: pluginAccent.video,
     releases: '',
     standalone: false,

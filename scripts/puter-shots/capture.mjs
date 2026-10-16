@@ -107,7 +107,7 @@ const PLUGINS = {
     themes: ['dark'],
     scenes: [
       { key: 'session', waitMs: 4800, actions: newPodcastSession },
-      { key: 'waveform', waitMs: 4200, actions: newAudioFile },
+      { key: 'waveform', waitMs: 4200, actions: generateToneFile },
     ],
   },
   'otools-video': {
@@ -180,21 +180,41 @@ async function openSamplePhoto(page) {
   return `photo=${path.basename(photo)} tabSize=${sz?.trim() ?? '?'}`;
 }
 
-// 3d：切换工作区标签（Layout/Modeling/Shading/UV Editing/…），点击后等待视口重排。
-// names 传中英文候选（中文界面下 ws-tab 文本是中文，单猜英文会匹配不到）。
+// 3d：切换工作区标签（Layout/Modeling/Shading/UV Editing/…）。点击后**必须校验**
+// 标签真的变激活（aria-selected=true），失败重试——首轮发布时 zh-CN 冷启动阶段
+// 出现过点击未生效、三张截图全停在默认 Layout 的事故（用户 2026-10-16 反馈「一模一样」，
+// md5 三图同哈希）。names 传中英文候选（dom-i18n 会把部分标签翻成中文：
+// Shading→着色、Geometry Nodes→几何节点，单猜英文会在中文界面失配）。
 async function switchWorkspace(page, names) {
-  const hit = await page.evaluate((ns) => {
-    const btn = [...document.querySelectorAll('button.ws-tab')].find((b) => {
-      const txt = (b.textContent || '').trim().toLowerCase();
-      return ns.some((n) => txt.includes(n));
-    });
-    if (!btn) return null;
-    btn.click();
-    return (btn.textContent || '').trim();
-  }, names);
-  if (!hit) return `ws-tab "${names.join('|')}" NOT FOUND`;
-  await page.waitForTimeout(2600); // 视口/编辑器重建 + WebGL 软渲染首帧
-  return `ws=${hit}`;
+  await page.waitForSelector('button.ws-tab', { timeout: 15000 });
+  for (let attempt = 1; attempt <= 3; attempt++) {
+    const hit = await page.evaluate((ns) => {
+      const btn = [...document.querySelectorAll('button.ws-tab')].find((b) => {
+        const txt = (b.textContent || '').trim().toLowerCase();
+        return ns.some((n) => txt.includes(n));
+      });
+      if (!btn) return null;
+      btn.click();
+      return (btn.textContent || '').trim();
+    }, names);
+    if (!hit) return `ws-tab "${names.join('|')}" NOT FOUND`;
+    const on = await page
+      .waitForFunction(
+        (name) => {
+          const btn = [...document.querySelectorAll('button.ws-tab')].find((b) => (b.textContent || '').trim() === name);
+          return btn?.getAttribute('aria-selected') === 'true';
+        },
+        hit,
+        { timeout: 5000 },
+      )
+      .then(() => true)
+      .catch(() => false);
+    if (on) {
+      await page.waitForTimeout(2600); // 视口/编辑器重建 + WebGL 软渲染首帧
+      return `ws=${hit}${attempt > 1 ? ` (retry ${attempt})` : ''}`;
+    }
+  }
+  return `ws-switch "${names.join('|')}" NOT EFFECTIVE`;
 }
 
 // presentation：欢迎屏（#/home）点第 n 张模板卡（0=blank, 1=The big idea, 2=The pitch），
@@ -213,42 +233,69 @@ async function pickTemplateCard(page, n) {
   return `template=${name} slides=${slides}`;
 }
 
+// 通用：确认当前打开的对话框。⚠️ 必须点 `.dialog-foot button.btn.primary`（主按钮，
+// locale 无关），不能按文本找 'OK'——zh-CN 语言包把 OK 翻成「确定」（i18n.common.zh-CN.js），
+// 按文本匹配在中文界面必然失配，对话框留在原地，截图就成了「只看见新建弹窗」。
+async function confirmDialog(page, waitFor) {
+  await page.waitForSelector('.dialog-foot button.btn.primary', { timeout: 10000 });
+  await page.click('.dialog-foot button.btn.primary');
+  if (waitFor) await page.waitForSelector(waitFor, { timeout: 20000 });
+}
+
 // audio：空态按钮无稳定属性（纯文本且随语言变），但顺序固定：
 // Open(0) / New Audio File(1) / New Multitrack Session(2) / Record(3) —— 用索引点。
 // New Multitrack Session → 对话框选 Podcast 模板 → OK，得 6 轨多轨编辑器（.mt-headers）。
+// 模板下拉的 aria-label 也随语言变（Template/模板），改用「含 podcast 选项的 select」定位。
 async function newPodcastSession(page) {
   await page.waitForSelector('.editor-empty-actions button', { timeout: 15000 });
   await page.evaluate(() => {
-    const btns = document.querySelectorAll('.editor-empty-actions button');
-    btns[2]?.click(); // New Multitrack Session
+    document.querySelectorAll('.editor-empty-actions button')[2]?.click(); // New Multitrack Session
   });
-  await page.waitForSelector('select[aria-label="Template"]', { timeout: 8000 });
-  await page.selectOption('select[aria-label="Template"]', 'podcast');
+  await page.waitForFunction(
+    () => [...document.querySelectorAll('select')].some((s) => [...s.options].some((o) => o.value === 'podcast')),
+    { timeout: 8000 },
+  );
   await page.evaluate(() => {
-    const ok = [...document.querySelectorAll('button')].find((b) => (b.textContent || '').trim() === 'OK');
-    ok?.click();
+    const sel = [...document.querySelectorAll('select')].find((s) => [...s.options].some((o) => o.value === 'podcast'));
+    if (sel) {
+      sel.value = 'podcast';
+      sel.dispatchEvent(new Event('change', { bubbles: true }));
+    }
   });
-  await page.waitForSelector('.mt-headers', { timeout: 15000 });
+  await confirmDialog(page, '.mt-headers');
   await page.waitForTimeout(1800);
   const tracks = await page.evaluate(() => document.querySelectorAll('.mt-headers [role="group"], .mt-headers .mt-track').length);
   return `tracks≈${tracks}`;
 }
 
-// audio：New Audio File（索引 1）→ 对话框 OK → 波形编辑器（.wf-lanes）。
-async function newAudioFile(page) {
+// audio：波形编辑器场景。直接从空态跑 Generate Tones（Effects > Generate > Tones）——
+// 无打开文件时它会自建新文件并插入 5s 默认音调，得到**有真实波形**的编辑器，
+// 比空文件（一条平线）有说服力得多。app 全局在 overlay main.js 暴露为 window.audioStudio。
+// 若生成流程失败（对话框没出现等），退回普通「新建音频文件」空编辑器，保证场景可用。
+async function generateToneFile(page) {
   await page.waitForSelector('.editor-empty-actions button', { timeout: 15000 });
-  await page.evaluate(() => {
-    const btns = document.querySelectorAll('.editor-empty-actions button');
-    btns[1]?.click(); // New Audio File
-  });
-  await page.waitForTimeout(900);
-  await page.evaluate(() => {
-    const ok = [...document.querySelectorAll('button')].find((b) => (b.textContent || '').trim() === 'OK');
-    ok?.click();
-  });
-  await page.waitForSelector('.wf-lanes', { timeout: 15000 });
-  await page.waitForTimeout(1500);
-  return 'waveform editor ready';
+  try {
+    // ⚠️ 必须 fire-and-forget：commands.run 返回的 Promise 要等生成完成（对话框关闭）
+    // 才 resolve，await 它会和「等对话框出现 → 点 Generate」形成死锁（首轮就卡在这）。
+    await page.evaluate(() => { void window.audioStudio?.commands?.run('gen.tones'); });
+    await page.waitForSelector('.dialog-foot button.btn.primary', { timeout: 8000 });
+    await confirmDialog(page, '.wf-lanes');
+    await page.waitForTimeout(1500);
+    const peaks = await page.evaluate(() => {
+      const lanes = document.querySelectorAll('.wf-lanes canvas, .wf-lanes svg').length;
+      return lanes;
+    });
+    return `gen.tones ok lanes=${peaks}`;
+  } catch (e) {
+    // 兜底：Escape 关掉可能残留的对话框，再走 New Audio File（索引 1）
+    await page.keyboard.press('Escape').catch(() => {});
+    await page.evaluate(() => {
+      document.querySelectorAll('.editor-empty-actions button')[1]?.click(); // New Audio File
+    });
+    await confirmDialog(page, '.wf-lanes');
+    await page.waitForTimeout(1500);
+    return `fallback newfile (${String(e).split('\n')[0]})`;
+  }
 }
 
 // video：点首页第一张模板卡 → "Use template" 确认 → 等时间线出现 clip

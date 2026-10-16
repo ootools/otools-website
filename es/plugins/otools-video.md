@@ -1,7 +1,7 @@
 ---
 layout: page
 aside: false
-title: 视频
+title: Video Studio
 ---
 
 <PluginLanding plugin="otools-video" />
