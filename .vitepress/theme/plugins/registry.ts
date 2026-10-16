@@ -115,7 +115,7 @@ export const pluginLandingMeta: Record<PluginLandingKey, PluginLandingMeta> = {
   'otools-dbm': {
     name: 'DBM',
     colors: pluginAccent.dbm,
-    releases: `${RELEASES}/plugin-app-otools-dbm-v0.2.3`,
+    releases: `${RELEASES}/plugin-app-otools-dbm-v0.2.4`,
     // ⚠️ 第一张用 **tables** 而不是 connections：
     // connections 只填了上方一张连接信息卡，下半屏全空；
     // tables 有 12 行真实数据 + 左侧展开的数据库/表树，也是用户点名要的形态。
