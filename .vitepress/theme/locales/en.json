@@ -904,6 +904,230 @@
           "desc": "Drop the playhead anywhere — or at the 2/3 mark — to preview that frame and line up your cuts with exact timing."
         }
       ]
+    },
+    "otools-cadcraft": {
+      "badge": "Built-in plugin",
+      "tagline": "AutoCAD-style CAD drafting",
+      "sub": "Command-line drafting with object snaps, layers and dimensions, DXF read/write and DWG open — drawings never leave your machine.",
+      "highlights": [
+        "Command line",
+        "Layers & dims",
+        "DXF / DWG"
+      ],
+      "screens": [
+        "Sample drawing",
+        "New drawing"
+      ],
+      "features": [
+        {
+          "title": "Command-line drafting",
+          "desc": "AutoCAD-style command line with object snaps — every line and arc precise."
+        },
+        {
+          "title": "Layers & dimensions",
+          "desc": "Layer management, dimensions, hatches and blocks for full engineering drawings."
+        },
+        {
+          "title": "DXF / DWG",
+          "desc": "Read/write DXF, open DWG — exchange freely with mainstream CAD."
+        },
+        {
+          "title": "Runs fully local",
+          "desc": "Rendered locally in WASM — drawings stay on your machine."
+        }
+      ]
+    },
+    "otools-pdfcraft": {
+      "badge": "Built-in plugin",
+      "tagline": "Acrobat-style PDF workbench",
+      "sub": "Read and annotate, merge and split, reorder and encrypt, fill forms and sign — one workbench for everything PDF.",
+      "highlights": [
+        "Annotate",
+        "Merge & split",
+        "Forms & signing"
+      ],
+      "screens": [
+        "Reading a document",
+        "Open document"
+      ],
+      "features": [
+        {
+          "title": "Read & annotate",
+          "desc": "Highlights, underlines and sticky notes saved with the document."
+        },
+        {
+          "title": "Merge & split",
+          "desc": "Combine PDFs or split by page — drag and done."
+        },
+        {
+          "title": "Encrypt & reorder",
+          "desc": "Password protection and page reordering in one place."
+        },
+        {
+          "title": "Forms & signing",
+          "desc": "Fill forms and sign by hand — close the loop."
+        }
+      ]
+    },
+    "otools-designcraft": {
+      "badge": "Built-in plugin",
+      "tagline": "InDesign-style page layout",
+      "sub": "Page grids, text and image frames, paragraph and character styles, master pages — print-grade layout output.",
+      "highlights": [
+        "Page grid",
+        "Frames",
+        "Master pages"
+      ],
+      "screens": [
+        "Sample document",
+        "New document"
+      ],
+      "features": [
+        {
+          "title": "Page grids",
+          "desc": "Column grids and baseline alignment — layout discipline from the skeleton up."
+        },
+        {
+          "title": "Paragraph & character styles",
+          "desc": "Style-driven typesetting: change once, update everywhere."
+        },
+        {
+          "title": "Master pages",
+          "desc": "Headers and footers on masters — no repeated busywork on long documents."
+        },
+        {
+          "title": "Print-grade export",
+          "desc": "Export PDF ready for print production."
+        }
+      ]
+    },
+    "otools-vectorcraft": {
+      "badge": "Built-in plugin",
+      "tagline": "Illustrator-style vector drawing",
+      "sub": "Pen Béziers, boolean paths and gradient meshes — logos, icons and illustrations, vector all the way.",
+      "highlights": [
+        "Pen tool",
+        "Boolean paths",
+        "Gradient mesh"
+      ],
+      "screens": [
+        "Sample artwork",
+        "New canvas"
+      ],
+      "features": [
+        {
+          "title": "Pen tool",
+          "desc": "Precise Bézier control — anchor points and handles at your fingertips."
+        },
+        {
+          "title": "Boolean paths",
+          "desc": "Union, subtract and intersect — complex shapes in one step."
+        },
+        {
+          "title": "Gradients & meshes",
+          "desc": "Gradient fills and meshes for smooth color transitions."
+        },
+        {
+          "title": "SVG import/export",
+          "desc": "Exchange seamlessly with mainstream vector formats."
+        }
+      ]
+    },
+    "otools-filmcraft": {
+      "badge": "Built-in plugin",
+      "tagline": "Premiere-style video editing",
+      "sub": "Timeline, transitions, color grading and audio mixing — the whole edit, done locally.",
+      "highlights": [
+        "Multitrack timeline",
+        "Transitions & color",
+        "Audio mixing"
+      ],
+      "screens": [
+        "Demo project",
+        "New project"
+      ],
+      "features": [
+        {
+          "title": "Multitrack timeline",
+          "desc": "Cut, split and splice across video and audio tracks."
+        },
+        {
+          "title": "Transitions",
+          "desc": "Dissolves, wipes and more — pacing that flows naturally."
+        },
+        {
+          "title": "Color grading",
+          "desc": "Curves and color balance — the look is yours to control."
+        },
+        {
+          "title": "Audio mixing",
+          "desc": "Multitrack mixing with fades, sound in sync with picture."
+        }
+      ]
+    },
+    "otools-effectcraft": {
+      "badge": "Built-in plugin",
+      "tagline": "After Effects-style motion compositing",
+      "sub": "Composition layers, keyframes, effects and a render queue — motion design as one pipeline.",
+      "highlights": [
+        "Comp layers",
+        "Keyframe animation",
+        "Render queue"
+      ],
+      "screens": [
+        "Demo composition",
+        "Welcome screen"
+      ],
+      "features": [
+        {
+          "title": "Composition layers",
+          "desc": "Stacked-layer compositing with blend modes and masks."
+        },
+        {
+          "title": "Keyframe animation",
+          "desc": "Key any property, with easing curves under fine control."
+        },
+        {
+          "title": "Effects",
+          "desc": "Blur, glow and distortion — applied and previewed instantly."
+        },
+        {
+          "title": "Render queue",
+          "desc": "Queue renders in batches and export without babysitting."
+        }
+      ]
+    },
+    "otools-lightcraft": {
+      "badge": "Built-in plugin",
+      "tagline": "Lightroom-style photo development",
+      "sub": "Library management, rating and filtering, RAW development — from culling to final export in one place.",
+      "highlights": [
+        "Library",
+        "Ratings & filters",
+        "RAW development"
+      ],
+      "screens": [
+        "Demo library",
+        "Imported photos"
+      ],
+      "features": [
+        {
+          "title": "Library management",
+          "desc": "Organize with ratings and flags — culling and compare at a glance."
+        },
+        {
+          "title": "Develop adjustments",
+          "desc": "Exposure, white balance and curves — nondestructive RAW editing."
+        },
+        {
+          "title": "RAW support",
+          "desc": "Open mainstream camera RAW directly, detail fully preserved."
+        },
+        {
+          "title": "Batch export",
+          "desc": "Export with presets — size and format your way."
+        }
+      ]
     }
   },
   "pluginGrid": {

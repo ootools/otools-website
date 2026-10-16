@@ -904,6 +904,230 @@
           "desc": "Lleva el cabezal a cualquier punto — o a la marca de 2/3 — para previsualizar ese fotograma y alinear los cortes con precisión."
         }
       ]
+    },
+    "otools-cadcraft": {
+      "badge": "Plugin integrado",
+      "tagline": "Dibujo CAD estilo AutoCAD",
+      "sub": "Dibujo por línea de comandos con referencias a objetos, capas y acotación, lectura/escritura DXF y apertura DWG — los planos nunca salen de tu equipo.",
+      "highlights": [
+        "Línea de comandos",
+        "Capas y acotación",
+        "DXF / DWG"
+      ],
+      "screens": [
+        "Plano de ejemplo",
+        "Plano nuevo"
+      ],
+      "features": [
+        {
+          "title": "Dibujo por comandos",
+          "desc": "Línea de comandos estilo AutoCAD con referencias a objetos: cada línea y arco, precisos."
+        },
+        {
+          "title": "Capas y acotación",
+          "desc": "Gestión de capas, acotación, achurados y bloques para planos técnicos completos."
+        },
+        {
+          "title": "DXF / DWG",
+          "desc": "Lee/escribe DXF y abre DWG: intercambio libre con el CAD habitual."
+        },
+        {
+          "title": "Ejecución local",
+          "desc": "Renderizado local en WASM: los planos se quedan en tu máquina."
+        }
+      ]
+    },
+    "otools-pdfcraft": {
+      "badge": "Plugin integrado",
+      "tagline": "Mesa de trabajo PDF estilo Acrobat",
+      "sub": "Lee y anota, combina y divide, reordena y cifra, rellena formularios y firma — todo para PDF en un solo lugar.",
+      "highlights": [
+        "Anotar",
+        "Combinar y dividir",
+        "Formularios y firma"
+      ],
+      "screens": [
+        "Leer un documento",
+        "Abrir documento"
+      ],
+      "features": [
+        {
+          "title": "Leer y anotar",
+          "desc": "Resaltados, subrayados y notas — guardados con el documento."
+        },
+        {
+          "title": "Combinar y dividir",
+          "desc": "Une PDFs o divide por páginas — arrastra y listo."
+        },
+        {
+          "title": "Cifrar y reordenar",
+          "desc": "Protección con contraseña y reordenación de páginas en un lugar."
+        },
+        {
+          "title": "Formularios y firma",
+          "desc": "Rellena formularios y firma a mano — cierra el ciclo."
+        }
+      ]
+    },
+    "otools-designcraft": {
+      "badge": "Plugin integrado",
+      "tagline": "Maquetación estilo InDesign",
+      "sub": "Rejillas de página, marcos de texto e imagen, estilos de párrafo y carácter, páginas maestras — maquetación con calidad de imprenta.",
+      "highlights": [
+        "Rejilla de página",
+        "Marcos",
+        "Páginas maestras"
+      ],
+      "screens": [
+        "Documento de ejemplo",
+        "Documento nuevo"
+      ],
+      "features": [
+        {
+          "title": "Rejillas de página",
+          "desc": "Rejillas de columna y alineación a la línea base — disciplina desde el esqueleto."
+        },
+        {
+          "title": "Estilos de párrafo y carácter",
+          "desc": "Maquetación dirigida por estilos: cambia una vez, actualiza todo."
+        },
+        {
+          "title": "Páginas maestras",
+          "desc": "Encabezados y pies en las maestras — sin trabajo repetido en documentos largos."
+        },
+        {
+          "title": "Exportación de imprenta",
+          "desc": "Exporta a PDF listo para producción impresa."
+        }
+      ]
+    },
+    "otools-vectorcraft": {
+      "badge": "Plugin integrado",
+      "tagline": "Dibujo vectorial estilo Illustrator",
+      "sub": "Béziers con pluma, rutas booleanas y mallas de degradado — logos, iconos e ilustraciones, todo en vector.",
+      "highlights": [
+        "Herramienta Pluma",
+        "Rutas booleanas",
+        "Malla de degradado"
+      ],
+      "screens": [
+        "Obra de ejemplo",
+        "Lienzo nuevo"
+      ],
+      "features": [
+        {
+          "title": "Herramienta Pluma",
+          "desc": "Control Bézier preciso — anclas y tiradores a tu antojo."
+        },
+        {
+          "title": "Rutas booleanas",
+          "desc": "Unión, resta e intersección — formas complejas en un paso."
+        },
+        {
+          "title": "Degradados y mallas",
+          "desc": "Rellenos degradados y mallas para transiciones de color suaves."
+        },
+        {
+          "title": "Importar/exportar SVG",
+          "desc": "Intercambio sin fisuras con los formatos vectoriales habituales."
+        }
+      ]
+    },
+    "otools-filmcraft": {
+      "badge": "Plugin integrado",
+      "tagline": "Edición de vídeo estilo Premiere",
+      "sub": "Línea de tiempo, transiciones, etalonaje y mezcla de audio — toda la edición, en local.",
+      "highlights": [
+        "Línea de tiempo multipista",
+        "Transiciones y color",
+        "Mezcla de audio"
+      ],
+      "screens": [
+        "Proyecto de ejemplo",
+        "Proyecto nuevo"
+      ],
+      "features": [
+        {
+          "title": "Línea de tiempo multipista",
+          "desc": "Corta, divide y empista en pistas de vídeo y audio."
+        },
+        {
+          "title": "Transiciones",
+          "desc": "Fundidos, barridos y más: un ritmo que fluye."
+        },
+        {
+          "title": "Etalonaje",
+          "desc": "Curvas y balance de color — el look lo controlas tú."
+        },
+        {
+          "title": "Mezcla de audio",
+          "desc": "Mezcla multipista con fundidos, sonido sincronizado con la imagen."
+        }
+      ]
+    },
+    "otools-effectcraft": {
+      "badge": "Plugin integrado",
+      "tagline": "Composición de movimiento estilo After Effects",
+      "sub": "Capas de composición, fotogramas clave, efectos y cola de render — el motion design como una sola tubería.",
+      "highlights": [
+        "Capas de composición",
+        "Animación por claves",
+        "Cola de render"
+      ],
+      "screens": [
+        "Composición de ejemplo",
+        "Pantalla de bienvenida"
+      ],
+      "features": [
+        {
+          "title": "Capas de composición",
+          "desc": "Composición por capas apiladas, con modos de fusión y máscaras."
+        },
+        {
+          "title": "Animación por claves",
+          "desc": "Añade claves a cualquier propiedad, con curvas de suavizado al detalle."
+        },
+        {
+          "title": "Efectos",
+          "desc": "Desenfoque, brillo y distorsión — aplicados y previsualizados al instante."
+        },
+        {
+          "title": "Cola de render",
+          "desc": "Encola renders por lotes y exporta sin supervisión."
+        }
+      ]
+    },
+    "otools-lightcraft": {
+      "badge": "Plugin integrado",
+      "tagline": "Revelado fotográfico estilo Lightroom",
+      "sub": "Biblioteca, valoraciones y filtros, revelado RAW — de la selección a la exportación en un solo lugar.",
+      "highlights": [
+        "Biblioteca",
+        "Valoraciones y filtros",
+        "Revelado RAW"
+      ],
+      "screens": [
+        "Biblioteca de ejemplo",
+        "Fotos importadas"
+      ],
+      "features": [
+        {
+          "title": "Gestión de biblioteca",
+          "desc": "Organiza con valoraciones y banderas — criba y compara de un vistazo."
+        },
+        {
+          "title": "Revelado",
+          "desc": "Exposición, balance de blancos y curvas — edición RAW no destructiva."
+        },
+        {
+          "title": "Soporte RAW",
+          "desc": "Abre RAW de las cámaras habituales, con todo el detalle."
+        },
+        {
+          "title": "Exportación por lotes",
+          "desc": "Exporta con preajustes — tamaño y formato a tu gusto."
+        }
+      ]
     }
   },
   "pluginGrid": {

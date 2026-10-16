@@ -15,7 +15,14 @@ export type PluginLandingKey =
   | 'otools-puter-spreadsheet'
   | 'otools-puter-presentation'
   | 'otools-puter-audio'
-  | 'otools-video';
+  | 'otools-video'
+  | 'otools-cadcraft'
+  | 'otools-pdfcraft'
+  | 'otools-designcraft'
+  | 'otools-vectorcraft'
+  | 'otools-filmcraft'
+  | 'otools-effectcraft'
+  | 'otools-lightcraft';
 
 export interface PluginLandingMeta {
   /** 展示名（品牌名不翻译） */
@@ -66,6 +73,18 @@ export const pluginAccent = {
   'puter-presentation': ['#f0653a', '#b3341b'],
   'puter-audio': ['#22d3ee', '#e879f9'],
   video: ['#0ea5e9', '#7c3aed'],
+  // craft 系列：cadcraft / lightcraft 的 logo 是有设计的（渐变或描边配色），
+  // 主题色直接取自 logo；其余 5 个（designcraft/effectcraft/filmcraft/
+  // pdfcraft/vectorcraft）目前还是占位 logo——统一的 #2563eb 圆角方块 + emoji，
+  // 没有第二主色。这里以该蓝为锚点各配一个区分色，让 7 个页面不至于长得一样；
+  // 等 logo 正式设计完成后，记得回来把第二色对齐新 logo。
+  cadcraft: ['#5c9dd6', '#f0a03a'],
+  pdfcraft: ['#2563eb', '#dc2626'],
+  designcraft: ['#2563eb', '#7c3aed'],
+  vectorcraft: ['#2563eb', '#0ea5e9'],
+  filmcraft: ['#2563eb', '#f43f5e'],
+  effectcraft: ['#2563eb', '#06b6d4'],
+  lightcraft: ['#38bdf8', '#1d4ed8'],
 } satisfies Record<string, [string, string]>;
 
 const RELEASES = 'https://github.com/ootools/otools-publish/releases/tag';
@@ -334,6 +353,135 @@ export const pluginLandingMeta: Record<PluginLandingKey, PluginLandingMeta> = {
       { key: 'text', shot: 'text' },
       { key: 'seek', shot: 'seek' },
       { key: 'effects' },
+      { key: 'export' },
+    ],
+  },
+  // ── craft 系列（Rust→WASM，纯插件，无独立 APP）──────────────────────────
+  // 截图由 scripts/craft-shots/capture.mjs 产出（场景 = URL query，egui canvas
+  // 无法用 DOM 交互造场景）。
+  'otools-cadcraft': {
+    name: 'CADCraft',
+    colors: pluginAccent.cadcraft,
+    releases: '',
+    standalone: false,
+    forceDarkShot: true,
+    screenshots: [
+      { key: 'sample', label: 'Sample drawing' },
+      { key: 'blank', label: 'New drawing' },
+    ],
+    highlights: ['', '', ''],
+    features: [
+      { key: 'drafting', shot: 'sample' },
+      { key: 'command' },
+      { key: 'layers', shot: 'blank' },
+      { key: 'dxf' },
+    ],
+  },
+  'otools-pdfcraft': {
+    name: 'PdfCraft',
+    colors: pluginAccent.pdfcraft,
+    releases: '',
+    standalone: false,
+    forceDarkShot: true,
+    screenshots: [
+      { key: 'view', label: 'Reading a document' },
+      { key: 'open', label: 'Open document' },
+    ],
+    highlights: ['', '', ''],
+    features: [
+      { key: 'read', shot: 'view' },
+      { key: 'organize', shot: 'open' },
+      { key: 'secure' },
+      { key: 'form' },
+    ],
+  },
+  'otools-designcraft': {
+    name: 'DesignCraft',
+    colors: pluginAccent.designcraft,
+    releases: '',
+    standalone: false,
+    forceDarkShot: true,
+    screenshots: [
+      { key: 'sample', label: 'Sample document' },
+      { key: 'blank', label: 'New document' },
+    ],
+    highlights: ['', '', ''],
+    features: [
+      { key: 'grid', shot: 'sample' },
+      { key: 'styles' },
+      { key: 'master', shot: 'blank' },
+      { key: 'export' },
+    ],
+  },
+  'otools-vectorcraft': {
+    name: 'VectorCraft',
+    colors: pluginAccent.vectorcraft,
+    releases: '',
+    standalone: false,
+    forceDarkShot: true,
+    screenshots: [
+      { key: 'artwork', label: 'Sample artwork' },
+      { key: 'blank', label: 'New canvas' },
+    ],
+    highlights: ['', '', ''],
+    features: [
+      { key: 'pen', shot: 'artwork' },
+      { key: 'boolean' },
+      { key: 'gradient', shot: 'artwork' },
+      { key: 'svg', shot: 'blank' },
+    ],
+  },
+  'otools-filmcraft': {
+    name: 'FilmCraft',
+    colors: pluginAccent.filmcraft,
+    releases: '',
+    standalone: false,
+    forceDarkShot: true,
+    screenshots: [
+      { key: 'demo', label: 'Demo project' },
+      { key: 'blank', label: 'New project' },
+    ],
+    highlights: ['', '', ''],
+    features: [
+      { key: 'timeline', shot: 'demo' },
+      { key: 'transitions' },
+      { key: 'color', shot: 'blank' },
+      { key: 'audio' },
+    ],
+  },
+  'otools-effectcraft': {
+    name: 'EffectCraft',
+    colors: pluginAccent.effectcraft,
+    releases: '',
+    standalone: false,
+    forceDarkShot: true,
+    screenshots: [
+      { key: 'demo', label: 'Demo composition' },
+      { key: 'home', label: 'Welcome screen' },
+    ],
+    highlights: ['', '', ''],
+    features: [
+      { key: 'comp', shot: 'demo' },
+      { key: 'keyframe' },
+      { key: 'effects' },
+      { key: 'render' },
+    ],
+  },
+  'otools-lightcraft': {
+    name: 'LightCraft',
+    colors: pluginAccent.lightcraft,
+    releases: '',
+    standalone: false,
+    forceDarkShot: true,
+    screenshots: [
+      { key: 'demo', label: 'Demo library' },
+      { key: 'library', label: 'Imported photos' },
+    ],
+    highlights: ['', '', ''],
+    features: [
+      { key: 'library', shot: 'library' },
+      { key: 'develop', shot: 'demo' },
+      { key: 'raw' },
       { key: 'export' },
     ],
   },

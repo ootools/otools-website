@@ -904,6 +904,230 @@
           "desc": "Setze den Abspielkopf überallhin — oder auf die 2/3-Marke — um genau dieses Bild zu sehen und Schnitte punktgenau zu setzen."
         }
       ]
+    },
+    "otools-cadcraft": {
+      "badge": "Integriertes Plugin",
+      "tagline": "CAD-Zeichnung im AutoCAD-Stil",
+      "sub": "Kommandozeilen-Zeichnen mit Objektfang, Ebenen und Bemaßung, DXF lesen/schreiben und DWG öffnen — Zeichnungen bleiben lokal.",
+      "highlights": [
+        "Kommandozeile",
+        "Ebenen & Bemaßung",
+        "DXF / DWG"
+      ],
+      "screens": [
+        "Beispielzeichnung",
+        "Neue Zeichnung"
+      ],
+      "features": [
+        {
+          "title": "Kommandozeilen-Zeichnen",
+          "desc": "AutoCAD-Stil-Kommandozeile mit Objektfang — jede Linie und jeder Bogen präzise."
+        },
+        {
+          "title": "Ebenen & Bemaßung",
+          "desc": "Ebenenverwaltung, Bemaßung, Schraffuren und Blöcke für komplette technische Zeichnungen."
+        },
+        {
+          "title": "DXF / DWG",
+          "desc": "DXF lesen/schreiben, DWG öffnen — frei mit gängigen CAD-Systemen austauschen."
+        },
+        {
+          "title": "Komplett lokal",
+          "desc": "Lokales WASM-Rendering — Zeichnungen verlassen Ihren Rechner nicht."
+        }
+      ]
+    },
+    "otools-pdfcraft": {
+      "badge": "Integriertes Plugin",
+      "tagline": "PDF-Werkbank im Acrobat-Stil",
+      "sub": "Lesen und kommentieren, zusammenfügen und teilen, umordnen und verschlüsseln, Formulare ausfüllen und signieren — alles für PDF an einem Ort.",
+      "highlights": [
+        "Kommentieren",
+        "Zusammenfügen & Teilen",
+        "Formulare & Signatur"
+      ],
+      "screens": [
+        "Dokument lesen",
+        "Dokument öffnen"
+      ],
+      "features": [
+        {
+          "title": "Lesen & kommentieren",
+          "desc": "Markierungen, Unterstreichungen und Notizen — mit dem Dokument gespeichert."
+        },
+        {
+          "title": "Zusammenfügen & teilen",
+          "desc": "PDFs kombinieren oder seitenweise teilen — ziehen und fertig."
+        },
+        {
+          "title": "Verschlüsseln & umordnen",
+          "desc": "Passwortschutz und Seitenreihenfolge an einem Ort."
+        },
+        {
+          "title": "Formulare & Signatur",
+          "desc": "Formulare ausfüllen und handschriftlich signieren."
+        }
+      ]
+    },
+    "otools-designcraft": {
+      "badge": "Integriertes Plugin",
+      "tagline": "Seitenlayout im InDesign-Stil",
+      "sub": "Seitengitter, Text- und Bildrahmen, Absatz- und Zeichenformate, Musterseiten — Layout in Druckqualität.",
+      "highlights": [
+        "Seitengitter",
+        "Rahmen",
+        "Musterseiten"
+      ],
+      "screens": [
+        "Beispieldokument",
+        "Neues Dokument"
+      ],
+      "features": [
+        {
+          "title": "Seitengitter",
+          "desc": "Spaltengitter und Grundlinienausrichtung — Layout-Disziplin von Anfang an."
+        },
+        {
+          "title": "Absatz- & Zeichenformate",
+          "desc": "Formatgesteuertes Satzen: einmal ändern, überall aktualisiert."
+        },
+        {
+          "title": "Musterseiten",
+          "desc": "Kopf- und Fußzeilen auf Musterseiten — kein Doppelaufwand bei langen Dokumenten."
+        },
+        {
+          "title": "Druckfertiger Export",
+          "desc": "PDF-Export, bereit für die Druckproduktion."
+        }
+      ]
+    },
+    "otools-vectorcraft": {
+      "badge": "Integriertes Plugin",
+      "tagline": "Vektorzeichnung im Illustrator-Stil",
+      "sub": "Pen-Béziers, boolesche Pfade und Farbverlaufsnetze — Logos, Icons und Illustrationen, durchgehend vektoriell.",
+      "highlights": [
+        "Werkzeug: Pen",
+        "Boolesche Pfade",
+        "Farbverlaufsnetz"
+      ],
+      "screens": [
+        "Beispielwerk",
+        "Neue Leinwand"
+      ],
+      "features": [
+        {
+          "title": "Werkzeug: Pen",
+          "desc": "Präzise Bézier-Kontrolle — Ankerpunkte und Griffe nach Wunsch."
+        },
+        {
+          "title": "Boolesche Pfade",
+          "desc": "Vereinigen, subtrahieren, schneiden — komplexe Formen in einem Schritt."
+        },
+        {
+          "title": "Verläufe & Netze",
+          "desc": "Verlauffüllungen und Netze für weiche Farbverläufe."
+        },
+        {
+          "title": "SVG-Import/-Export",
+          "desc": "Nahtloser Austausch mit gängigen Vektorformaten."
+        }
+      ]
+    },
+    "otools-filmcraft": {
+      "badge": "Integriertes Plugin",
+      "tagline": "Videoschnitt im Premiere-Stil",
+      "sub": "Timeline, Übergänge, Farbkorrektur und Audiomischung — der gesamte Schnitt, komplett lokal.",
+      "highlights": [
+        "Multitrack-Timeline",
+        "Übergänge & Farbe",
+        "Audiomischung"
+      ],
+      "screens": [
+        "Demoprojekt",
+        "Neues Projekt"
+      ],
+      "features": [
+        {
+          "title": "Multitrack-Timeline",
+          "desc": "Schneiden, teilen und fügen über Video- und Audiospuren."
+        },
+        {
+          "title": "Übergänge",
+          "desc": "Blendens und Wischen — ein natürlich fließender Rhythmus."
+        },
+        {
+          "title": "Farbkorrektur",
+          "desc": "Kurven und Farbbalance — der Look liegt in deiner Hand."
+        },
+        {
+          "title": "Audiomischung",
+          "desc": "Multitrack-Mixen mit Blenden, Ton synchron zum Bild."
+        }
+      ]
+    },
+    "otools-effectcraft": {
+      "badge": "Integriertes Plugin",
+      "tagline": "Motion-Compositing im After-Effects-Stil",
+      "sub": "Kompositionsebenen, Keyframes, Effekte und Render-Queue — Motion Design als eine Pipeline.",
+      "highlights": [
+        "Comp-Ebenen",
+        "Keyframe-Animation",
+        "Render-Queue"
+      ],
+      "screens": [
+        "Demo-Komposition",
+        "Willkommensbildschirm"
+      ],
+      "features": [
+        {
+          "title": "Kompositionsebenen",
+          "desc": "Ebenenstapel-Compositing mit Blendmodi und Masken."
+        },
+        {
+          "title": "Keyframe-Animation",
+          "desc": "Jede Eigenschaft keyen, mit Easing-Kurven unter feiner Kontrolle."
+        },
+        {
+          "title": "Effekte",
+          "desc": "Blur, Glow und Verzerrung — angewendet und sofort in der Vorschau."
+        },
+        {
+          "title": "Render-Queue",
+          "desc": "Rendern in Batches queuen — Export ohne Aufsicht."
+        }
+      ]
+    },
+    "otools-lightcraft": {
+      "badge": "Integriertes Plugin",
+      "tagline": "Fotoentwicklung im Lightroom-Stil",
+      "sub": "Bibliothek, Bewertungen und Filter, RAW-Entwicklung — vom Aussortieren bis zum Export an einem Ort.",
+      "highlights": [
+        "Bibliothek",
+        "Bewertungen & Filter",
+        "RAW-Entwicklung"
+      ],
+      "screens": [
+        "Demo-Bibliothek",
+        "Importierte Fotos"
+      ],
+      "features": [
+        {
+          "title": "Bibliothek verwalten",
+          "desc": "Mit Bewertungen und Markern ordnen — sichten und vergleichen auf einen Blick."
+        },
+        {
+          "title": "Entwicklung",
+          "desc": "Belichtung, Weißabgleich und Kurven — zerstörungsfreie RAW-Bearbeitung."
+        },
+        {
+          "title": "RAW-Unterstützung",
+          "desc": "Gängige Kamera-RAWs direkt öffnen, Details vollständig erhalten."
+        },
+        {
+          "title": "Stapel-Export",
+          "desc": "Mit Presets exportieren — Größe und Format nach Wunsch."
+        }
+      ]
     }
   },
   "pluginGrid": {
