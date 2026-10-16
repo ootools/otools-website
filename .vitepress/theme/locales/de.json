@@ -680,7 +680,8 @@
         "Lokaler Import und Export"
       ],
       "screens": [
-        "Editor"
+        "Foto bearbeiten",
+        "Neue Leinwand"
       ],
       "features": [
         {
@@ -711,7 +712,9 @@
         "Lokale Projektdateien"
       ],
       "screens": [
-        "Viewport"
+        "Layout-Arbeitsbereich",
+        "Shading",
+        "Geometry-Nodes"
       ],
       "features": [
         {
@@ -742,7 +745,8 @@
         "Export in mehreren Formaten"
       ],
       "screens": [
-        "Dokument"
+        "Bericht",
+        "Lebenslauf"
       ],
       "features": [
         {
@@ -773,7 +777,8 @@
         "CSV-/Excel-Austausch"
       ],
       "screens": [
-        "Tabelle"
+        "Beispielhaushalt",
+        "Haushaltsvorlage"
       ],
       "features": [
         {
@@ -804,7 +809,8 @@
         "Präsentation mit einem Klick"
       ],
       "screens": [
-        "Folie"
+        "Story-Deck",
+        "Pitch-Deck"
       ],
       "features": [
         {
@@ -835,7 +841,8 @@
         "Lokaler Export"
       ],
       "screens": [
-        "Station"
+        "Mehrspur-Session",
+        "Wellenform-Bearbeitung"
       ],
       "features": [
         {
@@ -866,7 +873,8 @@
         "Lokaler Export"
       ],
       "screens": [
-        "Editor"
+        "Vorlagenprojekt",
+        "Neues Projekt"
       ],
       "features": [
         {

@@ -680,7 +680,8 @@
         "Local import / export"
       ],
       "screens": [
-        "Editor"
+        "Editing a photo",
+        "New canvas"
       ],
       "features": [
         {
@@ -711,7 +712,9 @@
         "Local project files"
       ],
       "screens": [
-        "Viewport"
+        "Layout workspace",
+        "Shading",
+        "Geometry Nodes"
       ],
       "features": [
         {
@@ -742,7 +745,8 @@
         "Multi-format export"
       ],
       "screens": [
-        "Document"
+        "Report",
+        "Resume"
       ],
       "features": [
         {
@@ -773,7 +777,8 @@
         "CSV / Excel interchange"
       ],
       "screens": [
-        "Sheet"
+        "Sample budget",
+        "Budget template"
       ],
       "features": [
         {
@@ -804,7 +809,8 @@
         "One-click present"
       ],
       "screens": [
-        "Slide"
+        "Story deck",
+        "Pitch deck"
       ],
       "features": [
         {
@@ -835,7 +841,8 @@
         "Local export"
       ],
       "screens": [
-        "Studio"
+        "Multitrack session",
+        "Waveform editing"
       ],
       "features": [
         {
@@ -866,7 +873,8 @@
         "Local export"
       ],
       "screens": [
-        "Editor"
+        "Template project",
+        "New project"
       ],
       "features": [
         {

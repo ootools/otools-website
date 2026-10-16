@@ -680,7 +680,8 @@
         "Importación y exportación local"
       ],
       "screens": [
-        "Editor"
+        "Editando una foto",
+        "Nuevo lienzo"
       ],
       "features": [
         {
@@ -711,7 +712,9 @@
         "Archivos de proyecto locales"
       ],
       "screens": [
-        "Viewport"
+        "Espacio de trabajo",
+        "Sombreado",
+        "Nodos de geometría"
       ],
       "features": [
         {
@@ -742,7 +745,8 @@
         "Exportación en varios formatos"
       ],
       "screens": [
-        "Documento"
+        "Informe",
+        "Currículum"
       ],
       "features": [
         {
@@ -773,7 +777,8 @@
         "Intercambio CSV / Excel"
       ],
       "screens": [
-        "Hoja de cálculo"
+        "Presupuesto de ejemplo",
+        "Plantilla de presupuesto"
       ],
       "features": [
         {
@@ -804,7 +809,8 @@
         "Presentación con un clic"
       ],
       "screens": [
-        "Diapositiva"
+        "Presentación narrativa",
+        "Presentación de propuesta"
       ],
       "features": [
         {
@@ -835,7 +841,8 @@
         "Exportación local"
       ],
       "screens": [
-        "Estación de trabajo"
+        "Sesión multipista",
+        "Edición de onda"
       ],
       "features": [
         {
@@ -866,7 +873,8 @@
         "Exportación local"
       ],
       "screens": [
-        "Editor"
+        "Proyecto desde plantilla",
+        "Nuevo proyecto"
       ],
       "features": [
         {

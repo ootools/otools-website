@@ -680,7 +680,8 @@
         "Import / export local"
       ],
       "screens": [
-        "Éditeur"
+        "Édition d'une photo",
+        "Nouveau canevas"
       ],
       "features": [
         {
@@ -711,7 +712,9 @@
         "Fichiers de projet locaux"
       ],
       "screens": [
-        "Viewport"
+        "Espace de travail",
+        "Shading",
+        "Nœuds de géométrie"
       ],
       "features": [
         {
@@ -742,7 +745,8 @@
         "Export multi-formats"
       ],
       "screens": [
-        "Document"
+        "Rapport",
+        "CV"
       ],
       "features": [
         {
@@ -773,7 +777,8 @@
         "Échanges CSV / Excel"
       ],
       "screens": [
-        "Feuille de calcul"
+        "Budget d'exemple",
+        "Modèle de budget"
       ],
       "features": [
         {
@@ -804,7 +809,8 @@
         "Présentation en un clic"
       ],
       "screens": [
-        "Diapositive"
+        "Présentation narrative",
+        "Présentation éclair"
       ],
       "features": [
         {
@@ -835,7 +841,8 @@
         "Export local"
       ],
       "screens": [
-        "Station de travail"
+        "Session multipiste",
+        "Édition de forme d'onde"
       ],
       "features": [
         {
@@ -866,7 +873,8 @@
         "Export local"
       ],
       "screens": [
-        "Éditeur"
+        "Projet depuis un modèle",
+        "Nouveau projet"
       ],
       "features": [
         {

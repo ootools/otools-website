@@ -206,20 +206,25 @@ export const pluginLandingMeta: Record<PluginLandingKey, PluginLandingMeta> = {
   },
 
   // ── puter 插件（只提供插件，不发布独立 APP：standalone=false）──────────────
-  // 截图当前每个插件一张主视图（main）；后续可在 scripts/puter-shots 补场景。
+  // 截图管线：scripts/puter-shots/capture.mjs。每个插件 2~3 个场景，
+  // 全部是「正在干活」的真实工作画面（打开模板 / 示例工程 / 新建文档后的编辑器态），
+  // 不留欢迎屏充数——用户 2026-10-16 明确要求「不要都是欢迎屏幕，要有正在编辑的」。
   'otools-puter-ps': {
     name: 'Photo Studio',
     colors: pluginAccent['puter-ps'],
     releases: '',
     standalone: false,
     forceDarkShot: true,
-    screenshots: [{ key: 'main', label: 'Editor' }],
+    screenshots: [
+      { key: 'edit', label: 'Editing' },
+      { key: 'blank', label: 'New canvas' },
+    ],
     highlights: ['', '', ''],
     features: [
-      { key: 'edit', shot: 'main' },
+      { key: 'edit', shot: 'edit' },
       { key: 'layers' },
       { key: 'filters' },
-      { key: 'export' },
+      { key: 'export', shot: 'blank' },
     ],
   },
   'otools-puter-3d': {
@@ -228,12 +233,16 @@ export const pluginLandingMeta: Record<PluginLandingKey, PluginLandingMeta> = {
     releases: '',
     standalone: false,
     forceDarkShot: true,
-    screenshots: [{ key: 'main', label: 'Viewport' }],
+    screenshots: [
+      { key: 'layout', label: 'Layout' },
+      { key: 'shading', label: 'Shading' },
+      { key: 'geo-nodes', label: 'Geometry Nodes' },
+    ],
     highlights: ['', '', ''],
     features: [
-      { key: 'scene', shot: 'main' },
-      { key: 'model' },
-      { key: 'material' },
+      { key: 'scene', shot: 'layout' },
+      { key: 'model', shot: 'geo-nodes' },
+      { key: 'material', shot: 'shading' },
       { key: 'animate' },
     ],
   },
@@ -242,12 +251,15 @@ export const pluginLandingMeta: Record<PluginLandingKey, PluginLandingMeta> = {
     colors: pluginAccent['puter-documents'],
     releases: '',
     standalone: false,
-    screenshots: [{ key: 'main', label: 'Document' }],
+    screenshots: [
+      { key: 'report', label: 'Report' },
+      { key: 'resume', label: 'Resume' },
+    ],
     highlights: ['', '', ''],
     features: [
-      { key: 'edit', shot: 'main' },
+      { key: 'edit', shot: 'report' },
       { key: 'format' },
-      { key: 'export' },
+      { key: 'export', shot: 'resume' },
       { key: 'local' },
     ],
   },
@@ -256,12 +268,15 @@ export const pluginLandingMeta: Record<PluginLandingKey, PluginLandingMeta> = {
     colors: pluginAccent['puter-spreadsheet'],
     releases: '',
     standalone: false,
-    screenshots: [{ key: 'main', label: 'Sheet' }],
+    screenshots: [
+      { key: 'sample', label: 'Sample budget' },
+      { key: 'budget', label: 'Budget template' },
+    ],
     highlights: ['', '', ''],
     features: [
-      { key: 'grid', shot: 'main' },
+      { key: 'grid', shot: 'sample' },
       { key: 'formula' },
-      { key: 'chart' },
+      { key: 'chart', shot: 'budget' },
       { key: 'import' },
     ],
   },
@@ -270,11 +285,14 @@ export const pluginLandingMeta: Record<PluginLandingKey, PluginLandingMeta> = {
     colors: pluginAccent['puter-presentation'],
     releases: '',
     standalone: false,
-    screenshots: [{ key: 'main', label: 'Slide' }],
+    screenshots: [
+      { key: 'story', label: 'The big idea' },
+      { key: 'pitch', label: 'The pitch' },
+    ],
     highlights: ['', '', ''],
     features: [
-      { key: 'slide', shot: 'main' },
-      { key: 'design' },
+      { key: 'slide', shot: 'story' },
+      { key: 'design', shot: 'pitch' },
       { key: 'animate' },
       { key: 'present' },
     ],
@@ -285,12 +303,15 @@ export const pluginLandingMeta: Record<PluginLandingKey, PluginLandingMeta> = {
     releases: '',
     standalone: false,
     forceDarkShot: true,
-    screenshots: [{ key: 'main', label: 'Studio' }],
+    screenshots: [
+      { key: 'session', label: 'Multitrack' },
+      { key: 'waveform', label: 'Waveform' },
+    ],
     highlights: ['', '', ''],
     features: [
-      { key: 'edit', shot: 'main' },
+      { key: 'edit', shot: 'session' },
       { key: 'tracks' },
-      { key: 'effects' },
+      { key: 'effects', shot: 'waveform' },
       { key: 'export' },
     ],
   },
@@ -300,11 +321,14 @@ export const pluginLandingMeta: Record<PluginLandingKey, PluginLandingMeta> = {
     releases: '',
     standalone: false,
     forceDarkShot: true,
-    screenshots: [{ key: 'main', label: 'Editor' }],
+    screenshots: [
+      { key: 'template', label: 'Template project' },
+      { key: 'editor', label: 'New project' },
+    ],
     highlights: ['', '', ''],
     features: [
-      { key: 'edit', shot: 'main' },
-      { key: 'timeline' },
+      { key: 'edit', shot: 'template' },
+      { key: 'timeline', shot: 'editor' },
       { key: 'effects' },
       { key: 'export' },
     ],
