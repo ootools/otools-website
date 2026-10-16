@@ -874,7 +874,8 @@
       ],
       "screens": [
         "Vorlagenprojekt",
-        "Neues Projekt"
+        "Neues Projekt",
+        "Textspur"
       ],
       "features": [
         {
@@ -892,6 +893,10 @@
         {
           "title": "Export",
           "desc": "Export in gängige Videoformate — direkt auf die lokale Festplatte."
+        },
+        {
+          "title": "Text & Untertitel",
+          "desc": "Lege eine Textspur auf der Timeline an und bearbeite Titel, Untertitel und Beschriftungen — was du siehst, ist was du bekommst."
         }
       ]
     }

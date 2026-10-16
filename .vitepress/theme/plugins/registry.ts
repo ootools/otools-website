@@ -324,11 +324,13 @@ export const pluginLandingMeta: Record<PluginLandingKey, PluginLandingMeta> = {
     screenshots: [
       { key: 'template', label: 'Template project' },
       { key: 'editor', label: 'New project' },
+      { key: 'text', label: 'Text track' },
     ],
     highlights: ['', '', ''],
     features: [
       { key: 'edit', shot: 'template' },
       { key: 'timeline', shot: 'editor' },
+      { key: 'text', shot: 'text' },
       { key: 'effects' },
       { key: 'export' },
     ],

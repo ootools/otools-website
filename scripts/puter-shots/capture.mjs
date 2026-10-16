@@ -116,6 +116,7 @@ const PLUGINS = {
     scenes: [
       { key: 'template', waitMs: 6000, actions: openFirstTemplate },
       { key: 'editor', waitMs: 5500, actions: (p) => clickAndWait(p, 'button.new-banner', 'div.editor .tl-tracks') },
+      { key: 'text', waitMs: 6000, actions: openTemplateWithText },
     ],
   },
 };
@@ -314,6 +315,23 @@ async function openFirstTemplate(page) {
   await page.waitForTimeout(2200); // 播放器首帧 + 时间线 clip 渲染
   const clips = await page.evaluate(() => document.querySelectorAll('.tl-clip').length);
   return `template=${name} clips=${clips}`;
+}
+
+// video：打开模板（时间线已有内容）→ 加一段文本（actions.addText 会自建文本轨并选中
+// 该文本 clip），得到「文本轨被选中」的真实编辑画面——时间线文本轨上的文本 clip 高亮、
+// 右侧弹出文本检查器（字体/字号/对齐/描边等）。比空工程更贴近真实使用。
+// app 在 dev 模式暴露 window.vs.ctx（main.js:250），actions.addText 是稳定入口。
+async function openTemplateWithText(page) {
+  const r1 = await openFirstTemplate(page); // 开模板，时间线出现 clip
+  await page.waitForTimeout(700);
+  const added = await page.evaluate(() => {
+    try { window.vs?.ctx?.actions?.addText('plain'); return true; } catch { return false; }
+  });
+  if (!added) return `${r1} | addText NOT available`;
+  await page.waitForSelector('.tl-clip.type-text.selected', { timeout: 12000 });
+  await page.waitForTimeout(1600); // 文本检查器展开 + 播放器首帧
+  const ok = await page.evaluate(() => !!document.querySelector('.tl-clip.type-text.selected'));
+  return `${r1} | textSelected=${ok}`;
 }
 
 // 通用：点一个选择器，等目标选择器出现。

@@ -874,7 +874,8 @@
       ],
       "screens": [
         "Template project",
-        "New project"
+        "New project",
+        "Text track"
       ],
       "features": [
         {
@@ -892,6 +893,10 @@
         {
           "title": "Export",
           "desc": "Export to common video formats, straight to local disk."
+        },
+        {
+          "title": "Text & captions",
+          "desc": "Drop a text track on the timeline and edit titles, captions and labels — what you see is what you get."
         }
       ]
     }

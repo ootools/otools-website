@@ -874,7 +874,8 @@
       ],
       "screens": [
         "Proyecto desde plantilla",
-        "Nuevo proyecto"
+        "Nuevo proyecto",
+        "Pista de texto"
       ],
       "features": [
         {
@@ -892,6 +893,10 @@
         {
           "title": "Exportación",
           "desc": "Exporta a los formatos de vídeo habituales, directamente a tu disco local."
+        },
+        {
+          "title": "Texto y subtítulos",
+          "desc": "Añade una pista de texto en la línea de tiempo y edita títulos, subtítulos y etiquetas; lo que ves es lo que obtienes."
         }
       ]
     }

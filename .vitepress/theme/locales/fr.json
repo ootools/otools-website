@@ -874,7 +874,8 @@
       ],
       "screens": [
         "Projet depuis un modèle",
-        "Nouveau projet"
+        "Nouveau projet",
+        "Piste de texte"
       ],
       "features": [
         {
@@ -892,6 +893,10 @@
         {
           "title": "Export",
           "desc": "Exportez dans les formats vidéo courants, directement sur votre disque local."
+        },
+        {
+          "title": "Texte & sous-titres",
+          "desc": "Posez une piste de texte sur la timeline et éditez titres, sous-titres et libellés — ce que vous voyez est ce que vous obtenez."
         }
       ]
     }
