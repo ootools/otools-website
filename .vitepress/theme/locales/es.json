@@ -666,7 +666,227 @@
       ]
     },
     "showcaseTitle": "En acción",
-    "showcaseSub": "Cada funcionalidad incluye una captura real: mira cómo se ve en el día a día."
+    "showcaseSub": "Cada funcionalidad incluye una captura real: mira cómo se ve en el día a día.",
+    "standaloneSoon": "La versión como app independiente está en desarrollo; por ahora instálalo desde el mercado de plugins de OTools.",
+    "downloadTitlePlugin": "Instalar y listo",
+    "downloadSubPlugin": "Instalación con un clic desde el mercado de plugins de OTools, junto a tus otras herramientas en el mismo espacio de trabajo.",
+    "otools-puter-ps": {
+      "badge": "Plugin integrado",
+      "tagline": "Retoque fotográfico en tu espacio de trabajo",
+      "sub": "Capas, filtros y ajustes completos, con importación y exportación de archivos locales: no hace falta ir de un programa de retoque a otro.",
+      "highlights": [
+        "Edición de capas no destructiva",
+        "Filtros y ajustes variados",
+        "Importación y exportación local"
+      ],
+      "screens": [
+        "Editor"
+      ],
+      "features": [
+        {
+          "title": "Retoque profesional",
+          "desc": "Pinceles, selecciones y transformaciones: las herramientas esenciales, con imágenes grandes y sin tirones."
+        },
+        {
+          "title": "Gestión de capas",
+          "desc": "Varias capas, modos de fusión y opacidad; edición no destructiva que puedes cambiar en cualquier momento."
+        },
+        {
+          "title": "Filtros y ajustes",
+          "desc": "Curvas, niveles, desenfoque o nitidez: cada ajuste se previsualiza en tiempo real."
+        },
+        {
+          "title": "Exportación local",
+          "desc": "Guarda en PNG, JPEG, WebP y otros formatos habituales, directamente en tu disco local."
+        }
+      ]
+    },
+    "otools-puter-3d": {
+      "badge": "Plugin integrado",
+      "tagline": "Crea escenas 3D en tu escritorio",
+      "sub": "Modelado, materiales y animación en un solo espacio de trabajo; las escenas se guardan como archivos locales y puedes seguir editándolas cuando quieras.",
+      "highlights": [
+        "Viewport 3D en tiempo real",
+        "Materiales e iluminación",
+        "Archivos de proyecto locales"
+      ],
+      "screens": [
+        "Viewport"
+      ],
+      "features": [
+        {
+          "title": "Viewport en tiempo real",
+          "desc": "Renderizado WebGL en tiempo real; rotar, acercar y desplazar, todo fluido."
+        },
+        {
+          "title": "Herramientas de modelado",
+          "desc": "Geometrías básicas, transformaciones y agrupación: arma una escena rápidamente."
+        },
+        {
+          "title": "Materiales e iluminación",
+          "desc": "Asigna materiales y luces a los objetos y comprueba el resultado al instante."
+        },
+        {
+          "title": "Línea de tiempo de animación",
+          "desc": "Fotogramas clave y trayectorias, con vista previa y reproducción integradas."
+        }
+      ]
+    },
+    "otools-puter-documents": {
+      "badge": "Plugin integrado",
+      "tagline": "Un editor de documentos que se siente natural",
+      "sub": "Redacción, maquetación y exportación en una sola ventana; los archivos son documentos locales normales que puedes abrir con cualquier otro programa.",
+      "highlights": [
+        "Maquetación WYSIWYG",
+        "Prioridad a los archivos locales",
+        "Exportación en varios formatos"
+      ],
+      "screens": [
+        "Documento"
+      ],
+      "features": [
+        {
+          "title": "Edición fluida",
+          "desc": "Títulos, listas, tablas e imágenes: el formato habitual está listo para usar."
+        },
+        {
+          "title": "Formato",
+          "desc": "Fuentes, tamaños, colores y estilos de párrafo con un solo clic."
+        },
+        {
+          "title": "Exportación en varios formatos",
+          "desc": "Exporta a DOCX, PDF y más, compatible con las suites de ofimática habituales."
+        },
+        {
+          "title": "Prioridad local",
+          "desc": "Tus documentos viven en carpetas de tu equipo: archivos normales visibles en el Finder."
+        }
+      ]
+    },
+    "otools-puter-spreadsheet": {
+      "badge": "Plugin integrado",
+      "tagline": "Hoja de cálculo de escritorio",
+      "sub": "Fórmulas, gráficos y organización de datos en una pantalla; las hojas se guardan en local, con importar CSV y exportar Excel sin esfuerzo.",
+      "highlights": [
+        "Fórmulas y funciones",
+        "Gráficos y visualización",
+        "Intercambio CSV / Excel"
+      ],
+      "screens": [
+        "Hoja de cálculo"
+      ],
+      "features": [
+        {
+          "title": "Cuadrícula de datos",
+          "desc": "Desplazamiento fluido en hojas grandes; seleccionar, rellenar y ordenar, sin esfuerzo."
+        },
+        {
+          "title": "Fórmulas y funciones",
+          "desc": "Fórmulas habituales con recálculo automático y errores resaltados."
+        },
+        {
+          "title": "Gráficos",
+          "desc": "Convierte los datos en barras, líneas o circulares, para verlo de un vistazo."
+        },
+        {
+          "title": "Importación y exportación",
+          "desc": "Abre un CSV, guárdalo como Excel: la conexión con tus otras herramientas es perfecta."
+        }
+      ]
+    },
+    "otools-puter-presentation": {
+      "badge": "Plugin integrado",
+      "tagline": "Presentaciones en tu espacio de trabajo",
+      "sub": "Edición, diseño y presentación de diapositivas en una sola ventana; los proyectos se guardan en local y puedes seguir editando en cualquier momento.",
+      "highlights": [
+        "Edición de diapositivas",
+        "Temas y diseño",
+        "Presentación con un clic"
+      ],
+      "screens": [
+        "Diapositiva"
+      ],
+      "features": [
+        {
+          "title": "Edición de diapositivas",
+          "desc": "Añade, reordena y cambia el diseño; coloca textos y formas con total libertad."
+        },
+        {
+          "title": "Diseño y temas",
+          "desc": "Temas integrados y estilos rápidos para unificar el estilo de tu presentación."
+        },
+        {
+          "title": "Animaciones y transiciones",
+          "desc": "Añade animaciones y efectos de transición a elementos y diapositivas."
+        },
+        {
+          "title": "Presentación",
+          "desc": "Un clic para pasar a pantalla completa, con las notas del presentador siempre a la vista."
+        }
+      ]
+    },
+    "otools-puter-audio": {
+      "badge": "Plugin integrado",
+      "tagline": "Estación de audio de escritorio",
+      "sub": "Edición multipista, efectos y mezcla en una sola ventana; los proyectos de audio se guardan en local y se exportan a los formatos habituales.",
+      "highlights": [
+        "Edición multipista",
+        "Efectos en tiempo real",
+        "Exportación local"
+      ],
+      "screens": [
+        "Estación de trabajo"
+      ],
+      "features": [
+        {
+          "title": "Línea de tiempo multipista",
+          "desc": "Ordena, corta y aplica fundidos en varias pistas: edición intuitiva y eficiente."
+        },
+        {
+          "title": "Pistas y efectos",
+          "desc": "Añade efectos a las pistas y escucha el resultado en tiempo real."
+        },
+        {
+          "title": "Mesa de mezcla",
+          "desc": "Volumen, paneo, silencio y solo: la mezcla se hace en una pantalla."
+        },
+        {
+          "title": "Exportación",
+          "desc": "Exporta a WAV, MP3 y otros formatos, directamente a tu equipo."
+        }
+      ]
+    },
+    "otools-video": {
+      "badge": "Plugin integrado",
+      "tagline": "Edición de vídeo de escritorio",
+      "sub": "Edición en línea de tiempo, efectos y exportación en un solo espacio de trabajo; materiales y proyectos se quedan en local.",
+      "highlights": [
+        "Edición en línea de tiempo",
+        "Vista previa en tiempo real",
+        "Exportación local"
+      ],
+      "screens": [
+        "Editor"
+      ],
+      "features": [
+        {
+          "title": "Edición en línea de tiempo",
+          "desc": "Línea de tiempo multipista: cortar, dividir y unir, todo en una sola pasada."
+        },
+        {
+          "title": "Vista previa en tiempo real",
+          "desc": "Previsualiza con el cabezal de reproducción: cada cambio se ve al instante."
+        },
+        {
+          "title": "Efectos y transiciones",
+          "desc": "Añade efectos y transiciones a los clips para enriquecer la imagen."
+        },
+        {
+          "title": "Exportación",
+          "desc": "Exporta a los formatos de vídeo habituales, directamente a tu disco local."
+        }
+      ]
+    }
   },
   "pluginGrid": {
     "title": "Conoce los plugins",

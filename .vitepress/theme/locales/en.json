@@ -433,6 +433,8 @@
     "featuresSub": "Details refined for daily use — not a checklist of features.",
     "downloadTitle": "Two ways to use it",
     "downloadSub": "A focused app that does just this, or a plugin inside your existing OTools workspace?",
+    "downloadTitlePlugin": "Install and go",
+    "downloadSubPlugin": "One-click install from the OTools plugin marketplace — works alongside your other tools in the same workspace.",
     "standaloneTitle": "Standalone app",
     "standaloneDesc": "A dedicated desktop app with the same engine but only this plugin’s features. Double-click and go — no OTools required.",
     "standaloneNote": "Installers live on GitHub Releases; built-in auto-update.",
@@ -666,11 +668,229 @@
       ]
     },
     "showcaseTitle": "In action",
-    "showcaseSub": "Every capability comes with a real screenshot — see what it looks like in daily work."
+    "showcaseSub": "Every capability comes with a real screenshot — see what it looks like in daily work.",
+    "standaloneSoon": "A standalone app is on the way — install the plugin from the OTools market today.",
+    "otools-puter-ps": {
+      "badge": "Built-in plugin",
+      "tagline": "Photo editing, right in your workspace",
+      "sub": "Layers, filters and adjustments in one window. Import and export local files without switching apps.",
+      "highlights": [
+        "Non-destructive layers",
+        "Rich filters & adjustments",
+        "Local import / export"
+      ],
+      "screens": [
+        "Editor"
+      ],
+      "features": [
+        {
+          "title": "Pro editing",
+          "desc": "Brush, selection, transform and more — smooth even on large images."
+        },
+        {
+          "title": "Layers",
+          "desc": "Multiple layers, blend modes and opacity — fully non-destructive."
+        },
+        {
+          "title": "Filters & adjustments",
+          "desc": "Curves, levels, blur/sharpen — all with live preview."
+        },
+        {
+          "title": "Local export",
+          "desc": "Save as PNG / JPEG / WebP and more, straight to your disk."
+        }
+      ]
+    },
+    "otools-puter-3d": {
+      "badge": "Built-in plugin",
+      "tagline": "3D scenes on your desktop",
+      "sub": "Model, material and animation in one workspace. Scenes live as local files you can reopen anytime.",
+      "highlights": [
+        "Real-time 3D viewport",
+        "Materials & lighting",
+        "Local project files"
+      ],
+      "screens": [
+        "Viewport"
+      ],
+      "features": [
+        {
+          "title": "Real-time viewport",
+          "desc": "WebGL rendering with smooth orbit, pan and zoom."
+        },
+        {
+          "title": "Modeling tools",
+          "desc": "Primitives, transforms and grouping to build scenes fast."
+        },
+        {
+          "title": "Materials & lighting",
+          "desc": "Assign materials and lights, see results instantly."
+        },
+        {
+          "title": "Animation timeline",
+          "desc": "Keyframes and motion paths with inline playback."
+        }
+      ]
+    },
+    "otools-puter-documents": {
+      "badge": "Built-in plugin",
+      "tagline": "A document editor that just works",
+      "sub": "Write, format and export in one window. Files are ordinary local documents you can open anywhere.",
+      "highlights": [
+        "WYSIWYG formatting",
+        "Local files first",
+        "Multi-format export"
+      ],
+      "screens": [
+        "Document"
+      ],
+      "features": [
+        {
+          "title": "Smooth editing",
+          "desc": "Headings, lists, tables and images — ready out of the box."
+        },
+        {
+          "title": "Formatting",
+          "desc": "Font, size, color and paragraph styles in one click."
+        },
+        {
+          "title": "Multi-format export",
+          "desc": "Export to DOCX / PDF and more, compatible with major suites."
+        },
+        {
+          "title": "Local first",
+          "desc": "Documents live in a local folder — plain files in Finder."
+        }
+      ]
+    },
+    "otools-puter-spreadsheet": {
+      "badge": "Built-in plugin",
+      "tagline": "Spreadsheets on your desktop",
+      "sub": "Formulas, charts and data wrangling in one screen. Files stay local — import CSV, export Excel with ease.",
+      "highlights": [
+        "Formulas & functions",
+        "Charts & visuals",
+        "CSV / Excel interchange"
+      ],
+      "screens": [
+        "Sheet"
+      ],
+      "features": [
+        {
+          "title": "Data grid",
+          "desc": "Smooth scrolling on big sheets; select, fill and sort with ease."
+        },
+        {
+          "title": "Formulas",
+          "desc": "Common functions with auto-recalc and error highlighting."
+        },
+        {
+          "title": "Charts",
+          "desc": "Turn data into bar, line and pie charts at a glance."
+        },
+        {
+          "title": "Import / export",
+          "desc": "Open CSV, save Excel — interoperate with other tools."
+        }
+      ]
+    },
+    "otools-puter-presentation": {
+      "badge": "Built-in plugin",
+      "tagline": "Presentations in your workspace",
+      "sub": "Edit, design and present in one window. Projects stay local so you can pick up where you left off.",
+      "highlights": [
+        "Slide editing",
+        "Themes & design",
+        "One-click present"
+      ],
+      "screens": [
+        "Slide"
+      ],
+      "features": [
+        {
+          "title": "Slide editing",
+          "desc": "Add, reorder and restyle slides; place text and shapes freely."
+        },
+        {
+          "title": "Design & themes",
+          "desc": "Built-in themes and quick styles for a consistent deck."
+        },
+        {
+          "title": "Animations",
+          "desc": "Animate elements and add slide transitions."
+        },
+        {
+          "title": "Present",
+          "desc": "One click to full-screen presenting with speaker notes."
+        }
+      ]
+    },
+    "otools-puter-audio": {
+      "badge": "Built-in plugin",
+      "tagline": "An audio workstation on your desktop",
+      "sub": "Multi-track editing, effects and mixing in one window. Projects stay local, export to common formats.",
+      "highlights": [
+        "Multi-track editing",
+        "Real-time effects",
+        "Local export"
+      ],
+      "screens": [
+        "Studio"
+      ],
+      "features": [
+        {
+          "title": "Multi-track timeline",
+          "desc": "Arrange, cut and fade across tracks with an intuitive timeline."
+        },
+        {
+          "title": "Tracks & effects",
+          "desc": "Add effects per track and monitor in real time."
+        },
+        {
+          "title": "Mixer",
+          "desc": "Volume, pan, mute/solo — mixing on a single screen."
+        },
+        {
+          "title": "Export",
+          "desc": "Export to WAV / MP3 and more, straight to local disk."
+        }
+      ]
+    },
+    "otools-video": {
+      "badge": "Built-in plugin",
+      "tagline": "Video editing on your desktop",
+      "sub": "Timeline editing, effects and export in one workspace. Media and projects stay local.",
+      "highlights": [
+        "Timeline editing",
+        "Real-time preview",
+        "Local export"
+      ],
+      "screens": [
+        "Editor"
+      ],
+      "features": [
+        {
+          "title": "Timeline editing",
+          "desc": "Multi-track timeline — cut, split and trim in one flow."
+        },
+        {
+          "title": "Real-time preview",
+          "desc": "Scrub the playhead and see edits instantly."
+        },
+        {
+          "title": "Effects & transitions",
+          "desc": "Add effects and transitions to enrich your footage."
+        },
+        {
+          "title": "Export",
+          "desc": "Export to common video formats, straight to local disk."
+        }
+      ]
+    }
   },
   "pluginGrid": {
     "title": "Meet the plugins",
-    "subtitle": "Every plugin ships as both a standalone desktop app and an in-app plugin. Open one to see what it can do for you.",
+    "subtitle": "From databases to design and presentations, your everyday tools in one workspace — open one to see what it can do.",
     "more": "Learn more"
   }
 }

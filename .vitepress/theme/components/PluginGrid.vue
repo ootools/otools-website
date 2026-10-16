@@ -1,20 +1,24 @@
 <script setup lang="ts">
-import { onBeforeUnmount, onMounted, ref } from 'vue';
+import { computed, onBeforeUnmount, onMounted, ref } from 'vue';
 import { withBase } from 'vitepress';
 import { useI18n } from '../i18n';
 import { pluginLandingKeys, pluginLandingMeta } from '../plugins/registry';
 
-const { t } = useI18n();
+const { t, localeKey } = useI18n();
 const root = ref<HTMLElement | null>(null);
 let io: IntersectionObserver | null = null;
 
-const cards = pluginLandingKeys.map((key) => ({
-  key,
-  name: pluginLandingMeta[key].name,
-  colors: pluginLandingMeta[key].colors,
-  logo: withBase(`/plugin-logos/${key}.svg`),
-  href: withBase(`/plugins/${key}`),
-}));
+// 卡片链接跟随当前语言：非根语言（en/ja/ko/fr/es/de/ru）跳到各自的
+// `<lang>/plugins/<key>` 页面，否则日语用户点卡会落到中文页。
+const cards = computed(() =>
+  pluginLandingKeys.map((key) => ({
+    key,
+    name: pluginLandingMeta[key].name,
+    colors: pluginLandingMeta[key].colors,
+    logo: withBase(`/plugin-logos/${key}.svg`),
+    href: withBase(localeKey.value === 'root' ? `/plugins/${key}` : `/${localeKey.value}/plugins/${key}`),
+  })),
+);
 
 onMounted(() => {
   io = new IntersectionObserver(

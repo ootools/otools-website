@@ -666,7 +666,227 @@
       ]
     },
     "showcaseTitle": "In der Praxis",
-    "showcaseSub": "Jede Funktion mit echtem Screenshot — sieh dir an, wie sie im Alltag aussieht."
+    "showcaseSub": "Jede Funktion mit echtem Screenshot — sieh dir an, wie sie im Alltag aussieht.",
+    "standaloneSoon": "Die Standalone-App-Version ist in Entwicklung; installiere das Plugin jetzt über den OTools-Marktplatz.",
+    "downloadTitlePlugin": "Installieren und loslegen",
+    "downloadSubPlugin": "Ein-Klick-Installation über den OTools-Marktplatz — zusammen mit deinen anderen Tools im selben Arbeitsbereich.",
+    "otools-puter-ps": {
+      "badge": "Integriertes Plugin",
+      "tagline": "Fotobearbeitung in deinem Arbeitsbereich",
+      "sub": "Ebenen, Filter und Korrekturen — alles dabei, Import und Export als lokale Dateien. Kein Springen zwischen Retuschprogrammen mehr.",
+      "highlights": [
+        "Nicht-destruktive Ebenenbearbeitung",
+        "Umfangreiche Filter und Korrekturen",
+        "Lokaler Import und Export"
+      ],
+      "screens": [
+        "Editor"
+      ],
+      "features": [
+        {
+          "title": "Professionelle Retusche",
+          "desc": "Pinsel, Auswahl, Transformieren — die Kernwerkzeuge sind da, große Bilder bleiben flüssig."
+        },
+        {
+          "title": "Ebenenverwaltung",
+          "desc": "Mehrere Ebenen, Mischmodi und Deckkraft — nicht-destruktiv, jederzeit änderbar."
+        },
+        {
+          "title": "Filter und Korrekturen",
+          "desc": "Kurven, Tonwerte, Weichzeichnen und Schärfen — mit Live-Vorschau."
+        },
+        {
+          "title": "Lokaler Export",
+          "desc": "Speichere als PNG, JPEG, WebP und andere gängige Formate — direkt auf die lokale Festplatte."
+        }
+      ]
+    },
+    "otools-puter-3d": {
+      "badge": "Integriertes Plugin",
+      "tagline": "3D-Szenen auf dem Desktop",
+      "sub": "Modellierung, Materialien und Animation in einem Arbeitsbereich — Szenen liegen als lokale Datei vor und lassen sich jederzeit weiterbearbeiten.",
+      "highlights": [
+        "Echtzeit-3D-Viewport",
+        "Materialien und Licht",
+        "Lokale Projektdateien"
+      ],
+      "screens": [
+        "Viewport"
+      ],
+      "features": [
+        {
+          "title": "Echtzeit-Viewport",
+          "desc": "WebGL-Rendering in Echtzeit — Drehen, Zoomen und Schwenken in einem Zug."
+        },
+        {
+          "title": "Modellierwerkzeuge",
+          "desc": "Grundgeometrien, Transformationen und Gruppierung — Szenen schnell aufgebaut."
+        },
+        {
+          "title": "Materialien und Licht",
+          "desc": "Objekten Materialien und Lichter zuweisen — das Ergebnis siehst du sofort."
+        },
+        {
+          "title": "Animations-Timeline",
+          "desc": "Keyframes und Bewegungspfade — Vorschau und Wiedergabe inklusive."
+        }
+      ]
+    },
+    "otools-puter-documents": {
+      "badge": "Integriertes Plugin",
+      "tagline": "Ein angenehmer Dokumenteneditor",
+      "sub": "Schreiben, Layout und Export in einem Fenster — die Dateien sind ganz normale lokale Dokumente, die sich jederzeit mit anderer Software öffnen lassen.",
+      "highlights": [
+        "WYSIWYG-Layout",
+        "Lokale Dateien zuerst",
+        "Export in mehreren Formaten"
+      ],
+      "screens": [
+        "Dokument"
+      ],
+      "features": [
+        {
+          "title": "Flüssiges Editieren",
+          "desc": "Überschriften, Listen, Tabellen, Bilder — gängige Formatierung ab Werk."
+        },
+        {
+          "title": "Formatierung",
+          "desc": "Schrift, Größe, Farbe und Absatzstile mit einem Klick."
+        },
+        {
+          "title": "Export in mehreren Formaten",
+          "desc": "Export nach DOCX, PDF und mehr — kompatibel mit gängiger Bürosoftware."
+        },
+        {
+          "title": "Lokal zuerst",
+          "desc": "Dokumente liegen in Ordnern auf deinem Rechner — ganz normale Dateien im Finder."
+        }
+      ]
+    },
+    "otools-puter-spreadsheet": {
+      "badge": "Integriertes Plugin",
+      "tagline": "Desktop-Tabellenkalkulation",
+      "sub": "Formeln, Diagramme und Datenaufbereitung auf einem Bildschirm — Tabellen liegen lokal, CSV-Import und Excel-Export inklusive.",
+      "highlights": [
+        "Formeln und Funktionen",
+        "Diagramme zur Visualisierung",
+        "CSV-/Excel-Austausch"
+      ],
+      "screens": [
+        "Tabelle"
+      ],
+      "features": [
+        {
+          "title": "Datengitter",
+          "desc": "Flüssiges Scrollen auch in großen Tabellen — Auswählen, Füllen und Sortieren gehen leicht von der Hand."
+        },
+        {
+          "title": "Formeln und Funktionen",
+          "desc": "Gängige Formeln mit automatischer Neuberechnung — Fehler werden hervorgehoben."
+        },
+        {
+          "title": "Diagramme",
+          "desc": "Daten als Balken-, Linien- oder Kreisdiagramm — auf einen Blick erfassbar."
+        },
+        {
+          "title": "Import und Export",
+          "desc": "CSV öffnen, als Excel speichern — fügt sich nahtlos in deine anderen Tools ein."
+        }
+      ]
+    },
+    "otools-puter-presentation": {
+      "badge": "Integriertes Plugin",
+      "tagline": "Präsentationen in deinem Arbeitsbereich",
+      "sub": "Folien bearbeiten, gestalten und präsentieren in einem Fenster — Projekte liegen lokal und lassen sich überall weiterbearbeiten.",
+      "highlights": [
+        "Folienbearbeitung",
+        "Themen und Design",
+        "Präsentation mit einem Klick"
+      ],
+      "screens": [
+        "Folie"
+      ],
+      "features": [
+        {
+          "title": "Folienbearbeitung",
+          "desc": "Hinzufügen, Umsortieren, Layout wechseln — Texte und Formen frei platzieren."
+        },
+        {
+          "title": "Design und Themen",
+          "desc": "Integrierte Themes und Schnellstile für einen einheitlichen Look."
+        },
+        {
+          "title": "Animationen und Übergänge",
+          "desc": "Elementen und Seiten Animationen sowie Übergänge hinzufügen."
+        },
+        {
+          "title": "Präsentation",
+          "desc": "Ein Klick zur Vollbild-Präsentation — Sprechernotizen immer im Blick."
+        }
+      ]
+    },
+    "otools-puter-audio": {
+      "badge": "Integriertes Plugin",
+      "tagline": "Desktop-Audiostation",
+      "sub": "Mehrspur-Editing, Effekte und Mixing in einem Fenster — Audioprojekte liegen lokal und exportieren in gängige Formate.",
+      "highlights": [
+        "Mehrspur-Editing",
+        "Echtzeit-Effekte",
+        "Lokaler Export"
+      ],
+      "screens": [
+        "Station"
+      ],
+      "features": [
+        {
+          "title": "Mehrspur-Timeline",
+          "desc": "Spuren anordnen, schneiden, Ein- und Ausblenden — intuitiv und effizient."
+        },
+        {
+          "title": "Spuren und Effekte",
+          "desc": "Spuren Effekte hinzufügen und das Ergebnis live mithören."
+        },
+        {
+          "title": "Mischpult",
+          "desc": "Lautstärke, Pan, Stummschaltung und Solo — der Mix entsteht auf einem Bildschirm."
+        },
+        {
+          "title": "Export",
+          "desc": "Export nach WAV, MP3 und weiteren Formaten — direkt lokal gespeichert."
+        }
+      ]
+    },
+    "otools-video": {
+      "badge": "Integriertes Plugin",
+      "tagline": "Desktop-Videobearbeitung",
+      "sub": "Timeline-Schnitt, Effekte und Export in einem Arbeitsbereich — Material und Projekt bleiben lokal.",
+      "highlights": [
+        "Timeline-Schnitt",
+        "Echtzeit-Vorschau",
+        "Lokaler Export"
+      ],
+      "screens": [
+        "Editor"
+      ],
+      "features": [
+        {
+          "title": "Timeline-Schnitt",
+          "desc": "Mehrspur-Timeline — schneiden, teilen und zusammensetzen in einem Zug."
+        },
+        {
+          "title": "Echtzeit-Vorschau",
+          "desc": "Vorschau am Abspielkopf — jede Änderung ist sofort sichtbar."
+        },
+        {
+          "title": "Effekte und Übergänge",
+          "desc": "Clips mit Effekten und Übergängen versehen — für ausdrucksstärkere Bilder."
+        },
+        {
+          "title": "Export",
+          "desc": "Export in gängige Videoformate — direkt auf die lokale Festplatte."
+        }
+      ]
+    }
   },
   "pluginGrid": {
     "title": "Die Plugins im Detail",

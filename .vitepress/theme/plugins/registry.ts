@@ -8,21 +8,38 @@ export type PluginLandingKey =
   | 'otools-mqtt'
   | 'otools-ftp'
   | 'otools-servrun'
-  | 'otools-scrcpy';
+  | 'otools-scrcpy'
+  | 'otools-puter-ps'
+  | 'otools-puter-3d'
+  | 'otools-puter-documents'
+  | 'otools-puter-spreadsheet'
+  | 'otools-puter-presentation'
+  | 'otools-puter-audio'
+  | 'otools-video';
 
 export interface PluginLandingMeta {
   /** 展示名（品牌名不翻译） */
   name: string;
   /** 主题色（渐变起止） */
   colors: [string, string];
-  /** 独立版下载地址（otools-publish 的版本化 tag） */
+  /** 独立版下载地址（otools-publish 的版本化 tag）；plugin-only 插件为 '' */
   releases: string;
-  /** 截图场景（文件位于 /public/plugins/<key>/<scene>-{light,dark}.png） */
+  /** 截图场景（文件位于 /public/plugins/<key>/<scene>-{light,dark}.webp） */
   screenshots: Array<{ key: string; label: string }>;
   /** 首页高亮点数量（文案在 locale 里） */
   highlights: string[];
   /** 功能特性；带 `shot` 的特性会在「功能实景」区以「图文交替」形式展示 */
   features: Array<{ key: string; shot?: string }>;
+  /** 是否提供独立 APP 版下载；缺省 / true = 提供。puter 插件与 video 目前只上插件市场。 */
+  standalone?: boolean;
+  /**
+   * 截图固定用暗黑版（网页亮色也显示暗黑截图）。
+   * 创作类软件（修图 / 3D / 音频 / 视频）的行业惯例就是暗色界面——PS、Premiere、
+   * Blender、各 DAW 莫不如此，亮色 UI 反而像换了个产品。故这些插件只拍暗黑场景，
+   * 且不随站点明暗切换。办公类（documents/spreadsheet/presentation）不设此标记，
+   * 继续跟随站点主题。
+   */
+  forceDarkShot?: boolean;
 }
 
 // ⚠️ 主题色必须逐段对齐 `public/plugin-logos/<key>.svg` 里的渐变 stop：
@@ -41,6 +58,14 @@ export const pluginAccent = {
   ollama: ['#7c3aed', '#a855f7'],
   audio: ['#f43f5e', '#be123c'],
   http: ['#0ea5e9', '#2563eb'],
+  // puter 插件与 video 的 logo 是上游 PNG 光栅图（无渐变 stop），主题色按 logo 主色手工登记。
+  'puter-ps': ['#ec4899', '#8b5cf6'],
+  'puter-3d': ['#22d3ee', '#6366f1'],
+  'puter-documents': ['#5b8def', '#2f5bb0'],
+  'puter-spreadsheet': ['#34a853', '#1b7a3d'],
+  'puter-presentation': ['#f0653a', '#b3341b'],
+  'puter-audio': ['#22d3ee', '#e879f9'],
+  video: ['#0ea5e9', '#7c3aed'],
 } satisfies Record<string, [string, string]>;
 
 const RELEASES = 'https://github.com/ootools/otools-publish/releases/tag';
@@ -177,6 +202,111 @@ export const pluginLandingMeta: Record<PluginLandingKey, PluginLandingMeta> = {
       { key: 'mirror', shot: 'devices' },
       { key: 'control', shot: 'mirror' },
       { key: 'wireless' },
+    ],
+  },
+
+  // ── puter 插件（只提供插件，不发布独立 APP：standalone=false）──────────────
+  // 截图当前每个插件一张主视图（main）；后续可在 scripts/puter-shots 补场景。
+  'otools-puter-ps': {
+    name: 'Photo Studio',
+    colors: pluginAccent['puter-ps'],
+    releases: '',
+    standalone: false,
+    forceDarkShot: true,
+    screenshots: [{ key: 'main', label: 'Editor' }],
+    highlights: ['', '', ''],
+    features: [
+      { key: 'edit', shot: 'main' },
+      { key: 'layers' },
+      { key: 'filters' },
+      { key: 'export' },
+    ],
+  },
+  'otools-puter-3d': {
+    name: '3D',
+    colors: pluginAccent['puter-3d'],
+    releases: '',
+    standalone: false,
+    forceDarkShot: true,
+    screenshots: [{ key: 'main', label: 'Viewport' }],
+    highlights: ['', '', ''],
+    features: [
+      { key: 'scene', shot: 'main' },
+      { key: 'model' },
+      { key: 'material' },
+      { key: 'animate' },
+    ],
+  },
+  'otools-puter-documents': {
+    name: 'Documents',
+    colors: pluginAccent['puter-documents'],
+    releases: '',
+    standalone: false,
+    screenshots: [{ key: 'main', label: 'Document' }],
+    highlights: ['', '', ''],
+    features: [
+      { key: 'edit', shot: 'main' },
+      { key: 'format' },
+      { key: 'export' },
+      { key: 'local' },
+    ],
+  },
+  'otools-puter-spreadsheet': {
+    name: 'Spreadsheet',
+    colors: pluginAccent['puter-spreadsheet'],
+    releases: '',
+    standalone: false,
+    screenshots: [{ key: 'main', label: 'Sheet' }],
+    highlights: ['', '', ''],
+    features: [
+      { key: 'grid', shot: 'main' },
+      { key: 'formula' },
+      { key: 'chart' },
+      { key: 'import' },
+    ],
+  },
+  'otools-puter-presentation': {
+    name: 'Presentation',
+    colors: pluginAccent['puter-presentation'],
+    releases: '',
+    standalone: false,
+    screenshots: [{ key: 'main', label: 'Slide' }],
+    highlights: ['', '', ''],
+    features: [
+      { key: 'slide', shot: 'main' },
+      { key: 'design' },
+      { key: 'animate' },
+      { key: 'present' },
+    ],
+  },
+  'otools-puter-audio': {
+    name: 'Audio Studio',
+    colors: pluginAccent['puter-audio'],
+    releases: '',
+    standalone: false,
+    forceDarkShot: true,
+    screenshots: [{ key: 'main', label: 'Studio' }],
+    highlights: ['', '', ''],
+    features: [
+      { key: 'edit', shot: 'main' },
+      { key: 'tracks' },
+      { key: 'effects' },
+      { key: 'export' },
+    ],
+  },
+  'otools-video': {
+    name: 'Video',
+    colors: pluginAccent.video,
+    releases: '',
+    standalone: false,
+    forceDarkShot: true,
+    screenshots: [{ key: 'main', label: 'Editor' }],
+    highlights: ['', '', ''],
+    features: [
+      { key: 'edit', shot: 'main' },
+      { key: 'timeline' },
+      { key: 'effects' },
+      { key: 'export' },
     ],
   },
 };

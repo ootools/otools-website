@@ -11,6 +11,8 @@ aside: false
 
 <PluginShowcase />
 
+
+<PluginGrid />
 <TabsWorkflow />
 
 <DocCta />

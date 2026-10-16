@@ -34,8 +34,12 @@ const shotLang = computed(() => SHOT_LANG[localeKey.value] ?? 'zh-CN');
 // 截图统一用 WebP（体积约为 PNG 的 1/3，UI 小字在原生 2x 分辨率下无可见损失）。
 // 目录里同时存在 `<name>-<theme>.webp`（中文副本，SEO/OG 与不支持 JS 的场景兜底）
 // 与 `<name>-<lang>-<theme>.webp`（逐语言副本）。
+// ⚠️ forceDarkShot（创作类软件：修图 / 3D / 音频 / 视频）固定取暗黑文件——
+// 行业惯例就是暗色界面（PS / Premiere / Blender / DAW 莫不如此），亮色站点下
+// 展示暗色 UI 反而对味。此时 hero 的亮/暗双图槽都指向暗黑文件，CSS 的 .dark
+// 切换无论命中哪一槽，用户看到的都是同一张暗黑截图。
 const shot = (name: string, theme: 'light' | 'dark') =>
-  `${base}/${name}-${shotLang.value}-${theme}.webp`;
+  `${base}/${name}-${shotLang.value}-${meta.value.forceDarkShot ? 'dark' : theme}.webp`;
 
 // ── 主题（明/暗）────────────────────────────────────────────────────────────
 const isDark = ref(false);
@@ -91,6 +95,23 @@ onBeforeUnmount(() => {
 const releaseUrl = computed(() => meta.value.releases);
 const logoUrl = computed(() => withBase(`/plugin-logos/${props.plugin}.svg`));
 const guideLink = withBase('/guide/overview');
+
+// 是否提供独立 APP 版下载。puter 插件与 video 目前只上插件市场，不发布独立 APP，
+// 此时隐藏「下载独立版」CTA 与独立下载卡，插件卡升级为主卡。
+const isStandalone = computed(() => meta.value.standalone !== false);
+
+// 截图缺语言兜底：插件只自带 zh-CN / en-US，其余站点语种（de/ja/ko/es/ru，fr→en）
+// 请求不到对应 `<scene>-<lang>-<theme>.webp` 时，回退到 neutral 副本 `<scene>-<theme>.webp`。
+const onImgError = (e) => {
+  const img = e.target;
+  if (img.dataset.shotFallback) return;
+  const src = img.getAttribute('src') || '';
+  const neutral = src.replace(/-(?:zh-CN|en-US|ja-JP|ko-KR|es-ES|de-DE|ru-RU|fr-FR|ar-SA)-(light|dark)\.webp$/, '-$1.webp');
+  if (neutral && neutral !== src) {
+    img.dataset.shotFallback = '1';
+    img.src = neutral;
+  }
+};
 </script>
 
 <template>
@@ -111,10 +132,10 @@ const guideLink = withBase('/guide/overview');
           <p class="pl-tagline">{{ t(`pluginLanding.${plugin}.tagline`) }}</p>
           <p class="pl-sub">{{ t(`pluginLanding.${plugin}.sub`) }}</p>
           <div class="pl-cta">
-            <a class="pl-btn pl-btn-primary" :href="releaseUrl" target="_blank" rel="noopener">
+            <a v-if="isStandalone" class="pl-btn pl-btn-primary" :href="releaseUrl" target="_blank" rel="noopener">
               {{ t('pluginLanding.downloadStandalone') }}
             </a>
-            <a class="pl-btn pl-btn-ghost" :href="guideLink">
+            <a class="pl-btn" :class="isStandalone ? 'pl-btn-ghost' : 'pl-btn-primary'" :href="guideLink">
               {{ t('pluginLanding.getPlugin') }}
             </a>
           </div>
@@ -129,8 +150,8 @@ const guideLink = withBase('/guide/overview');
               <span class="pl-dot pl-dot-r"></span><span class="pl-dot pl-dot-y"></span><span class="pl-dot pl-dot-g"></span>
               <span class="pl-window-title">{{ meta.name }}</span>
             </div>
-            <img :src="shot(meta.screenshots[0].key, 'light')" :alt="meta.name" class="pl-window-img pl-window-light" />
-            <img :src="shot(meta.screenshots[0].key, 'dark')" :alt="meta.name" class="pl-window-img pl-window-dark" />
+            <img :src="shot(meta.screenshots[0].key, 'light')" :alt="meta.name" class="pl-window-img pl-window-light" @error="onImgError" />
+            <img :src="shot(meta.screenshots[0].key, 'dark')" :alt="meta.name" class="pl-window-img pl-window-dark" @error="onImgError" />
           </div>
         </div>
       </div>
@@ -145,7 +166,7 @@ const guideLink = withBase('/guide/overview');
         </header>
         <div class="pl-gallery pl-reveal">
           <div class="pl-gallery-stage">
-            <img :src="currentSrc" :alt="currentShot.label" class="pl-gallery-img" />
+            <img :src="currentSrc" :alt="currentShot.label" class="pl-gallery-img" @error="onImgError" />
           </div>
           <div class="pl-gallery-thumbs">
             <button
@@ -155,7 +176,7 @@ const guideLink = withBase('/guide/overview');
               :class="{ active: i === activeShot }"
               @click="selectShot(i)"
             >
-              <img :src="shot(s.key, currentTheme)" :alt="s.label" />
+              <img :src="shot(s.key, currentTheme)" :alt="s.label" @error="onImgError" />
               <span>{{ t(`pluginLanding.${plugin}.screens.${i}`) }}</span>
             </button>
           </div>
@@ -184,8 +205,8 @@ const guideLink = withBase('/guide/overview');
                   <span class="pl-dot pl-dot-r"></span><span class="pl-dot pl-dot-y"></span><span class="pl-dot pl-dot-g"></span>
                   <span class="pl-window-title">{{ meta.name }}</span>
                 </div>
-                <img :src="shot(row.shot, 'light')" :alt="row.shot" class="pl-window-img pl-window-light" />
-                <img :src="shot(row.shot, 'dark')" :alt="row.shot" class="pl-window-img pl-window-dark" />
+                <img :src="shot(row.shot, 'light')" :alt="row.shot" class="pl-window-img pl-window-light" @error="onImgError" />
+                <img :src="shot(row.shot, 'dark')" :alt="row.shot" class="pl-window-img pl-window-dark" @error="onImgError" />
               </div>
             </div>
             <div class="pl-show-text">
@@ -226,11 +247,11 @@ const guideLink = withBase('/guide/overview');
     <section class="pl-section" id="download">
       <div class="pl-container">
         <header class="pl-section-head pl-reveal">
-          <h2>{{ t('pluginLanding.downloadTitle') }}</h2>
-          <p>{{ t('pluginLanding.downloadSub') }}</p>
+          <h2>{{ t(isStandalone ? 'pluginLanding.downloadTitle' : 'pluginLanding.downloadTitlePlugin') }}</h2>
+          <p>{{ t(isStandalone ? 'pluginLanding.downloadSub' : 'pluginLanding.downloadSubPlugin') }}</p>
         </header>
         <div class="pl-downloads">
-          <article class="pl-dl-card pl-dl-primary pl-reveal" :style="{ '--pl-from': meta.colors[0], '--pl-to': meta.colors[1] }">
+          <article v-if="isStandalone" class="pl-dl-card pl-dl-primary pl-reveal" :style="{ '--pl-from': meta.colors[0], '--pl-to': meta.colors[1] }">
             <div class="pl-dl-tag">{{ t('pluginLanding.recommended') }}</div>
             <h3>{{ t('pluginLanding.standaloneTitle') }}</h3>
             <p>{{ t('pluginLanding.standaloneDesc') }}</p>
@@ -245,7 +266,8 @@ const guideLink = withBase('/guide/overview');
             <p class="pl-dl-note">{{ t('pluginLanding.standaloneNote') }}</p>
           </article>
 
-          <article class="pl-dl-card pl-reveal" :style="{ '--d': '120ms' }">
+          <article class="pl-dl-card pl-reveal" :class="{ 'pl-dl-primary': !isStandalone }" :style="{ '--d': '120ms' }">
+            <div v-if="!isStandalone" class="pl-dl-tag">{{ t('pluginLanding.recommended') }}</div>
             <h3>{{ t('pluginLanding.pluginTitle') }}</h3>
             <p>{{ t('pluginLanding.pluginDesc') }}</p>
             <ol class="pl-dl-steps">
@@ -253,10 +275,11 @@ const guideLink = withBase('/guide/overview');
               <li>{{ t('pluginLanding.pluginStep2') }}</li>
               <li>{{ t('pluginLanding.pluginStep3') }}</li>
             </ol>
-            <a class="pl-btn pl-btn-ghost pl-btn-block" :href="guideLink">
+            <a class="pl-btn pl-btn-block" :class="isStandalone ? 'pl-btn-ghost' : 'pl-btn-primary'" :href="guideLink">
               {{ t('pluginLanding.getPlugin') }}
             </a>
-            <p class="pl-dl-note">{{ t('pluginLanding.pluginNote') }}</p>
+            <p v-if="!isStandalone" class="pl-dl-note">{{ t('pluginLanding.standaloneSoon') }}</p>
+            <p v-else class="pl-dl-note">{{ t('pluginLanding.pluginNote') }}</p>
           </article>
         </div>
       </div>
