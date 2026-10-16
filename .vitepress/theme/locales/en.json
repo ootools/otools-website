@@ -875,7 +875,8 @@
       "screens": [
         "Template project",
         "New project",
-        "Text track"
+        "Text track",
+        "Playhead at 2/3"
       ],
       "features": [
         {
@@ -897,6 +898,10 @@
         {
           "title": "Text & captions",
           "desc": "Drop a text track on the timeline and edit titles, captions and labels — what you see is what you get."
+        },
+        {
+          "title": "Precise seeking",
+          "desc": "Drop the playhead anywhere — or at the 2/3 mark — to preview that frame and line up your cuts with exact timing."
         }
       ]
     }

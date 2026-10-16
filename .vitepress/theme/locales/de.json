@@ -875,7 +875,8 @@
       "screens": [
         "Vorlagenprojekt",
         "Neues Projekt",
-        "Textspur"
+        "Textspur",
+        "Playhead bei 2/3"
       ],
       "features": [
         {
@@ -897,6 +898,10 @@
         {
           "title": "Text & Untertitel",
           "desc": "Lege eine Textspur auf der Timeline an und bearbeite Titel, Untertitel und Beschriftungen — was du siehst, ist was du bekommst."
+        },
+        {
+          "title": "Präzises Suchen",
+          "desc": "Setze den Abspielkopf überallhin — oder auf die 2/3-Marke — um genau dieses Bild zu sehen und Schnitte punktgenau zu setzen."
         }
       ]
     }

@@ -875,7 +875,8 @@
       "screens": [
         "Proyecto desde plantilla",
         "Nuevo proyecto",
-        "Pista de texto"
+        "Pista de texto",
+        "Cabezal en 2/3"
       ],
       "features": [
         {
@@ -897,6 +898,10 @@
         {
           "title": "Texto y subtítulos",
           "desc": "Añade una pista de texto en la línea de tiempo y edita títulos, subtítulos y etiquetas; lo que ves es lo que obtienes."
+        },
+        {
+          "title": "Búsqueda precisa",
+          "desc": "Lleva el cabezal a cualquier punto — o a la marca de 2/3 — para previsualizar ese fotograma y alinear los cortes con precisión."
         }
       ]
     }

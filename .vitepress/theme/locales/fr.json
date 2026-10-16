@@ -875,7 +875,8 @@
       "screens": [
         "Projet depuis un modèle",
         "Nouveau projet",
-        "Piste de texte"
+        "Piste de texte",
+        "Tête de lecture à 2/3"
       ],
       "features": [
         {
@@ -897,6 +898,10 @@
         {
           "title": "Texte & sous-titres",
           "desc": "Posez une piste de texte sur la timeline et éditez titres, sous-titres et libellés — ce que vous voyez est ce que vous obtenez."
+        },
+        {
+          "title": "Repérage précis",
+          "desc": "Placez la tête de lecture où vous voulez — ou sur la marque des 2/3 — pour prévisualiser cette image et aligner vos coupes au pixel près."
         }
       ]
     }

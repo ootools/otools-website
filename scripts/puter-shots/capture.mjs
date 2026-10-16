@@ -117,6 +117,7 @@ const PLUGINS = {
       { key: 'template', waitMs: 6000, actions: openFirstTemplate },
       { key: 'editor', waitMs: 5500, actions: (p) => clickAndWait(p, 'button.new-banner', 'div.editor .tl-tracks') },
       { key: 'text', waitMs: 6000, actions: openTemplateWithText },
+      { key: 'seek', waitMs: 6000, actions: openTemplateSeek2_3 },
     ],
   },
 };
@@ -332,6 +333,31 @@ async function openTemplateWithText(page) {
   await page.waitForTimeout(1600); // 文本检查器展开 + 播放器首帧
   const ok = await page.evaluate(() => !!document.querySelector('.tl-clip.type-text.selected'));
   return `${r1} | textSelected=${ok}`;
+}
+
+// video：打开模板（时间线已有内容）→ 把播放头定位到工程总时长的 2/3 处。
+// 用 dev 模式暴露的 window.vs.ctx.store：seek(t) 立即移动播放头（emit 'time'），
+// duration 是工程总时长；2/3 处播放器显示对应帧、时间线标尺 + 播放头也落在 2/3，
+// 直观体现「定位到 2/3 播放处」。比空工程更真实——时间线多轨内容齐全。
+async function openTemplateSeek2_3(page) {
+  const r1 = await openFirstTemplate(page); // 开模板，时间线出现 clip
+  await page.waitForTimeout(700);
+  const res = await page.evaluate(() => {
+    try {
+      const s = window.vs?.ctx?.store;
+      if (!s) return { ok: false, reason: 'store unavailable' };
+      const d = s.duration;
+      if (!d || d <= 0) return { ok: false, reason: 'duration=0' };
+      const t = Math.round(d * 2 / 3);
+      s.seek(t);
+      return { ok: true, dur: d, t };
+    } catch (e) {
+      return { ok: false, reason: String(e) };
+    }
+  });
+  if (!res.ok) return `${r1} | seek NOT applied (${res.reason})`;
+  await page.waitForTimeout(1600); // 播放头移动 + 播放器对应帧渲染（可能带过渡）
+  return `${r1} | seek=${res.t}/${res.dur}`;
 }
 
 // 通用：点一个选择器，等目标选择器出现。
