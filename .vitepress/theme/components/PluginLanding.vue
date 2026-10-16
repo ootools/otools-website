@@ -414,7 +414,7 @@ const onImgError = (e) => {
   width: 46px; height: 46px; border-radius: 12px; display: grid; place-items: center; margin-bottom: 14px;
   background: linear-gradient(135deg, var(--ic-from), var(--ic-to));
 }
-.pl-feature-icon img { width: 26px; height: 26px; filter: brightness(0) invert(1); }
+.pl-feature-icon img { width: 100%; height: 100%; border-radius: 12px; display: block; }
 .pl-feature h3 { font-size: 17px; margin: 0 0 8px; }
 .pl-feature p { font-size: 14px; line-height: 1.7; color: var(--vp-c-text-2); margin: 0; }
 

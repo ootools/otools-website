@@ -83,7 +83,7 @@ onBeforeUnmount(() => io?.disconnect());
   width: 46px; height: 46px; border-radius: 12px; display: grid; place-items: center; margin-bottom: 8px;
   background: linear-gradient(135deg, var(--pg-from), var(--pg-to));
 }
-.pg-icon img { width: 26px; height: 26px; filter: brightness(0) invert(1); }
+.pg-icon img { width: 100%; height: 100%; border-radius: 12px; display: block; }
 .pg-name { font-size: 18px; font-weight: 700; color: var(--vp-c-text-1); }
 .pg-tagline { font-size: 13.5px; line-height: 1.6; color: var(--vp-c-text-2); min-height: 42px; }
 .pg-more { margin-top: 6px; font-size: 13px; font-weight: 600; color: var(--pg-ink); }
