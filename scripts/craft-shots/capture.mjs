@@ -329,10 +329,18 @@ async function main() {
   const keys = ONLY ? [ONLY] : Object.keys(PLUGINS);
   // 软件 WebGL：egui 走 wgpu/WebGL，无头 Chrome 默认拿不到 GL 上下文会全黑，
   // SwiftShader 用 CPU 软渲染兜底。
+  // `--force-device-scale-factor` 是关键：Playwright 的 `deviceScaleFactor` 只改
+  // window.devicePixelRatio，不会让浏览器真正按 2x 光栅化——ResizeObserver 上报的
+  // devicePixelContentBoxSize 仍是 CSS 尺寸（1440x900），eframe 据此把 canvas 后备
+  // 缓冲也设成 1440，截图再被拉伸到 2880x1800，等于 1x 内容插值放大（发虚）。
+  // 这个 flag 让 Chrome 真正以 2x 渲染，canvas 缓冲 = 2880x1800，截图 1:1 无损。
   const browser = await chromium.launch({
     executablePath: CHROME,
     headless: true,
-    args: ['--use-gl=angle', '--use-angle=swiftshader', '--enable-unsafe-swiftshader', '--ignore-gpu-blocklist'],
+    args: [
+      '--use-gl=angle', '--use-angle=swiftshader', '--enable-unsafe-swiftshader', '--ignore-gpu-blocklist',
+      `--force-device-scale-factor=${SCALE}`,
+    ],
   });
   try {
     for (const key of keys) {
