@@ -635,16 +635,10 @@ async function main() {
   const keys = ONLY ? [ONLY] : Object.keys(PLUGINS).filter((k) => k !== 'scenes');
   // 软件 WebGL：3d 插件的视口依赖 WebGL2，无头 Chrome 默认拿不到 GL 上下文，
   // 整个视口会是黑的。SwiftShader 让 CPU 软件渲染兜底。
-  // `--force-device-scale-factor` 与 SCALE 必须一致：Playwright 的 deviceScaleFactor
-  // 只改 window.devicePixelRatio，不驱动真实光栅化——没有这个 flag 时页面按 1x 渲染，
-  // 截图被插值放大到 2880x1800（DOM 文字与 WebGL 画布都发虚）。
   const browser = await chromium.launch({
     executablePath: CHROME,
     headless: true,
-    args: [
-      '--use-gl=angle', '--use-angle=swiftshader', '--enable-unsafe-swiftshader', '--ignore-gpu-blocklist',
-      `--force-device-scale-factor=${SCALE}`,
-    ],
+    args: ['--use-gl=angle', '--use-angle=swiftshader', '--enable-unsafe-swiftshader', '--ignore-gpu-blocklist'],
   });
   try {
     for (const key of keys) {
