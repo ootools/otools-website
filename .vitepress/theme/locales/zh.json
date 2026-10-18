@@ -428,7 +428,7 @@
     "getPlugin": "获取插件版",
     "recommended": "推荐",
     "galleryTitle": "界面一览",
-    "gallerySub": "以下截图由插件真实界面渲染（明 / 暗主题随站点自动切换）。",
+    "gallerySub": "以下截图均由插件真实界面渲染（2x 高清）。",
     "featuresTitle": "核心能力",
     "featuresSub": "为日常使用打磨过的细节，而不是功能清单的堆砌。",
     "downloadTitle": "两种用法，任选其一",
@@ -1134,5 +1134,325 @@
     "title": "逐个插件深入了解",
     "subtitle": "从数据库到设计演示，常用工具都装进同一个工作台，点开看看它能为你做什么。",
     "more": "查看详情"
+  },
+  "home": {
+    "hero": {
+      "eyebrow": "免费开源 · 一次装齐 40+ 生产力工具",
+      "titleLine1": "一个平台，",
+      "titleLine2": "替代一整排商业软件",
+      "desc": "OTools 把 <b>办公套件、创意设计、开发运维</b> 装进同一个桌面工作台：WPS、Photoshop、Premiere、Git、Navicat 们做的事，这里全部<b>免费</b>，还能被 <b>一个 MCP</b> 统一驱动。",
+      "ctaDownload": "免费获取内测版",
+      "ctaDocs": "查看文档",
+      "badges": [
+        "完全免费，无订阅无广告",
+        "一个 MCP 驱动全部插件",
+        "Rust 内核，约 20MB",
+        "Windows / macOS"
+      ],
+      "scroll": "向下滚动探索",
+      "modalTitle": "加入内测",
+      "modalDesc": "扫码加入内测微信群，获取下载地址与更新通知。",
+      "windows": {
+        "documents": {
+          "title": "文字与文档",
+          "sub": "写作 / 排版 / 导出 PDF"
+        },
+        "ps": {
+          "title": "图像编辑",
+          "sub": "图层 / 蒙版 / 滤镜"
+        },
+        "git": {
+          "title": "代码版本控制",
+          "sub": "多仓库 / Diff / AI 提交"
+        },
+        "video": {
+          "title": "视频剪辑",
+          "sub": "时间线 / 多轨 / 导出"
+        },
+        "dbm": {
+          "title": "数据库管理",
+          "sub": "多库连接 / 查询 / 表结构"
+        }
+      }
+    },
+    "marquee": {
+      "label": "40+ 插件，持续更新"
+    },
+    "replace": {
+      "eyebrow": "平替清单",
+      "title": "用一套 OTools，<em>替掉一整排付费软件</em>",
+      "subtitle": "不是「轻量版」或「阉割版」——这些插件就是按真实工作流做的完整工具，且免费提供。",
+      "badge": "免费",
+      "groups": {
+        "office": {
+          "title": "办公套件",
+          "sub": "对标 WPS Office 与 Microsoft 365"
+        },
+        "creative": {
+          "title": "创意设计",
+          "sub": "对标 Adobe Creative Cloud 全家桶"
+        },
+        "dev": {
+          "title": "开发运维",
+          "sub": "对标开发者常用的付费工具链"
+        }
+      },
+      "items": {
+        "word": "长文写作、样式排版、导出 PDF 与 DOCX",
+        "excel": "大数据量表格、公式计算、图表可视化",
+        "ppt": "模板化演示、版式设计、动画与放映",
+        "pdf": "阅读批注、页面组织、表单与加密",
+        "indesign": "多页版式、主页与样式、印刷级导出",
+        "photoshop": "图层编辑、蒙版、滤镜与批量处理",
+        "illustrator": "钢笔与布尔运算、渐变、矢量导出",
+        "premiere": "多轨时间线、转场、字幕与渲染导出",
+        "aftereffects": "合成、关键帧与特效渲染",
+        "audition": "多轨音频、波形编辑、效果链",
+        "lightroom": "照片图库、调色、RAW 与批量导出",
+        "blender": "三维建模、材质、动画与渲染",
+        "autocad": "二维制图、图层与命令、DXF 交换",
+        "canva": "拼图排版、滤镜外观、一键导出",
+        "github-desktop": "仓库总览、暂存提交、历史与 Diff",
+        "navicat": "多库连接、SQL 查询、表结构管理",
+        "iterm": "SSH 会话、SFTP 文件、端口转发",
+        "laragon": "本地 Nginx / PHP / MySQL / Redis 一键管理",
+        "mqttx": "MQTT 连接、订阅发布、消息追踪",
+        "filezilla": "双栏 FTP 传输、TLS 加密",
+        "scrcpy": "安卓投屏、鼠标键盘控制、无线连接"
+      }
+    },
+    "story": {
+      "eyebrow": "三大工作流",
+      "title": "一条滚动，<em>看完整个工作台</em>",
+      "subtitle": "继续向下滚动，逐个看清 OTools 真实运行时的界面与能力。",
+      "acts": {
+        "office": "办公文档",
+        "creative": "创意设计",
+        "dev": "开发运维"
+      },
+      "scenes": {
+        "documents": {
+          "tagline": "从空白页到成稿，排版、样式、导出一次到位。",
+          "features": [
+            "模板化新建文档，开箱即写",
+            "样式与版式所见即所得",
+            "导出 PDF / DOCX，本地处理不上传"
+          ]
+        },
+        "spreadsheet": {
+          "tagline": "海量单元格依然顺滑，公式与图表随手可用。",
+          "features": [
+            "示例与预算模板直接开用",
+            "公式计算与图表可视化",
+            "导入导出 Excel 兼容格式"
+          ]
+        },
+        "presentation": {
+          "tagline": "模板驱动的演示创作，从大纲到放映一气呵成。",
+          "features": [
+            "多套内置演示模板",
+            "幻灯片版式与视觉设计",
+            "动画过渡与全屏放映"
+          ]
+        },
+        "pdfcraft": {
+          "tagline": "阅读、整理、安全处理，一个 PDF 工作台搞定。",
+          "features": [
+            "阅读批注与页面组织",
+            "合并拆分、表单与加密",
+            "Rust / WASM 内核，秒开大文件"
+          ]
+        },
+        "ps": {
+          "tagline": "图层、蒙版、滤镜齐备的桌面级图像编辑。",
+          "features": [
+            "图层与蒙版精细编辑",
+            "滤镜与色彩调整管线",
+            "批量导出，支持多种格式"
+          ]
+        },
+        "vectorcraft": {
+          "tagline": "钢笔、布尔运算与渐变，矢量设计一应俱全。",
+          "features": [
+            "钢笔工具与节点编辑",
+            "布尔运算与路径管理",
+            "渐变填充与 SVG 导出"
+          ]
+        },
+        "video": {
+          "tagline": "多轨时间线剪辑，模板、字幕、转场全内置。",
+          "features": [
+            "模板工程一键开剪",
+            "多轨时间线与文本轨",
+            "转场、特效与渲染导出"
+          ]
+        },
+        "audio": {
+          "tagline": "多轨录音、波形编辑与效果链，播客制作轻松完成。",
+          "features": [
+            "多轨会话与轨道管理",
+            "波形级精细剪辑",
+            "效果链与音频导出"
+          ]
+        },
+        "three": {
+          "tagline": "三维建模、材质与动画，浏览器里的创作空间。",
+          "features": [
+            "场景布局与视口操作",
+            "建模与几何节点",
+            "材质着色与渲染预览"
+          ]
+        },
+        "lightcraft": {
+          "tagline": "照片图库与调色，RAW 工作流也从容应对。",
+          "features": [
+            "图库导入与照片管理",
+            "调色与显影参数",
+            "RAW 解析与批量导出"
+          ]
+        },
+        "git": {
+          "tagline": "多仓库总览、可视化 Diff，还有 AI 帮你写提交信息。",
+          "features": [
+            "多仓库并行与状态总览",
+            "可视化 Diff，支持逐块重置",
+            "AI 生成提交信息与内置终端"
+          ]
+        },
+        "dbm": {
+          "tagline": "一个界面连接 MySQL、PostgreSQL、MongoDB。",
+          "features": [
+            "多类型数据库统一连接",
+            "SQL 查询与结果网格",
+            "表结构、索引与备份"
+          ]
+        },
+        "term": {
+          "tagline": "SSH 终端与 SFTP 文件协同，运维一屏完成。",
+          "features": [
+            "多会话 SSH 终端",
+            "内置 SFTP 文件传输",
+            "端口转发与隧道"
+          ]
+        },
+        "servrun": {
+          "tagline": "Nginx / PHP / MySQL / Redis 本地环境一键起。",
+          "features": [
+            "9 类服务统一管理",
+            "虚拟主机与配置生成",
+            "一键启停与日志查看"
+          ]
+        },
+        "scrcpy": {
+          "tagline": "安卓投屏到桌面，鼠标键盘直接操控。",
+          "features": [
+            "USB / 无线投屏",
+            "鼠标键盘反向控制",
+            "多设备管理与文件传输"
+          ]
+        }
+      }
+    },
+    "mcp": {
+      "eyebrow": "一个 MCP 驱动全部",
+      "title": "让 AI 用<em>一个 MCP 端点</em>，操控你的全部插件",
+      "subtitle": "Claude Code、Codex、Cursor 等任意 AI 编码工具，接入 OTools 宿主 MCP 网关后，就能跨插件编排任务——不再需要为每个工具单独接一遍。",
+      "core": "MCP GATEWAY",
+      "coreSub": "单一端点",
+      "panelTitle": "otools-mcp · 已连接 40+ 插件",
+      "points": [
+        {
+          "icon": "🔌",
+          "title": "单一端点，聚合所有插件",
+          "desc": "外部 AI 只接一个 MCP，即可调用全部已授权插件，无需逐个配置。"
+        },
+        {
+          "icon": "🎛️",
+          "title": "按需授权，工具面可控",
+          "desc": "默认不暴露，用户勾选后才开放；大工具面还有搜索式按名调用。"
+        },
+        {
+          "icon": "🧩",
+          "title": "跨插件任务编排",
+          "desc": "一条自然语言指令，即可串联办公、创意与开发插件完成多步任务。"
+        }
+      ],
+      "commands": [
+        {
+          "prompt": "把季度报告导出 PDF，并生成一份配套演示稿"
+        },
+        {
+          "prompt": "检查这批图片，批量调色后导出 WebP"
+        },
+        {
+          "prompt": "看下当前分支改动，写一条提交信息并提交"
+        }
+      ]
+    },
+    "platform": {
+      "eyebrow": "平台底座",
+      "title": "免费、轻量、高性能的<em>桌面工作台</em>",
+      "subtitle": "插件再多也不笨重：Tabs 多任务、Rust 原生内核，把 40+ 工具装进一个约 20MB 的桌面外壳。",
+      "cards": {
+        "free": {
+          "title": "完全免费开源",
+          "desc": "无订阅、无广告、无功能墙。办公与创作工具本该人人可用。"
+        },
+        "mcp": {
+          "title": "一个 MCP 全接管",
+          "desc": "对外只暴露一个 MCP 端点，AI 一次接入即可驱动全部插件。"
+        },
+        "tabs": {
+          "title": "Tabs 多任务并行",
+          "desc": "多个工具同屏并行，上下文不丢失，切换零重载成本。"
+        },
+        "rust": {
+          "title": "Rust 原生高性能",
+          "desc": "核心与插件底层由 Rust 驱动，启动快、占用低、运行稳。"
+        }
+      },
+      "stats": {
+        "plugins": "官方插件与工具",
+        "free": "永久免费使用",
+        "mcp": "统一 MCP 端点",
+        "size": "桌面安装包体积"
+      }
+    },
+    "grid": {
+      "eyebrow": "插件全景",
+      "title": "每一个，都是<em>能直接干活</em>的工具",
+      "subtitle": "覆盖办公、创意与开发运维的官方插件，安装即用，随 OTools 一同更新。"
+    },
+    "dev": {
+      "eyebrow": "OTools 是一个平台",
+      "title": "插件大多<em>移植自开源项目</em>，你也可以移植自己需要的",
+      "subtitle": "OTools 不是一个大而全的软件，而是一个可扩展的桌面插件平台。官方插件里有相当一部分来自优秀的开源项目——把它们移植进 OTools，就能跨平台、免安装、还能被一个 MCP 统一驱动。缺什么工具？自己移植一个就好。",
+      "ctaDev": "开始移植插件",
+      "ctaApi": "查看 OTools API",
+      "sourcesLabel": "从开源项目出发 · 已在 OTools 中可用",
+      "steps": {
+        "choose": {
+          "title": "挑一个开源项目",
+          "desc": "任何 Web / Rust / WASM 形态的开源工具都可以作为移植起点，不限语言与框架。"
+        },
+        "port": {
+          "title": "用 OTools 接口接入",
+          "desc": "生成 Web / Vue 工程骨架，按需声明 fs、shell、dialog 等权限，也能挂 Rust 原生库提性能。"
+        },
+        "publish": {
+          "title": "打包上架插件市场",
+          "desc": "打包后一键发布到插件市场，让所有 OTools 用户都能装上你移植的工具。"
+        }
+      }
+    },
+    "cta": {
+      "eyebrow": "现在就能用",
+      "title": "把这一排软件，<em>换成一个 OTools</em>",
+      "desc": "免费获取桌面版，装上 40+ 插件，再用一个 MCP 把它们全部接入你的 AI 工作流。",
+      "download": "免费获取内测版",
+      "docs": "使用文档",
+      "api": "OTools API",
+      "note": "免费开源 · 插件市场持续更新 · 支持 Windows 与 macOS"
+    }
   }
 }

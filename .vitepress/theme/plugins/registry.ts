@@ -47,6 +47,17 @@ export interface PluginLandingMeta {
    * 继续跟随站点主题。
    */
   forceDarkShot?: boolean;
+  /**
+   * 该插件**实际拥有**的逐语言截图语种。
+   * ⚠️ 落地页/首页是深色，组件固定取 `<scene>-<lang>-dark.webp`；
+   * 若某个语种没有对应文件，浏览器会先发一个 404 再回退 neutral 副本
+   * （观感无碍，但控制台会留一堆 404）。
+   * 因此这里显式登记能力：
+   *   · 工具类插件（git/dbm/term/mqtt/ftp/servrun/scrcpy）拍了 8 语言；
+   *   · craft 系与 puter 系只拍了 zh-CN / en-US（缺省值）。
+   * 组件据此**在渲染前就选好语种**，不请求不存在的文件。
+   */
+  shotLangs?: string[];
 }
 
 // ⚠️ 主题色必须逐段对齐 `public/plugin-logos/<key>.svg` 里的渐变 stop：
@@ -111,6 +122,7 @@ export const pluginLandingMeta: Record<PluginLandingKey, PluginLandingMeta> = {
       { key: 'ai' },
       { key: 'terminal', shot: 'terminal' },
     ],
+    shotLangs: ['zh-CN', 'en-US', 'de-DE', 'es-ES', 'ja-JP', 'ko-KR', 'ru-RU', 'ar-SA'],
   },
   'otools-dbm': {
     name: 'DBM',
@@ -131,6 +143,7 @@ export const pluginLandingMeta: Record<PluginLandingKey, PluginLandingMeta> = {
       { key: 'tables', shot: 'tables' },
       { key: 'backup' },
     ],
+    shotLangs: ['zh-CN', 'en-US', 'de-DE', 'es-ES', 'ja-JP', 'ko-KR', 'ru-RU', 'ar-SA'],
   },
   'otools-term': {
     name: 'Term',
@@ -148,6 +161,7 @@ export const pluginLandingMeta: Record<PluginLandingKey, PluginLandingMeta> = {
       { key: 'sftp', shot: 'sftp' },
       { key: 'forward' },
     ],
+    shotLangs: ['zh-CN', 'en-US', 'de-DE', 'es-ES', 'ja-JP', 'ko-KR', 'ru-RU', 'ar-SA'],
   },
   'otools-mqtt': {
     name: 'MQTT',
@@ -167,6 +181,7 @@ export const pluginLandingMeta: Record<PluginLandingKey, PluginLandingMeta> = {
       { key: 'payload', shot: 'session' },
       { key: 'subscribe' },
     ],
+    shotLangs: ['zh-CN', 'en-US', 'de-DE', 'es-ES', 'ja-JP', 'ko-KR', 'ru-RU', 'ar-SA'],
   },
   'otools-ftp': {
     name: 'FTP',
@@ -182,6 +197,7 @@ export const pluginLandingMeta: Record<PluginLandingKey, PluginLandingMeta> = {
       { key: 'transfer', shot: 'browse' },
       { key: 'tls' },
     ],
+    shotLangs: ['zh-CN', 'en-US', 'de-DE', 'es-ES', 'ja-JP', 'ko-KR', 'ru-RU', 'ar-SA'],
   },
   'otools-servrun': {
     name: 'Env',
@@ -207,6 +223,7 @@ export const pluginLandingMeta: Record<PluginLandingKey, PluginLandingMeta> = {
       { key: 'php', shot: 'detail-php' },
       { key: 'detail', shot: 'detail-mysql' },
     ],
+    shotLangs: ['zh-CN', 'en-US', 'de-DE', 'es-ES', 'ja-JP', 'ko-KR', 'ru-RU', 'ar-SA'],
   },
   'otools-scrcpy': {
     name: 'Android Mirror',
@@ -222,6 +239,7 @@ export const pluginLandingMeta: Record<PluginLandingKey, PluginLandingMeta> = {
       { key: 'control', shot: 'mirror' },
       { key: 'wireless' },
     ],
+    shotLangs: ['zh-CN', 'en-US', 'de-DE', 'es-ES', 'ja-JP', 'ko-KR', 'ru-RU', 'ar-SA'],
   },
 
   // ── puter 插件（只提供插件，不发布独立 APP：standalone=false）──────────────

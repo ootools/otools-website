@@ -3,16 +3,20 @@ layout: page
 aside: false
 ---
 
-<HeroIntro />
+<HomeHero />
 
-<OriginStory />
+<LogoMarquee />
 
-<PlatformHighlights />
+<ReplaceMatrix />
 
-<PluginShowcase />
+<ScrollStory />
 
+<McpGateway />
 
-<PluginGrid />
-<TabsWorkflow />
+<PlatformEdge />
 
-<DocCta />
+<PluginWall />
+
+<DevPorting />
+
+<HomeCta />

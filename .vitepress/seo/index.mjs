@@ -238,7 +238,9 @@ export function createSeoTransform(ctx = {}) {
         ...seo.competitors,
       ]);
 
-      ogImagePath = `${SITE_BASE}/plugins/${pluginKey}/${reg.firstScene}-light.webp`;
+      // ⚠️ 落地页是深色沉浸（站点固定浅色 appearance:false，组件固定取暗色截图），
+      // OG 分享预览图必须跟着用暗色版，否则社交卡片与页面观感不一致。
+      ogImagePath = `${SITE_BASE}/plugins/${pluginKey}/${reg.firstScene}-dark.webp`;
 
       jsonLd = [
         {

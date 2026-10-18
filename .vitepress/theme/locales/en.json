@@ -428,7 +428,7 @@
     "getPlugin": "Get the plugin",
     "recommended": "Recommended",
     "galleryTitle": "Screenshots",
-    "gallerySub": "Rendered from the real plugin UI (light / dark follows the site theme).",
+    "gallerySub": "All screenshots are rendered from the real plugin UI (2x hi-res).",
     "featuresTitle": "Capabilities",
     "featuresSub": "Details refined for daily use — not a checklist of features.",
     "downloadTitle": "Two ways to use it",
@@ -1134,5 +1134,325 @@
     "title": "Meet the plugins",
     "subtitle": "From databases to design and presentations, your everyday tools in one workspace — open one to see what it can do.",
     "more": "Learn more"
+  },
+  "home": {
+    "hero": {
+      "eyebrow": "Free & open source · 40+ productivity tools in one",
+      "titleLine1": "One platform,",
+      "titleLine2": "a whole shelf of paid apps replaced",
+      "desc": "OTools packs <b>office suites, creative design, and dev ops</b> into a single desktop workbench. Everything WPS, Photoshop, Premiere, Git and Navicat do — <b>free of charge</b>, and drivable by <b>one MCP</b>.",
+      "ctaDownload": "Get the free beta",
+      "ctaDocs": "Read the docs",
+      "badges": [
+        "Completely free, no subscriptions",
+        "One MCP drives every plugin",
+        "Rust core, ~20MB",
+        "Windows / macOS"
+      ],
+      "scroll": "Scroll to explore",
+      "modalTitle": "Join the beta",
+      "modalDesc": "Scan the QR code to join our WeChat group for downloads and updates.",
+      "windows": {
+        "documents": {
+          "title": "Writing & documents",
+          "sub": "Draft / layout / export PDF"
+        },
+        "ps": {
+          "title": "Image editing",
+          "sub": "Layers / masks / filters"
+        },
+        "git": {
+          "title": "Version control",
+          "sub": "Multi-repo / diff / AI commit"
+        },
+        "video": {
+          "title": "Video editing",
+          "sub": "Timeline / multitrack / export"
+        },
+        "dbm": {
+          "title": "Database manager",
+          "sub": "Connections / queries / schema"
+        }
+      }
+    },
+    "marquee": {
+      "label": "40+ plugins, updated continuously"
+    },
+    "replace": {
+      "eyebrow": "The replacement list",
+      "title": "Replace a whole shelf of paid apps with <em>one OTools</em>",
+      "subtitle": "Not slimmed-down editions. These plugins are full tools built for real workflows — and they are free.",
+      "badge": "Free",
+      "groups": {
+        "office": {
+          "title": "Office suite",
+          "sub": "Against WPS Office and Microsoft 365"
+        },
+        "creative": {
+          "title": "Creative design",
+          "sub": "Against the Adobe Creative Cloud suite"
+        },
+        "dev": {
+          "title": "Dev & ops",
+          "sub": "Against the paid toolchain devs rely on"
+        }
+      },
+      "items": {
+        "word": "Long-form writing, styled layout, PDF & DOCX export",
+        "excel": "Large sheets, formulas, charts and visualization",
+        "ppt": "Template-driven decks, layout design, animation",
+        "pdf": "Read & annotate, organize pages, forms and security",
+        "indesign": "Multi-page layout, masters & styles, print-grade export",
+        "photoshop": "Layer editing, masks, filters and batch processing",
+        "illustrator": "Pen & boolean ops, gradients, vector export",
+        "premiere": "Multitrack timeline, transitions, captions, render",
+        "aftereffects": "Compositing, keyframes and effect rendering",
+        "audition": "Multitrack audio, waveform editing, effect chains",
+        "lightroom": "Photo library, color grading, RAW and batch export",
+        "blender": "3D modeling, materials, animation and rendering",
+        "autocad": "2D drafting, layers & commands, DXF exchange",
+        "canva": "Collage layout, filters and one-click export",
+        "github-desktop": "Repo overview, staging, history and diffs",
+        "navicat": "Multi-DB connections, SQL queries, schema management",
+        "iterm": "SSH sessions, SFTP files and port forwarding",
+        "laragon": "One-click local Nginx / PHP / MySQL / Redis",
+        "mqttx": "MQTT connections, publish/subscribe, message tracing",
+        "filezilla": "Dual-pane FTP transfer with TLS",
+        "scrcpy": "Android mirroring with mouse & keyboard control"
+      }
+    },
+    "story": {
+      "eyebrow": "Three workflows",
+      "title": "One scroll through <em>the entire workbench</em>",
+      "subtitle": "Keep scrolling to see exactly what OTools looks like and can do at runtime.",
+      "acts": {
+        "office": "Documents",
+        "creative": "Creative",
+        "dev": "Dev & ops"
+      },
+      "scenes": {
+        "documents": {
+          "tagline": "From blank page to final draft — layout, styles and export in one pass.",
+          "features": [
+            "Template-driven new documents",
+            "WYSIWYG styles and layout",
+            "Export PDF / DOCX, processed locally"
+          ]
+        },
+        "spreadsheet": {
+          "tagline": "Massive sheets stay smooth, with formulas and charts at hand.",
+          "features": [
+            "Sample and budget templates ready to use",
+            "Formula calculation and charts",
+            "Excel-compatible import & export"
+          ]
+        },
+        "presentation": {
+          "tagline": "Template-driven deck creation, from outline to presenting.",
+          "features": [
+            "A range of built-in templates",
+            "Slide layout and visual design",
+            "Animations and full-screen presenting"
+          ]
+        },
+        "pdfcraft": {
+          "tagline": "Read, organize and secure — a complete PDF workbench.",
+          "features": [
+            "Read, annotate and organize pages",
+            "Merge, split, forms and encryption",
+            "Rust / WASM core opens big files instantly"
+          ]
+        },
+        "ps": {
+          "tagline": "Desktop-grade image editing with layers, masks and filters.",
+          "features": [
+            "Precise layer and mask editing",
+            "Filters and color adjustment pipeline",
+            "Batch export in multiple formats"
+          ]
+        },
+        "vectorcraft": {
+          "tagline": "Pen, boolean ops and gradients — vector design in full.",
+          "features": [
+            "Pen tool and node editing",
+            "Boolean operations and path control",
+            "Gradient fills and SVG export"
+          ]
+        },
+        "video": {
+          "tagline": "Multitrack editing with templates, captions and transitions built in.",
+          "features": [
+            "Open a template project and start cutting",
+            "Multitrack timeline and text track",
+            "Transitions, effects and render export"
+          ]
+        },
+        "audio": {
+          "tagline": "Multitrack recording, waveform editing and effect chains.",
+          "features": [
+            "Multitrack sessions and track management",
+            "Waveform-level fine editing",
+            "Effect chains and audio export"
+          ]
+        },
+        "three": {
+          "tagline": "3D modeling, materials and animation in a creative space.",
+          "features": [
+            "Scene layout and viewport control",
+            "Modeling and geometry nodes",
+            "Material shading and render preview"
+          ]
+        },
+        "lightcraft": {
+          "tagline": "Photo library and grading, RAW workflow included.",
+          "features": [
+            "Library import and photo management",
+            "Color grading and develop parameters",
+            "RAW decoding and batch export"
+          ]
+        },
+        "git": {
+          "tagline": "Multi-repo overview, visual diffs, and AI-written commit messages.",
+          "features": [
+            "Parallel repos with status overview",
+            "Visual diff with per-hunk reset",
+            "AI commit messages and built-in terminal"
+          ]
+        },
+        "dbm": {
+          "tagline": "Connect MySQL, PostgreSQL and MongoDB from one screen.",
+          "features": [
+            "Unified multi-database connections",
+            "SQL queries and result grid",
+            "Schema, indexes and backup"
+          ]
+        },
+        "term": {
+          "tagline": "SSH terminal and SFTP files together — ops in one screen.",
+          "features": [
+            "Multi-session SSH terminal",
+            "Built-in SFTP file transfer",
+            "Port forwarding and tunnels"
+          ]
+        },
+        "servrun": {
+          "tagline": "Local Nginx / PHP / MySQL / Redis in one click.",
+          "features": [
+            "Nine service types managed in one place",
+            "Virtual hosts and config generation",
+            "One-click start/stop and logs"
+          ]
+        },
+        "scrcpy": {
+          "tagline": "Mirror Android to your desktop and control it directly.",
+          "features": [
+            "USB and wireless mirroring",
+            "Reverse mouse & keyboard control",
+            "Multi-device management and file transfer"
+          ]
+        }
+      }
+    },
+    "mcp": {
+      "eyebrow": "One MCP to drive them all",
+      "title": "Let AI drive <em>every plugin</em> through one MCP endpoint",
+      "subtitle": "Connect any AI coding tool — Claude Code, Codex, Cursor — to the OTools host MCP gateway and orchestrate tasks across plugins, instead of wiring each tool separately.",
+      "core": "MCP GATEWAY",
+      "coreSub": "Single endpoint",
+      "panelTitle": "otools-mcp · 40+ plugins connected",
+      "points": [
+        {
+          "icon": "🔌",
+          "title": "One endpoint, all plugins",
+          "desc": "External AI connects to a single MCP and can call every authorized plugin — no per-plugin setup."
+        },
+        {
+          "icon": "🎛️",
+          "title": "Granular control",
+          "desc": "Nothing is exposed by default; users opt in. Large tool surfaces get search-based calls by name."
+        },
+        {
+          "icon": "🧩",
+          "title": "Cross-plugin orchestration",
+          "desc": "One natural-language instruction can chain office, creative and dev plugins through a multi-step task."
+        }
+      ],
+      "commands": [
+        {
+          "prompt": "Export the quarterly report to PDF and build a matching deck"
+        },
+        {
+          "prompt": "Check these images, grade them and export WebP"
+        },
+        {
+          "prompt": "Review my branch changes, write a commit message and commit"
+        }
+      ]
+    },
+    "platform": {
+      "eyebrow": "The foundation",
+      "title": "A free, lightweight, high-performance <em>desktop workbench</em>",
+      "subtitle": "No matter how many plugins — Tabs multitasking and a Rust-native core keep 40+ tools inside a ~20MB desktop shell.",
+      "cards": {
+        "free": {
+          "title": "Completely free & open source",
+          "desc": "No subscriptions, no ads, no feature walls. Office and creative tools should be for everyone."
+        },
+        "mcp": {
+          "title": "One MCP takes over",
+          "desc": "A single external MCP endpoint that lets AI drive every plugin after one setup."
+        },
+        "tabs": {
+          "title": "Tabs multitasking",
+          "desc": "Many tools side by side with no lost context and zero reload cost when switching."
+        },
+        "rust": {
+          "title": "Rust-native performance",
+          "desc": "Core and plugin runtimes are Rust-powered: fast start, low footprint, rock stable."
+        }
+      },
+      "stats": {
+        "plugins": "Official plugins & tools",
+        "free": "Free forever",
+        "mcp": "Unified MCP endpoint",
+        "size": "Desktop installer size"
+      }
+    },
+    "grid": {
+      "eyebrow": "The full plugin wall",
+      "title": "Every one of them is <em>a tool you can work in</em>",
+      "subtitle": "Official plugins across office, creative and dev ops — install and go, updated alongside OTools."
+    },
+    "dev": {
+      "eyebrow": "OTools is a platform",
+      "title": "Most plugins are <em>ported from open-source projects</em> — port the one you need",
+      "subtitle": "OTools is not one big all-in-one app — it is an extensible desktop plugin platform. A good share of the official plugins started as excellent open-source projects: ported into OTools they run cross-platform, need no install, and are drivable by a single MCP. Missing a tool? Just port it.",
+      "ctaDev": "Start porting a plugin",
+      "ctaApi": "Explore the OTools API",
+      "sourcesLabel": "From open source · already available in OTools",
+      "steps": {
+        "choose": {
+          "title": "Pick an open-source project",
+          "desc": "Any open-source tool — web, Rust or WASM — can be a starting point. No language or framework restrictions."
+        },
+        "port": {
+          "title": "Wire it up with OTools APIs",
+          "desc": "Generate a web / Vue project skeleton, declare fs, shell or dialog permissions as needed, and add a Rust native library for performance."
+        },
+        "publish": {
+          "title": "Ship to the plugin marketplace",
+          "desc": "Package it and publish to the marketplace so every OTools user can install the tool you ported."
+        }
+      }
+    },
+    "cta": {
+      "eyebrow": "Ready today",
+      "title": "Swap that shelf of apps for <em>one OTools</em>",
+      "desc": "Get the free desktop app, install 40+ plugins, then wire them all into your AI workflow with a single MCP.",
+      "download": "Get the free beta",
+      "docs": "Documentation",
+      "api": "OTools API",
+      "note": "Free & open source · Plugin marketplace keeps growing · Windows and macOS"
+    }
   }
 }
