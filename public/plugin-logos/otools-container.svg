@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-label="Podman容器">
+  <defs>
+    <linearGradient id="bg-otools-container" x1="0%" x2="100%" y1="0%" y2="100%">
+      <stop offset="0%" stop-color="#2dd4bf" />
+      <stop offset="100%" stop-color="#0ea5e9" />
+    </linearGradient>
+  </defs>
+  <rect width="128" height="128" rx="28" fill="url(#bg-otools-container)" />
+  <g fill="none" stroke="#fff" stroke-width="8" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M22 88C26 78 34 68 48 64C56 62 62 60 68 58C76 52 80 34 93 35C100 36 103 42 102 49C100 55 96 58 92 58C89 59 88 61 88 64C88 70 85 74 80 76C70 82 60 87 52 86C40 86 30 88 22 88Z"/>
+  </g>
+  <g fill="#fff">
+    <circle cx="89" cy="44" r="3.5"/>
+    <circle cx="98" cy="47" r="3"/>
+  </g>
+</svg>
